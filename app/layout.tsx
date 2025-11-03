@@ -12,6 +12,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://relius.com"),
   title: {
     default: "Relius | Church Management System with AI",
     template: "%s | Relius",
