@@ -30,19 +30,19 @@ export default function AiPage() {
   ];
 
   return (
-    <div className="py-24 px-6 lg:px-8">
+    <div className="py-14 px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <Badge variant="default" className="mb-4">
             AI-Powered Ministry
           </Badge>
           <h1 className="mb-4">AI That Serves Your Mission</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-500 max-w-3xl mx-auto">
             Relius uses artificial intelligence to help church leaders save time on administrative tasks so they can focus on people and ministry.
           </p>
         </div>
 
-        <div className="mb-24 bg-gradient-to-br from-primary-50 to-gold-50 rounded-2xl p-12">
+        <div className="mb-24 bg-gradient-to-br from-primary-50 to-accent-50 rounded-2xl p-12">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center justify-center mb-8">
               <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center">
@@ -50,10 +50,10 @@ export default function AiPage() {
               </div>
             </div>
             <h2 className="text-center mb-6">How Relius AI Works</h2>
-            <p className="text-lg text-gray-700 text-center mb-8">
+            <p className="text-lg text-slate-600 text-center mb-8">
               Our AI features analyze your church data to provide insights, generate content, and automate routine tasks. Every AI tool is designed with three core principles:
             </p>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-3 gap-5">
               {principles.map((principle) => {
                 const Icon = principle.icon;
                 return (
@@ -65,7 +65,7 @@ export default function AiPage() {
                       <CardTitle className="text-lg">{principle.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-gray-600 text-sm">{principle.description}</p>
+                      <p className="text-slate-500 text-sm">{principle.description}</p>
                     </CardContent>
                   </Card>
                 );
@@ -75,13 +75,13 @@ export default function AiPage() {
         </div>
 
         <div className="mb-24">
-          <h2 className="text-center mb-12">AI Features Overview</h2>
+          <h2 className="text-center mb-8">AI Features Overview</h2>
           <div className="space-y-16">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <Badge variant="default" className="mb-3">Sermon Generator</Badge>
                 <h3 className="mb-4">Create Sermons in Your Voice</h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-slate-500 mb-4">
                   Input your scripture, topic, or sermon series theme. Choose your preaching style and target audience. Our AI generates a complete sermon draft with outline, main points, illustrations, and discussion questions.
                 </p>
                 <ul className="space-y-2">
@@ -111,7 +111,7 @@ export default function AiPage() {
               <div className="order-1 md:order-2">
                 <Badge variant="default" className="mb-3">Content Studio</Badge>
                 <h3 className="mb-4">Repurpose Content Instantly</h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-slate-500 mb-4">
                   Take your sermon and automatically generate email newsletters, social media posts, small group study guides, daily devotionals, and youth curriculum. One-click publishing to all your channels.
                 </p>
                 <ul className="space-y-2">
@@ -135,7 +135,7 @@ export default function AiPage() {
               <div>
                 <Badge variant="default" className="mb-3">Pastoral Care AI</Badge>
                 <h3 className="mb-4">Care at Scale</h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-slate-500 mb-4">
                   Manage prayer requests with AI-powered sentiment analysis. Identify urgent needs and at-risk members. Automate follow-up reminders while maintaining personal touch.
                 </p>
                 <ul className="space-y-2">
@@ -165,7 +165,7 @@ export default function AiPage() {
               <div className="order-1 md:order-2">
                 <Badge variant="default" className="mb-3">AI Insights</Badge>
                 <h3 className="mb-4">Predictive Analytics</h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-slate-500 mb-4">
                   Get attendance predictions, engagement trends, and volunteer optimization suggestions. Understand seasonal patterns and receive prioritized action items.
                 </p>
                 <ul className="space-y-2">

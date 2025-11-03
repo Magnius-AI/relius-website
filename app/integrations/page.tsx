@@ -61,16 +61,16 @@ export default function IntegrationsPage() {
   };
 
   return (
-    <div className="py-24 px-6 lg:px-8\">
+    <div className="py-14 px-6 lg:px-8\">
       <div className="mx-auto max-w-7xl">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h1 className="mb-4">Integrations</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-500 max-w-3xl mx-auto">
             Relius connects with the tools you already use to create a seamless ministry workflow
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
           {integrations.map((integration) => {
             const Icon = integration.icon;
             const status = statusConfig[integration.status as keyof typeof statusConfig];
@@ -87,7 +87,7 @@ export default function IntegrationsPage() {
                   <p className="text-sm text-gray-500">{integration.category}</p>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600 text-sm">{integration.description}</p>
+                  <p className="text-slate-500 text-sm">{integration.description}</p>
                 </CardContent>
               </Card>
             );
@@ -96,7 +96,7 @@ export default function IntegrationsPage() {
 
         <div className="bg-gray-50 rounded-2xl p-12 text-center">
           <h3 className="mb-4">Need a Custom Integration?</h3>
-          <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-500 mb-6 max-w-2xl mx-auto">
             Enterprise plans include custom integration support. We can work with your team to connect Relius to your existing tools.
           </p>
           <Badge variant="secondary" className="text-sm">

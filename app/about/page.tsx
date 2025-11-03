@@ -71,33 +71,33 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="py-24 px-6 lg:px-8">
+    <div className="py-14 px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h1 className="mb-4">About Relius</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-500 max-w-3xl mx-auto">
             We're building the church management system that church leaders deserve—modern, powerful, and designed for ministry.
           </p>
         </div>
 
         <div className="mb-24">
-          <h2 className="text-center mb-12">Our Mission</h2>
-          <div className="max-w-4xl mx-auto bg-gradient-to-br from-primary-50 to-gold-50 rounded-2xl p-12">
-            <p className="text-lg text-gray-700 mb-6">
+          <h2 className="text-center mb-8">Our Mission</h2>
+          <div className="max-w-4xl mx-auto bg-gradient-to-br from-primary-50 to-accent-50 rounded-2xl p-12">
+            <p className="text-lg text-slate-600 mb-6">
               For too long, churches have been stuck with clunky, outdated software that feels like it's from the 1990s. Church leaders spend hours on administrative tasks instead of focusing on people and ministry.
             </p>
-            <p className="text-lg text-gray-700 mb-6">
+            <p className="text-lg text-slate-600 mb-6">
               Relius exists to change that. We believe church management software should be as modern, intuitive, and powerful as the tools you use in your personal life.
             </p>
-            <p className="text-lg text-gray-700">
+            <p className="text-lg text-slate-600">
               By combining a complete church management system with artificial intelligence, we're helping church leaders save time, increase engagement, and focus on what matters most—their people.
             </p>
           </div>
         </div>
 
         <div className="mb-24">
-          <h2 className="text-center mb-12">Our Values</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <h2 className="text-center mb-8">Our Values</h2>
+          <div className="grid md:grid-cols-3 gap-5">
             {values.map((value) => {
               const Icon = value.icon;
               return (
@@ -107,7 +107,7 @@ export default function AboutPage() {
                       <Icon className="w-8 h-8 text-primary" />
                     </div>
                     <h3 className="text-xl font-bold mb-4">{value.title}</h3>
-                    <p className="text-gray-600">{value.description}</p>
+                    <p className="text-slate-500">{value.description}</p>
                   </CardContent>
                 </Card>
               );
@@ -116,11 +116,11 @@ export default function AboutPage() {
         </div>
 
         <div className="mb-24">
-          <h2 className="text-center mb-12">Product Roadmap</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <h2 className="text-center mb-8">Product Roadmap</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             {roadmap.map((phase, index) => (
               <Card key={index} className="border-2">
-                <CardContent className="p-6">
+                <CardContent className="p-5">
                   <div className="mb-4">
                     <h3 className="text-lg font-bold text-primary mb-1">{phase.phase}</h3>
                   </div>
@@ -128,7 +128,7 @@ export default function AboutPage() {
                     {phase.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-start gap-2 text-sm">
                         <span className="text-primary mt-0.5">•</span>
-                        <span className="text-gray-700">{item}</span>
+                        <span className="text-slate-600">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -138,10 +138,10 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className="mb-16 bg-gray-50 rounded-2xl p-12">
+        <div className="mb-10 bg-gray-50 rounded-2xl p-12">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-center mb-6">The Problem with Legacy ChMS</h2>
-            <div className="space-y-4 text-gray-700">
+            <div className="space-y-4 text-slate-600">
               <p>
                 Most church management systems were built 10-20 years ago and haven't kept up with modern technology. They're:
               </p>

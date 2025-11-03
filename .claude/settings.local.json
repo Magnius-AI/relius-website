@@ -6,7 +6,11 @@
       "Bash(npm run dev:*)",
       "Bash(npm install:*)",
       "Bash(git rm:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(taskkill:*)",
+      "Bash(find:*)",
+      "Bash(nul)",
+      "Bash(timeout /t 2 /nobreak)"
     ],
     "deny": [],
     "ask": []

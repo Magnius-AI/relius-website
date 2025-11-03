@@ -146,17 +146,17 @@ export default function PricingPage() {
   ];
 
   return (
-    <div className="py-24 px-6 lg:px-8">
+    <div className="py-14 px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h1 className="mb-4">Simple, Transparent Pricing</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-500 max-w-3xl mx-auto">
             Start with the basics. Unlock AI when you're ready. Scale as you grow.
           </p>
         </div>
 
-        <Tabs defaultValue="annual" className="mb-16">
-          <TabsList className="mx-auto flex w-fit mb-12">
+        <Tabs defaultValue="annual" className="mb-10">
+          <TabsList className="mx-auto flex w-fit mb-8">
             <TabsTrigger value="monthly">Monthly</TabsTrigger>
             <TabsTrigger value="annual">
               Annual
@@ -165,7 +165,7 @@ export default function PricingPage() {
           </TabsList>
 
           <TabsContent value="monthly">
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-5">
               {tiers.map((tier) => (
                 <Card
                   key={tier.name}
@@ -186,7 +186,7 @@ export default function PricingPage() {
                     <div className="mt-4">
                       <span className="text-4xl font-bold">{tier.price.monthly}</span>
                       {tier.price.monthly !== "Custom" && (
-                        <span className="text-gray-600">/month</span>
+                        <span className="text-slate-500">/month</span>
                       )}
                     </div>
                   </CardHeader>
@@ -204,7 +204,7 @@ export default function PricingPage() {
                       {tier.features.map((feature, index) => (
                         <li key={index} className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                          <span className="text-gray-700">{feature}</span>
+                          <span className="text-slate-600">{feature}</span>
                         </li>
                       ))}
                       {tier.notIncluded.map((feature, index) => (
@@ -221,7 +221,7 @@ export default function PricingPage() {
           </TabsContent>
 
           <TabsContent value="annual">
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-5">
               {tiers.map((tier) => (
                 <Card
                   key={tier.name}
@@ -242,7 +242,7 @@ export default function PricingPage() {
                     <div className="mt-4">
                       <span className="text-4xl font-bold">{tier.price.annual}</span>
                       {tier.price.annual !== "Custom" && (
-                        <span className="text-gray-600">/year</span>
+                        <span className="text-slate-500">/year</span>
                       )}
                     </div>
                   </CardHeader>
@@ -260,7 +260,7 @@ export default function PricingPage() {
                       {tier.features.map((feature, index) => (
                         <li key={index} className="flex items-start gap-2">
                           <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                          <span className="text-gray-700">{feature}</span>
+                          <span className="text-slate-600">{feature}</span>
                         </li>
                       ))}
                       {tier.notIncluded.map((feature, index) => (
@@ -277,8 +277,8 @@ export default function PricingPage() {
           </TabsContent>
         </Tabs>
 
-        <div className="mb-16">
-          <h2 className="text-center mb-12">Feature Comparison</h2>
+        <div className="mb-10">
+          <h2 className="text-center mb-8">Feature Comparison</h2>
           <div className="overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
@@ -330,15 +330,15 @@ export default function PricingPage() {
           </div>
         </div>
 
-        <div className="mb-16">
-          <h2 className="text-center mb-12">Frequently Asked Questions</h2>
+        <div className="mb-10">
+          <h2 className="text-center mb-8">Frequently Asked Questions</h2>
           <div className="max-w-3xl mx-auto">
             <Accordion type="single">
               {faqs.map((faq, index) => (
                 <AccordionItem key={index} value={`faq-${index}`}>
                   <AccordionTrigger>{faq.question}</AccordionTrigger>
                   <AccordionContent>
-                    <p className="text-gray-700">{faq.answer}</p>
+                    <p className="text-slate-600">{faq.answer}</p>
                   </AccordionContent>
                 </AccordionItem>
               ))}
@@ -348,7 +348,7 @@ export default function PricingPage() {
 
         <div className="text-center bg-gray-50 rounded-2xl p-12">
           <h3 className="mb-4">Ready to get started?</h3>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-500 mb-8 max-w-2xl mx-auto">
             Book a demo to see Relius in action and find the perfect plan for your church
           </p>
           <Button variant="primary" size="lg" asChild>

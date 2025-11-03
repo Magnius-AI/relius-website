@@ -35,31 +35,33 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-gray-50 border-t border-gray-200">
+    <footer className="bg-slate-50 text-slate-900 border-t border-slate-200">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
-        <div className="grid grid-cols-2 gap-8 lg:grid-cols-6">
-          <div className="col-span-2">
-            <Link href="/" className="flex items-center gap-3 group mb-6">
-              <Image
-                src="/Relius Logo.png"
-                alt="Relius Logo"
-                width={40}
-                height={40}
-                className="transition-transform group-hover:scale-105"
-              />
-              <span className="text-2xl font-bold text-primary">Relius</span>
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-5">
+          <div className="space-y-4">
+            <Link href="/" className="flex items-center gap-3 group">
+              <div className="p-1 rounded-lg bg-gradient-to-br from-primary-100 to-accent-100 transition-all group-hover:shadow-glow">
+                <Image
+                  src="/Relius Emblem.png"
+                  alt="Relius Emblem"
+                  width={36}
+                  height={36}
+                  className="transition-transform group-hover:scale-105"
+                />
+              </div>
+              <span className="text-xl font-bold text-slate-900">Relius</span>
             </Link>
-            <p className="text-sm text-gray-600 mb-6">
+            <p className="text-sm text-slate-600 leading-relaxed">
               The modern Church Management System with built-in AI. Empowering churches to focus on people, not paperwork.
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-3">
               {socialLinks.map((item) => {
                 const Icon = item.icon;
                 return (
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="text-gray-600 hover:text-primary transition-colors"
+                    className="text-slate-600 hover:text-primary focus-visible:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2 transition-colors"
                     aria-label={item.name}
                   >
                     <Icon className="h-5 w-5" />
@@ -70,13 +72,13 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-gray-900 mb-4">Product</h3>
-            <ul className="space-y-3">
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-900 mb-3">Product</h3>
+            <ul className="space-y-2.5">
               {footerLinks.product.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-600 hover:text-primary transition-colors"
+                    className="text-sm text-slate-600 hover:text-primary focus-visible:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2 transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -86,13 +88,13 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-gray-900 mb-4">Company</h3>
-            <ul className="space-y-3">
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-900 mb-3">Company</h3>
+            <ul className="space-y-2.5">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-600 hover:text-primary transition-colors"
+                    className="text-sm text-slate-600 hover:text-primary focus-visible:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2 transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -102,13 +104,13 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-gray-900 mb-4">Resources</h3>
-            <ul className="space-y-3">
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-900 mb-3">Resources</h3>
+            <ul className="space-y-2.5">
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-600 hover:text-primary transition-colors"
+                    className="text-sm text-slate-600 hover:text-primary focus-visible:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2 transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -118,13 +120,13 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-gray-900 mb-4">Legal</h3>
-            <ul className="space-y-3">
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-900 mb-3">Legal</h3>
+            <ul className="space-y-2.5">
               {footerLinks.legal.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-600 hover:text-primary transition-colors"
+                    className="text-sm text-slate-600 hover:text-primary focus-visible:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2 transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -134,8 +136,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-gray-200 pt-8">
-          <p className="text-xs text-gray-500 text-center">
+        <div className="mt-12 border-t border-slate-200 pt-6">
+          <p className="text-xs text-slate-500 text-center">
             &copy; {new Date().getFullYear()} Relius. All rights reserved.
           </p>
         </div>

@@ -2,7 +2,7 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 
 export interface DecorativeOrbProps {
-  variant?: "primary" | "gold" | "mixed";
+  variant?: "primary" | "accent" | "mixed";
   position?: "top-left" | "top-right" | "bottom-left" | "bottom-right" | "center";
   size?: "sm" | "md" | "lg" | "xl";
   animate?: boolean;
@@ -11,7 +11,7 @@ export interface DecorativeOrbProps {
 const DecorativeOrb: React.FC<DecorativeOrbProps> = ({
   variant = "primary",
   position = "top-right",
-  size = "lg",
+  size = "md",
   animate = false,
 }) => {
   const positionClasses = {
@@ -23,23 +23,23 @@ const DecorativeOrb: React.FC<DecorativeOrbProps> = ({
   };
 
   const sizeClasses = {
-    sm: "w-32 h-32",
-    md: "w-64 h-64",
-    lg: "w-96 h-96",
-    xl: "w-[32rem] h-[32rem]",
+    sm: "w-24 h-24",
+    md: "w-48 h-48",
+    lg: "w-72 h-72",
+    xl: "w-96 h-96",
   };
 
   const variantClasses = {
-    primary: "decorative-orb-primary",
-    gold: "decorative-orb-gold",
-    mixed: "decorative-orb-primary",
+    primary: "decorative-accent-primary",
+    accent: "decorative-accent-cyan",
+    mixed: "decorative-accent-primary",
   };
 
   return (
     <>
       <div
         className={cn(
-          "decorative-orb absolute pointer-events-none z-0",
+          "decorative-accent absolute pointer-events-none z-0",
           positionClasses[position],
           sizeClasses[size],
           variantClasses[variant],
@@ -49,7 +49,7 @@ const DecorativeOrb: React.FC<DecorativeOrbProps> = ({
       {variant === "mixed" && (
         <div
           className={cn(
-            "decorative-orb decorative-orb-gold absolute pointer-events-none z-0",
+            "decorative-accent decorative-accent-cyan absolute pointer-events-none z-0",
             position === "top-right" && "top-20 right-20",
             position === "top-left" && "top-20 left-20",
             position === "bottom-right" && "bottom-20 right-20",

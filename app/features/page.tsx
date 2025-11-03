@@ -224,17 +224,17 @@ export default function FeaturesPage() {
   ];
 
   return (
-    <div className="py-24 px-6 lg:px-8">
+    <div className="py-14 px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h1 className="mb-4">Product Features</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-500 max-w-3xl mx-auto">
             Everything you need to run a modern church, from people management to AI-powered ministry tools
           </p>
         </div>
 
         <div className="mb-24">
-          <div className="flex items-center gap-3 mb-12">
+          <div className="flex items-center gap-3 mb-8">
             <h2>Core Church Management</h2>
           </div>
 
@@ -251,7 +251,7 @@ export default function FeaturesPage() {
                         </div>
                         <div className="flex-1">
                           <CardTitle className="text-2xl mb-2">{feature.title}</CardTitle>
-                          <p className="text-gray-600">{feature.description}</p>
+                          <p className="text-slate-500">{feature.description}</p>
                         </div>
                       </div>
                     </CardHeader>
@@ -260,7 +260,7 @@ export default function FeaturesPage() {
                         {feature.highlights.map((highlight, index) => (
                           <div key={index} className="flex items-start gap-2">
                             <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                            <span className="text-gray-700">{highlight}</span>
+                            <span className="text-slate-600">{highlight}</span>
                           </div>
                         ))}
                       </div>
@@ -272,8 +272,8 @@ export default function FeaturesPage() {
           </div>
         </div>
 
-        <div className="mb-16">
-          <div className="flex items-center gap-3 mb-12">
+        <div className="mb-10">
+          <div className="flex items-center gap-3 mb-8">
             <h2 id="ai">AI-Powered Features</h2>
             <Badge variant="default">Pro Plan</Badge>
           </div>
@@ -283,15 +283,15 @@ export default function FeaturesPage() {
               const Icon = feature.icon;
               return (
                 <div key={feature.id} id={feature.id} className="scroll-mt-24">
-                  <Card className="border-2 border-gold/30 bg-gradient-to-br from-white to-gold-50/30">
+                  <Card className="border-2 border-primary/30 bg-gradient-to-br from-white to-accent-50/30">
                     <CardHeader>
                       <div className="flex items-start gap-4">
-                        <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gold-100 flex items-center justify-center">
-                          <Icon className="w-6 h-6 text-gold" />
+                        <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-accent-100 flex items-center justify-center">
+                          <Icon className="w-6 h-6 text-accent" />
                         </div>
                         <div className="flex-1">
                           <CardTitle className="text-2xl mb-2">{feature.title}</CardTitle>
-                          <p className="text-gray-600">{feature.description}</p>
+                          <p className="text-slate-500">{feature.description}</p>
                         </div>
                       </div>
                     </CardHeader>
@@ -299,8 +299,8 @@ export default function FeaturesPage() {
                       <div className="grid md:grid-cols-2 gap-4">
                         {feature.highlights.map((highlight, index) => (
                           <div key={index} className="flex items-start gap-2">
-                            <CheckCircle2 className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
-                            <span className="text-gray-700">{highlight}</span>
+                            <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                            <span className="text-slate-600">{highlight}</span>
                           </div>
                         ))}
                       </div>
@@ -314,7 +314,7 @@ export default function FeaturesPage() {
 
         <div className="text-center bg-gray-50 rounded-2xl p-12">
           <h3 className="mb-4">Ready to transform your church management?</h3>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-500 mb-8 max-w-2xl mx-auto">
             See how Relius can help your church save time and increase engagement
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

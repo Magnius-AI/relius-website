@@ -9,16 +9,16 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="py-24 px-6 lg:px-8">
+    <div className="py-14 px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <h1 className="mb-4">Get Started with Relius</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-500 max-w-3xl mx-auto">
             Book a personalized demo to see how Relius can transform your church management
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
+        <div className="grid lg:grid-cols-2 gap-12 mb-10">
           <div>
             <ContactForm />
           </div>
@@ -33,7 +33,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-2">Schedule Your Demo</h3>
-                    <p className="text-gray-600">
+                    <p className="text-slate-500">
                       We'll reach out within 24 hours to schedule a personalized demo at a time that works for you.
                     </p>
                   </div>
@@ -45,7 +45,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-2">Live Walkthrough</h3>
-                    <p className="text-gray-600">
+                    <p className="text-slate-500">
                       See Relius in action with a guided tour of features tailored to your church's needs and size.
                     </p>
                   </div>
@@ -57,7 +57,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-2">Get Your Questions Answered</h3>
-                    <p className="text-gray-600">
+                    <p className="text-slate-500">
                       Ask anything about features, pricing, migration, training, or how Relius fits your workflow.
                     </p>
                   </div>
@@ -67,17 +67,17 @@ export default function ContactPage() {
 
             <div className="bg-gray-50 rounded-xl p-8">
               <h3 className="mb-4">Alternative: Calendly Link</h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-slate-500 mb-4">
                 Prefer to schedule directly? Use our Calendly link to book a time that works for you.
               </p>
-              <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
+              <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-5 text-center">
                 <p className="text-gray-500 italic">Calendly integration placeholder</p>
               </div>
             </div>
 
             <div className="bg-primary-50 border-2 border-primary-200 rounded-xl p-8">
               <h3 className="mb-3">Have Questions First?</h3>
-              <p className="text-gray-700 mb-4">
+              <p className="text-slate-600 mb-4">
                 Check out our documentation and resources, or reach out directly at:
               </p>
               <div className="space-y-2">

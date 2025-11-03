@@ -10,13 +10,13 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   return (
-    <div className="py-24 px-6 lg:px-8">
+    <div className="py-14 px-6 lg:px-8">
       <div className="mx-auto max-w-4xl text-center">
         <div className="w-20 h-20 rounded-full bg-primary-50 flex items-center justify-center mx-auto mb-6">
           <Newspaper className="w-10 h-10 text-primary" />
         </div>
         <h1 className="mb-4">Blog & Resources</h1>
-        <p className="text-xl text-gray-600 mb-8">
+        <p className="text-xl text-slate-500 mb-8">
           Articles, guides, and insights coming soon
         </p>
         <Button variant="primary" size="lg" asChild>

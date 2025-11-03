@@ -86,21 +86,21 @@ export default function SecurityPage() {
   ];
 
   return (
-    <div className="py-24 px-6 lg:px-8">
+    <div className="py-14 px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <Badge variant="default" className="mb-4">
             Enterprise-Grade Security
           </Badge>
           <h1 className="mb-4">Security & Compliance</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-500 max-w-3xl mx-auto">
             Your data belongs to your church. We protect it with encryption, strict roles, audit trails, and privacy controls.
           </p>
         </div>
 
         <div className="mb-24">
-          <h2 className="text-center mb-12">Security Features</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <h2 className="text-center mb-8">Security Features</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             {securityFeatures.map((feature) => {
               const Icon = feature.icon;
               return (
@@ -112,7 +112,7 @@ export default function SecurityPage() {
                     <CardTitle className="text-lg">{feature.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600 text-sm">{feature.description}</p>
+                    <p className="text-slate-500 text-sm">{feature.description}</p>
                   </CardContent>
                 </Card>
               );
@@ -121,11 +121,11 @@ export default function SecurityPage() {
         </div>
 
         <div className="mb-24 bg-gray-50 rounded-2xl p-12">
-          <h2 className="text-center mb-12">Architecture & Best Practices</h2>
+          <h2 className="text-center mb-8">Architecture & Best Practices</h2>
           <div className="max-w-4xl mx-auto space-y-8">
             <div>
               <h3 className="mb-4">Infrastructure</h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-slate-500 mb-4">
                 Relius is built on modern, secure cloud infrastructure with automatic scaling, redundancy, and backups:
               </p>
               <ul className="grid md:grid-cols-2 gap-3">
@@ -158,7 +158,7 @@ export default function SecurityPage() {
 
             <div>
               <h3 className="mb-4">Application Security</h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-slate-500 mb-4">
                 Every layer of Relius is designed with security in mind:
               </p>
               <ul className="grid md:grid-cols-2 gap-3">
@@ -191,7 +191,7 @@ export default function SecurityPage() {
 
             <div>
               <h3 className="mb-4">Data Stewardship</h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-slate-500 mb-4">
                 We take the responsibility of managing church data seriously:
               </p>
               <ul className="grid md:grid-cols-2 gap-3">
@@ -224,9 +224,9 @@ export default function SecurityPage() {
           </div>
         </div>
 
-        <div className="mb-16">
-          <h2 className="text-center mb-12">Compliance & Best Practices</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+        <div className="mb-10">
+          <h2 className="text-center mb-8">Compliance & Best Practices</h2>
+          <div className="grid md:grid-cols-3 gap-5">
             {complianceItems.map((item) => (
               <Card key={item.title} className="border-2">
                 <CardHeader>
@@ -237,7 +237,7 @@ export default function SecurityPage() {
                     {item.items.map((point, index) => (
                       <li key={index} className="flex items-start gap-2">
                         <span className="text-green-600 mt-1">✓</span>
-                        <span className="text-gray-700">{point}</span>
+                        <span className="text-slate-600">{point}</span>
                       </li>
                     ))}
                   </ul>
@@ -249,7 +249,7 @@ export default function SecurityPage() {
 
         <div className="bg-primary-50 border-2 border-primary-200 rounded-2xl p-12">
           <h3 className="text-center mb-4">Responsible AI</h3>
-          <p className="text-gray-700 text-center max-w-3xl mx-auto">
+          <p className="text-slate-600 text-center max-w-3xl mx-auto">
             Our AI features follow strict ethical guidelines: all data is anonymized before processing, AI outputs require human review before sending, and individual privacy settings are always respected. We believe AI should augment ministry, not replace the human touch.
           </p>
         </div>
