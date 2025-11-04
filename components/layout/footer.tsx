@@ -40,13 +40,13 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-5">
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-3 group">
-              <div className="p-1 rounded-lg bg-gradient-to-br from-primary-100 to-accent-100 transition-all group-hover:shadow-glow">
+              <div className="p-2 rounded-xl bg-gradient-to-br from-primary-100 to-accent-100 transition-all group-hover:shadow-glow">
                 <Image
                   src="/Relius Emblem.png"
                   alt="Relius Emblem"
-                  width={36}
-                  height={36}
-                  className="transition-transform group-hover:scale-105"
+                  width={48}
+                  height={48}
+                  className="transition-transform group-hover:scale-105 drop-shadow-sm"
                 />
               </div>
               <span className="text-xl font-bold text-slate-900">Relius</span>

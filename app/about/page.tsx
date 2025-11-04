@@ -162,7 +162,7 @@ export default function AboutPage() {
 
         <div className="text-center bg-gradient-to-br from-primary to-primary-700 text-white rounded-2xl p-12">
           <h2 className="text-white mb-6">Join Us on the Journey</h2>
-          <p className="text-lg text-primary-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-white/80 mb-8 max-w-2xl mx-auto">
             We're in beta and actively working with churches to build the best ChMS on the market. Book a demo to see where we're headed.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -189,7 +189,7 @@ export default function AiPage() {
 
         <div className="bg-gradient-to-br from-primary to-primary-700 text-white rounded-2xl p-12 text-center">
           <h2 className="text-white mb-6">Responsible AI for Ministry</h2>
-          <p className="text-lg text-primary-100 mb-8 max-w-3xl mx-auto">
+          <p className="text-lg text-white/80 mb-8 max-w-3xl mx-auto">
             We believe AI should augment human ministry, not replace it. Every AI feature is designed with ethical guidelines, privacy protections, and human oversight to ensure technology serves your mission.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

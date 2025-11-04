@@ -18,16 +18,16 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         className={cn(
           "inline-flex items-center justify-center rounded-lg font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
           {
-            "bg-primary text-white hover:bg-primary-700 hover:shadow-lg hover:-translate-y-0.5":
+            "bg-primary text-white shadow-md hover:bg-primary-600 hover:shadow-lg hover:-translate-y-0.5":
               variant === "primary",
-            "bg-white text-primary border-2 border-primary hover:bg-primary-50":
+            "bg-white text-primary border-2 border-primary/25 shadow-sm hover:bg-secondary-50 hover:border-primary/40":
               variant === "secondary",
-            "hover:bg-slate-100 text-slate-700": variant === "ghost",
-            "border-2 border-slate-300 hover:border-primary hover:text-primary":
+            "hover:bg-primary-50/60 text-primary": variant === "ghost",
+            "border-2 border-primary/20 text-primary hover:border-primary/50 hover:bg-secondary-50":
               variant === "outline",
             "bg-gradient-mesh text-white hover:shadow-glow-lg hover:-translate-y-0.5":
               variant === "gradient",
-            "bg-accent text-white hover:bg-accent-600 hover:shadow-glow-accent hover:-translate-y-0.5":
+            "bg-accent text-white shadow-md hover:bg-accent-600 hover:shadow-glow-accent hover:-translate-y-0.5":
               variant === "accent",
           },
           {

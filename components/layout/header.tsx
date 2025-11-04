@@ -30,13 +30,13 @@ export function Header() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-8">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3 group">
-            <div className="p-1 rounded-lg bg-gradient-to-br from-primary-100 to-accent-100 transition-all group-hover:shadow-glow">
+            <div className="p-2 rounded-xl bg-gradient-to-br from-primary-100 to-accent-100 transition-all group-hover:shadow-glow">
               <Image
                 src="/Relius Emblem.png"
                 alt="Relius Emblem"
-                width={36}
-                height={36}
-                className="transition-transform group-hover:scale-105"
+                width={48}
+                height={48}
+                className="transition-transform group-hover:scale-105 drop-shadow-sm"
               />
             </div>
             <span className="text-xl font-bold gradient-text">Relius</span>

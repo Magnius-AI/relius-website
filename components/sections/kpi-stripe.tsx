@@ -17,7 +17,7 @@ export function KpiStripe() {
               key={metric.label}
               className="rounded-xl border border-slate-200 bg-white px-5 py-6 text-center shadow-sm transition-shadow hover:shadow-md"
             >
-              <div className="text-3xl sm:text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent">{metric.value}</div>
+              <div className="text-3xl sm:text-4xl font-bold gradient-text">{metric.value}</div>
               <div className="mt-2 text-sm text-slate-600">{metric.label}</div>
             </div>
           ))}

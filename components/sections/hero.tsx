@@ -23,10 +23,10 @@ export function Hero() {
         </div>
 
         <h1 className="text-balance mb-5">
-          Run your church with <span className="gradient-text">clarity</span>. Let AI handle the busywork.
+          Run your church with <span className="gradient-text">clarity</span>. Simplify operations to focus on mission.
         </h1>
 
-        <p className="text-xl text-slate-700 mb-7 leading-relaxed max-w-3xl mx-auto">
+        <p className="text-xl text-slate-800 mb-7 leading-relaxed max-w-3xl mx-auto">
           Relius combines a complete Church Management System with built-in AI for sermons, events, giving, volunteers, and care so leaders can focus on people.
         </p>
 

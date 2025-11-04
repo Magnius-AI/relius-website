@@ -4,16 +4,18 @@
   --font-inter: "Inter", system-ui, sans-serif;
 
   /* Modern gradient colors */
-  --gradient-primary-start: #6366F1;
-  --gradient-primary-end: #8B5CF6;
-  --gradient-accent-start: #06B6D4;
-  --gradient-accent-end: #22D3EE;
+  --gradient-primary-start: #12315B;
+  --gradient-primary-end: #D89A28;
+  --gradient-accent-start: #D89A28;
+  --gradient-accent-end: #F3E9D8;
 
-  /* Glow effects */
-  --glow-primary: 0 0 15px rgba(99, 102, 241, 0.2);
-  --glow-primary-lg: 0 0 30px rgba(99, 102, 241, 0.25);
-  --glow-accent: 0 0 15px rgba(6, 182, 212, 0.2);
-  --glow-accent-lg: 0 0 30px rgba(6, 182, 212, 0.25);
+  /* Glow effects tuned to navy and gold palette */
+  --glow-primary: 0 0 15px rgba(18, 49, 91, 0.3);
+  --glow-primary-lg: 0 0 30px rgba(18, 49, 91, 0.35);
+  --glow-accent: 0 0 15px rgba(216, 154, 40, 0.25);
+  --glow-accent-lg: 0 0 30px rgba(216, 154, 40, 0.3);
+  --glow-secondary: 0 0 15px rgba(243, 233, 216, 0.4);
+  --glow-secondary-lg: 0 0 30px rgba(243, 233, 216, 0.45);
 }
 
 body {
@@ -86,17 +88,19 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  display: inline-block;
+  padding-bottom: 0.05em;
 }
 
 .gradient-text-accent {
-  background: linear-gradient(135deg, var(--gradient-accent-start), var(--gradient-accent-end));
+  background: linear-gradient(135deg, #C38313, var(--gradient-accent-end));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .gradient-text-mesh {
-  background: linear-gradient(135deg, var(--gradient-primary-start), var(--gradient-primary-end), var(--gradient-accent-start));
+  background: linear-gradient(135deg, var(--gradient-primary-start), var(--gradient-primary-end), var(--gradient-accent-end));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -104,15 +108,15 @@ p {
 
 /* Background Gradients */
 .bg-gradient-primary {
-  background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+  background: linear-gradient(135deg, #12315B 0%, #D89A28 100%);
 }
 
 .bg-gradient-accent {
-  background: linear-gradient(135deg, #06B6D4 0%, #22D3EE 100%);
+  background: linear-gradient(135deg, #D89A28 0%, #F3E9D8 100%);
 }
 
 .bg-gradient-mesh {
-  background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #06B6D4 100%);
+  background: linear-gradient(135deg, #12315B 0%, #1F3F6B 35%, #D89A28 75%, #F3E9D8 100%);
 }
 
 .bg-gradient-dark {
@@ -120,23 +124,23 @@ p {
 }
 
 .bg-gradient-radial-primary {
-  background: radial-gradient(circle at top right, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle at top right, rgba(18, 49, 91, 0.1) 0%, transparent 70%);
 }
 
 .bg-gradient-radial-accent {
-  background: radial-gradient(circle at top left, rgba(6, 182, 212, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle at top left, rgba(216, 154, 40, 0.12) 0%, transparent 70%);
 }
 
 /* Decorative Background Patterns */
 .bg-pattern-dots {
-  background-image: radial-gradient(circle, rgba(99, 102, 241, 0.08) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(18, 49, 91, 0.08) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
 .bg-pattern-grid {
   background-image:
-    linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(18, 49, 91, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(18, 49, 91, 0.04) 1px, transparent 1px);
   background-size: 48px 48px;
 }
 
@@ -151,11 +155,15 @@ p {
 }
 
 .decorative-accent-primary {
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.3) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(18, 49, 91, 0.28) 0%, transparent 70%);
+}
+
+.decorative-accent-secondary {
+  background: radial-gradient(circle, rgba(243, 233, 216, 0.45) 0%, transparent 70%);
 }
 
 .decorative-accent-cyan {
-  background: radial-gradient(circle, rgba(6, 182, 212, 0.3) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(216, 154, 40, 0.3) 0%, transparent 70%);
 }
 
 /* Glass Morphism Effect */
@@ -167,10 +175,10 @@ p {
 }
 
 .glass-dark {
-  background: rgba(99, 102, 241, 0.08);
+  background: rgba(18, 49, 91, 0.08);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(18, 49, 91, 0.18);
 }
 
 /* Animations */
@@ -264,14 +272,14 @@ p {
 /* Modern mesh backgrounds (simplified from heavy multi-layer) */
 .bg-mesh-primary {
   background:
-    radial-gradient(circle at 20% 30%, rgba(99, 102, 241, 0.06) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.04) 0%, transparent 50%),
-    linear-gradient(180deg, #FFFFFF 0%, #F8F9FF 100%);
+    radial-gradient(circle at 20% 30%, rgba(18, 49, 91, 0.08) 0%, transparent 52%),
+    radial-gradient(circle at 78% 72%, rgba(216, 154, 40, 0.08) 0%, transparent 55%),
+    linear-gradient(180deg, #FFFFFF 0%, #EEF1F7 100%);
 }
 
 .bg-mesh-accent {
   background:
-    radial-gradient(circle at 70% 20%, rgba(6, 182, 212, 0.06) 0%, transparent 50%),
-    radial-gradient(circle at 30% 80%, rgba(99, 102, 241, 0.04) 0%, transparent 50%),
-    linear-gradient(180deg, #FFFFFF 0%, #F0FDFF 100%);
+    radial-gradient(circle at 70% 22%, rgba(216, 154, 40, 0.12) 0%, transparent 52%),
+    radial-gradient(circle at 28% 78%, rgba(18, 49, 91, 0.08) 0%, transparent 55%),
+    linear-gradient(180deg, #FFFFFF 0%, #F9F1E3 100%);
 }
