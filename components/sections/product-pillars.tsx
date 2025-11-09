@@ -72,7 +72,7 @@ export function ProductPillars() {
                     </div>
                     <CardTitle className="flex items-center justify-between text-lg">
                       {pillar.title}
-                      <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-primary group-hover:translate-x-1 group-focus-within:text-primary group-focus-within:translate-x-1 transition-all" />
+                      <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-primary group-hover:translate-x-1 group-focus-within:text-primary group-focus-within:translate-x-1 transition-all" aria-hidden="true" />
                     </CardTitle>
                     <CardDescription className="text-sm text-slate-600">
                       {pillar.description}

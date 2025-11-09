@@ -90,6 +90,13 @@ p {
   background-clip: text;
   display: inline-block;
   padding-bottom: 0.05em;
+  color: #12315B; /* Fallback color for browsers without gradient text support */
+}
+
+@supports (-webkit-background-clip: text) and (-webkit-text-fill-color: transparent) {
+  .gradient-text {
+    color: transparent;
+  }
 }
 
 .gradient-text-accent {
@@ -97,6 +104,14 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  display: inline-block;
+  color: #C38313; /* Fallback color */
+}
+
+@supports (-webkit-background-clip: text) and (-webkit-text-fill-color: transparent) {
+  .gradient-text-accent {
+    color: transparent;
+  }
 }
 
 .gradient-text-mesh {
@@ -104,6 +119,14 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  display: inline-block;
+  color: #12315B; /* Fallback color */
+}
+
+@supports (-webkit-background-clip: text) and (-webkit-text-fill-color: transparent) {
+  .gradient-text-mesh {
+    color: transparent;
+  }
 }
 
 /* Background Gradients */

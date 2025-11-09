@@ -3,12 +3,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const navigation = [
     { name: "How It Works", href: "/features" },
@@ -55,16 +57,26 @@ export function Header() {
         </div>
 
         <div className="hidden lg:flex lg:gap-x-7">
-          {navigation.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="text-sm font-semibold leading-6 text-slate-700 hover:text-primary focus-visible:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-4 transition-all duration-200 relative group rounded-sm"
-            >
-              {item.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-primary group-hover:w-full group-focus-visible:w-full transition-all duration-200"></span>
-            </Link>
-          ))}
+          {navigation.map((item) => {
+            const isActive = pathname === item.href;
+            return (
+              <Link
+                key={item.name}
+                href={item.href}
+                aria-current={isActive ? "page" : undefined}
+                className={cn(
+                  "text-sm font-semibold leading-6 hover:text-primary focus-visible:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-4 transition-all duration-200 relative group rounded-sm",
+                  isActive ? "text-primary" : "text-slate-700"
+                )}
+              >
+                {item.name}
+                <span className={cn(
+                  "absolute -bottom-1 left-0 h-0.5 bg-gradient-primary transition-all duration-200",
+                  isActive ? "w-full" : "w-0 group-hover:w-full group-focus-visible:w-full"
+                )}></span>
+              </Link>
+            );
+          })}
         </div>
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
@@ -77,16 +89,23 @@ export function Header() {
       {mobileMenuOpen && (
         <div id="mobile-menu" role="navigation" className="lg:hidden bg-gradient-to-b from-white to-primary-50/10">
           <div className="space-y-1 px-6 pb-4 pt-2">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-700 hover:bg-primary-50 hover:text-primary focus-visible:bg-primary-50 focus-visible:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary transition-all"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
+            {navigation.map((item) => {
+              const isActive = pathname === item.href;
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  aria-current={isActive ? "page" : undefined}
+                  className={cn(
+                    "block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-50 hover:text-primary focus-visible:bg-primary-50 focus-visible:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary transition-all",
+                    isActive ? "bg-primary-50 text-primary" : "text-slate-700"
+                  )}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
             <div className="pt-3">
               <Button variant="gradient" size="md" className="w-full" asChild>
                 <Link href="/contact">Get Started</Link>

@@ -37,7 +37,7 @@ export function ResourcesSearch({ items }: ResourcesSearchProps) {
           <label className="flex flex-col gap-2 text-sm font-semibold text-slate-700">
             <span className="sr-only">Search resources</span>
             <div className="flex items-center gap-2 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-2.5">
-              <svg className="h-5 w-5 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <svg className="h-5 w-5 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                 <circle cx="11" cy="11" r="7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 <path d="M16.5 16.5L21 21" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>

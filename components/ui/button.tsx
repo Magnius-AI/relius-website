@@ -10,24 +10,24 @@ export interface ButtonProps
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant = "primary", size = "md", asChild = false, children, ...props }, ref) => {
+  ({ className, variant = "primary", size = "md", asChild = false, children, disabled, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
 
     return (
       <Comp
         className={cn(
-          "inline-flex items-center justify-center rounded-lg font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+          "inline-flex items-center justify-center rounded-lg font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
           {
-            "bg-primary text-white shadow-md hover:bg-primary-600 hover:shadow-lg hover:-translate-y-0.5":
+            "bg-primary text-white shadow-md hover:bg-primary-600 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0":
               variant === "primary",
-            "bg-white text-primary border-2 border-primary/25 shadow-sm hover:bg-secondary-50 hover:border-primary/40":
+            "bg-white text-primary border-2 border-primary/25 shadow-sm hover:bg-secondary-50 hover:border-primary/40 active:bg-secondary-100":
               variant === "secondary",
-            "hover:bg-primary-50/60 text-primary": variant === "ghost",
-            "border-2 border-primary/20 text-primary hover:border-primary/50 hover:bg-secondary-50":
+            "hover:bg-primary-100 text-primary-700 hover:text-primary-800": variant === "ghost",
+            "border-2 border-primary/20 text-primary hover:border-primary/50 hover:bg-secondary-50 active:bg-secondary-100":
               variant === "outline",
-            "bg-gradient-mesh text-white hover:shadow-glow-lg hover:-translate-y-0.5":
+            "bg-gradient-mesh text-white hover:shadow-glow-lg hover:-translate-y-0.5 active:translate-y-0":
               variant === "gradient",
-            "bg-accent text-white shadow-md hover:bg-accent-600 hover:shadow-glow-accent hover:-translate-y-0.5":
+            "bg-accent-600 text-white shadow-md hover:bg-accent-700 hover:shadow-glow-accent hover:-translate-y-0.5 active:translate-y-0":
               variant === "accent",
           },
           {
@@ -38,6 +38,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           className
         )}
         ref={ref as any}
+        disabled={disabled}
+        aria-disabled={disabled}
         {...props}
       >
         {children}

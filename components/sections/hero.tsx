@@ -14,8 +14,8 @@ export function Hero() {
       <div className="absolute inset-0 bg-pattern-dots opacity-20" />
 
       <div className="relative mx-auto max-w-4xl text-center">
-        <div role="status" className="mb-8 inline-flex items-center gap-2 rounded-full bg-white/80 backdrop-blur-sm px-4 py-2 text-sm font-medium text-primary-700 border border-primary-200/50 shadow-sm">
-          <span className="relative flex h-2 w-2">
+        <div role="status" aria-live="polite" className="mb-8 inline-flex items-center gap-2 rounded-full bg-white/80 backdrop-blur-sm px-4 py-2 text-sm font-medium text-primary-700 border border-primary-200/50 shadow-sm">
+          <span className="relative flex h-2 w-2" aria-hidden="true">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
           </span>
@@ -34,7 +34,7 @@ export function Hero() {
           <Button variant="gradient" size="lg" asChild className="group shadow-lg">
             <Link href="/contact">
               See Relius in Action
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
             </Link>
           </Button>
           <Button variant="secondary" size="lg" asChild>
@@ -50,12 +50,12 @@ export function Hero() {
                 className="max-w-3xl"
                 title="Welcoming community gathering at Relius"
               />
-              <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm border border-slate-200 rounded-2xl px-5 py-4 text-left shadow-md">
+              <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm border border-slate-200 rounded-2xl px-5 py-4 text-left shadow-md" aria-hidden="true">
                 <p className="text-xs uppercase tracking-wide text-slate-500 font-semibold">This weekend</p>
                 <p className="text-lg font-semibold text-slate-900">48 volunteers scheduled</p>
                 <p className="text-sm text-slate-500">All teams confirmed by Friday</p>
               </div>
-              <div className="absolute top-6 right-6 bg-primary-600 text-white rounded-full px-4 py-2 text-sm font-semibold shadow-sm">
+              <div className="absolute top-6 right-6 bg-primary-600 text-white rounded-full px-4 py-2 text-sm font-semibold shadow-sm" aria-hidden="true">
                 Joyful check-ins: <span className="font-bold">312</span>
               </div>
             </div>

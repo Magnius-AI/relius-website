@@ -82,7 +82,7 @@ export function StoriesFilterGrid({ stories, filters }: StoriesFilterGridProps) 
         <p className="text-sm text-slate-500">
           Showing {filteredStories.length} {filteredStories.length === 1 ? "story" : "stories"}
         </p>
-        <Button variant="ghost" size="sm" onClick={resetFilters}>
+        <Button variant="ghost" size="sm" onClick={resetFilters} aria-label="Reset all story filters">
           Reset filters
         </Button>
       </div>
@@ -133,6 +133,7 @@ export function StoriesFilterGrid({ stories, filters }: StoriesFilterGridProps) 
                   <Link
                     href={`/stories/${story.slug}`}
                     className="text-primary-700 font-semibold inline-flex items-center gap-1 hover:text-primary-800"
+                    aria-label={`Read story from ${story.church}`}
                   >
                     Read story →
                   </Link>

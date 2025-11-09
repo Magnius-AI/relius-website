@@ -65,7 +65,7 @@ export function AiDifference() {
               <Card key={feature.title} className="border border-slate-200 hover:border-primary hover:shadow-md transition-all duration-200">
                 <CardHeader>
                   <div className="mb-3 inline-flex items-center justify-center w-10 h-10 rounded-lg bg-accent-50">
-                    <Icon className="w-5 h-5 text-accent" />
+                    <Icon className="w-5 h-5 text-accent-700" />
                   </div>
                   <CardTitle className="text-base">{feature.title}</CardTitle>
                 </CardHeader>

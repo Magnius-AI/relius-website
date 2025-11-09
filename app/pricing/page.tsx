@@ -306,12 +306,13 @@ export default function PricingPage() {
           <h2 className="text-center mb-8">Feature Comparison</h2>
           <div className="overflow-x-auto">
             <table className="w-full border-collapse">
+              <caption className="sr-only">Comparison of features across Basic, Pro, and Enterprise pricing tiers</caption>
               <thead>
                 <tr className="border-b-2 border-gray-200">
-                  <th className="text-left py-4 px-6 font-semibold">Feature</th>
-                  <th className="text-center py-4 px-6 font-semibold">Basic</th>
-                  <th className="text-center py-4 px-6 font-semibold">Pro</th>
-                  <th className="text-center py-4 px-6 font-semibold">Enterprise</th>
+                  <th scope="col" className="text-left py-4 px-6 font-semibold">Feature</th>
+                  <th scope="col" className="text-center py-4 px-6 font-semibold">Basic</th>
+                  <th scope="col" className="text-center py-4 px-6 font-semibold">Pro</th>
+                  <th scope="col" className="text-center py-4 px-6 font-semibold">Enterprise</th>
                 </tr>
               </thead>
               <tbody>
@@ -327,23 +328,23 @@ export default function PricingPage() {
                         <td className="py-3 px-6">{item.name}</td>
                         <td className="py-3 px-6 text-center">
                           {item.basic ? (
-                            <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
+                            <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" aria-label="Included" />
                           ) : (
-                            <X className="w-5 h-5 text-gray-300 mx-auto" />
+                            <X className="w-5 h-5 text-gray-300 mx-auto" aria-label="Not included" />
                           )}
                         </td>
                         <td className="py-3 px-6 text-center">
                           {item.pro ? (
-                            <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
+                            <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" aria-label="Included" />
                           ) : (
-                            <X className="w-5 h-5 text-gray-300 mx-auto" />
+                            <X className="w-5 h-5 text-gray-300 mx-auto" aria-label="Not included" />
                           )}
                         </td>
                         <td className="py-3 px-6 text-center">
                           {item.enterprise ? (
-                            <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" />
+                            <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" aria-label="Included" />
                           ) : (
-                            <X className="w-5 h-5 text-gray-300 mx-auto" />
+                            <X className="w-5 h-5 text-gray-300 mx-auto" aria-label="Not included" />
                           )}
                         </td>
                       </tr>

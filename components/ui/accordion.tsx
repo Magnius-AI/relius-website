@@ -78,12 +78,15 @@ export function AccordionTrigger({ value, children, className }: AccordionTrigge
 
   const { openItems, toggleItem } = context;
   const isOpen = value ? openItems.has(value) : false;
+  const contentId = value ? `accordion-content-${value}` : undefined;
 
   return (
     <button
       onClick={() => value && toggleItem(value)}
+      aria-expanded={isOpen}
+      aria-controls={contentId}
       className={cn(
-        "flex w-full items-center justify-between bg-white px-6 py-4 text-left font-semibold hover:bg-gray-50 transition-colors",
+        "flex w-full items-center justify-between bg-white px-6 py-4 text-left font-semibold hover:bg-gray-50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2",
         className
       )}
     >
@@ -93,6 +96,7 @@ export function AccordionTrigger({ value, children, className }: AccordionTrigge
           "h-5 w-5 transition-transform duration-200",
           isOpen && "rotate-180"
         )}
+        aria-hidden="true"
       />
     </button>
   );
@@ -110,11 +114,16 @@ export function AccordionContent({ value, children, className }: AccordionConten
 
   const { openItems } = context;
   const isOpen = value ? openItems.has(value) : false;
+  const contentId = value ? `accordion-content-${value}` : undefined;
 
   if (!isOpen) return null;
 
   return (
-    <div className={cn("px-6 py-4 bg-gray-50", className)}>
+    <div
+      id={contentId}
+      role="region"
+      className={cn("px-6 py-4 bg-gray-50", className)}
+    >
       {children}
     </div>
   );

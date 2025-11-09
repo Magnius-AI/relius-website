@@ -36,6 +36,7 @@ interface TabsListProps {
 export function TabsList({ children, className }: TabsListProps) {
   return (
     <div
+      role="tablist"
       className={cn(
         "inline-flex h-12 items-center justify-center rounded-lg bg-gray-100 p-1",
         className
@@ -57,15 +58,21 @@ export function TabsTrigger({ value, children, className }: TabsTriggerProps) {
   if (!context) throw new Error("TabsTrigger must be used within Tabs");
 
   const { activeTab, setActiveTab } = context;
+  const isSelected = activeTab === value;
+  const contentId = `tab-content-${value}`;
 
   return (
     <button
+      role="tab"
+      aria-selected={isSelected}
+      aria-controls={contentId}
+      tabIndex={isSelected ? 0 : -1}
       onClick={() => setActiveTab(value)}
       className={cn(
-        "inline-flex items-center justify-center whitespace-nowrap rounded-md px-6 py-2 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+        "inline-flex items-center justify-center whitespace-nowrap rounded-md px-6 py-2 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
         activeTab === value
           ? "bg-white text-primary shadow-sm"
-          : "text-gray-600 hover:text-gray-900",
+          : "text-gray-600 hover:text-gray-900 hover:bg-gray-50",
         className
       )}
     >
@@ -85,8 +92,19 @@ export function TabsContent({ value, children, className }: TabsContentProps) {
   if (!context) throw new Error("TabsContent must be used within Tabs");
 
   const { activeTab } = context;
+  const contentId = `tab-content-${value}`;
 
   if (activeTab !== value) return null;
 
-  return <div className={className}>{children}</div>;
+  return (
+    <div
+      role="tabpanel"
+      id={contentId}
+      aria-labelledby={`tab-${value}`}
+      tabIndex={0}
+      className={className}
+    >
+      {children}
+    </div>
+  );
 }

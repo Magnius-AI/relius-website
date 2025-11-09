@@ -49,7 +49,7 @@ export function ContactForm() {
       <Card className="border-2 border-green-200 bg-green-50">
         <CardContent className="p-8 text-center">
           <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
-            <svg className="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-label="Success">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
           </div>
@@ -81,11 +81,13 @@ export function ContactForm() {
               {...register("name")}
               type="text"
               id="name"
+              aria-invalid={errors.name ? "true" : "false"}
+              aria-describedby={errors.name ? "name-error" : undefined}
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
               placeholder="John Smith"
             />
             {errors.name && (
-              <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>
+              <p id="name-error" className="mt-1 text-sm text-red-600" role="alert">{errors.name.message}</p>
             )}
           </div>
 
@@ -97,11 +99,13 @@ export function ContactForm() {
               {...register("email")}
               type="email"
               id="email"
+              aria-invalid={errors.email ? "true" : "false"}
+              aria-describedby={errors.email ? "email-error" : undefined}
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
               placeholder="john@church.org"
             />
             {errors.email && (
-              <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
+              <p id="email-error" className="mt-1 text-sm text-red-600" role="alert">{errors.email.message}</p>
             )}
           </div>
 
@@ -113,11 +117,13 @@ export function ContactForm() {
               {...register("church")}
               type="text"
               id="church"
+              aria-invalid={errors.church ? "true" : "false"}
+              aria-describedby={errors.church ? "church-error" : undefined}
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
               placeholder="Grace Community Church"
             />
             {errors.church && (
-              <p className="mt-1 text-sm text-red-600">{errors.church.message}</p>
+              <p id="church-error" className="mt-1 text-sm text-red-600" role="alert">{errors.church.message}</p>
             )}
           </div>
 
@@ -128,6 +134,8 @@ export function ContactForm() {
             <select
               {...register("memberSize")}
               id="memberSize"
+              aria-invalid={errors.memberSize ? "true" : "false"}
+              aria-describedby={errors.memberSize ? "memberSize-error" : undefined}
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
             >
               <option value="">Select a size</option>
@@ -139,7 +147,7 @@ export function ContactForm() {
               <option value="5000+">5,000+ members</option>
             </select>
             {errors.memberSize && (
-              <p className="mt-1 text-sm text-red-600">{errors.memberSize.message}</p>
+              <p id="memberSize-error" className="mt-1 text-sm text-red-600" role="alert">{errors.memberSize.message}</p>
             )}
           </div>
 
@@ -164,11 +172,13 @@ export function ContactForm() {
               {...register("goals")}
               id="goals"
               rows={4}
+              aria-invalid={errors.goals ? "true" : "false"}
+              aria-describedby={errors.goals ? "goals-error" : undefined}
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
               placeholder="Tell us what you're hoping to achieve with Relius..."
             />
             {errors.goals && (
-              <p className="mt-1 text-sm text-red-600">{errors.goals.message}</p>
+              <p id="goals-error" className="mt-1 text-sm text-red-600" role="alert">{errors.goals.message}</p>
             )}
           </div>
 
@@ -178,6 +188,7 @@ export function ContactForm() {
             className="hidden"
             tabIndex={-1}
             autoComplete="off"
+            aria-hidden="true"
           />
 
           <Button

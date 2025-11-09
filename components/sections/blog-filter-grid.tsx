@@ -44,6 +44,7 @@ export function BlogFilterGrid({ posts, filters }: BlogFilterGridProps) {
         <button
           type="button"
           onClick={resetFilters}
+          aria-label="Reset all blog filters"
           className="text-sm font-semibold text-primary-700 hover:text-primary-800"
         >
           Reset filters
@@ -67,7 +68,7 @@ export function BlogFilterGrid({ posts, filters }: BlogFilterGridProps) {
                 </span>
               ))}
             </div>
-            <Link href={`/blog/${post.slug}`} className="inline-flex items-center gap-2 text-primary-700 font-semibold">
+            <Link href={`/blog/${post.slug}`} className="inline-flex items-center gap-2 text-primary-700 font-semibold" aria-label={`Read article: ${post.title}`}>
               Read article →
             </Link>
           </article>
