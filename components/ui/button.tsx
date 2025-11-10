@@ -25,9 +25,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             "hover:bg-primary-100 text-primary-700 hover:text-primary-800": variant === "ghost",
             "border-2 border-primary/20 text-primary hover:border-primary/50 hover:bg-secondary-50 active:bg-secondary-100":
               variant === "outline",
-            "bg-gradient-mesh text-white hover:shadow-glow-lg hover:-translate-y-0.5 active:translate-y-0":
+            "text-white shadow-md hover:shadow-glow-lg hover:-translate-y-0.5 active:translate-y-0":
               variant === "gradient",
-            "bg-accent-600 text-white shadow-md hover:bg-accent-700 hover:shadow-glow-accent hover:-translate-y-0.5 active:translate-y-0":
+            "bg-primary text-white shadow-md hover:bg-primary-600 hover:shadow-glow-accent hover:-translate-y-0.5 active:translate-y-0":
               variant === "accent",
           },
           {
@@ -37,6 +37,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           },
           className
         )}
+        style={(variant === "gradient" || variant === "primary" || variant === "accent") ? { backgroundColor: "#1e3a5f" } : undefined}
         ref={ref as any}
         disabled={disabled}
         aria-disabled={disabled}

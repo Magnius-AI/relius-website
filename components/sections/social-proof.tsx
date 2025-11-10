@@ -35,7 +35,7 @@ export function SocialProof() {
   ];
 
   return (
-    <section className="py-20 px-6 lg:px-8 bg-gradient-to-b from-white to-slate-50 relative overflow-hidden">
+    <section className="py-20 px-6 lg:px-8 bg-white relative overflow-hidden">
       {/* Minimal decoration */}
       <div className="absolute inset-0 bg-pattern-grid opacity-5" />
 

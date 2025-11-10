@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { AUTH_URLS, DEFAULT_SIGNUP_URL } from "@/lib/constants";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -28,7 +29,7 @@ export function Header() {
           <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3 group">
             <div className="p-2 rounded-xl bg-primary-50 transition-all group-hover:bg-primary-100">
               <Image
-                src="/Relius Emblem.png"
+                src="/relius_emblem_circle.png"
                 alt="Relius Emblem"
                 width={40}
                 height={40}
@@ -71,7 +72,7 @@ export function Header() {
               >
                 {item.name}
                 <span className={cn(
-                  "absolute -bottom-1 left-0 h-0.5 bg-gradient-primary transition-all duration-200",
+                  "absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-200",
                   isActive ? "w-full" : "w-0 group-hover:w-full group-focus-visible:w-full"
                 )}></span>
               </Link>
@@ -80,14 +81,17 @@ export function Header() {
         </div>
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
+          <Button variant="secondary" size="md" asChild>
+            <a href={AUTH_URLS.LOGIN}>Login</a>
+          </Button>
           <Button variant="gradient" size="md" asChild>
-            <Link href="/contact">Get Started</Link>
+            <a href={DEFAULT_SIGNUP_URL}>Get Started</a>
           </Button>
         </div>
       </nav>
 
       {mobileMenuOpen && (
-        <div id="mobile-menu" role="navigation" className="lg:hidden bg-gradient-to-b from-white to-primary-50/10">
+        <div id="mobile-menu" role="navigation" className="lg:hidden bg-white">
           <div className="space-y-1 px-6 pb-4 pt-2">
             {navigation.map((item) => {
               const isActive = pathname === item.href;
@@ -106,9 +110,12 @@ export function Header() {
                 </Link>
               );
             })}
-            <div className="pt-3">
+            <div className="pt-3 space-y-2">
+              <Button variant="secondary" size="md" className="w-full" asChild>
+                <a href={AUTH_URLS.LOGIN}>Login</a>
+              </Button>
               <Button variant="gradient" size="md" className="w-full" asChild>
-                <Link href="/contact">Get Started</Link>
+                <a href={DEFAULT_SIGNUP_URL}>Get Started</a>
               </Button>
             </div>
           </div>

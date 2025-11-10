@@ -2,10 +2,11 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { DecorativeOrb } from "@/components/ui/decorative-orb";
+import { DEFAULT_SIGNUP_URL, AUTH_URLS } from "@/lib/constants";
 
 export function FinalCta() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 to-white py-20 px-6 lg:px-8">
+    <section className="relative overflow-hidden bg-white py-20 px-6 lg:px-8">
       <div className="absolute inset-0 bg-pattern-dots opacity-10" aria-hidden="true" />
       <DecorativeOrb variant="accent" position="top-right" size="sm" animate />
 
@@ -30,10 +31,15 @@ export function FinalCta() {
               asChild
               className="border-2 border-slate-200 text-slate-700 hover:bg-slate-50"
             >
-              <Link href="/contact">Join the Beta</Link>
+              <a href={DEFAULT_SIGNUP_URL}>Join the Beta</a>
             </Button>
           </div>
-          <p className="text-sm text-slate-500 mt-6">No pressure, just answers. Let's talk about your church's needs.</p>
+          <p className="text-sm text-slate-500 mt-6">
+            Already have an account?{" "}
+            <a href={AUTH_URLS.LOGIN} className="text-primary font-semibold hover:underline">
+              Login
+            </a>
+          </p>
         </div>
       </div>
     </section>

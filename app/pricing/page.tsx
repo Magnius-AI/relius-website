@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { Metadata } from "next";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -8,6 +9,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import Link from "next/link";
 import { CheckCircle2, X } from "lucide-react";
+import { CHECKOUT_URLS, AUTH_URLS } from "@/lib/constants";
 
 export default function PricingPage() {
   const tiers = [
@@ -221,9 +223,13 @@ export default function PricingPage() {
                       className="w-full mb-6"
                       asChild
                     >
-                      <Link href="/contact">
-                        {tier.price.monthly === "Let's talk" ? "Let's Talk" : "Get Started"}
-                      </Link>
+                      {tier.name === "Enterprise" ? (
+                        <Link href="/contact">Let's Talk</Link>
+                      ) : (
+                        <a href={tier.name === "Basic" ? CHECKOUT_URLS.BASIC_MONTHLY : CHECKOUT_URLS.PRO_MONTHLY}>
+                          Get Started
+                        </a>
+                      )}
                     </Button>
                     <ul className="space-y-3">
                       {tier.features.map((feature, index) => (
@@ -277,9 +283,13 @@ export default function PricingPage() {
                       className="w-full mb-6"
                       asChild
                     >
-                      <Link href="/contact">
-                        {tier.price.annual === "Let's talk" ? "Let's Talk" : "Get Started"}
-                      </Link>
+                      {tier.name === "Enterprise" ? (
+                        <Link href="/contact">Let's Talk</Link>
+                      ) : (
+                        <a href={tier.name === "Basic" ? CHECKOUT_URLS.BASIC_ANNUAL : CHECKOUT_URLS.PRO_ANNUAL}>
+                          Get Started
+                        </a>
+                      )}
                     </Button>
                     <ul className="space-y-3">
                       {tier.features.map((feature, index) => (
@@ -302,6 +312,15 @@ export default function PricingPage() {
           </TabsContent>
         </Tabs>
 
+        <div className="text-center mb-10">
+          <p className="text-slate-600">
+            Already have an account?{" "}
+            <a href={AUTH_URLS.LOGIN} className="text-primary font-semibold hover:underline">
+              Login
+            </a>
+          </p>
+        </div>
+
         <div className="mb-10">
           <h2 className="text-center mb-8">Feature Comparison</h2>
           <div className="overflow-x-auto">
@@ -317,8 +336,8 @@ export default function PricingPage() {
               </thead>
               <tbody>
                 {comparisonFeatures.map((category) => (
-                  <>
-                    <tr key={category.category} className="bg-gray-50">
+                  <React.Fragment key={category.category}>
+                    <tr className="bg-gray-50">
                       <td colSpan={4} className="py-3 px-6 font-semibold text-primary">
                         {category.category}
                       </td>
@@ -349,7 +368,7 @@ export default function PricingPage() {
                         </td>
                       </tr>
                     ))}
-                  </>
+                  </React.Fragment>
                 ))}
               </tbody>
             </table>

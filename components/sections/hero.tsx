@@ -3,10 +3,11 @@ import { Button } from "@/components/ui/button";
 import { DecorativeOrb } from "@/components/ui/decorative-orb";
 import { ArrowRight } from "lucide-react";
 import { CommunityConnectionIllustration } from "@/components/illustrations";
+import { DEFAULT_SIGNUP_URL } from "@/lib/constants";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-primary-50/30 to-white px-6 py-24 lg:px-8 lg:py-32">
+    <section className="relative overflow-hidden bg-white px-6 py-24 lg:px-8 lg:py-32">
       {/* Single subtle decorative accent */}
       <DecorativeOrb variant="accent" position="top-right" size="md" animate />
 
@@ -14,15 +15,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-pattern-dots opacity-20" />
 
       <div className="relative mx-auto max-w-4xl text-center">
-        <div role="status" aria-live="polite" className="mb-8 inline-flex items-center gap-2 rounded-full bg-white/80 backdrop-blur-sm px-4 py-2 text-sm font-medium text-primary-700 border border-primary-200/50 shadow-sm">
-          <span className="relative flex h-2 w-2" aria-hidden="true">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-          </span>
-          Now in Beta
-        </div>
-
-        <h1 className="text-balance mb-6 text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900">
+        <h1 className="text-balance mb-8 text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900">
           Spend less time managing,<br />more time <span className="gradient-text">ministering</span>
         </h1>
 
@@ -32,10 +25,10 @@ export function Hero() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
           <Button variant="gradient" size="lg" asChild className="group shadow-lg">
-            <Link href="/contact">
+            <a href={DEFAULT_SIGNUP_URL}>
               See Relius in Action
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-            </Link>
+            </a>
           </Button>
           <Button variant="secondary" size="lg" asChild>
             <Link href="#features">How It Works</Link>
@@ -45,7 +38,7 @@ export function Hero() {
         {/* Custom illustration preview */}
         <div className="relative mx-auto max-w-5xl">
           <div className="relative rounded-2xl border border-slate-200 bg-white p-4 shadow-xl">
-            <div className="aspect-[5/3] rounded-xl bg-gradient-to-br from-slate-50 to-white flex items-center justify-center relative overflow-hidden">
+            <div className="aspect-[5/3] rounded-xl bg-slate-50 flex items-center justify-center relative overflow-hidden">
               <CommunityConnectionIllustration
                 className="max-w-3xl"
                 title="Welcoming community gathering at Relius"
