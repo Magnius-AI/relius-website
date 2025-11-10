@@ -2,9 +2,9 @@ import { Metadata } from "next";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 import { Heart, Users, Lightbulb, HandHeart } from "lucide-react";
 import {
-  CommunityConnectionIllustration,
   CareSupportIllustration,
   GrowthPlanningIllustration,
 } from "@/components/illustrations";
@@ -54,7 +54,13 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="bg-white border border-slate-200 rounded-3xl shadow-sm p-6">
-              <CommunityConnectionIllustration className="w-full" title="Church members connecting" />
+              <Image
+                src="/Hero Relius Image.png"
+                alt="Relius platform overview"
+                width={800}
+                height={600}
+                className="w-full h-auto rounded-xl"
+              />
               <div className="mt-6 grid gap-4">
                 <div className="rounded-2xl border border-primary-100 bg-primary-50/50 px-4 py-3">
                   <p className="text-xs uppercase font-semibold text-primary-700 tracking-wide">Community snapshot</p>
