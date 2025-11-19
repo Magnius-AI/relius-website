@@ -1,11 +1,6 @@
+import Image from "next/image";
 import { Heart, Users, Calendar, HandHeart } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  CareSupportIllustration,
-  VolunteerCoordinationIllustration,
-  GrowthPlanningIllustration,
-  MinistryMomentsIllustration,
-} from "@/components/illustrations";
 
 export function WhyRelius() {
   const features = [
@@ -13,7 +8,7 @@ export function WhyRelius() {
       icon: Heart,
       title: "Serve Your People",
       description: "Know your members better so you can care for them better. Track pastoral care, prayer requests, and life events in one place.",
-      Illustration: CareSupportIllustration,
+      image: "/images/illustrations/care-support.png",
       color: "text-rose-500",
       bg: "bg-rose-50",
       border: "group-hover:border-rose-200",
@@ -23,7 +18,7 @@ export function WhyRelius() {
       icon: Users,
       title: "Equip Your Teams",
       description: "Coordinate volunteers, organize groups, and communicate effortlessly. Everyone knows their role and feels connected.",
-      Illustration: VolunteerCoordinationIllustration,
+      image: "/images/illustrations/volunteer-coordination.png",
       color: "text-blue-500",
       bg: "bg-blue-50",
       border: "group-hover:border-blue-200",
@@ -33,7 +28,7 @@ export function WhyRelius() {
       icon: Calendar,
       title: "Plan Your Ministry",
       description: "From weekly services to annual events, manage everything seamlessly. Set it up once, and Relius remembers.",
-      Illustration: GrowthPlanningIllustration,
+      image: "/images/illustrations/growth-planning.png",
       color: "text-amber-500",
       bg: "bg-amber-50",
       border: "group-hover:border-amber-200",
@@ -43,7 +38,7 @@ export function WhyRelius() {
       icon: HandHeart,
       title: "Grow Your Impact",
       description: "Track giving with transparency, understand engagement trends, and make informed decisions that strengthen your ministry.",
-      Illustration: MinistryMomentsIllustration,
+      image: "/images/illustrations/ministry-moments.png",
       color: "text-emerald-500",
       bg: "bg-emerald-50",
       border: "group-hover:border-emerald-200",
@@ -68,7 +63,6 @@ export function WhyRelius() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => {
             const Icon = feature.icon;
-            const Illustration = feature.Illustration;
             return (
               <Card
                 key={feature.title}
@@ -84,11 +78,14 @@ export function WhyRelius() {
                     <h3 className="text-xl font-bold mb-4 text-slate-900 group-hover:text-primary transition-colors">{feature.title}</h3>
                     <p className="text-slate-600 leading-relaxed text-sm">{feature.description}</p>
                   </div>
-                  <div className="mt-auto px-6 pb-6 pt-0 flex justify-center">
-                    <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-slate-50/50 p-4 group-hover:bg-white/80 transition-colors duration-300">
-                      <Illustration
+                  <div className="mt-auto pt-0 flex justify-center">
+                    <div className="relative w-full aspect-[4/3] overflow-hidden">
+                      <Image
+                        src={feature.image}
+                        alt={`${feature.title} illustration`}
+                        width={400}
+                        height={300}
                         className="w-full h-full object-contain transform transition-transform duration-700 group-hover:scale-110"
-                        title={`${feature.title} illustration`}
                       />
                     </div>
                   </div>

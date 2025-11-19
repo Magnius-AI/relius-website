@@ -5,7 +5,7 @@ import { ResourcesSearch } from "@/components/sections/resources-search";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { StoryIllustration } from "@/components/illustrations";
+import Image from "next/image";
 
 const flattenedResources = resourceCategories.flatMap((category) =>
   category.items.map((item) => ({
@@ -53,7 +53,13 @@ export default function ResourcesPage() {
           </div>
           <Card className="border border-slate-200 shadow-lg">
             <CardContent className="p-6 space-y-6">
-              <StoryIllustration type="growth" className="w-full" title="Resource planning illustration" />
+              <Image
+                src="/images/illustrations/resource-planning.png"
+                alt="Resource planning illustration"
+                width={500}
+                height={400}
+                className="w-full h-auto object-contain"
+              />
               <div className="space-y-4">
                 <div>
                   <p className="text-xs uppercase tracking-wide text-primary-600">Featured resources</p>

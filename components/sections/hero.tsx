@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, PlayCircle } from "lucide-react";
-import { CommunityConnectionIllustration } from "@/components/illustrations";
+
 import { DEFAULT_SIGNUP_URL } from "@/lib/constants";
 
 export function Hero() {
@@ -83,10 +83,22 @@ export function Hero() {
           <div className="relative rounded-2xl border border-slate-200/60 bg-white/50 backdrop-blur-sm p-2 shadow-2xl shadow-slate-200/50">
             <div className="absolute inset-x-0 -top-20 h-20 bg-gradient-to-b from-white to-transparent z-20" />
             <div className="aspect-[16/9] rounded-xl bg-slate-50 overflow-hidden border border-slate-100 relative group">
-              <CommunityConnectionIllustration
-                className="w-full h-full object-cover opacity-90 transition-opacity duration-500 group-hover:opacity-100"
-                title="Relius Dashboard Interface"
-              />
+              <div className="w-full h-full bg-slate-900 flex items-center justify-center group cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-950" />
+
+                {/* Play Button */}
+                <div className="relative z-10 flex items-center justify-center w-20 h-20 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 shadow-2xl transition-transform duration-300 group-hover:scale-110">
+                  <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-inner">
+                    <PlayCircle className="w-8 h-8 text-accent-600 ml-1" fill="currentColor" />
+                  </div>
+                </div>
+
+                {/* Overlay Text */}
+                <div className="absolute bottom-6 left-6 right-6 z-10">
+                  <p className="text-white font-medium text-lg">See how Relius works</p>
+                  <p className="text-slate-400 text-sm">2:45 min walkthrough</p>
+                </div>
+              </div>
 
               {/* Floating Cards */}
               <div className="absolute bottom-8 left-8 bg-white/95 backdrop-blur-md border border-white/20 rounded-xl p-5 shadow-lg animate-float hidden md:block hover:scale-105 transition-transform duration-300 cursor-default">

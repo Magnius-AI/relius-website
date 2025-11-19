@@ -2,10 +2,10 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import type { Story, StoryFilterOptions } from "@/data/stories";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { StoryIllustration } from "@/components/illustrations";
 
 type StoriesFilterGridProps = {
   stories: Story[];
@@ -90,7 +90,13 @@ export function StoriesFilterGrid({ stories, filters }: StoriesFilterGridProps) 
       {filteredStories.length === 0 ? (
         <div className="rounded-3xl border border-slate-200 bg-white p-10 text-center space-y-6">
           <div className="max-w-sm mx-auto">
-            <StoryIllustration type="care" title="No stories illustration" />
+            <Image
+              src="/images/illustrations/story-placeholder.png"
+              alt="No stories illustration"
+              width={200}
+              height={150}
+              className="mx-auto opacity-50"
+            />
           </div>
           <p className="text-lg font-semibold text-slate-900">No stories match those filters yet.</p>
           <p className="text-slate-600">Try a different combination or share the kind of story you would like to see.</p>
@@ -112,7 +118,13 @@ export function StoriesFilterGrid({ stories, filters }: StoriesFilterGridProps) 
                 </div>
 
                 <div className="h-32">
-                  <StoryIllustration type={story.illustration} title={`${story.church} story illustration`} className="h-full w-full" />
+                  <Image
+                    src="/images/illustrations/story-placeholder.png"
+                    alt={`${story.church} story illustration`}
+                    width={400}
+                    height={300}
+                    className="h-full w-full object-cover"
+                  />
                 </div>
 
                 <div className="space-y-3 flex-1">

@@ -3,11 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import {
-  WorshipCelebrationIllustration,
-  VolunteerCoordinationIllustration,
-  GrowthPlanningIllustration,
-} from "@/components/illustrations";
+import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 import { coreFeatures, aiFeatures } from "@/data/features";
 
@@ -46,7 +42,13 @@ export default function FeaturesPage() {
           </div>
           <div className="bg-white border border-slate-200 rounded-3xl shadow-xl p-6 relative overflow-hidden">
             <div className="absolute inset-x-10 top-8 h-32 bg-primary-50/40 rounded-full blur-3xl pointer-events-none" aria-hidden="true" />
-            <WorshipCelebrationIllustration className="relative z-10 w-full" title="Coordinated worship services" />
+            <Image
+              src="/images/illustrations/worship-celebration.png"
+              alt="Coordinated worship services"
+              width={600}
+              height={400}
+              className="relative z-10 w-full h-auto object-contain"
+            />
             <div className="relative z-10 mt-6 grid gap-4">
               <div className="rounded-2xl border border-slate-200 bg-white/90 backdrop-blur-sm px-4 py-3 flex items-center justify-between">
                 <div>
@@ -67,7 +69,13 @@ export default function FeaturesPage() {
         <div className="mb-24">
           <div className="flex items-center gap-5 mb-12">
             <div className="hidden md:block w-32">
-              <VolunteerCoordinationIllustration className="h-24 w-full" title="Volunteer coordination illustration" />
+              <Image
+                src="/images/illustrations/ministry-essentials-v2.png"
+                alt="Ministry essentials illustration"
+                width={128}
+                height={96}
+                className="h-24 w-full object-contain"
+              />
             </div>
             <div>
               <p className="text-sm font-semibold uppercase tracking-wide text-primary-600 mb-2">Core workflows</p>
@@ -113,13 +121,19 @@ export default function FeaturesPage() {
           <div className="flex flex-col gap-6 mb-12 lg:flex-row lg:items-center lg:justify-between">
             <div className="flex items-center gap-5">
               <div className="hidden md:block w-32">
-                <GrowthPlanningIllustration className="h-24 w-full" title="Planning illustration" />
+                <Image
+                  src="/images/illustrations/ai-features-v2.png"
+                  alt="AI features illustration"
+                  width={128}
+                  height={96}
+                  className="h-24 w-full object-contain"
+                />
               </div>
               <div>
                 <p className="text-sm font-semibold uppercase tracking-wide text-primary-600 mb-2">Optional helpers</p>
                 <div className="flex items-center gap-3">
                   <h2 id="ai" className="text-3xl font-bold text-slate-900">Work smarter with AI</h2>
-                  <Badge variant="default" className="text-xs">Optional Add-on</Badge>
+                  <Badge variant="default" className="text-xs whitespace-nowrap self-center">Optional Add-on</Badge>
                 </div>
               </div>
             </div>
