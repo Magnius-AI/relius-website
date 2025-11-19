@@ -15,7 +15,11 @@
       "Bash(netstat:*)",
       "Bash(findstr:*)",
       "Bash(if exist .next rmdir /s /q .next)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(where.exe:*)",
+      "Bash(Get-Alias gemini -ErrorAction SilentlyContinue)",
+      "Bash(powershell:*)",
+      "Bash(echo:*)"
     ],
     "deny": [],
     "ask": []

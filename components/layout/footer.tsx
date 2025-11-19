@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Facebook, Twitter, Linkedin, Youtube } from "lucide-react";
+import { Facebook, Twitter, Linkedin, Youtube, Heart } from "lucide-react";
 
 export function Footer() {
   const footerLinks = {
@@ -15,6 +15,7 @@ export function Footer() {
       { name: "About", href: "/about" },
       { name: "Contact", href: "/contact" },
       { name: "Book a Demo", href: "/contact" },
+      { name: "Careers", href: "/careers" },
     ],
     resources: [
       { name: "Stories", href: "/stories" },
@@ -26,6 +27,7 @@ export function Footer() {
     legal: [
       { name: "Privacy Policy", href: "/privacy" },
       { name: "Terms of Service", href: "/terms" },
+      { name: "Cookie Policy", href: "/cookies" },
     ],
   };
 
@@ -38,32 +40,33 @@ export function Footer() {
 
   return (
     <footer className="bg-slate-50 text-slate-900 border-t border-slate-200">
-      <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-5">
-          <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-3 group">
-              <div className="p-2 rounded-xl bg-primary-100 transition-all group-hover:shadow-glow">
+      <div className="container-width py-12 lg:py-16">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
+          {/* Brand Column */}
+          <div className="lg:col-span-4 space-y-6">
+            <Link href="/" className="flex items-center gap-3 group w-fit">
+              <div className="p-2 rounded-xl bg-white border border-slate-100 shadow-sm transition-all group-hover:shadow-md group-hover:border-primary-100">
                 <Image
                   src="/relius_emblem_circle.png"
                   alt="Relius Emblem"
-                  width={48}
-                  height={48}
-                  className="transition-transform group-hover:scale-105 drop-shadow-sm"
+                  width={40}
+                  height={40}
+                  className="transition-transform group-hover:scale-105"
                 />
               </div>
-              <span className="text-xl font-bold text-slate-900">Relius</span>
+              <span className="text-xl font-bold text-slate-900 tracking-tight">Relius</span>
             </Link>
-            <p className="text-sm text-slate-600 leading-relaxed">
+            <p className="text-sm text-slate-600 leading-relaxed max-w-xs">
               The modern Church Management System with built-in AI. Empowering churches to focus on people, not paperwork.
             </p>
-            <div className="flex gap-3">
+            <div className="flex gap-4">
               {socialLinks.map((item) => {
                 const Icon = item.icon;
                 return (
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="text-slate-600 hover:text-primary focus-visible:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2 transition-colors"
+                    className="text-slate-400 hover:text-primary transition-colors p-2 hover:bg-white rounded-full hover:shadow-sm"
                     aria-label={item.name}
                   >
                     <Icon className="h-5 w-5" />
@@ -73,75 +76,80 @@ export function Footer() {
             </div>
           </div>
 
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-900 mb-3">Product</h3>
-            <ul className="space-y-2.5">
-              {footerLinks.product.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-slate-600 hover:text-primary focus-visible:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2 transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Links Columns */}
+          <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div>
+              <h3 className="text-sm font-semibold text-slate-900 mb-4">Product</h3>
+              <ul className="space-y-3">
+                {footerLinks.product.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-slate-600 hover:text-primary transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-900 mb-3">Company</h3>
-            <ul className="space-y-2.5">
-              {footerLinks.company.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-slate-600 hover:text-primary focus-visible:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2 transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+            <div>
+              <h3 className="text-sm font-semibold text-slate-900 mb-4">Company</h3>
+              <ul className="space-y-3">
+                {footerLinks.company.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-slate-600 hover:text-primary transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-900 mb-3">Resources</h3>
-            <ul className="space-y-2.5">
-              {footerLinks.resources.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-slate-600 hover:text-primary focus-visible:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2 transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+            <div>
+              <h3 className="text-sm font-semibold text-slate-900 mb-4">Resources</h3>
+              <ul className="space-y-3">
+                {footerLinks.resources.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-slate-600 hover:text-primary transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-900 mb-3">Legal</h3>
-            <ul className="space-y-2.5">
-              {footerLinks.legal.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-slate-600 hover:text-primary focus-visible:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2 transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <div>
+              <h3 className="text-sm font-semibold text-slate-900 mb-4">Legal</h3>
+              <ul className="space-y-3">
+                {footerLinks.legal.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-slate-600 hover:text-primary transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 
-        <div className="mt-12 border-t border-slate-200 pt-6 space-y-2 text-center">
-          <p className="text-sm font-semibold text-slate-600">Made for churches by people who care.</p>
-          <p className="text-xs text-slate-500">
+        <div className="mt-16 border-t border-slate-200 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-slate-500">
             &copy; {new Date().getFullYear()} Relius. All rights reserved.
+          </p>
+          <p className="text-sm text-slate-500 flex items-center gap-1">
+            Made with <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500" /> for the Kingdom
           </p>
         </div>
       </div>

@@ -1,0 +1,58 @@
+import { Users, Calendar, DollarSign, UserCheck, ClipboardCheck, Sparkles } from "lucide-react";
+
+export const pillars = [
+  {
+    icon: Users,
+    title: "People & Groups",
+    description: "One directory. Rich profiles. Clear timelines.",
+    href: "/features#people",
+    color: "text-blue-500",
+    bg: "bg-blue-50",
+    hoverBg: "group-hover:bg-blue-500",
+  },
+  {
+    icon: Calendar,
+    title: "Events & Calendar",
+    description: "Plan once, avoid conflicts, keep everyone in the loop.",
+    href: "/features#events",
+    color: "text-purple-500",
+    bg: "bg-purple-50",
+    hoverBg: "group-hover:bg-purple-500",
+  },
+  {
+    icon: DollarSign,
+    title: "Giving & Donors",
+    description: "Understand trends, thank faster, grow generosity.",
+    href: "/features#giving",
+    color: "text-emerald-500",
+    bg: "bg-emerald-50",
+    hoverBg: "group-hover:bg-emerald-500",
+  },
+  {
+    icon: UserCheck,
+    title: "Volunteers & Services",
+    description: "Right people, right roles, right times.",
+    href: "/features#volunteers",
+    color: "text-amber-500",
+    bg: "bg-amber-50",
+    hoverBg: "group-hover:bg-amber-500",
+  },
+  {
+    icon: ClipboardCheck,
+    title: "Check-ins & Attendance",
+    description: "Secure, fast, and kid-friendly.",
+    href: "/features#checkins",
+    color: "text-rose-500",
+    bg: "bg-rose-50",
+    hoverBg: "group-hover:bg-rose-500",
+  },
+  {
+    icon: Sparkles,
+    title: "AI Studio",
+    description: "Draft sermons, repurpose content, care at scale.",
+    href: "/features#ai",
+    color: "text-indigo-500",
+    bg: "bg-indigo-50",
+    hoverBg: "group-hover:bg-indigo-500",
+  },
+];

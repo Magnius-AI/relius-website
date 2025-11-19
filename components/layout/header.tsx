@@ -1,126 +1,164 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { Menu, X, ArrowRight } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
-import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { AUTH_URLS, DEFAULT_SIGNUP_URL } from "@/lib/constants";
+import { DEFAULT_SIGNUP_URL } from "@/lib/constants";
+
+const navigation = [
+  { name: "Features", href: "/features" },
+  { name: "AI", href: "/ai" },
+  { name: "Pricing", href: "/pricing" },
+  { name: "Resources", href: "/resources" },
+  { name: "Blog", href: "/blog" },
+];
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
 
-  const navigation = [
-    { name: "How It Works", href: "/features" },
-    { name: "Pricing", href: "/pricing" },
-    { name: "Stories", href: "/stories" },
-    { name: "Resources", href: "/resources" },
-    { name: "Blog", href: "/blog" },
-    { name: "About", href: "/about" },
-  ];
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/95 backdrop-blur-sm shadow-sm">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+    <header
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled
+          ? "bg-white/80 backdrop-blur-md border-b border-white/20 shadow-sm"
+          : "bg-transparent"
+        }`}
+    >
+      <nav
+        className="container-width flex items-center justify-between py-4"
+        aria-label="Global"
+      >
         <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3 group">
-            <div className="p-2 rounded-xl bg-primary-50 transition-all group-hover:bg-primary-100">
+          <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2 group">
+            <div className="relative w-8 h-8 transition-transform duration-300 group-hover:scale-110">
               <Image
                 src="/relius_emblem_circle.png"
-                alt="Relius Emblem"
-                width={40}
-                height={40}
-                className="transition-transform group-hover:scale-105"
+                alt="Relius Logo"
+                fill
+                className="object-contain"
               />
             </div>
-            <span className="text-xl font-bold text-slate-900">Relius</span>
+            <span className="text-xl font-bold text-primary tracking-tight">
+              Relius
+            </span>
           </Link>
         </div>
-
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-expanded={mobileMenuOpen}
-            aria-controls="mobile-menu"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-secondary hover:text-primary transition-colors"
+            onClick={() => setMobileMenuOpen(true)}
           >
-            <span className="sr-only">Toggle menu</span>
-            {mobileMenuOpen ? (
-              <X className="h-6 w-6" aria-hidden="true" />
-            ) : (
-              <Menu className="h-6 w-6" aria-hidden="true" />
-            )}
+            <span className="sr-only">Open main menu</span>
+            <Menu className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-
-        <div className="hidden lg:flex lg:gap-x-7">
-          {navigation.map((item) => {
-            const isActive = pathname === item.href;
-            return (
-              <Link
-                key={item.name}
-                href={item.href}
-                aria-current={isActive ? "page" : undefined}
-                className={cn(
-                  "text-sm font-semibold leading-6 hover:text-primary focus-visible:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-4 transition-all duration-200 relative group rounded-sm",
-                  isActive ? "text-primary" : "text-slate-700"
-                )}
-              >
-                {item.name}
-                <span className={cn(
-                  "absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-200",
-                  isActive ? "w-full" : "w-0 group-hover:w-full group-focus-visible:w-full"
-                )}></span>
-              </Link>
-            );
-          })}
+        <div className="hidden lg:flex lg:gap-x-8">
+          {navigation.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              className="text-sm font-medium leading-6 text-secondary hover:text-accent transition-colors relative group"
+            >
+              {item.name}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
+            </Link>
+          ))}
         </div>
-
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
-          <Button variant="secondary" size="md" asChild>
-            <a href={AUTH_URLS.LOGIN}>Login</a>
-          </Button>
-          <Button variant="gradient" size="md" asChild>
-            <a href={DEFAULT_SIGNUP_URL}>Get Started</a>
-          </Button>
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-6 items-center">
+          <Link
+            href="https://platform.relius.ai"
+            className="text-sm font-semibold leading-6 text-primary hover:text-accent transition-colors"
+          >
+            Log in
+          </Link>
+          <Link
+            href={DEFAULT_SIGNUP_URL}
+            className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-lg hover:bg-accent hover:shadow-accent/25 transition-all duration-300 flex items-center gap-2 group"
+          >
+            Get started
+            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+          </Link>
         </div>
       </nav>
 
-      {mobileMenuOpen && (
-        <div id="mobile-menu" role="navigation" className="lg:hidden bg-white">
-          <div className="space-y-1 px-6 pb-4 pt-2">
-            {navigation.map((item) => {
-              const isActive = pathname === item.href;
-              return (
+      {/* Mobile menu */}
+      <div
+        className={`lg:hidden fixed inset-0 z-50 ${mobileMenuOpen ? "pointer-events-auto" : "pointer-events-none"
+          }`}
+      >
+        <div
+          className={`fixed inset-0 bg-primary/20 backdrop-blur-sm transition-opacity duration-300 ${mobileMenuOpen ? "opacity-100" : "opacity-0"
+            }`}
+          onClick={() => setMobileMenuOpen(false)}
+        />
+        <div
+          className={`fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+            }`}
+        >
+          <div className="flex items-center justify-between">
+            <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
+              <div className="relative w-8 h-8">
+                <Image
+                  src="/relius_emblem_circle.png"
+                  alt="Relius Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <span className="text-xl font-bold text-primary">Relius</span>
+            </Link>
+            <button
+              type="button"
+              className="-m-2.5 rounded-md p-2.5 text-secondary hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <span className="sr-only">Close menu</span>
+              <X className="h-6 w-6" aria-hidden="true" />
+            </button>
+          </div>
+          <div className="mt-6 flow-root">
+            <div className="-my-6 divide-y divide-gray-500/10">
+              <div className="space-y-2 py-6">
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary hover:bg-gray-50 hover:text-accent transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+              <div className="py-6 space-y-4">
                 <Link
-                  key={item.name}
-                  href={item.href}
-                  aria-current={isActive ? "page" : undefined}
-                  className={cn(
-                    "block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-primary-50 hover:text-primary focus-visible:bg-primary-50 focus-visible:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary transition-all",
-                    isActive ? "bg-primary-50 text-primary" : "text-slate-700"
-                  )}
-                  onClick={() => setMobileMenuOpen(false)}
+                  href="https://platform.relius.ai"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-primary hover:bg-gray-50 hover:text-accent transition-colors"
                 >
-                  {item.name}
+                  Log in
                 </Link>
-              );
-            })}
-            <div className="pt-3 space-y-2">
-              <Button variant="secondary" size="md" className="w-full" asChild>
-                <a href={AUTH_URLS.LOGIN}>Login</a>
-              </Button>
-              <Button variant="gradient" size="md" className="w-full" asChild>
-                <a href={DEFAULT_SIGNUP_URL}>Get Started</a>
-              </Button>
+                <Link
+                  href={DEFAULT_SIGNUP_URL}
+                  className="flex items-center justify-center gap-2 w-full rounded-full bg-primary px-3 py-3 text-base font-semibold text-white shadow-sm hover:bg-accent transition-colors"
+                >
+                  Get started
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
-      )}
+      </div>
     </header>
   );
 }

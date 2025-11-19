@@ -1,83 +1,51 @@
 import Link from "next/link";
-import { Users, Calendar, DollarSign, UserCheck, ClipboardCheck, Sparkles } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
-import { DecorativeOrb } from "@/components/ui/decorative-orb";
+import { Card, CardContent } from "@/components/ui/card";
+import { pillars } from "@/data/pillars";
 
 export function ProductPillars() {
-  const pillars = [
-    {
-      icon: Users,
-      title: "People & Groups",
-      description: "One directory. Rich profiles. Clear timelines.",
-      href: "/features#people",
-    },
-    {
-      icon: Calendar,
-      title: "Events & Calendar",
-      description: "Plan once, avoid conflicts, keep everyone in the loop.",
-      href: "/features#events",
-    },
-    {
-      icon: DollarSign,
-      title: "Giving & Donors",
-      description: "Understand trends, thank faster, grow generosity.",
-      href: "/features#giving",
-    },
-    {
-      icon: UserCheck,
-      title: "Volunteers & Services",
-      description: "Right people, right roles, right times.",
-      href: "/features#volunteers",
-    },
-    {
-      icon: ClipboardCheck,
-      title: "Check-ins & Attendance",
-      description: "Secure, fast, and kid-friendly.",
-      href: "/features#checkins",
-    },
-    {
-      icon: Sparkles,
-      title: "AI Studio",
-      description: "Draft sermons, repurpose content, care at scale.",
-      href: "/features#ai",
-    },
-  ];
 
   return (
-    <section id="features" className="py-20 px-6 lg:px-8 bg-white relative overflow-hidden">
-      {/* Minimal decoration */}
-      <div className="absolute inset-0 bg-pattern-grid opacity-5" />
+    <section id="features" className="py-24 px-6 lg:px-8 bg-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-pattern-grid opacity-[0.03]" />
 
-      {/* Single subtle decorative accent */}
-      <DecorativeOrb variant="primary" position="top-right" size="sm" animate />
-
-      <div className="mx-auto max-w-7xl relative z-10">
-        <div className="text-center mb-14">
-          <h2 className="text-balance mb-4 text-slate-900 text-3xl md:text-4xl font-bold">How Relius helps your church</h2>
+      <div className="container-width relative z-10">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-sm font-medium mb-6">
+            <span className="relative flex h-2 w-2">
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-slate-400"></span>
+            </span>
+            Core Features
+          </div>
+          <h2 className="text-balance mb-6 text-slate-900 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
+            How Relius helps <span className="text-gradient">your church</span>
+          </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            Six key areas working together, so you can spend less time on logistics and more time on what really matters
+            Six key areas working together, so you can spend less time on logistics and more time on what really matters.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {pillars.map((pillar) => {
             const Icon = pillar.icon;
             return (
-              <Link key={pillar.title} href={pillar.href} className="focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-4 rounded-xl">
-                <Card className="h-full border border-slate-200 hover:border-primary hover:shadow-md focus-within:border-primary focus-within:shadow-md transition-all duration-200 group cursor-pointer bg-white">
-                  <CardHeader>
-                    <div className="mb-3 inline-flex items-center justify-center w-11 h-11 rounded-lg bg-primary-50 group-hover:bg-primary group-hover:text-white group-focus-within:bg-primary group-focus-within:text-white transition-colors">
-                      <Icon className="w-5 h-5" />
+              <Link key={pillar.title} href={pillar.href} className="group block h-full">
+                <Card className="h-full border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white overflow-hidden relative">
+                  <div className={`absolute top-0 left-0 w-1 h-full ${pillar.bg.replace('bg-', 'bg-gradient-to-b from-')} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
+                  <CardContent className="p-8">
+                    <div className={`mb-6 inline-flex items-center justify-center w-14 h-14 rounded-2xl ${pillar.bg} ${pillar.hoverBg} group-hover:text-white transition-all duration-300`}>
+                      <Icon className={`w-7 h-7 ${pillar.color} group-hover:text-white transition-colors duration-300`} />
                     </div>
-                    <CardTitle className="flex items-center justify-between text-lg">
-                      {pillar.title}
-                      <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-primary group-hover:translate-x-1 group-focus-within:text-primary group-focus-within:translate-x-1 transition-all" aria-hidden="true" />
-                    </CardTitle>
-                    <CardDescription className="text-sm text-slate-600">
+                    <div className="flex items-center justify-between mb-3">
+                      <h3 className="text-xl font-bold text-slate-900 group-hover:text-primary transition-colors">
+                        {pillar.title}
+                      </h3>
+                      <ArrowRight className="w-5 h-5 text-slate-300 group-hover:text-primary group-hover:translate-x-1 transition-all duration-300 opacity-0 group-hover:opacity-100" />
+                    </div>
+                    <p className="text-slate-600 leading-relaxed">
                       {pillar.description}
-                    </CardDescription>
-                  </CardHeader>
+                    </p>
+                  </CardContent>
                 </Card>
               </Link>
             );

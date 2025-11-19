@@ -19,19 +19,18 @@ export function FinalCta() {
             Join churches that are spending less time managing software and more time caring for people. See how Relius can serve your ministry.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="gradient" size="lg" asChild className="group shadow-lg">
-              <Link href="/contact">
-                Schedule a Conversation
+            <Button variant="accent" size="lg" asChild className="group shadow-lg">
+              <a href={DEFAULT_SIGNUP_URL}>
+                Join the Beta
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Link>
+              </a>
             </Button>
             <Button
-              variant="secondary"
+              variant="outline"
               size="lg"
               asChild
-              className="border-2 border-slate-200 text-slate-700 hover:bg-slate-50"
             >
-              <a href={DEFAULT_SIGNUP_URL}>Join the Beta</a>
+              <Link href="/contact">Schedule a Conversation</Link>
             </Button>
           </div>
           <p className="text-sm text-slate-500 mt-6">

@@ -1,76 +1,54 @@
 import Link from "next/link";
-import { FileText, Newspaper, Languages, Heart, TrendingUp, BarChart3 } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Sparkles, ArrowRight } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { DecorativeOrb } from "@/components/ui/decorative-orb";
+import { aiFeaturesSummary } from "@/data/features";
 
 export function AiDifference() {
-  const aiFeatures = [
-    {
-      icon: FileText,
-      title: "Sermon Generator",
-      description: "Draft sermons in your voice from scripture, topic, or style inputs.",
-    },
-    {
-      icon: Newspaper,
-      title: "Content Studio",
-      description: "Turn messages into emails, social posts, studies, and devotionals instantly.",
-    },
-    {
-      icon: Languages,
-      title: "Translation Console",
-      description: "Live captions in 50+ languages with QR access for your congregation.",
-    },
-    {
-      icon: Heart,
-      title: "Pastoral Care AI",
-      description: "Spot needs earlier with sentiment analysis and automated follow-ups.",
-    },
-    {
-      icon: TrendingUp,
-      title: "Donations Manager",
-      description: "Forecast giving, identify retention risks, and optimize engagement.",
-    },
-    {
-      icon: BarChart3,
-      title: "AI Insights Dashboard",
-      description: "Predict attendance, optimize volunteers, and get actionable recommendations.",
-    },
-  ];
 
   return (
-    <section className="py-20 px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
-      {/* Minimal decoration */}
-      <div className="absolute inset-0 bg-pattern-dots opacity-10" />
-
-      {/* Single subtle decorative accent */}
-      <DecorativeOrb variant="accent" position="bottom-left" size="sm" animate />
+    <section className="py-24 px-6 lg:px-8 bg-slate-950 relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-accent-500/20 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="mx-auto max-w-7xl relative z-10">
-        <div className="text-center mb-14">
-          <Badge variant="default" className="mb-4 text-xs font-medium">
-            Work Smarter
-          </Badge>
-          <h2 className="text-balance mb-4 text-slate-900 text-3xl md:text-4xl font-bold">AI that helps, not hinders</h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-accent-300 text-sm font-medium mb-6 backdrop-blur-sm">
+            <Sparkles className="w-4 h-4" />
+            <span className="bg-gradient-to-r from-accent-300 to-white bg-clip-text text-transparent">
+              Powered by Advanced AI
+            </span>
+          </div>
+
+          <h2 className="text-balance mb-6 text-white text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
+            AI that helps, <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-cyan-300">not hinders</span>
+          </h2>
+
+          <p className="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
             Save hours every week with thoughtful AI assistance. From drafting sermons to spotting care needs, Relius handles the heavy lifting so you can focus on people.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
-          {aiFeatures.map((feature) => {
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          {aiFeaturesSummary.map((feature) => {
             const Icon = feature.icon;
             return (
-              <Card key={feature.title} className="border border-slate-200 hover:border-primary hover:shadow-md transition-all duration-200">
-                <CardHeader>
-                  <div className="mb-3 inline-flex items-center justify-center w-10 h-10 rounded-lg bg-accent-50">
-                    <Icon className="w-5 h-5 text-accent-700" />
+              <Card key={feature.title} className="group bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden relative">
+                <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+
+                <CardContent className="p-8 relative z-10">
+                  <div className={`mb-6 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br ${feature.gradient} shadow-lg shadow-black/20 group-hover:scale-110 transition-transform duration-300`}>
+                    <Icon className="w-6 h-6 text-white" />
                   </div>
-                  <CardTitle className="text-base">{feature.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-slate-600 text-sm">{feature.description}</p>
+
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent-300 transition-colors">
+                    {feature.title}
+                  </h3>
+
+                  <p className="text-slate-400 leading-relaxed text-sm group-hover:text-slate-300 transition-colors">
+                    {feature.description}
+                  </p>
                 </CardContent>
               </Card>
             );
@@ -78,8 +56,15 @@ export function AiDifference() {
         </div>
 
         <div className="text-center">
-          <Button variant="primary" size="lg" asChild>
-            <Link href="/ai">See How It Works</Link>
+          <Button
+            size="lg"
+            className="bg-white text-slate-950 hover:bg-accent-50 hover:text-accent-900 font-semibold h-12 px-8 rounded-full transition-all duration-300 shadow-lg shadow-white/10 hover:shadow-white/20 group"
+            asChild
+          >
+            <Link href="/ai" className="flex items-center gap-2">
+              See How It Works
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </Link>
           </Button>
         </div>
       </div>
