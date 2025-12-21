@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Facebook, Twitter, Linkedin, Youtube, Heart } from "lucide-react";
+import { Facebook, Twitter, Linkedin, Youtube } from "lucide-react";
 
 export function Footer() {
   const footerLinks = {
@@ -146,12 +146,9 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 border-t border-slate-200 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="mt-16 border-t border-slate-200 pt-8 flex items-center justify-center">
           <p className="text-sm text-slate-500">
             &copy; {new Date().getFullYear()} Relius. All rights reserved.
-          </p>
-          <p className="text-sm text-slate-500 flex items-center gap-1">
-            Made with <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500" /> for the Kingdom
           </p>
         </div>
       </div>
