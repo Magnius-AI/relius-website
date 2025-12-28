@@ -266,7 +266,7 @@ export default function PricingPage() {
                       {tier.name === "Enterprise" ? (
                         <Link href="/contact">Contact Us</Link>
                       ) : (
-                        <a href={tier.name === "Basic" ? CHECKOUT_URLS.BASIC_MONTHLY : CHECKOUT_URLS.PRO_MONTHLY}>
+                        <a href={CHECKOUT_URLS.DEFAULT}>
                           Get Started
                         </a>
                       )}
@@ -329,7 +329,7 @@ export default function PricingPage() {
                       {tier.name === "Enterprise" ? (
                         <Link href="/contact">Contact Us</Link>
                       ) : (
-                        <a href={tier.name === "Basic" ? CHECKOUT_URLS.BASIC_ANNUAL : CHECKOUT_URLS.PRO_ANNUAL}>
+                        <a href={CHECKOUT_URLS.DEFAULT}>
                           Get Started
                         </a>
                       )}
