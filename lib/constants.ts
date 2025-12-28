@@ -1,5 +1,5 @@
 // Platform URLs
-export const PLATFORM_BASE_URL = "https://platform.relius.ai";
+export const PLATFORM_BASE_URL = "https://app.relius.ai";
 
 // Authentication URLs
 export const AUTH_URLS = {

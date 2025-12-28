@@ -78,7 +78,7 @@ export function Header() {
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-6 items-center">
           <Link
-            href="https://platform.relius.ai"
+            href="https://app.relius.ai"
             className="text-sm font-semibold leading-6 text-primary hover:text-accent transition-colors"
           >
             Log in
@@ -144,7 +144,7 @@ export function Header() {
               </div>
               <div className="py-6 space-y-4">
                 <Link
-                  href="https://platform.relius.ai"
+                  href="https://app.relius.ai"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-primary hover:bg-gray-50 hover:text-accent transition-colors"
                 >
                   Log in
