@@ -194,7 +194,7 @@ export default function PricingPage() {
         <div className="mb-8 max-w-4xl mx-auto bg-emerald-50 border border-emerald-200 rounded-xl p-6 text-center">
           <p className="text-emerald-800 font-medium">
             Switching from another platform?{" "}
-            <Link href="/switch" className="underline hover:text-emerald-900">
+            <Link href="/switch/" className="underline hover:text-emerald-900">
               Get free migration assistance + 30-day extended trial
             </Link>
           </p>
@@ -264,7 +264,7 @@ export default function PricingPage() {
                       asChild
                     >
                       {tier.name === "Enterprise" ? (
-                        <Link href="/contact">Contact Us</Link>
+                        <Link href="/contact/">Contact Us</Link>
                       ) : (
                         <a href={CHECKOUT_URLS.DEFAULT}>
                           Get Started
@@ -327,7 +327,7 @@ export default function PricingPage() {
                       asChild
                     >
                       {tier.name === "Enterprise" ? (
-                        <Link href="/contact">Contact Us</Link>
+                        <Link href="/contact/">Contact Us</Link>
                       ) : (
                         <a href={CHECKOUT_URLS.DEFAULT}>
                           Get Started
@@ -450,10 +450,10 @@ export default function PricingPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="primary" size="lg" asChild>
-              <Link href="/contact">Talk to Us</Link>
+              <Link href="/contact/">Talk to Us</Link>
             </Button>
             <Button variant="secondary" size="lg" asChild>
-              <Link href="/features">See How It Works</Link>
+              <Link href="/features/">See How It Works</Link>
             </Button>
           </div>
           <p className="text-sm text-slate-500 mt-6">No pressure. We're here to help, not sell.</p>

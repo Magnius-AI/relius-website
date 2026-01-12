@@ -17,10 +17,10 @@ export default function NotFound() {
             <Link href="/">Back home</Link>
           </Button>
           <Button variant="secondary" asChild>
-            <Link href="/use-cases">Explore use cases</Link>
+            <Link href="/use-cases/">Explore use cases</Link>
           </Button>
           <Button variant="secondary" asChild>
-            <Link href="/resources">Resources hub</Link>
+            <Link href="/resources/">Resources hub</Link>
           </Button>
         </div>
       </div>

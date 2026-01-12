@@ -33,10 +33,10 @@ export default function FeaturesPage() {
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
               <Button variant="gradient" asChild>
-                <Link href="/contact">Walk through the platform</Link>
+                <Link href="/contact/">Walk through the platform</Link>
               </Button>
               <Button variant="secondary" asChild>
-                <Link href="/use-cases">See use cases</Link>
+                <Link href="/use-cases/">See use cases</Link>
               </Button>
             </div>
           </div>
@@ -169,10 +169,10 @@ export default function FeaturesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="primary" size="lg" asChild>
-              <Link href="/contact">Schedule a Conversation</Link>
+              <Link href="/contact/">Schedule a Conversation</Link>
             </Button>
             <Button variant="secondary" size="lg" asChild>
-              <Link href="/pricing">See Pricing</Link>
+              <Link href="/pricing/">See Pricing</Link>
             </Button>
           </div>
           <p className="text-sm text-slate-500 mt-6">No pressure, just answers.</p>

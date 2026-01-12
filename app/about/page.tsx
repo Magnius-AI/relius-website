@@ -164,10 +164,10 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="primary" size="lg" asChild>
-              <Link href="/contact">Schedule a Conversation</Link>
+              <Link href="/contact/">Schedule a Conversation</Link>
             </Button>
             <Button variant="secondary" size="lg" asChild>
-              <Link href="/features">See How It Works</Link>
+              <Link href="/features/">See How It Works</Link>
             </Button>
           </div>
           <p className="text-sm text-slate-500 mt-6">No sales pitch-just an honest conversation about how we can help.</p>

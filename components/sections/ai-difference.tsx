@@ -61,7 +61,7 @@ export function AiDifference() {
             className="bg-white text-slate-950 hover:bg-accent-50 hover:text-accent-900 font-semibold h-12 px-8 rounded-full transition-all duration-300 shadow-lg shadow-white/10 hover:shadow-white/20 group"
             asChild
           >
-            <Link href="/ai" className="flex items-center gap-2">
+            <Link href="/ai/" className="flex items-center gap-2">
               See How It Works
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>

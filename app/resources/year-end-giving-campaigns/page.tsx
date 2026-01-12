@@ -154,7 +154,7 @@ Pastor [Name]`}
                     Relius handles the receipts, reports, and statements so you can focus on the vision.
                 </p>
                 <Link
-                    href="/get-started"
+                    href="/pricing/"
                     className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
                 >
                     Start free trial

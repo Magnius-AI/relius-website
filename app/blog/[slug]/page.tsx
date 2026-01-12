@@ -115,10 +115,10 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="gradient" size="lg" asChild>
-                <Link href="/contact">Start a conversation</Link>
+                <Link href="/contact/">Start a conversation</Link>
               </Button>
               <Button variant="secondary" size="lg" asChild>
-                <Link href="/use-cases">Explore use cases</Link>
+                <Link href="/use-cases/">Explore use cases</Link>
               </Button>
             </div>
           </CardContent>

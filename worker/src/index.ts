@@ -247,23 +247,42 @@ async function sendEmail(
   data: ContactFormData,
   env: Env
 ): Promise<{ success: boolean; error?: string }> {
+  const emailPayload = {
+    from: env.FROM_EMAIL,
+    to: [env.TO_EMAIL],
+    reply_to: data.email,
+    subject: `Demo Request: ${data.church} (${data.memberSize} members)`,
+    html: formatEmailHtml(data),
+    text: formatEmailText(data),
+  };
+
+  console.log("Sending email with payload:", JSON.stringify({
+    from: emailPayload.from,
+    to: emailPayload.to,
+    reply_to: emailPayload.reply_to,
+    subject: emailPayload.subject,
+  }));
+
   const response = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
       Authorization: `Bearer ${env.RESEND_API_KEY}`,
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({
-      from: env.FROM_EMAIL,
-      to: [env.TO_EMAIL],
-      reply_to: data.email,
-      subject: `Demo Request: ${data.church} (${data.memberSize} members)`,
-      html: formatEmailHtml(data),
-      text: formatEmailText(data),
-    }),
+    body: JSON.stringify(emailPayload),
   });
 
-  const result: ResendResponse = await response.json();
+  const responseText = await response.text();
+  console.log("Resend API response status:", response.status);
+  console.log("Resend API response body:", responseText);
+
+  let result: ResendResponse;
+  try {
+    result = JSON.parse(responseText);
+  } catch {
+    console.error("Failed to parse Resend response:", responseText);
+    return { success: false, error: "Invalid response from email service" };
+  }
 
   if (!response.ok || result.error) {
     console.error("Resend API error:", result.error);
@@ -273,6 +292,7 @@ async function sendEmail(
     };
   }
 
+  console.log("Email sent successfully, ID:", result.id);
   return { success: true };
 }
 

@@ -38,7 +38,7 @@ export default async function UseCaseDetailPage({ params }: { params: Promise<{ 
     <div className="py-16 px-6 lg:px-8 bg-gradient-to-b from-white to-slate-50">
       <div className="mx-auto max-w-4xl space-y-12">
         <Link
-          href="/use-cases"
+          href="/use-cases/"
           className="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-primary-700 transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
@@ -130,10 +130,10 @@ export default async function UseCaseDetailPage({ params }: { params: Promise<{ 
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="gradient" size="lg" asChild>
-                <Link href="/contact">Schedule a Demo</Link>
+                <Link href="/contact/">Schedule a Demo</Link>
               </Button>
               <Button variant="secondary" size="lg" asChild>
-                <Link href="/features">Explore All Features</Link>
+                <Link href="/features/">Explore All Features</Link>
               </Button>
             </div>
           </CardContent>

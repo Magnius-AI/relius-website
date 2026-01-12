@@ -163,7 +163,7 @@ export default function AiInMinistryPage() {
                     See how Relius AI can save your team 10+ hours a week.
                 </p>
                 <Link
-                    href="/get-started"
+                    href="/pricing/"
                     className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
                 >
                     Explore AI features

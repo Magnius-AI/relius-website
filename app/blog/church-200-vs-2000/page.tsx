@@ -157,7 +157,7 @@ export default function ChurchScalePage() {
                     Whether you are planting or multi-site, Relius scales with you.
                 </p>
                 <Link
-                    href="/pricing"
+                    href="/pricing/"
                     className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
                 >
                     See pricing plans

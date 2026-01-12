@@ -7,13 +7,13 @@ import Image from "next/image";
 import { DEFAULT_SIGNUP_URL } from "@/lib/constants";
 
 const navigation = [
-  { name: "Features", href: "/features" },
-  { name: "AI", href: "/ai" },
-  { name: "Pricing", href: "/pricing" },
-  { name: "Switch", href: "/switch" },
-  { name: "Use Cases", href: "/use-cases" },
-  { name: "Resources", href: "/resources" },
-  { name: "Blog", href: "/blog" },
+  { name: "Features", href: "/features/" },
+  { name: "AI", href: "/ai/" },
+  { name: "Pricing", href: "/pricing/" },
+  { name: "Switch", href: "/switch/" },
+  { name: "Use Cases", href: "/use-cases/" },
+  { name: "Resources", href: "/resources/" },
+  { name: "Blog", href: "/blog/" },
 ];
 
 export function Header() {

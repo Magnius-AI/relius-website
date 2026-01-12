@@ -30,7 +30,7 @@ export function FinalCta() {
               size="lg"
               asChild
             >
-              <Link href="/contact">Schedule a Conversation</Link>
+              <Link href="/contact/">Schedule a Conversation</Link>
             </Button>
           </div>
           <p className="text-sm text-slate-500 mt-6">

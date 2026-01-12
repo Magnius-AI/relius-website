@@ -20,7 +20,7 @@ export default function DocsPage() {
           Comprehensive guides and API documentation coming soon
         </p>
         <Button variant="primary" size="lg" asChild>
-          <Link href="/contact">Contact Us for Early Access</Link>
+          <Link href="/contact/">Contact Us for Early Access</Link>
         </Button>
       </div>
     </div>

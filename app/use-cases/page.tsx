@@ -30,10 +30,10 @@ export default function UseCasesPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Button variant="gradient" asChild>
-                <Link href="/contact">Schedule a Demo</Link>
+                <Link href="/contact/">Schedule a Demo</Link>
               </Button>
               <Button variant="secondary" asChild>
-                <Link href="/features">Explore Features</Link>
+                <Link href="/features/">Explore Features</Link>
               </Button>
             </div>
           </div>
@@ -117,10 +117,10 @@ export default function UseCasesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="gradient" size="lg" asChild>
-              <Link href="/contact">Schedule a Demo</Link>
+              <Link href="/contact/">Schedule a Demo</Link>
             </Button>
             <Button variant="secondary" size="lg" asChild>
-              <Link href="/features">Explore Features</Link>
+              <Link href="/features/">Explore Features</Link>
             </Button>
           </div>
           <p className="text-sm text-slate-500 mt-6">No pressure, no sales pitch - just an honest conversation.</p>

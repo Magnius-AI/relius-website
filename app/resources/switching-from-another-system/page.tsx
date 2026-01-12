@@ -203,14 +203,14 @@ export default function SwitchingSystemPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Link
-                        href="/get-started"
+                        href="/pricing/"
                         className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
                     >
                         Start free trial
                         <ArrowRight className="w-4 h-4" />
                     </Link>
                     <Link
-                        href="/contact"
+                        href="/contact/"
                         className="inline-flex items-center gap-2 bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 px-6 py-3 rounded-lg font-medium transition-colors"
                     >
                         Talk to migration expert

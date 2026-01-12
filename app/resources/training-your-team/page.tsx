@@ -169,7 +169,7 @@ export default function TrainingTeamPage() {
                     We offer live remote training sessions for church staffs.
                 </p>
                 <Link
-                    href="/contact"
+                    href="/contact/"
                     className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
                 >
                     Book a training session

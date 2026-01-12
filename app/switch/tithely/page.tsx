@@ -27,7 +27,7 @@ export default function TithelyMigrationPage() {
 
         <div className="container-width px-6 lg:px-8">
           <Link
-            href="/switch"
+            href="/switch/"
             className="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-accent-600 transition-colors mb-8"
           >
             <ArrowLeft className="h-4 w-4" />
@@ -280,7 +280,7 @@ export default function TithelyMigrationPage() {
                 size="lg"
                 asChild
               >
-                <Link href="/pricing">
+                <Link href="/pricing/">
                   View Pricing
                 </Link>
               </Button>

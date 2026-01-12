@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, RefreshCw, PlayCircle } from "lucide-react";
@@ -9,6 +10,18 @@ export function Hero() {
     <section className="relative overflow-hidden bg-white pt-32 pb-20 lg:pt-40 lg:pb-32">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-pattern-grid opacity-[0.03]" />
+
+      {/* Angel Halo Effect */}
+      <div className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-60 pointer-events-none mix-blend-multiply z-0">
+        <Image
+          src="/halo-effect-yellow.png"
+          alt="Angel Halo"
+          fill
+          className="object-contain animate-pulse-glow"
+          priority
+        />
+      </div>
+
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-gradient-radial-primary opacity-30 blur-3xl -z-10" />
       <div className="absolute top-20 right-0 w-96 h-96 bg-accent-100 rounded-full blur-3xl opacity-20 -z-10 animate-pulse-glow" />
       <div className="absolute bottom-0 left-0 w-72 h-72 bg-blue-100 rounded-full blur-3xl opacity-20 -z-10 animate-pulse-glow [animation-delay:1s]" />
@@ -24,7 +37,7 @@ export function Hero() {
           </div>
 
           <Link
-            href="/switch"
+            href="/switch/"
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-sm font-medium mb-8 animate-fade-in-up [animation-delay:100ms] hover:bg-emerald-100 transition-colors"
           >
             <RefreshCw className="h-3.5 w-3.5" />
@@ -64,7 +77,7 @@ export function Hero() {
               className="h-14 px-8 text-lg rounded-full group border-2"
               asChild
             >
-              <Link href="/switch" className="flex items-center gap-2">
+              <Link href="/switch/" className="flex items-center gap-2">
                 <RefreshCw className="w-5 h-5 text-slate-400 group-hover:text-accent-500 transition-colors" />
                 See How Churches Switch
               </Link>

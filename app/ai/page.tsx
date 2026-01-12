@@ -292,10 +292,10 @@ export default function AiPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="secondary" size="lg" asChild className="bg-white text-primary hover:bg-gray-50">
-              <Link href="/contact">See AI in Action</Link>
+              <Link href="/contact/">See AI in Action</Link>
             </Button>
             <Button variant="outline" size="lg" asChild className="border-2 border-white text-white hover:bg-white/10">
-              <Link href="/features#ai">View All AI Features</Link>
+              <Link href="/features/#ai">View All AI Features</Link>
             </Button>
           </div>
         </div>

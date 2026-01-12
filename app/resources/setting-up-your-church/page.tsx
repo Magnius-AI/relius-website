@@ -79,7 +79,7 @@ export default function SetupChecklistPage() {
                                 <input type="checkbox" className="mt-1.5 w-4 h-4 text-blue-600 rounded border-slate-300 focus:ring-blue-500" />
                                 <div>
                                     <span className="font-medium text-slate-900">Import Members</span>
-                                    <p className="text-sm text-slate-600">Use the CSV importer (see our <Link href="/resources/switching-from-another-system" className="text-blue-600 hover:underline">migration guide</Link>).</p>
+                                    <p className="text-sm text-slate-600">Use the CSV importer (see our <Link href="/resources/switching-from-another-system/" className="text-blue-600 hover:underline">migration guide</Link>).</p>
                                 </div>
                             </li>
                             <li className="flex items-start gap-3">
@@ -185,7 +185,7 @@ export default function SetupChecklistPage() {
                     Our support team can walk you through any of these configurations.
                 </p>
                 <Link
-                    href="/contact"
+                    href="/contact/"
                     className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
                 >
                     Contact Support

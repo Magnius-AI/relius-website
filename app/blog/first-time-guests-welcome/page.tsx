@@ -174,7 +174,7 @@ export default function FirstTimeGuestsPage() {
                     Use Relius to build a follow-up system that makes every guest feel seen and known.
                 </p>
                 <Link
-                    href="/get-started"
+                    href="/pricing/"
                     className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
                 >
                     Start your free trial

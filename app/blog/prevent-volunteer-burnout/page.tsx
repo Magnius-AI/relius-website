@@ -245,7 +245,7 @@ export default function PreventVolunteerBurnout() {
                     appreciation—so your team stays energized for the long haul.
                 </p>
                 <Link
-                    href="/get-started"
+                    href="/pricing/"
                     className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
                 >
                     Start your free trial
@@ -257,7 +257,7 @@ export default function PreventVolunteerBurnout() {
             <div className="mt-16">
                 <h3 className="text-xl font-semibold text-slate-900 mb-6">Related reading</h3>
                 <div className="grid md:grid-cols-2 gap-6">
-                    <Link href="/blog/why-church-software-fails" className="group">
+                    <Link href="/blog/why-church-software-fails/" className="group">
                         <div className="bg-white border border-slate-200 rounded-lg p-5 hover:border-blue-300 transition-colors">
                             <span className="text-sm text-slate-500">Perspective</span>
                             <h4 className="font-semibold text-slate-900 group-hover:text-blue-600 transition-colors">
@@ -265,7 +265,7 @@ export default function PreventVolunteerBurnout() {
                             </h4>
                         </div>
                     </Link>
-                    <Link href="/resources/volunteer-recruitment-strategies" className="group">
+                    <Link href="/resources/volunteer-recruitment-strategies/" className="group">
                         <div className="bg-white border border-slate-200 rounded-lg p-5 hover:border-blue-300 transition-colors">
                             <span className="text-sm text-slate-500">Playbook</span>
                             <h4 className="font-semibold text-slate-900 group-hover:text-blue-600 transition-colors">

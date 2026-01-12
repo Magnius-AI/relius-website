@@ -118,7 +118,7 @@ export default function SwitchPage() {
               Using a different platform? We can help with that too.
             </p>
             <Button variant="outline" className="rounded-full" asChild>
-              <Link href="/contact?interest=migration">
+              <Link href="/contact/?interest=migration">
                 Contact us for custom migration help
               </Link>
             </Button>
@@ -276,7 +276,7 @@ export default function SwitchPage() {
                 className="group shadow-lg"
                 asChild
               >
-                <Link href="/contact?interest=migration">
+                <Link href="/contact/?interest=migration">
                   Start Your Migration
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Link>
@@ -286,7 +286,7 @@ export default function SwitchPage() {
                 size="lg"
                 asChild
               >
-                <Link href="/pricing">
+                <Link href="/pricing/">
                   View Pricing
                 </Link>
               </Button>

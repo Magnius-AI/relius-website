@@ -5,7 +5,7 @@ compatibility_date = "2024-01-01"
 # Production environment variables
 [vars]
 # Update this to your actual domain (GitHub Pages or custom domain)
-ALLOWED_ORIGIN = "https://relius.com"
+ALLOWED_ORIGIN = "https://relius.ai"
 TO_EMAIL = "contact@relius.ai"
 FROM_EMAIL = "Relius Website <noreply@relius.ai>"
 

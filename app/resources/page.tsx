@@ -44,10 +44,10 @@ export default function ResourcesPage() {
             </ul>
             <div className="flex flex-col sm:flex-row gap-3 mt-8">
               <Button variant="gradient" asChild>
-                <Link href="/contact">Talk with a ministry partner</Link>
+                <Link href="/contact/">Talk with a ministry partner</Link>
               </Button>
               <Button variant="secondary" asChild>
-                <Link href="/docs">Visit the Help Center</Link>
+                <Link href="/docs/">Visit the Help Center</Link>
               </Button>
             </div>
           </div>
@@ -136,7 +136,7 @@ export default function ResourcesPage() {
             </div>
             <div className="mt-6">
               <Button variant="gradient" asChild>
-                <Link href="/docs">Open Help Center</Link>
+                <Link href="/docs/">Open Help Center</Link>
               </Button>
               <p className="text-sm text-slate-500 mt-3">Prefer email? support@relius.ai</p>
             </div>

@@ -85,12 +85,12 @@ export function SocialProof() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button variant="gradient" asChild>
-                    <Link href="/contact" className="flex items-center gap-2">
+                    <Link href="/contact/" className="flex items-center gap-2">
                       Schedule a Conversation <ArrowRight className="w-4 h-4" />
                     </Link>
                   </Button>
                   <Button variant="secondary" asChild>
-                    <Link href="/features">Explore Features</Link>
+                    <Link href="/features/">Explore Features</Link>
                   </Button>
                 </div>
               </div>

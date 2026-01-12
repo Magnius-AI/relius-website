@@ -163,7 +163,7 @@ export default function WhySoftwareFailsPage() {
                     See why churches are switching to a system that actually feels like ministry.
                 </p>
                 <Link
-                    href="/get-started"
+                    href="/pricing/"
                     className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
                 >
                     Start free trial

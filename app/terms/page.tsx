@@ -261,7 +261,7 @@ export default function TermsPage() {
             </p>
             <div className="bg-white p-6 rounded-xl border border-slate-200">
               <p className="text-slate-600 mb-2"><strong>Email:</strong> legal@relius.ai</p>
-              <p className="text-slate-600 mb-2"><strong>Website:</strong> <a href="/contact" className="text-primary-600 hover:text-primary-700">relius.ai/contact</a></p>
+              <p className="text-slate-600 mb-2"><strong>Website:</strong> <a href="/contact/" className="text-primary-600 hover:text-primary-700">relius.ai/contact</a></p>
             </div>
           </section>
         </div>
