@@ -12,9 +12,9 @@ export function Hero() {
       <div className="absolute inset-0 bg-pattern-grid opacity-[0.03]" />
 
       {/* Angel Halo Effect */}
-      <div className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-60 pointer-events-none mix-blend-multiply z-0">
+      <div className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[600px] opacity-80 pointer-events-none mix-blend-multiply z-0" style={{ maskImage: 'radial-gradient(ellipse at center, black 40%, transparent 70%)', WebkitMaskImage: 'radial-gradient(ellipse at center, black 40%, transparent 70%)' }}>
         <Image
-          src="/halo-effect-yellow.png"
+          src="/halo-effect-elliptical.png"
           alt="Angel Halo"
           fill
           className="object-contain animate-pulse-glow"
