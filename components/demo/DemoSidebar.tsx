@@ -25,6 +25,7 @@ import {
   UserCog,
   CheckSquare,
   LayoutGrid,
+  ArrowRightLeft,
 } from 'lucide-react';
 import { DemoCollapsible } from './components/DemoCollapsible';
 import type { DemoView } from './types/demo.types';
@@ -92,6 +93,7 @@ const adminItems: NavItem[] = [
 const settingsItems: NavItem[] = [
   { id: 'general-settings', name: 'General Settings', icon: Settings, isVisualOnly: true },
   { id: 'public-website', name: 'Public Website', icon: Globe, isVisualOnly: true },
+  { id: 'data-migration', name: 'Data Migration', icon: ArrowRightLeft, isVisualOnly: true },
 ];
 
 export function DemoSidebar({ currentView, onNavigate, isMobileOpen, onCloseMobile }: DemoSidebarProps) {
