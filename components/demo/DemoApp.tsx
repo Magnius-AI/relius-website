@@ -1,8 +1,10 @@
 'use client';
 
+import Image from 'next/image';
 import { useReducer, useMemo } from 'react';
 import { DemoSidebar } from './DemoSidebar';
 import { DemoHeader } from './DemoHeader';
+import { DemoBottomNav } from './DemoBottomNav';
 import { DemoDashboard } from './views/DemoDashboard';
 import { DemoPeopleDirectory } from './views/DemoPeopleDirectory';
 import { DemoGroupsDirectory } from './views/DemoGroupsDirectory';
@@ -10,6 +12,10 @@ import { DemoServicesOverview } from './views/DemoServicesOverview';
 import { DemoEventsCalendar } from './views/DemoEventsCalendar';
 import { mockPeople, mockGroups, additionalPeople, additionalGroups } from './data/mockData';
 import type { DemoState, DemoAction, DemoView, Person, Group } from './types/demo.types';
+
+interface DemoAppProps {
+  isMobileView?: boolean;
+}
 
 const MAX_ADDITIONS = 5;
 
@@ -58,7 +64,7 @@ function demoReducer(state: DemoState, action: DemoAction): DemoState {
   }
 }
 
-export function DemoApp() {
+export function DemoApp({ isMobileView = false }: DemoAppProps) {
   const [state, dispatch] = useReducer(demoReducer, initialState);
 
   const handleNavigate = (view: DemoView) => {
@@ -146,6 +152,35 @@ export function DemoApp() {
     }
   };
 
+  // Mobile layout with bottom navigation
+  if (isMobileView) {
+    return (
+      <div className="demo-app h-full flex flex-col bg-gray-50">
+        {/* Simplified mobile header */}
+        <header className="h-12 bg-white border-b border-gray-200 flex items-center px-4 flex-shrink-0">
+          <div className="relative w-7 h-7">
+            <Image
+              src="/relius_emblem_circle.png"
+              alt="Relius"
+              fill
+              className="object-contain"
+            />
+          </div>
+          <span className="ml-2 font-semibold text-gray-900 text-sm">Relius</span>
+        </header>
+
+        {/* Content area - full width */}
+        <main className="flex-1 overflow-y-auto demo-scrollbar">
+          {renderView()}
+        </main>
+
+        {/* Bottom navigation */}
+        <DemoBottomNav currentView={state.currentView} onNavigate={handleNavigate} />
+      </div>
+    );
+  }
+
+  // Desktop layout with sidebar
   return (
     <div className="demo-app h-full flex relative overflow-hidden">
       <DemoSidebar

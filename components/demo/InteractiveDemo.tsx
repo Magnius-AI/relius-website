@@ -1,9 +1,23 @@
 'use client';
 
+import { useState, useEffect } from 'react';
+import { Monitor, Smartphone } from 'lucide-react';
 import { DemoBrowserFrame } from './DemoBrowserFrame';
+import { DemoMobileFrame } from './DemoMobileFrame';
 import { DemoApp } from './DemoApp';
 
+type ViewMode = 'desktop' | 'mobile';
+
 export function InteractiveDemo() {
+  const [viewMode, setViewMode] = useState<ViewMode>('desktop');
+
+  // Auto-detect if user is on a small screen and default to mobile view
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.innerWidth < 640) {
+      setViewMode('mobile');
+    }
+  }, []);
+
   return (
     <section className="relative py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white to-slate-50 overflow-hidden">
       {/* Background decoration */}
@@ -29,16 +43,50 @@ export function InteractiveDemo() {
           </p>
         </div>
 
+        {/* View mode toggle */}
+        <div className="flex justify-center sm:justify-end max-w-6xl mx-auto mb-4">
+          <div className="inline-flex rounded-lg border border-gray-200 p-1 bg-white shadow-sm">
+            <button
+              onClick={() => setViewMode('desktop')}
+              className={`px-3 py-1.5 rounded-md text-sm font-medium flex items-center gap-2 transition-colors
+                ${viewMode === 'desktop'
+                  ? 'bg-blue-100 text-blue-700'
+                  : 'text-gray-600 hover:bg-gray-50'}`}
+            >
+              <Monitor className="w-4 h-4" />
+              <span className="hidden sm:inline">Desktop</span>
+            </button>
+            <button
+              onClick={() => setViewMode('mobile')}
+              className={`px-3 py-1.5 rounded-md text-sm font-medium flex items-center gap-2 transition-colors
+                ${viewMode === 'mobile'
+                  ? 'bg-blue-100 text-blue-700'
+                  : 'text-gray-600 hover:bg-gray-50'}`}
+            >
+              <Smartphone className="w-4 h-4" />
+              <span className="hidden sm:inline">Mobile</span>
+            </button>
+          </div>
+        </div>
+
         {/* Demo container */}
         <div className="max-w-6xl mx-auto">
-          <DemoBrowserFrame>
-            <DemoApp />
-          </DemoBrowserFrame>
+          {viewMode === 'desktop' ? (
+            <DemoBrowserFrame>
+              <DemoApp />
+            </DemoBrowserFrame>
+          ) : (
+            <DemoMobileFrame>
+              <DemoApp isMobileView />
+            </DemoMobileFrame>
+          )}
         </div>
 
         {/* Hint text */}
         <p className="text-center mt-6 text-sm text-slate-500">
-          Try clicking on sidebar items to navigate between views. Add new people or groups using the buttons.
+          {viewMode === 'desktop'
+            ? 'Try clicking on sidebar items to navigate between views. Add new people or groups using the buttons.'
+            : 'Use the bottom navigation to explore different views. Tap on items to interact.'}
         </p>
       </div>
     </section>
