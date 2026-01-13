@@ -34,7 +34,8 @@ export function Hero() {
 
             {/* Content inside the halo */}
             <div className="relative z-10 py-8">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm text-slate-600 text-sm font-medium mb-4 animate-fade-in-up hover:border-accent-200 hover:text-accent-600 transition-colors cursor-default">
+              <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm text-slate-600 text-sm font-medium animate-fade-in-up hover:border-accent-200 hover:text-accent-600 transition-colors cursor-default">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-accent-500"></span>
@@ -44,11 +45,12 @@ export function Hero() {
 
               <Link
                 href="/switch/"
-                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-sm font-medium mb-8 animate-fade-in-up [animation-delay:100ms] hover:bg-emerald-100 transition-colors"
+                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-sm font-medium animate-fade-in-up [animation-delay:100ms] hover:bg-emerald-100 transition-colors"
               >
                 <RefreshCw className="h-3.5 w-3.5" />
                 Easy migration from Planning Center, ChurchTrac & Tithe.ly
               </Link>
+            </div>
 
               <h1 className="text-balance text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 mb-6 animate-fade-in-up [animation-delay:200ms]">
                 The AI-powered church platform that gives your team{" "}
@@ -91,10 +93,6 @@ export function Hero() {
               </div>
 
               <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm text-slate-500 animate-fade-in-up [animation-delay:800ms]">
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-accent-500" />
-                  <span>No credit card required</span>
-                </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-accent-500" />
                   <span>14-day free trial</span>
