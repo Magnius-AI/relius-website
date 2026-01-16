@@ -43,7 +43,7 @@ export default function ChurchScalePage() {
       */}
             <div className="relative h-80 w-full rounded-xl overflow-hidden mb-12 bg-slate-100">
                 <Image
-                    src="/images/blog/church-200-vs-2000.png"
+                    src="/images/blog/church-200-vs-2000.webp"
                     alt="Church scale comparison illustration"
                     fill
                     className="object-cover"

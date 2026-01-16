@@ -43,7 +43,7 @@ export default function FeaturesPage() {
           <div className="bg-white border border-slate-200 rounded-3xl shadow-xl p-6 relative overflow-hidden">
             <div className="absolute inset-x-10 top-8 h-32 bg-primary-50/40 rounded-full blur-3xl pointer-events-none" aria-hidden="true" />
             <Image
-              src="/images/illustrations/worship-celebration.png"
+              src="/images/illustrations/worship-celebration.webp"
               alt="Coordinated worship services"
               width={600}
               height={400}
@@ -56,7 +56,7 @@ export default function FeaturesPage() {
           <div className="flex items-center gap-5 mb-12">
             <div className="hidden md:block w-32">
               <Image
-                src="/images/illustrations/ministry-essentials-v2.png"
+                src="/images/illustrations/ministry-essentials-v2.webp"
                 alt="Ministry essentials illustration"
                 width={128}
                 height={96}
@@ -108,7 +108,7 @@ export default function FeaturesPage() {
             <div className="flex items-center gap-5">
               <div className="hidden md:block w-32">
                 <Image
-                  src="/images/illustrations/ai-features-v2.png"
+                  src="/images/illustrations/ai-features-v2.webp"
                   alt="AI features illustration"
                   width={128}
                   height={96}

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Facebook, Twitter, Linkedin, Youtube, Mail } from "lucide-react";
+import { NewsletterForm } from "@/components/forms/newsletter-form";
 
 export function Footer() {
   const footerLinks = {
@@ -61,21 +62,31 @@ export function Footer() {
             <p className="text-sm text-slate-600 leading-relaxed max-w-xs">
               The modern Church Management System with built-in AI. Empowering churches to focus on people, not paperwork.
             </p>
-            <a
-              href="mailto:support@relius.ai"
-              className="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-primary transition-colors"
-            >
-              <Mail className="h-4 w-4" />
-              support@relius.ai
-            </a>
-            <div className="flex gap-4">
+
+            {/* Newsletter */}
+            <div className="pt-2">
+              <h4 className="text-sm font-semibold text-slate-900 mb-3">
+                Ministry insights, delivered monthly
+              </h4>
+              <NewsletterForm variant="compact" className="max-w-xs" />
+              <p className="text-xs text-slate-500 mt-2">No spam, unsubscribe anytime.</p>
+            </div>
+
+            <div className="flex items-center gap-4 pt-2">
+              <a
+                href="mailto:support@relius.ai"
+                className="text-slate-400 hover:text-primary transition-colors"
+                aria-label="Email support"
+              >
+                <Mail className="h-5 w-5" />
+              </a>
               {socialLinks.map((item) => {
                 const Icon = item.icon;
                 return (
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="text-slate-400 hover:text-primary transition-colors p-2 hover:bg-white rounded-full hover:shadow-sm"
+                    className="text-slate-400 hover:text-primary transition-colors"
                     aria-label={item.name}
                   >
                     <Icon className="h-5 w-5" />
@@ -153,7 +164,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 border-t border-slate-200 pt-8 flex items-center justify-center">
+        <div className="mt-10 border-t border-slate-200 pt-8 flex items-center justify-center">
           <p className="text-sm text-slate-500">
             &copy; {new Date().getFullYear()} Relius. All rights reserved.
           </p>

@@ -43,7 +43,7 @@ export default function FirstTimeGuestsPage() {
       */}
             <div className="relative h-80 w-full rounded-xl overflow-hidden mb-12 bg-slate-100">
                 <Image
-                    src="/images/blog/first-time-guests-welcome.png"
+                    src="/images/blog/first-time-guests-welcome.webp"
                     alt="Welcoming a guest at church"
                     fill
                     className="object-cover"

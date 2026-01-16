@@ -61,7 +61,7 @@ export const blogPosts: BlogPost[] = [
       "Thank people with stories, not stats.",
     ],
     quote: "When volunteers know there's an exit ramp, they stay longer because they trust you'll notice before they're exhausted.",
-    image: "/images/blog/prevent-volunteer-burnout.png",
+    image: "/images/blog/prevent-volunteer-burnout.webp",
   },
   {
     slug: "why-church-software-fails",
@@ -103,7 +103,7 @@ export const blogPosts: BlogPost[] = [
       "People vocab should lead priorities.",
       "Choose relationship over hype.",
     ],
-    image: "/images/blog/why-church-software-fails.png",
+    image: "/images/blog/why-church-software-fails.webp",
   },
   {
     slug: "first-time-guests-welcome",
@@ -145,7 +145,7 @@ export const blogPosts: BlogPost[] = [
       "Personal invitations beat general ones.",
       "Shared dashboards keep teams accountable.",
     ],
-    image: "/images/blog/first-time-guests-welcome.png",
+    image: "/images/blog/first-time-guests-welcome.webp",
   },
   {
     slug: "church-200-vs-2000",
@@ -185,7 +185,7 @@ export const blogPosts: BlogPost[] = [
       "Segment communication as you grow.",
       "Log instincts so you can measure them later.",
     ],
-    image: "/images/blog/church-200-vs-2000.png",
+    image: "/images/blog/church-200-vs-2000.webp",
   },
   {
     slug: "ai-changing-church-administration",
@@ -225,7 +225,7 @@ export const blogPosts: BlogPost[] = [
       "Your voice is part of your theology.",
       "Use AI to remove admin work, not to replace humans.",
     ],
-    image: "/images/blog/ai-changing-church-administration.png",
+    image: "/images/blog/ai-changing-church-administration.webp",
   },
   {
     slug: "why-churches-switching-planning-center-2025",
@@ -279,7 +279,7 @@ export const blogPosts: BlogPost[] = [
       "Migration takes hours, not months.",
     ],
     quote: "I was nervous about the switch. Then I realized I'd spent more time worrying about migration than the migration actually took.",
-    image: "/images/blog/why-churches-switching-planning-center-2025.png",
+    image: "/images/blog/why-churches-switching-planning-center-2025.webp",
   },
   {
     slug: "planning-center-vs-relius-honest-comparison",
@@ -352,7 +352,7 @@ export const blogPosts: BlogPost[] = [
       "Migration takes hours, not months-Planning Center exports cleanly and our team guides every step.",
       "The right choice depends on your pain points: organization vs. AI-powered ministry outcomes.",
     ],
-    image: "/images/blog/planning-center-vs-relius-honest-comparison.png",
+    image: "/images/blog/planning-center-vs-relius-honest-comparison.webp",
   },
   {
     slug: "evaluate-church-management-software-checklist",
@@ -453,7 +453,7 @@ export const blogPosts: BlogPost[] = [
       "Use the checklist to stay objective when shiny features tempt you off track.",
     ],
     quote: "The best church software is the one your team actually uses. Everything else is just potential.",
-    image: "/images/blog/evaluate-church-management-software-checklist.png",
+    image: "/images/blog/evaluate-church-management-software-checklist.webp",
   },
 ];
 

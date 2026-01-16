@@ -43,7 +43,7 @@ export default function WhySoftwareFailsPage() {
       */}
             <div className="relative h-80 w-full rounded-xl overflow-hidden mb-12 bg-slate-100">
                 <Image
-                    src="/images/blog/why-church-software-fails.png"
+                    src="/images/blog/why-church-software-fails.webp"
                     alt="Complexity vs Clarity illustration"
                     fill
                     className="object-cover"

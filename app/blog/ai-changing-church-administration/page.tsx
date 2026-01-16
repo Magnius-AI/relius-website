@@ -43,7 +43,7 @@ export default function AiInMinistryPage() {
       */}
             <div className="relative h-80 w-full rounded-xl overflow-hidden mb-12 bg-slate-100">
                 <Image
-                    src="/images/blog/ai-changing-church-administration.png"
+                    src="/images/blog/ai-changing-church-administration.webp"
                     alt="AI as a ministry assistant illustration"
                     fill
                     className="object-cover"

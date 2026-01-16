@@ -54,7 +54,7 @@ export default function ResourcesPage() {
           <Card className="border border-slate-200 shadow-lg">
             <CardContent className="p-6 space-y-6">
               <Image
-                src="/images/illustrations/resource-planning.png"
+                src="/images/illustrations/resource-planning.webp"
                 alt="Resource planning illustration"
                 width={500}
                 height={400}

@@ -46,7 +46,7 @@ export default function PreventVolunteerBurnout() {
       */}
             <div className="relative h-80 w-full rounded-xl overflow-hidden mb-12 bg-slate-100">
                 <Image
-                    src="/images/blog/prevent-volunteer-burnout.png"
+                    src="/images/blog/prevent-volunteer-burnout.webp"
                     alt="Volunteers serving together with joy"
                     fill
                     className="object-cover"

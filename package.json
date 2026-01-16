@@ -32,5 +32,8 @@
     "tailwindcss": "^4.1.16",
     "typescript": "^5.9.3",
     "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "sharp-cli": "^5.2.0"
   }
 }
