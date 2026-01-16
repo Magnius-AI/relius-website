@@ -15,7 +15,7 @@ export function ProductPillars() {
             <span className="relative flex h-2 w-2">
               <span className="relative inline-flex rounded-full h-2 w-2 bg-slate-400"></span>
             </span>
-            Core Features
+            Church Management Platform
           </div>
           <h2 className="text-balance mb-6 text-slate-900 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
             How Relius helps <span className="text-gradient">your church</span>

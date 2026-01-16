@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Shield, Clock, Heart } from "lucide-react";
 import { DecorativeOrb } from "@/components/ui/decorative-orb";
 import { DEFAULT_SIGNUP_URL, AUTH_URLS } from "@/lib/constants";
 
@@ -21,7 +21,7 @@ export function FinalCta() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button variant="accent" size="lg" asChild className="group shadow-lg">
               <a href={DEFAULT_SIGNUP_URL}>
-                Get Started Free
+                Start Free Trial
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
@@ -39,6 +39,20 @@ export function FinalCta() {
               Login
             </a>
           </p>
+          <div className="flex flex-wrap justify-center gap-6 mt-8 pt-6 border-t border-slate-100">
+            <div className="flex items-center gap-2 text-sm text-slate-500">
+              <Shield className="w-4 h-4 text-emerald-500" />
+              <span>Secure & private</span>
+            </div>
+            <div className="flex items-center gap-2 text-sm text-slate-500">
+              <Clock className="w-4 h-4 text-blue-500" />
+              <span>14-day free trial</span>
+            </div>
+            <div className="flex items-center gap-2 text-sm text-slate-500">
+              <Heart className="w-4 h-4 text-rose-500" />
+              <span>Cancel anytime</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>

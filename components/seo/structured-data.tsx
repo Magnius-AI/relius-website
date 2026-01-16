@@ -1,0 +1,109 @@
+import Script from "next/script";
+
+export function StructuredData() {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Relius",
+    url: "https://relius.com",
+    logo: "https://relius.com/relius_emblem_circle.png",
+    description:
+      "AI-powered church management software that helps churches save time on admin and focus on ministry.",
+    sameAs: [],
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer service",
+      url: "https://relius.com/contact",
+    },
+  };
+
+  const softwareApplicationSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Relius Church Management Software",
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Web",
+    description:
+      "AI-powered church management software with volunteer scheduling, pastoral care tracking, member database, and content generation tools.",
+    offers: {
+      "@type": "Offer",
+      price: "29",
+      priceCurrency: "USD",
+      priceValidUntil: "2026-12-31",
+      availability: "https://schema.org/InStock",
+    },
+    featureList: [
+      "AI-powered volunteer scheduling",
+      "Pastoral care tracking",
+      "Member database and church CRM",
+      "Automated content generation",
+      "Event management",
+      "Giving and donation tracking",
+    ],
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What is Relius?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Relius is AI-powered church management software designed to help churches save 10+ hours weekly on admin tasks. It includes volunteer scheduling, pastoral care tracking, member management, and AI tools for content creation.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is Relius a Planning Center alternative?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes, Relius is a modern alternative to Planning Center with AI-powered features. Churches can easily migrate from Planning Center, ChurchTrac, or Tithe.ly with our guided migration process that typically takes 2-4 hours.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How much does Relius cost?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Relius starts at $29/month for small churches (up to 100 members). We offer a 14-day free trial with no credit card required. Professional plans for larger churches start at $99/month.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What AI features does Relius include?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Relius includes AI-powered features like intelligent volunteer scheduling with burnout detection, automated sermon content repurposing, predictive engagement analytics, and smart pastoral care alerts.",
+        },
+      },
+    ],
+  };
+
+  return (
+    <>
+      <Script
+        id="organization-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(organizationSchema),
+        }}
+      />
+      <Script
+        id="software-application-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(softwareApplicationSchema),
+        }}
+      />
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+      />
+    </>
+  );
+}
