@@ -53,7 +53,7 @@ export function Hero() {
             </div>
 
               <h1 className="text-balance text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 mb-6 animate-fade-in-up [animation-delay:200ms]">
-                The AI-powered church platform that gives your team{" "}
+                AI church management software that gives your team{" "}
                 <span className="text-gradient-accent relative inline-block">
                   time back
                   <svg className="absolute w-full h-3 -bottom-1 left-0 text-accent-200 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">

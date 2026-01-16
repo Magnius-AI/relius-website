@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Analytics } from "@/lib/analytics";
+import { StructuredData } from "@/components/seo/structured-data";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -14,21 +15,25 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://relius.com"),
   title: {
-    default: "Relius | Ministry-focused church software",
+    default: "Relius | AI Church Management Software & Planning Center Alternative",
     template: "%s | Relius",
   },
-  description: "Relius is the ministry partner platform for churches - care for people, coordinate volunteers, plan services, and save time with AI-powered tools.",
+  description: "AI-powered church management software that saves 10+ hours weekly. The modern Planning Center alternative with volunteer scheduling, pastoral care, and church CRM. Start free trial.",
   icons: {
     icon: "/relius_emblem_circle.png",
     apple: "/relius_emblem_circle.png",
   },
   keywords: [
     "church management software",
-    "ministry software",
-    "volunteer coordination",
+    "AI church software",
+    "Planning Center alternative",
+    "church CRM",
+    "ChMS",
+    "volunteer scheduling software",
     "pastoral care tools",
-    "church resources",
-    "church software",
+    "church admin software",
+    "ministry software",
+    "church database",
   ],
   authors: [{ name: "Relius" }],
   openGraph: {
@@ -36,21 +41,21 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://relius.com",
     siteName: "Relius",
-    title: "Relius | Ministry-focused church software",
-    description: "Care for people, organize volunteers, and save time with AI-powered church management built with ministry leaders.",
+    title: "Relius | AI Church Management Software & Planning Center Alternative",
+    description: "AI-powered church management software that saves 10+ hours weekly. Modern volunteer scheduling, pastoral care, and church CRM built for ministry teams.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Relius - Ministry partner for churches",
+        alt: "Relius AI Church Management Software Dashboard",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Relius | Ministry-focused church software",
-    description: "Resources and software that serve churches with warmth.",
+    title: "Relius | AI Church Management Software",
+    description: "Save 10+ hours weekly with AI-powered church management. Volunteer scheduling, pastoral care, and church CRM built for ministry.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -68,6 +73,7 @@ export default function RootLayout({
     <html lang="en" className={inter.variable}>
       <body>
         <Analytics />
+        <StructuredData />
         <Header />
         <main className="min-h-screen">
           {children}

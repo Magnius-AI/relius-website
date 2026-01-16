@@ -9,6 +9,7 @@ export function WhyRelius() {
       title: "Serve Your People",
       description: "Catch people before they drift away with AI-powered care alerts. Track pastoral care, prayer requests, and life events—and get prompted when someone needs attention.",
       image: "/images/illustrations/care-support.png",
+      imageAlt: "Pastoral care tracking and member support in Relius church CRM software",
       color: "text-rose-500",
       bg: "bg-rose-50",
       border: "group-hover:border-rose-200",
@@ -19,6 +20,7 @@ export function WhyRelius() {
       title: "Equip Your Teams",
       description: "End the Sunday morning scramble. AI-assisted scheduling finds the right volunteers, detects burnout, and keeps everyone connected and confirmed.",
       image: "/images/illustrations/team-puzzle.png",
+      imageAlt: "AI-powered volunteer scheduling and team coordination in church management software",
       color: "text-blue-500",
       bg: "bg-blue-50",
       border: "group-hover:border-blue-200",
@@ -29,6 +31,7 @@ export function WhyRelius() {
       title: "Plan Your Ministry",
       description: "Turn one sermon into a week of content. AI transforms your message into emails, social posts, and study guides—all in your voice.",
       image: "/images/illustrations/growth-planning.png",
+      imageAlt: "Ministry planning and sermon content generation tools for churches",
       color: "text-amber-500",
       bg: "bg-amber-50",
       border: "group-hover:border-amber-200",
@@ -39,6 +42,7 @@ export function WhyRelius() {
       title: "Grow Your Impact",
       description: "See who's drifting and who's thriving. Predictive analytics help you understand giving trends and engagement—so you can act before it's too late.",
       image: "/images/illustrations/ministry-moments.png",
+      imageAlt: "Church engagement analytics and giving trends dashboard in Relius ChMS",
       color: "text-emerald-500",
       bg: "bg-emerald-50",
       border: "group-hover:border-emerald-200",
@@ -56,7 +60,7 @@ export function WhyRelius() {
             Everything you need to <span className="text-gradient-accent">focus on ministry</span>
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            Whether you're serving 50 members or 5,000, Relius helps you care for people, coordinate teams, and plan with confidence.
+            Whether you're serving 50 members or 5,000, our AI church management system (ChMS) helps you care for people, coordinate teams, and plan with confidence.
           </p>
         </div>
 
@@ -82,7 +86,7 @@ export function WhyRelius() {
                     <div className="relative w-full aspect-[4/3] overflow-hidden">
                       <Image
                         src={feature.image}
-                        alt={`${feature.title} illustration`}
+                        alt={feature.imageAlt}
                         width={400}
                         height={300}
                         className="w-full h-full object-contain transform transition-transform duration-700 group-hover:scale-110"

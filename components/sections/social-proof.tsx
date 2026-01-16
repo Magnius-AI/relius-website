@@ -45,7 +45,7 @@ export function SocialProof() {
             })}
           </div>
           <h2 className="text-balance mb-6 text-slate-900 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
-            Built for <span className="text-gradient-accent">real ministry</span>
+            Church CRM built for <span className="text-gradient-accent">real ministry</span>
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
             Relius is designed to help church teams spend less time on logistics and more time on the people they serve.

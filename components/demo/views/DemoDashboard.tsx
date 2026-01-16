@@ -128,7 +128,7 @@ export function DemoDashboard() {
       <div className="mb-6">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
+            <div className="text-2xl font-bold text-gray-900">Dashboard</div>
             <p className="text-sm text-gray-500 mt-1">Welcome back! Here&apos;s what&apos;s happening with your church.</p>
           </div>
           <select className="demo-input !w-36 text-sm appearance-none" disabled>
