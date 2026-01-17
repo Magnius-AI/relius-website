@@ -27,19 +27,20 @@ export default function PricingPage() {
         "Event Calendar",
         "Donation Tracking",
         "Check-In System & QR Codes",
-        "Volunteer Scheduling",
+        "Basic Reporting",
         "Data Migration Wizard",
         "Email support",
       ],
       notIncluded: [
         "Pastoral Care System",
-        "Prayer Request Management",
+        "Services & Volunteer Scheduling",
+        "Communications Hub",
         "AI Features",
       ],
     },
     {
       name: "Pro",
-      description: "Everything in Basic + Full Pastoral Care System",
+      description: "Everything in Basic + Pastoral Care, Services & Communications",
       price: {
         monthly: "$79.99",
         annual: "$767.88",
@@ -50,8 +51,10 @@ export default function PricingPage() {
         "Everything in Basic",
         "Pastoral Care System",
         "Prayer Request Management",
-        "Follow-up Tracking & Milestones",
-        "New Member Contact Tasks",
+        "Services Planning (Teams, Songs, Templates)",
+        "Volunteer Scheduling",
+        "Communications Hub",
+        "New Member Follow-ups",
         "Advanced Reporting",
         "Custom Branding",
         "Priority support (email & phone)",
@@ -136,18 +139,27 @@ export default function PricingPage() {
         { name: "Donation Tracking", basic: true, pro: true, max: true },
         { name: "Check-In System", basic: true, pro: true, max: true },
         { name: "QR Code Generation", basic: true, pro: true, max: true },
-        { name: "Volunteer Scheduling", basic: true, pro: true, max: true },
+        { name: "Basic Reporting", basic: true, pro: true, max: true },
         { name: "Data Migration Wizard", basic: true, pro: true, max: true },
       ],
     },
     {
-      category: "Pastoral Care",
+      category: "Pastoral Care & Services",
       items: [
+        { name: "Pastoral Care System", basic: false, pro: true, max: true },
         { name: "Prayer Request Management", basic: false, pro: true, max: true },
-        { name: "Pastoral Follow-ups", basic: false, pro: true, max: true },
-        { name: "Member Milestones", basic: false, pro: true, max: true },
-        { name: "New Member Contact Tasks", basic: false, pro: true, max: true },
+        { name: "Services Planning (Teams, Songs)", basic: false, pro: true, max: true },
+        { name: "Volunteer Scheduling", basic: false, pro: true, max: true },
+        { name: "New Member Follow-ups", basic: false, pro: true, max: true },
         { name: "Care Notes & History", basic: false, pro: true, max: true },
+      ],
+    },
+    {
+      category: "Communications",
+      items: [
+        { name: "Communications Hub", basic: false, pro: true, max: true },
+        { name: "Email Campaigns", basic: false, pro: true, max: true },
+        { name: "SMS Notifications", basic: false, pro: true, max: true },
       ],
     },
     {
@@ -206,13 +218,13 @@ export default function PricingPage() {
           <div className="grid md:grid-cols-3 gap-6 text-sm">
             <div className="text-center">
               <div className="font-semibold text-slate-900 mb-2">Basic</div>
-              <p className="text-slate-600">Perfect for churches who need solid core management features</p>
+              <p className="text-slate-600">Perfect for churches who need people, giving, events, groups, and check-ins</p>
               <p className="text-slate-500 text-xs mt-2 italic">Example: New Life Chapel starting their digital journey</p>
             </div>
             <div className="text-center">
               <div className="font-semibold text-slate-900 mb-2">Pro</div>
-              <p className="text-slate-600">Best for churches wanting to track pastoral care and member engagement</p>
-              <p className="text-slate-500 text-xs mt-2 italic">Example: Grace Fellowship with active prayer ministry</p>
+              <p className="text-slate-600">Best for churches wanting pastoral care, services planning, and communications</p>
+              <p className="text-slate-500 text-xs mt-2 italic">Example: Grace Fellowship with active worship and care teams</p>
             </div>
             <div className="text-center">
               <div className="font-semibold text-slate-900 mb-2">Max</div>
