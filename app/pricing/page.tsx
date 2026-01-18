@@ -207,7 +207,7 @@ export default function PricingPage() {
           <p className="text-emerald-800 font-medium">
             Switching from another platform?{" "}
             <Link href="/switch/" className="underline hover:text-emerald-900">
-              Get free migration assistance + 30-day extended trial
+              Get free migration assistance
             </Link>
           </p>
         </div>
