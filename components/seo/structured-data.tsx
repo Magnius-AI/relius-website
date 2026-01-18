@@ -67,7 +67,7 @@ export function StructuredData() {
         name: "How much does Relius cost?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Relius starts at $39.99/month for the Basic plan with unlimited members. We offer a 14-day free trial. Pro plan is $79.99/month and Max plan is $199.99/month.",
+          text: "Relius starts at $39.99/month for the Basic plan with unlimited members. We offer a 7-day free trial. Pro plan is $79.99/month and Max plan is $199.99/month.",
         },
       },
       {

@@ -46,7 +46,7 @@ export function FinalCta() {
             </div>
             <div className="flex items-center gap-2 text-sm text-slate-500">
               <Clock className="w-4 h-4 text-blue-500" />
-              <span>14-day free trial</span>
+              <span>7-day free trial</span>
             </div>
             <div className="flex items-center gap-2 text-sm text-slate-500">
               <Heart className="w-4 h-4 text-rose-500" />
