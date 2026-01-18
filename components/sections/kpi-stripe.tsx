@@ -1,6 +1,6 @@
 export function KpiStripe() {
   const metrics = [
-    { value: "50-5,000", label: "Members served" },
+    { value: "50-5,000", label: "Built for members" },
     { value: "10+", label: "Hours saved weekly" },
     { value: "Days", label: "To get started" },
     { value: "1", label: "Platform for everything" },
