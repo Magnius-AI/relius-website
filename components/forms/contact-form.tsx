@@ -7,6 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { analytics } from "@/lib/analytics";
 
 // Cloudflare Worker endpoint for form submissions
 const FORM_ENDPOINT = "https://relius-contact-form.kishor-panthi00.workers.dev";
@@ -107,10 +108,31 @@ export function ContactForm() {
         throw new Error(result.error || "Failed to submit form");
       }
 
+      // Track successful form submission
+      analytics.trackFormSubmission("contact_form", {
+        church_size: data.memberSize,
+        current_software: data.currentSoftware || "not_specified",
+        primary_interest: data.primaryInterest || "not_specified",
+      });
+
+      // Identify the user for session linking
+      analytics.identify(data.email, {
+        name: data.name,
+        church: data.church,
+        member_size: data.memberSize,
+      });
+
       setIsSubmitted(true);
       reset();
     } catch (error) {
       console.error("Form submission error:", error);
+
+      // Track form submission error
+      analytics.track("form_submission_error", {
+        form_name: "contact_form",
+        error: error instanceof Error ? error.message : "Unknown error",
+      });
+
       alert("There was an error submitting the form. Please try again or email us directly at contact@relius.ai");
     } finally {
       setIsSubmitting(false);

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Loader2, CheckCircle2, Mail } from "lucide-react";
+import { analytics } from "@/lib/analytics";
 
 interface NewsletterFormProps {
   variant?: "default" | "compact";
@@ -38,6 +39,10 @@ export function NewsletterForm({ variant = "default", className = "" }: Newslett
       if (!response.ok) {
         throw new Error(data.error || "Failed to subscribe");
       }
+
+      // Track newsletter subscription
+      analytics.trackFormSubmission("newsletter_form");
+      analytics.identify(email);
 
       setStatus("success");
       setEmail("");

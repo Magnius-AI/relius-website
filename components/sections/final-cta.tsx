@@ -1,7 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Clock, Heart } from "lucide-react";
 import { DecorativeOrb } from "@/components/ui/decorative-orb";
+import { analytics } from "@/lib/analytics";
 import { DEFAULT_SIGNUP_URL, AUTH_URLS } from "@/lib/constants";
 
 export function FinalCta() {
@@ -20,7 +23,10 @@ export function FinalCta() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button variant="accent" size="lg" asChild className="group shadow-lg">
-              <a href={DEFAULT_SIGNUP_URL}>
+              <a
+                href={DEFAULT_SIGNUP_URL}
+                onClick={() => analytics.trackCTAClick("start_free_trial_final", DEFAULT_SIGNUP_URL)}
+              >
                 Start Free Trial
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </a>
@@ -30,7 +36,12 @@ export function FinalCta() {
               size="lg"
               asChild
             >
-              <Link href="/contact/">Schedule a Conversation</Link>
+              <Link
+                href="/contact/"
+                onClick={() => analytics.trackCTAClick("schedule_conversation_final", "/contact/")}
+              >
+                Schedule a Conversation
+              </Link>
             </Button>
           </div>
           <p className="text-sm text-slate-500 mt-6">

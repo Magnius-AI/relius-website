@@ -1,15 +1,18 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Monitor, Smartphone } from 'lucide-react';
 import { DemoBrowserFrame } from './DemoBrowserFrame';
 import { DemoMobileFrame } from './DemoMobileFrame';
 import { DemoApp } from './DemoApp';
+import { analytics } from '@/lib/analytics';
 
 type ViewMode = 'desktop' | 'mobile';
 
 export function InteractiveDemo() {
   const [viewMode, setViewMode] = useState<ViewMode>('desktop');
+  const sectionRef = useRef<HTMLElement>(null);
+  const hasTrackedView = useRef(false);
 
   // Auto-detect if user is on a small screen and default to mobile view
   useEffect(() => {
@@ -18,8 +21,32 @@ export function InteractiveDemo() {
     }
   }, []);
 
+  // Track when demo section comes into view
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !hasTrackedView.current) {
+          analytics.trackDemoInteraction('demo_viewed');
+          hasTrackedView.current = true;
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const handleViewModeChange = (mode: ViewMode) => {
+    analytics.trackDemoInteraction('view_mode_changed', { mode });
+    setViewMode(mode);
+  };
+
   return (
-    <section className="relative py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white to-slate-50 overflow-hidden">
+    <section ref={sectionRef} className="relative py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white to-slate-50 overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-pattern-grid opacity-[0.02]" />
       <div className="absolute top-0 right-0 w-96 h-96 bg-accent-100 rounded-full blur-3xl opacity-20 -z-10" />
@@ -47,7 +74,7 @@ export function InteractiveDemo() {
         <div className="flex justify-center sm:justify-end max-w-6xl mx-auto mb-4">
           <div className="inline-flex rounded-lg border border-gray-200 p-1 bg-white shadow-sm">
             <button
-              onClick={() => setViewMode('desktop')}
+              onClick={() => handleViewModeChange('desktop')}
               className={`px-3 py-1.5 rounded-md text-sm font-medium flex items-center gap-2 transition-colors
                 ${viewMode === 'desktop'
                   ? 'bg-blue-100 text-blue-700'
@@ -57,7 +84,7 @@ export function InteractiveDemo() {
               <span className="hidden sm:inline">Desktop</span>
             </button>
             <button
-              onClick={() => setViewMode('mobile')}
+              onClick={() => handleViewModeChange('mobile')}
               className={`px-3 py-1.5 rounded-md text-sm font-medium flex items-center gap-2 transition-colors
                 ${viewMode === 'mobile'
                   ? 'bg-blue-100 text-blue-700'

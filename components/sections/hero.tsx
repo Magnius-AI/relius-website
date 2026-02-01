@@ -1,7 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, RefreshCw } from "lucide-react";
-
+import { analytics } from "@/lib/analytics";
 import { DEFAULT_SIGNUP_URL } from "@/lib/constants";
 
 export function Hero() {
@@ -74,7 +76,10 @@ export function Hero() {
                   className="shadow-xl hover:shadow-2xl h-14 px-8 text-lg rounded-full"
                   asChild
                 >
-                  <a href={DEFAULT_SIGNUP_URL}>
+                  <a
+                    href={DEFAULT_SIGNUP_URL}
+                    onClick={() => analytics.trackCTAClick("start_free_trial_hero", DEFAULT_SIGNUP_URL)}
+                  >
                     Start Free Trial
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </a>
@@ -85,7 +90,11 @@ export function Hero() {
                   className="h-14 px-8 text-lg rounded-full group border-2"
                   asChild
                 >
-                  <Link href="/switch/" className="flex items-center gap-2">
+                  <Link
+                    href="/switch/"
+                    className="flex items-center gap-2"
+                    onClick={() => analytics.trackCTAClick("see_how_churches_switch_hero", "/switch/")}
+                  >
                     <RefreshCw className="w-5 h-5 text-slate-400 group-hover:text-accent-500 transition-colors" />
                     See How Churches Switch
                   </Link>
