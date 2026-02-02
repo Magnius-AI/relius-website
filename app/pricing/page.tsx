@@ -9,6 +9,7 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 import Link from "next/link";
 import { CheckCircle2, X, Sparkles } from "lucide-react";
 import { CHECKOUT_URLS, AUTH_URLS } from "@/lib/constants";
+import { PricingCalculator } from "@/components/PricingCalculator";
 
 export default function PricingPage() {
   const tiers = [
@@ -432,6 +433,11 @@ export default function PricingPage() {
             </div>
           </TabsContent>
         </Tabs>
+
+        {/* Interactive Pricing Calculator */}
+        <div className="my-16">
+          <PricingCalculator />
+        </div>
 
         <div className="text-center mb-10">
           <p className="text-slate-600">
