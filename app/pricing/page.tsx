@@ -521,7 +521,7 @@ export default function PricingPage() {
         <div className="mb-10">
           <h2 className="text-center text-3xl font-bold mb-8">Frequently Asked Questions</h2>
           <div className="max-w-3xl mx-auto">
-            <Accordion type="single" collapsible>
+            <Accordion type="single">
               {faqs.map((faq, index) => (
                 <AccordionItem key={index} value={`faq-${index}`}>
                   <AccordionTrigger>{faq.question}</AccordionTrigger>
