@@ -5,8 +5,10 @@ import { BlogFilterGrid } from "@/components/sections/blog-filter-grid";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
-const featuredPost = blogPosts[0]!;
-const remainingPosts = blogPosts.slice(1);
+// Sort posts by date (newest first)
+const sortedPosts = [...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+const featuredPost = sortedPosts[0]!;
+const remainingPosts = sortedPosts.slice(1);
 
 export const metadata: Metadata = {
   title: "Blog & ministry insights",
@@ -86,7 +88,7 @@ export default function BlogPage() {
           </div>
         </section>
 
-        <BlogFilterGrid posts={blogPosts} filters={blogFilters} />
+        <BlogFilterGrid posts={sortedPosts} filters={blogFilters} />
 
         <section className="rounded-3xl border border-primary/20 bg-gradient-to-br from-primary-50 to-white p-12 text-center shadow-sm">
           <p className="text-sm font-semibold uppercase tracking-wide text-primary-700 mb-2">Soft CTA</p>
