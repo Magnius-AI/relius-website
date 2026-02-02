@@ -81,18 +81,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
           )}
         </div>
 
-        <article className="space-y-10 text-slate-700 leading-relaxed">
-          {post.content.map((section) => (
-            <section key={section.heading} className="space-y-3">
-              <h2 className="text-2xl font-semibold text-slate-900">{section.heading}</h2>
-              {section.body.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-            </section>
-          ))}
-        </article>
-
-        <section className="rounded-3xl border border-slate-200 bg-white p-6 space-y-3">
+        <section className="rounded-3xl border border-slate-200 bg-white p-6 space-y-4">
           <p className="text-sm font-semibold uppercase tracking-wide text-primary-600">Key takeaways</p>
           <ul className="list-disc pl-5 space-y-2 text-slate-700">
             {post.takeaway.map((item) => (
@@ -100,11 +89,35 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
             ))}
           </ul>
           {post.quote ? (
-            <blockquote className="mt-4 text-slate-600 italic border-l-4 border-primary-200 pl-4">
+            <blockquote className="mt-2 text-slate-600 italic border-l-4 border-primary-200 pl-4">
               "{post.quote}"
             </blockquote>
           ) : null}
         </section>
+
+        <section className="rounded-3xl border border-slate-200 bg-slate-50 p-6 space-y-3">
+          <p className="text-sm font-semibold uppercase tracking-wide text-primary-600">Table of contents</p>
+          <ul className="space-y-2 text-slate-700">
+            {post.content.map((section) => (
+              <li key={section.heading}>
+                <a href={`#${section.heading.toLowerCase().replace(/\s+/g, "-")}`} className="hover:text-primary-700">
+                  {section.heading}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <article className="space-y-10 text-slate-700 leading-relaxed">
+          {post.content.map((section) => (
+            <section key={section.heading} id={section.heading.toLowerCase().replace(/\s+/g, "-")} className="space-y-3">
+              <h2 className="text-2xl font-semibold text-slate-900">{section.heading}</h2>
+              {section.body.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </section>
+          ))}
+        </article>
 
         <Card className="border border-slate-200 bg-white">
           <CardContent className="p-8 space-y-5 text-center">
