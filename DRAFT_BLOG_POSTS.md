@@ -10,12 +10,12 @@
 
 ```typescript
 {
-  slug: "digital-giving-trends-2025",
-  title: "Digital giving trends every church needs to know in 2025",
+  slug: "digital-giving-trends-2026",
+  title: "Digital giving trends every church needs to know in 2026",
   excerpt: "Mobile wallets, text-to-give, and recurring donations are reshaping how churches receive tithes. Here's what the data says—and how to respond.",
   author: "Aaron Wells",
   role: "Executive Pastor in Residence",
-  date: "2025-02-02",
+  date: "2026-02-02",
   readTime: "6 min",
   category: "Best Practice",
   contentType: "Guide",
@@ -57,7 +57,7 @@
     "Reduce friction. Every extra click costs you donations.",
   ],
   quote: "The goal isn't to make giving complicated. It's to make generosity as easy as buying coffee.",
-  image: "/images/blog/digital-giving-trends-2025.webp",
+  image: "/images/blog/digital-giving-trends-2026.webp",
 }
 ```
 
@@ -69,12 +69,12 @@
 
 ```typescript
 {
-  slug: "grow-small-groups-2025",
-  title: "How churches are growing small groups in 2025",
+  slug: "grow-small-groups-2026",
+  title: "How churches are growing small groups in 2026",
   excerpt: "Connection happens in circles, not rows. Here are the systems thriving churches use to launch, multiply, and sustain healthy groups.",
   author: "Marissa Cole",
   role: "Ministry Partner Coach",
-  date: "2025-02-05",
+  date: "2026-02-05",
   readTime: "8 min",
   category: "Ministry Insight",
   contentType: "Playbook",
@@ -116,7 +116,7 @@
     "Track health metrics, not just attendance counts.",
   ],
   quote: "The goal of a small group isn't to exist forever. It's to create leaders who start new ones.",
-  image: "/images/blog/grow-small-groups-2025.webp",
+  image: "/images/blog/grow-small-groups-2026.webp",
 }
 ```
 
@@ -133,7 +133,7 @@
   excerpt: "Your congregation trusts you with sensitive information. Here's how to honor that trust with modern security practices.",
   author: "Joel Reyes",
   role: "Friend of Relius / IT Consultant",
-  date: "2025-02-08",
+  date: "2026-02-08",
   readTime: "7 min",
   category: "Best Practice",
   contentType: "Guide",
@@ -199,7 +199,7 @@
   excerpt: "Too many emails. Missed announcements. Communication overload. Here's how churches are cutting through the noise.",
   author: "Marissa Cole",
   role: "Ministry Partner Coach",
-  date: "2025-02-12",
+  date: "2026-02-12",
   readTime: "6 min",
   category: "Best Practice",
   contentType: "Guide",
@@ -258,7 +258,7 @@
   excerpt: "Check-in isn't just about name tags. It's about child safety, first impressions, and knowing who's in your building. Here's what modern looks like.",
   author: "Aaron Wells",
   role: "Executive Pastor in Residence",
-  date: "2025-02-15",
+  date: "2026-02-15",
   readTime: "7 min",
   category: "Product",
   contentType: "Guide",
@@ -324,7 +324,7 @@
   excerpt: "Leadership changes are inevitable. They don't have to be chaotic. Here's how healthy churches manage pastoral transitions.",
   author: "Joel Reyes",
   role: "Friend of Relius / Connections Pastor",
-  date: "2025-02-18",
+  date: "2026-02-18",
   readTime: "8 min",
   category: "Ministry Insight",
   contentType: "Guide",
