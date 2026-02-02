@@ -277,9 +277,9 @@ Relius Platform distinguishes itself through seven integrated AI capabilities:
 
 | Plan | Monthly | Yearly | Best For |
 |------|---------|--------|----------|
-| **Basic** | $39.99/month | $383.88/year | Churches wanting core management features |
-| **Pro** | $79.99/month | $767.88/year | Churches wanting Pastoral Care features |
-| **Max** | $199.99/month | $1,919.88/year | Churches wanting AI features |
+| **Basic** | $39.99/month | $479.88/year | Churches wanting core management features |
+| **Pro** | $79.99/month | $959.88/year | Churches wanting Pastoral Care features |
+| **Max** | $199.99/month | $2,399.88/year | Churches wanting AI features |
 
 ### Pricing Strategy Notes
 - **2x jump** from Basic to Pro includes Pastoral Care features
