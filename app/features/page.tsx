@@ -7,6 +7,27 @@ import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 import { coreFeatures, aiFeatures } from "@/data/features";
 
+export const metadata: Metadata = {
+  title: "Features",
+  description:
+    "AI-powered volunteer scheduling, pastoral care tracking, member management, giving, check-in, and communication tools built for church teams.",
+  alternates: {
+    canonical: "https://relius.com/features/",
+  },
+  openGraph: {
+    title: "Features | Relius",
+    description:
+      "AI-powered volunteer scheduling, pastoral care tracking, member management, giving, check-in, and communication tools built for church teams.",
+    url: "https://relius.com/features/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Features | Relius",
+    description:
+      "AI-powered church management features: volunteer scheduling, pastoral care, giving, check-in, and more.",
+  },
+};
+
 export default function FeaturesPage() {
   return (
     <div className="py-16 px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white">

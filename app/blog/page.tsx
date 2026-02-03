@@ -13,6 +13,21 @@ const topics = Array.from(new Set(sortedPosts.flatMap((post) => post.topics))).s
 export const metadata: Metadata = {
   title: "Blog & ministry insights",
   description: "Practical ministry tips, honest takes on church software, and transparent product updates from the Relius team.",
+  alternates: {
+    canonical: "https://relius.com/blog/",
+  },
+  openGraph: {
+    type: "website",
+    title: "Blog & Ministry Insights | Relius",
+    description: "Practical ministry tips, honest takes on church software, and transparent product updates from the Relius team.",
+    url: "https://relius.com/blog/",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Relius Blog" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog & Ministry Insights | Relius",
+    description: "Practical ministry tips, honest takes on church software, and transparent product updates from the Relius team.",
+  },
 };
 
 function getInitials(name: string) {

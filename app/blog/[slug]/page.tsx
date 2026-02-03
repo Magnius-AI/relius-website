@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Script from "next/script";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -6,6 +7,7 @@ import { blogPosts, getBlogPost } from "@/data/blog-posts";
 import { StoryIllustration } from "@/components/illustrations";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { BlogArticle } from "@/components/blog/content-renderer";
 
 type BlogPageProps = {
   params: Promise<{ slug: string }>;
@@ -24,12 +26,33 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
       description: "The article you are looking for does not exist.",
     };
   }
+  const ogImage = post.image
+    ? `https://relius.com${post.image}`
+    : "https://relius.com/og-image.png";
+
   return {
     title: `${post.title} | Relius Blog`,
     description: post.excerpt,
+    keywords: post.topics,
+    alternates: {
+      canonical: `https://relius.com/blog/${slug}/`,
+    },
     openGraph: {
+      type: "article",
       title: post.title,
       description: post.excerpt,
+      url: `https://relius.com/blog/${slug}/`,
+      publishedTime: post.date,
+      authors: [post.author],
+      section: post.category,
+      tags: post.topics,
+      images: [{ url: ogImage, width: 1200, height: 630, alt: post.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [ogImage],
     },
   };
 }
@@ -45,7 +68,55 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
     .filter((item) => item.slug !== post.slug && item.topics.some((topic) => post.topics.includes(topic)))
     .slice(0, 3);
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    image: post.image ? `https://relius.com${post.image}` : undefined,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      "@type": "Person",
+      name: post.author,
+      jobTitle: post.role,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Relius",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://relius.com/relius_emblem_circle.png",
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://relius.com/blog/${post.slug}/`,
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://relius.com/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://relius.com/blog/" },
+      { "@type": "ListItem", position: 3, name: post.title, item: `https://relius.com/blog/${post.slug}/` },
+    ],
+  };
+
   return (
+    <>
+      <Script
+        id="article-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
     <div className="py-16 px-6 lg:px-8 bg-gradient-to-b from-white to-slate-50">
       <div className="mx-auto max-w-3xl space-y-10">
         <header className="space-y-6">
@@ -108,16 +179,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
           </ul>
         </section>
 
-        <article className="space-y-10 text-slate-700 leading-relaxed">
-          {post.content.map((section) => (
-            <section key={section.heading} id={section.heading.toLowerCase().replace(/\s+/g, "-")} className="space-y-3">
-              <h2 className="text-2xl font-semibold text-slate-900">{section.heading}</h2>
-              {section.body.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-            </section>
-          ))}
-        </article>
+        <BlogArticle content={post.content} />
 
         <Card className="border border-slate-200 bg-white">
           <CardContent className="p-8 space-y-5 text-center">
@@ -156,5 +218,6 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
         )}
       </div>
     </div>
+    </>
   );
 }
