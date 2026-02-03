@@ -18,12 +18,14 @@ export function DemoHeader({ searchQuery, onSearchChange, onToggleMobileMenu }: 
           className="mr-2 rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 sm:hidden"
           aria-label="Open menu"
         >
-          <Menu className="h-5 w-5" />
+          <Menu className="h-5 w-5" aria-hidden="true" />
         </button>
 
         {/* Search */}
         <div className="flex-1 max-w-lg">
+          <label htmlFor="demo-search" className="sr-only">Search people, groups, events</label>
           <input
+            id="demo-search"
             type="search"
             placeholder="Search people, groups, events..."
             className="demo-input pl-3 text-sm"
