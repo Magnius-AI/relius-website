@@ -27,21 +27,21 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
     };
   }
   const ogImage = post.image
-    ? `https://relius.com${post.image}`
-    : "https://relius.com/og-image.png";
+    ? `https://relius.ai${post.image}`
+    : "https://relius.ai/og-image.png";
 
   return {
     title: `${post.title} | Relius Blog`,
     description: post.excerpt,
     keywords: post.topics,
     alternates: {
-      canonical: `https://relius.com/blog/${slug}/`,
+      canonical: `https://relius.ai/blog/${slug}/`,
     },
     openGraph: {
       type: "article",
       title: post.title,
       description: post.excerpt,
-      url: `https://relius.com/blog/${slug}/`,
+      url: `https://relius.ai/blog/${slug}/`,
       publishedTime: post.date,
       authors: [post.author],
       section: post.category,
@@ -73,7 +73,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
     "@type": "Article",
     headline: post.title,
     description: post.excerpt,
-    image: post.image ? `https://relius.com${post.image}` : undefined,
+    image: post.image ? `https://relius.ai${post.image}` : undefined,
     datePublished: post.date,
     dateModified: post.date,
     author: {
@@ -86,12 +86,12 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
       name: "Relius",
       logo: {
         "@type": "ImageObject",
-        url: "https://relius.com/relius_emblem_circle.png",
+        url: "https://relius.ai/relius_emblem_circle.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://relius.com/blog/${post.slug}/`,
+      "@id": `https://relius.ai/blog/${post.slug}/`,
     },
   };
 
@@ -99,9 +99,9 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://relius.com/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://relius.com/blog/" },
-      { "@type": "ListItem", position: 3, name: post.title, item: `https://relius.com/blog/${post.slug}/` },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://relius.ai/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://relius.ai/blog/" },
+      { "@type": "ListItem", position: 3, name: post.title, item: `https://relius.ai/blog/${post.slug}/` },
     ],
   };
 

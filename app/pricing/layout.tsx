@@ -2,17 +2,17 @@ import { Metadata } from "next";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Church Management Software Pricing | Plans from $39.99/month",
+  title: "Church Management Software Pricing | Plans from $49/month",
   description:
-    "Simple, transparent pricing for Relius church management software. Unlimited members on all plans. Basic $39.99/mo, Pro $79.99/mo, Max $199.99/mo. 14-day free trial, no credit card required.",
+    "Simple, transparent pricing for Relius church management software. Unlimited members on all plans. Starter $49/mo, Growth $99/mo, AI Pro $149/mo, Enterprise $249/mo. 7-day free trial, no credit card required.",
   alternates: {
-    canonical: "https://relius.com/pricing/",
+    canonical: "https://relius.ai/pricing/",
   },
   openGraph: {
     title: "Church Management Software Pricing | Relius",
     description:
       "Affordable church management features. Unlimited members, transparent pricing. Start your free trial today.",
-    url: "https://relius.com/pricing/",
+    url: "https://relius.ai/pricing/",
   },
   twitter: {
     card: "summary_large_image",
@@ -31,7 +31,7 @@ const pricingFaqSchema = {
       name: "How do I know which Relius plan is right for our church?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Start with your church's needs. Basic is perfect for churches wanting solid core features. Pro adds the full Pastoral Care system for tracking prayer requests, follow-ups, and member milestones. Max is ideal if you want help with sermon prep, content creation, and pastoral insights.",
+        text: "Start with your church's needs. Starter is perfect for churches wanting solid core features. Growth adds the full Pastoral Care system, services planning, and communications. AI Pro is ideal if you want AI to help with sermon prep, content creation, and pastoral insights. Enterprise is for large organizations needing unlimited sites, SSO, and white-labeling.",
       },
     },
     {
@@ -55,7 +55,7 @@ const pricingFaqSchema = {
       name: "Can we upgrade our Relius plan later?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Absolutely! Many churches start with Basic, add Pro for Pastoral Care features, and upgrade to Max when they're ready for more. You can upgrade anytime and get immediate access to new features. Your data comes with you.",
+        text: "Absolutely! Many churches start with Starter, add Growth for Pastoral Care and services features, and upgrade to AI Pro when they're ready for AI automation. You can upgrade anytime and get immediate access to new features. Your data comes with you.",
       },
     },
     {
@@ -63,7 +63,7 @@ const pricingFaqSchema = {
       name: "Do you offer discounts for church management software?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes! Annual billing saves about 20% compared to monthly. We also offer 6 months free for church planters and special considerations for churches in unique situations.",
+        text: "Yes! Annual billing saves about 15% compared to monthly. We also offer 6 months free for church planters and special considerations for churches in unique situations.",
       },
     },
     {

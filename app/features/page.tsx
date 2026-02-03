@@ -12,13 +12,13 @@ export const metadata: Metadata = {
   description:
     "Explore Relius church management features: volunteer scheduling, pastoral care tracking, church automation tools, content creation, and workflow automation. See how churches save 10+ hours weekly.",
   alternates: {
-    canonical: "https://relius.com/features/",
+    canonical: "https://relius.ai/features/",
   },
   openGraph: {
     title: "Church Management Software Features | Relius",
     description:
       "Church automation tools for volunteer scheduling, pastoral care, and ministry workflow automation.",
-    url: "https://relius.com/features/",
+    url: "https://relius.ai/features/",
   },
   twitter: {
     card: "summary_large_image",
