@@ -1,230 +1,230 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://relius.com/</loc>
+    <loc>https://relius.ai/</loc>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/features/</loc>
+    <loc>https://relius.ai/features/</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/pricing/</loc>
+    <loc>https://relius.ai/pricing/</loc>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/about/</loc>
+    <loc>https://relius.ai/about/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/ai/</loc>
+    <loc>https://relius.ai/ai/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/contact/</loc>
+    <loc>https://relius.ai/contact/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/security/</loc>
+    <loc>https://relius.ai/security/</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/docs/</loc>
+    <loc>https://relius.ai/docs/</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/privacy/</loc>
+    <loc>https://relius.ai/privacy/</loc>
     <priority>0.4</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/terms/</loc>
+    <loc>https://relius.ai/terms/</loc>
     <priority>0.4</priority>
     <changefreq>yearly</changefreq>
   </url>
 
   <!-- Switch / Migration Pages -->
   <url>
-    <loc>https://relius.com/switch/</loc>
+    <loc>https://relius.ai/switch/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/switch/planning-center/</loc>
+    <loc>https://relius.ai/switch/planning-center/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/switch/churchtrac/</loc>
+    <loc>https://relius.ai/switch/churchtrac/</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/switch/tithely/</loc>
+    <loc>https://relius.ai/switch/tithely/</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <!-- Use Cases -->
   <url>
-    <loc>https://relius.com/use-cases/</loc>
+    <loc>https://relius.ai/use-cases/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/use-cases/volunteer-coordination/</loc>
+    <loc>https://relius.ai/use-cases/volunteer-coordination/</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/use-cases/pastoral-care-tracking/</loc>
+    <loc>https://relius.ai/use-cases/pastoral-care-tracking/</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/use-cases/scaling-operations/</loc>
+    <loc>https://relius.ai/use-cases/scaling-operations/</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/use-cases/multi-site-unity/</loc>
+    <loc>https://relius.ai/use-cases/multi-site-unity/</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/use-cases/prayer-and-care/</loc>
+    <loc>https://relius.ai/use-cases/prayer-and-care/</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/use-cases/family-ministry/</loc>
+    <loc>https://relius.ai/use-cases/family-ministry/</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <!-- Resources -->
   <url>
-    <loc>https://relius.com/resources/</loc>
+    <loc>https://relius.ai/resources/</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/resources/switching-from-another-system/</loc>
+    <loc>https://relius.ai/resources/switching-from-another-system/</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/resources/setting-up-your-church/</loc>
+    <loc>https://relius.ai/resources/setting-up-your-church/</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/resources/training-your-team/</loc>
+    <loc>https://relius.ai/resources/training-your-team/</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/resources/volunteer-recruitment-strategies/</loc>
+    <loc>https://relius.ai/resources/volunteer-recruitment-strategies/</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/resources/improving-sunday-check-in-flow/</loc>
+    <loc>https://relius.ai/resources/improving-sunday-check-in-flow/</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/resources/year-end-giving-campaigns/</loc>
+    <loc>https://relius.ai/resources/year-end-giving-campaigns/</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/resources/roadmap-transparency/</loc>
+    <loc>https://relius.ai/resources/roadmap-transparency/</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <!-- Blog -->
   <url>
-    <loc>https://relius.com/blog/</loc>
+    <loc>https://relius.ai/blog/</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/blog/digital-giving-trends-2026/</loc>
+    <loc>https://relius.ai/blog/digital-giving-trends-2026/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/blog/church-leadership-transitions/</loc>
+    <loc>https://relius.ai/blog/church-leadership-transitions/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/blog/modern-church-check-in/</loc>
+    <loc>https://relius.ai/blog/modern-church-check-in/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/blog/streamline-church-communications/</loc>
+    <loc>https://relius.ai/blog/streamline-church-communications/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/blog/church-data-security-guide/</loc>
+    <loc>https://relius.ai/blog/church-data-security-guide/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/blog/grow-small-groups-2026/</loc>
+    <loc>https://relius.ai/blog/grow-small-groups-2026/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/blog/evaluate-church-management-software-checklist/</loc>
+    <loc>https://relius.ai/blog/evaluate-church-management-software-checklist/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/blog/why-churches-switching-planning-center-2025/</loc>
+    <loc>https://relius.ai/blog/why-churches-switching-planning-center-2025/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/blog/planning-center-vs-relius-honest-comparison/</loc>
+    <loc>https://relius.ai/blog/planning-center-vs-relius-honest-comparison/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/blog/ai-changing-church-administration/</loc>
+    <loc>https://relius.ai/blog/ai-changing-church-administration/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/blog/church-200-vs-2000/</loc>
+    <loc>https://relius.ai/blog/church-200-vs-2000/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/blog/first-time-guests-welcome/</loc>
+    <loc>https://relius.ai/blog/first-time-guests-welcome/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/blog/why-church-software-fails/</loc>
+    <loc>https://relius.ai/blog/why-church-software-fails/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://relius.com/blog/prevent-volunteer-burnout/</loc>
+    <loc>https://relius.ai/blog/prevent-volunteer-burnout/</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>

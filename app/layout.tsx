@@ -14,7 +14,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://relius.com"),
+  metadataBase: new URL("https://relius.ai"),
   title: {
     default: "Relius | AI Church Management Software & Planning Center Alternative",
     template: "%s | Relius",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://relius.com",
+    url: "https://relius.ai",
     siteName: "Relius",
     title: "Relius | AI Church Management Software & Planning Center Alternative",
     description: "AI-powered church management software that saves 10+ hours weekly. Modern volunteer scheduling, pastoral care, and church CRM built for ministry teams.",
@@ -75,6 +75,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        <link rel="dns-prefetch" href="https://us.i.posthog.com" />
+        <link rel="dns-prefetch" href="https://us-assets.i.posthog.com" />
+        <link rel="preconnect" href="https://us.i.posthog.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://us-assets.i.posthog.com" crossOrigin="anonymous" />
+      </head>
       <body>
         <Suspense fallback={null}>
           <Analytics />
