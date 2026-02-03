@@ -150,11 +150,16 @@ export function DemoSidebar({ currentView, onNavigate, isMobileOpen, onCloseMobi
         <div
           className="absolute inset-0 z-40 bg-black/50 sm:hidden"
           onClick={onCloseMobile}
+          role="button"
+          aria-label="Close sidebar"
+          tabIndex={0}
+          onKeyDown={(e) => e.key === 'Enter' && onCloseMobile()}
         />
       )}
 
       {/* Sidebar */}
       <aside
+        aria-label="Demo navigation"
         className={`
           absolute left-0 top-0 z-50 h-full demo-sidebar transition-all duration-300
           ${isMobileOpen ? 'translate-x-0' : '-translate-x-full'}

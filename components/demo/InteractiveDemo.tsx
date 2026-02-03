@@ -46,7 +46,12 @@ export function InteractiveDemo() {
   };
 
   return (
-    <section ref={sectionRef} className="relative py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white to-slate-50 overflow-hidden">
+    <section
+      ref={sectionRef}
+      className="relative py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white to-slate-50 overflow-hidden"
+      aria-labelledby="demo-heading"
+      role="region"
+    >
       {/* Background decoration */}
       <div className="absolute inset-0 bg-pattern-grid opacity-[0.02]" />
       <div className="absolute top-0 right-0 w-96 h-96 bg-accent-100 rounded-full blur-3xl opacity-20 -z-10" />
@@ -62,7 +67,7 @@ export function InteractiveDemo() {
             </span>
             Interactive Demo
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+          <h2 id="demo-heading" className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
             Experience Relius in action
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
@@ -72,25 +77,29 @@ export function InteractiveDemo() {
 
         {/* View mode toggle */}
         <div className="flex justify-center sm:justify-end max-w-6xl mx-auto mb-4">
-          <div className="inline-flex rounded-lg border border-gray-200 p-1 bg-white shadow-sm">
+          <div className="inline-flex rounded-lg border border-gray-200 p-1 bg-white shadow-sm" role="group" aria-label="Demo view mode">
             <button
               onClick={() => handleViewModeChange('desktop')}
+              aria-label="View desktop version"
+              aria-pressed={viewMode === 'desktop'}
               className={`px-3 py-1.5 rounded-md text-sm font-medium flex items-center gap-2 transition-colors
                 ${viewMode === 'desktop'
                   ? 'bg-blue-100 text-blue-700'
                   : 'text-gray-600 hover:bg-gray-50'}`}
             >
-              <Monitor className="w-4 h-4" />
+              <Monitor className="w-4 h-4" aria-hidden="true" />
               <span className="hidden sm:inline">Desktop</span>
             </button>
             <button
               onClick={() => handleViewModeChange('mobile')}
+              aria-label="View mobile version"
+              aria-pressed={viewMode === 'mobile'}
               className={`px-3 py-1.5 rounded-md text-sm font-medium flex items-center gap-2 transition-colors
                 ${viewMode === 'mobile'
                   ? 'bg-blue-100 text-blue-700'
                   : 'text-gray-600 hover:bg-gray-50'}`}
             >
-              <Smartphone className="w-4 h-4" />
+              <Smartphone className="w-4 h-4" aria-hidden="true" />
               <span className="hidden sm:inline">Mobile</span>
             </button>
           </div>

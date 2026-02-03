@@ -7,6 +7,27 @@ import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 import { coreFeatures, aiFeatures } from "@/data/features";
 
+export const metadata: Metadata = {
+  title: "Church Management Software Features | Automation Tools",
+  description:
+    "Explore Relius church management features: volunteer scheduling, pastoral care tracking, church automation tools, content creation, and workflow automation. See how churches save 10+ hours weekly.",
+  alternates: {
+    canonical: "https://relius.com/features/",
+  },
+  openGraph: {
+    title: "Church Management Software Features | Relius",
+    description:
+      "Church automation tools for volunteer scheduling, pastoral care, and ministry workflow automation.",
+    url: "https://relius.com/features/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Church Management Software Features | Relius",
+    description:
+      "Church automation tools for volunteer scheduling, pastoral care, and ministry workflow automation.",
+  },
+};
+
 export default function FeaturesPage() {
   return (
     <div className="py-16 px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white">
@@ -14,7 +35,7 @@ export default function FeaturesPage() {
         <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center mb-16">
           <div>
             <p className="text-sm font-semibold uppercase tracking-wide text-primary-600 mb-3">Ministry operating system</p>
-            <h1 className="mb-6 text-4xl md:text-5xl font-bold text-slate-900 text-balance">Everything Relius does to serve your church</h1>
+            <h1 className="mb-6 text-4xl md:text-5xl font-bold text-slate-900 text-balance">Church management features that save you time</h1>
             <p className="text-xl text-slate-600 mb-6 leading-relaxed">
               Relius brings people, services, giving, and communication into one warm, ministry-focused home. Plan with confidence, care with clarity, and never lose track of what matters.
             </p>

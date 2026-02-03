@@ -8,13 +8,23 @@ export function StructuredData() {
     url: "https://relius.com",
     logo: "https://relius.com/relius_emblem_circle.png",
     description:
-      "AI-powered church management software that helps churches save time on admin and focus on ministry.",
+      "AI-powered church management software with church automation tools and workflow automation. Helps churches save 10+ hours weekly on administration.",
+    foundingDate: "2024",
     sameAs: [],
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer service",
+      email: "support@relius.ai",
       url: "https://relius.com/contact",
     },
+    knowsAbout: [
+      "Church management software",
+      "Church automation tools",
+      "Church workflow automation",
+      "Church administration software",
+      "Volunteer scheduling",
+      "Pastoral care tracking",
+    ],
   };
 
   const softwareApplicationSchema = {
@@ -24,19 +34,43 @@ export function StructuredData() {
     applicationCategory: "BusinessApplication",
     operatingSystem: "Web",
     description:
-      "AI-powered church management software with volunteer scheduling, pastoral care tracking, member database, and content generation tools.",
-    offers: {
-      "@type": "Offer",
-      price: "39.99",
-      priceCurrency: "USD",
-      priceValidUntil: "2026-12-31",
-      availability: "https://schema.org/InStock",
-    },
+      "AI-powered church management software with church automation tools, workflow automation, volunteer scheduling, pastoral care tracking, and content generation.",
+    offers: [
+      {
+        "@type": "Offer",
+        name: "Basic",
+        price: "39.99",
+        priceCurrency: "USD",
+        priceValidUntil: "2026-12-31",
+        availability: "https://schema.org/InStock",
+        description: "Core church management with unlimited members",
+      },
+      {
+        "@type": "Offer",
+        name: "Pro",
+        price: "79.99",
+        priceCurrency: "USD",
+        priceValidUntil: "2026-12-31",
+        availability: "https://schema.org/InStock",
+        description: "Full pastoral care system and priority support",
+      },
+      {
+        "@type": "Offer",
+        name: "Max",
+        price: "199.99",
+        priceCurrency: "USD",
+        priceValidUntil: "2026-12-31",
+        availability: "https://schema.org/InStock",
+        description: "Complete AI suite with dedicated success partner",
+      },
+    ],
     featureList: [
+      "Church workflow automation",
       "AI-powered volunteer scheduling",
       "Pastoral care tracking",
       "Member database and church CRM",
-      "Automated content generation",
+      "Church automation tools",
+      "AI content generation",
       "Event management",
       "Giving and donation tracking",
     ],

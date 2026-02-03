@@ -6,8 +6,14 @@ import Link from "next/link";
 import { Brain, Shield, Users, CheckCircle2, Clock, X, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "AI Features | Relius Church Management",
-  description: "Save 10+ hours weekly with AI-powered content creation, pastoral care insights, and sermon planning. Features competitors don't have.",
+  title: "AI Church Administration Tools | Workflow Automation Features",
+  description:
+    "AI-powered church administration tools that automate content creation, pastoral care insights, and sermon planning. Church workflow automation that saves 10+ hours weekly.",
+  openGraph: {
+    title: "AI Church Administration & Automation Tools | Relius",
+    description:
+      "Church automation tools for content creation, pastoral care, and workflow automation. Save 10+ hours weekly.",
+  },
 };
 
 export default function AiPage() {
@@ -36,7 +42,7 @@ export default function AiPage() {
           <Badge variant="default" className="mb-4">
             AI-Powered Ministry
           </Badge>
-          <h1 className="mb-4">AI That Serves Your Mission</h1>
+          <h1 className="mb-4">AI-Powered Church Administration Tools</h1>
           <p className="text-xl text-slate-500 max-w-3xl mx-auto">
             Save 10+ hours weekly with AI that drafts content, spots needs, and handles routine tasks—so you can focus on people and ministry.
           </p>

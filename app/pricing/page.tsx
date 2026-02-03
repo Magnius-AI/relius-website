@@ -251,7 +251,7 @@ export default function PricingPage() {
     <div className="py-16 px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white">
       <div className="mx-auto max-w-7xl">
         <div className="text-center mb-12">
-          <h1 className="mb-6 text-4xl md:text-5xl font-bold text-slate-900">Pricing that grows with your church</h1>
+          <h1 className="mb-6 text-4xl md:text-5xl font-bold text-slate-900">Church management software pricing</h1>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
             Start with what you need. Add more when you're ready. No member limits, no surprises.
           </p>

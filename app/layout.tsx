@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   keywords: [
     "church management software",
-    "AI church software",
+    "AI church management software",
     "Planning Center alternative",
     "church CRM",
     "ChMS",
@@ -35,6 +35,9 @@ export const metadata: Metadata = {
     "church admin software",
     "ministry software",
     "church database",
+    "church automation tools",
+    "church workflow automation",
+    "church administration software",
   ],
   authors: [{ name: "Relius" }],
   openGraph: {
