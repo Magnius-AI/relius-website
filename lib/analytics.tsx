@@ -4,6 +4,10 @@ import { useEffect } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import posthog from "posthog-js";
 
+// Worker endpoint for CTA notifications
+const CTA_NOTIFICATION_URL =
+  process.env.NEXT_PUBLIC_WORKER_URL || "https://contact-form.relius.workers.dev";
+
 // Initialize PostHog once
 let isInitialized = false;
 
@@ -75,13 +79,33 @@ export const analytics = {
     });
   },
 
-  // Track CTA clicks
+  // Track CTA clicks with real-time notification
   trackCTAClick: (ctaName: string, destination?: string) => {
     if (typeof window === "undefined") return;
+
+    // 1. Track in PostHog (analytics)
     posthog.capture("cta_clicked", {
       cta_name: ctaName,
       destination,
     });
+
+    // 2. Send real-time notification (non-blocking)
+    // Only notify for free trial buttons
+    if (ctaName.includes("free_trial")) {
+      fetch(`${CTA_NOTIFICATION_URL}/notify-cta`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          cta_name: ctaName,
+          page_url: window.location.href,
+          timestamp: new Date().toISOString(),
+          referrer: document.referrer || undefined,
+          user_agent: navigator.userAgent,
+        }),
+      }).catch(() => {
+        // Silent fail - don't block user navigation
+      });
+    }
   },
 
   // Track demo interactions
