@@ -1,9 +1,24 @@
 import Link from 'next/link';
 import { ArrowRight, Users, Heart, Search, MessageCircle, BarChart, Sparkles } from 'lucide-react';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
     title: 'Volunteer recruitment strategies | Relius Resources',
     description: 'A playbook for finding, recruiting, and retaining volunteers using Relius.',
+    alternates: {
+        canonical: 'https://relius.ai/resources/volunteer-recruitment-strategies/',
+    },
+    openGraph: {
+        title: 'Volunteer Recruitment Strategies | Relius Resources',
+        description: 'A playbook for finding, recruiting, and retaining volunteers using Relius.',
+        url: 'https://relius.ai/resources/volunteer-recruitment-strategies/',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Volunteer Recruitment Strategies | Relius Resources',
+        description: 'A playbook for finding, recruiting, and retaining volunteers using Relius.',
+    },
+    keywords: ['volunteer recruitment', 'church volunteers', 'volunteer retention'],
 };
 
 export default function VolunteerRecruitmentPage() {

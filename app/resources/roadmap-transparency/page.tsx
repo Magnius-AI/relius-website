@@ -1,9 +1,24 @@
 import Link from 'next/link';
 import { ArrowRight, Map, MessageSquare, Construction, CheckCircle, Users } from 'lucide-react';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
     title: 'Roadmap Transparency | Relius Resources',
     description: 'See what we are building, how we decide, and how you can help shape the future of Relius.',
+    alternates: {
+        canonical: 'https://relius.ai/resources/roadmap-transparency/',
+    },
+    openGraph: {
+        title: 'Roadmap Transparency | Relius Resources',
+        description: 'See what we are building, how we decide, and how you can help shape the future of Relius.',
+        url: 'https://relius.ai/resources/roadmap-transparency/',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Roadmap Transparency | Relius Resources',
+        description: 'See what we are building, how we decide, and how you can help shape the future of Relius.',
+    },
+    keywords: ['Relius roadmap', 'product updates', 'church software roadmap'],
 };
 
 export default function RoadmapPage() {

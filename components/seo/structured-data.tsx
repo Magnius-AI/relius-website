@@ -10,7 +10,12 @@ export function StructuredData() {
     description:
       "AI-powered church management software with church automation tools and workflow automation. Helps churches save 10+ hours weekly on administration.",
     foundingDate: "2024",
-    sameAs: [],
+    sameAs: [
+      "https://www.facebook.com/relius.ai",
+      "https://www.linkedin.com/company/relius",
+      "https://twitter.com/relius_ai",
+      "https://www.youtube.com/@relius",
+    ],
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer service",

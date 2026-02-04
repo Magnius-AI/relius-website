@@ -2,51 +2,61 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://relius.ai/</loc>
+    <lastmod>2026-02-03</lastmod>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/features/</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/pricing/</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/about/</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/ai/</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/contact/</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/security/</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/docs/</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/privacy/</loc>
+    <lastmod>2026-01-12</lastmod>
     <priority>0.4</priority>
     <changefreq>yearly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/terms/</loc>
+    <lastmod>2025-12-21</lastmod>
     <priority>0.4</priority>
     <changefreq>yearly</changefreq>
   </url>
@@ -54,21 +64,25 @@
   <!-- Switch / Migration Pages -->
   <url>
     <loc>https://relius.ai/switch/</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/switch/planning-center/</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/switch/churchtrac/</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/switch/tithely/</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
@@ -76,36 +90,43 @@
   <!-- Use Cases -->
   <url>
     <loc>https://relius.ai/use-cases/</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/use-cases/volunteer-coordination/</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/use-cases/pastoral-care-tracking/</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/use-cases/scaling-operations/</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/use-cases/multi-site-unity/</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/use-cases/prayer-and-care/</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/use-cases/family-ministry/</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
@@ -113,41 +134,49 @@
   <!-- Resources -->
   <url>
     <loc>https://relius.ai/resources/</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/resources/switching-from-another-system/</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/resources/setting-up-your-church/</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/resources/training-your-team/</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/resources/volunteer-recruitment-strategies/</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/resources/improving-sunday-check-in-flow/</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/resources/year-end-giving-campaigns/</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/resources/roadmap-transparency/</loc>
+    <lastmod>2026-01-15</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
@@ -155,76 +184,91 @@
   <!-- Blog -->
   <url>
     <loc>https://relius.ai/blog/</loc>
+    <lastmod>2026-02-03</lastmod>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/blog/digital-giving-trends-2026/</loc>
+    <lastmod>2026-01-28</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/blog/church-leadership-transitions/</loc>
+    <lastmod>2026-01-21</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/blog/modern-church-check-in/</loc>
+    <lastmod>2026-01-14</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/blog/streamline-church-communications/</loc>
+    <lastmod>2026-01-07</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/blog/church-data-security-guide/</loc>
+    <lastmod>2025-12-31</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/blog/grow-small-groups-2026/</loc>
+    <lastmod>2025-12-24</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/blog/evaluate-church-management-software-checklist/</loc>
+    <lastmod>2025-12-17</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/blog/why-churches-switching-planning-center-2025/</loc>
+    <lastmod>2025-12-10</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/blog/planning-center-vs-relius-honest-comparison/</loc>
+    <lastmod>2025-12-03</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/blog/ai-changing-church-administration/</loc>
+    <lastmod>2025-11-26</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/blog/church-200-vs-2000/</loc>
+    <lastmod>2025-11-19</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/blog/first-time-guests-welcome/</loc>
+    <lastmod>2025-11-12</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/blog/why-church-software-fails/</loc>
+    <lastmod>2025-11-05</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://relius.ai/blog/prevent-volunteer-burnout/</loc>
+    <lastmod>2025-10-29</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>

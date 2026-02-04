@@ -9,11 +9,22 @@ export const metadata: Metadata = {
   title: "AI Church Administration Tools | Workflow Automation Features",
   description:
     "AI-powered church administration tools that automate content creation, pastoral care insights, and sermon planning. Church workflow automation that saves 10+ hours weekly.",
+  alternates: {
+    canonical: "https://relius.ai/ai/",
+  },
   openGraph: {
     title: "AI Church Administration & Automation Tools | Relius",
     description:
       "Church automation tools for content creation, pastoral care, and workflow automation. Save 10+ hours weekly.",
+    url: "https://relius.ai/ai/",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Church Administration & Automation Tools | Relius",
+    description:
+      "Church automation tools for content creation, pastoral care, and workflow automation. Save 10+ hours weekly.",
+  },
+  keywords: ["AI church tools", "church automation", "AI sermon planner", "church workflow automation", "AI pastoral insights"],
 };
 
 export default function AiPage() {

@@ -12,6 +12,20 @@ import {
 export const metadata: Metadata = {
   title: "About Relius",
   description: "Learn about Relius and our commitment to helping churches spend less time on logistics and more time on ministry.",
+  alternates: {
+    canonical: "https://relius.ai/about/",
+  },
+  openGraph: {
+    title: "About Relius | Purpose-Built for Ministry",
+    description: "Learn about Relius and our commitment to helping churches spend less time on logistics and more time on ministry.",
+    url: "https://relius.ai/about/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Relius | Purpose-Built for Ministry",
+    description: "Learn about Relius and our commitment to helping churches spend less time on logistics and more time on ministry.",
+  },
+  keywords: ["about Relius", "church management company", "ministry software team", "church technology"],
 };
 
 export default function AboutPage() {

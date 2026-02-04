@@ -37,7 +37,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           },
           className
         )}
-        ref={ref as any}
+        // Radix Slot accepts Ref<HTMLElement> while button expects Ref<HTMLButtonElement>
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        ref={ref as React.Ref<any>}
         disabled={disabled}
         aria-disabled={disabled}
         {...props}

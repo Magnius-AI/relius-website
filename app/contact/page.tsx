@@ -6,6 +6,20 @@ import { Mail, Calendar, MessageCircle } from "lucide-react";
 export const metadata: Metadata = {
   title: "Contact Us",
   description: "Book a demo of Relius Church Management System. Get in touch with our team to learn how we can help your church.",
+  alternates: {
+    canonical: "https://relius.ai/contact/",
+  },
+  openGraph: {
+    title: "Contact Relius | Book a Demo",
+    description: "Book a personalized demo to see how Relius can transform your church management.",
+    url: "https://relius.ai/contact/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Relius | Book a Demo",
+    description: "Book a personalized demo to see how Relius can transform your church management.",
+  },
+  keywords: ["contact Relius", "church software demo", "book a demo", "church management demo"],
 };
 
 export default function ContactPage() {

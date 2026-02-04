@@ -1,9 +1,24 @@
 import Link from 'next/link';
 import { ArrowRight, Mail, BarChart, Heart, Calendar, DollarSign, FileText } from 'lucide-react';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
     title: 'Year-end giving campaigns | Relius Resources',
     description: 'Templates and strategies for finishing the financial year strong.',
+    alternates: {
+        canonical: 'https://relius.ai/resources/year-end-giving-campaigns/',
+    },
+    openGraph: {
+        title: 'Year-End Giving Campaigns | Relius Resources',
+        description: 'Templates and strategies for finishing the financial year strong.',
+        url: 'https://relius.ai/resources/year-end-giving-campaigns/',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Year-End Giving Campaigns | Relius Resources',
+        description: 'Templates and strategies for finishing the financial year strong.',
+    },
+    keywords: ['year-end giving', 'church giving campaigns', 'church fundraising'],
 };
 
 export default function YearEndGivingPage() {

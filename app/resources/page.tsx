@@ -17,6 +17,20 @@ const flattenedResources = resourceCategories.flatMap((category) =>
 export const metadata: Metadata = {
   title: "Resources for churches",
   description: "Guides, best practices, ministry insights, and product updates to help your church thrive with Relius.",
+  alternates: {
+    canonical: "https://relius.ai/resources/",
+  },
+  openGraph: {
+    title: "Church Resources & Guides | Relius",
+    description: "Guides, best practices, ministry insights, and product updates to help your church thrive.",
+    url: "https://relius.ai/resources/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Church Resources & Guides | Relius",
+    description: "Guides, best practices, ministry insights, and product updates to help your church thrive.",
+  },
+  keywords: ["church resources", "ministry guides", "church management tips", "church best practices"],
 };
 
 export default function ResourcesPage() {

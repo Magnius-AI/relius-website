@@ -58,7 +58,7 @@ export function AccordionItem({ value, children, className }: AccordionItemProps
     >
       {React.Children.map(children, (child) => {
         if (React.isValidElement(child)) {
-          return React.cloneElement(child, { value } as any);
+          return React.cloneElement(child, { value } as React.Attributes & { value: string });
         }
         return child;
       })}

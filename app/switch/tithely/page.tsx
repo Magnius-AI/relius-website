@@ -15,6 +15,19 @@ export const metadata: Metadata = {
   title: MIGRATION_PAGE_META["tithely"].title,
   description: MIGRATION_PAGE_META["tithely"].description,
   keywords: MIGRATION_PAGE_META["tithely"].keywords,
+  alternates: {
+    canonical: "https://relius.ai/switch/tithely/",
+  },
+  openGraph: {
+    title: "Switch from Tithe.ly to Relius | Free Migration",
+    description: "Step-by-step guide to migrate your church data from Tithe.ly to Relius with free assisted migration.",
+    url: "https://relius.ai/switch/tithely/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Switch from Tithe.ly to Relius | Free Migration",
+    description: "Step-by-step guide to migrate your church data from Tithe.ly to Relius with free assisted migration.",
+  },
 };
 
 export default function TithelyMigrationPage() {

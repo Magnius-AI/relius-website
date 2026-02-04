@@ -1,9 +1,24 @@
 import Link from 'next/link';
 import { ArrowRight, Layout, Monitor, Printer, Users, AlertCircle, CheckCircle } from 'lucide-react';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
     title: 'Improving Sunday check-in flow | Relius Resources',
     description: 'Create a calm, secure, and fast check-in experience for families.',
+    alternates: {
+        canonical: 'https://relius.ai/resources/improving-sunday-check-in-flow/',
+    },
+    openGraph: {
+        title: 'Improving Sunday Check-In Flow | Relius Resources',
+        description: 'Create a calm, secure, and fast check-in experience for families.',
+        url: 'https://relius.ai/resources/improving-sunday-check-in-flow/',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Improving Sunday Check-In Flow | Relius Resources',
+        description: 'Create a calm, secure, and fast check-in experience for families.',
+    },
+    keywords: ['church check-in', 'Sunday check-in flow', 'church attendance', 'kids check-in'],
 };
 
 export default function CheckInFlowPage() {

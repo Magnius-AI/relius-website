@@ -14,6 +14,19 @@ export const metadata: Metadata = {
   title: MIGRATION_PAGE_META["planning-center"].title,
   description: MIGRATION_PAGE_META["planning-center"].description,
   keywords: MIGRATION_PAGE_META["planning-center"].keywords,
+  alternates: {
+    canonical: "https://relius.ai/switch/planning-center/",
+  },
+  openGraph: {
+    title: "Switch from Planning Center to Relius | Free Migration",
+    description: "Step-by-step guide to migrate your church data from Planning Center to Relius with free assisted migration.",
+    url: "https://relius.ai/switch/planning-center/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Switch from Planning Center to Relius | Free Migration",
+    description: "Step-by-step guide to migrate your church data from Planning Center to Relius with free assisted migration.",
+  },
 };
 
 export default function PlanningCenterMigrationPage() {
