@@ -10,7 +10,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { analytics } from "@/lib/analytics";
 
 // Cloudflare Worker endpoint for form submissions
-const FORM_ENDPOINT = "https://relius-contact-form.kishor-panthi00.workers.dev";
+const FORM_ENDPOINT = process.env.NEXT_PUBLIC_CONTACT_FORM_ENDPOINT || "https://relius-contact-form.kishor-panthi00.workers.dev";
 
 const CURRENT_SOFTWARE_OPTIONS = [
   { value: "", label: "Select current software" },
@@ -50,6 +50,7 @@ type ContactFormData = z.infer<typeof contactSchema>;
 export function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const searchParams = useSearchParams();
 
   const {
@@ -85,6 +86,7 @@ export function ContactForm() {
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
+    setSubmitError(null);
 
     try {
       const response = await fetch(FORM_ENDPOINT, {
@@ -133,7 +135,7 @@ export function ContactForm() {
         error: error instanceof Error ? error.message : "Unknown error",
       });
 
-      alert("There was an error submitting the form. Please try again or email us directly at contact@relius.ai");
+      setSubmitError("There was an error submitting the form. Please try again or email us directly at contact@relius.ai");
     } finally {
       setIsSubmitting(false);
     }
@@ -306,6 +308,12 @@ export function ContactForm() {
             autoComplete="off"
             aria-hidden="true"
           />
+
+          {submitError && (
+            <div className="rounded-lg border border-red-200 bg-red-50 p-4" role="alert">
+              <p className="text-sm text-red-800">{submitError}</p>
+            </div>
+          )}
 
           <Button
             type="submit"

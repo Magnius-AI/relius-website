@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "AI Church Management Software | Relius - Save 10+ Hours Weekly",
   description:
     "AI-powered church management software with workflow automation, volunteer scheduling, and pastoral care tools. The modern Planning Center alternative that saves 10+ hours weekly. Start your free trial.",
+  alternates: {
+    canonical: "https://relius.ai/",
+  },
   openGraph: {
     type: "website",
     url: "https://relius.ai",
@@ -27,6 +30,12 @@ export const metadata: Metadata = {
         alt: "Relius AI Church Management Software",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Church Management Software | Relius",
+    description: "Save 10+ hours weekly with AI-powered church management. Volunteer scheduling, pastoral care, and church CRM.",
+    images: ["/og-image.png"],
   },
 };
 

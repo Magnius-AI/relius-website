@@ -3,6 +3,19 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms of Service | Relius",
   description: "Read the terms and conditions for using Relius church management platform. Understand your rights and responsibilities as a user.",
+  alternates: {
+    canonical: "https://relius.ai/terms/",
+  },
+  openGraph: {
+    title: "Terms of Service | Relius",
+    description: "Terms and conditions for using the Relius church management platform.",
+    url: "https://relius.ai/terms/",
+  },
+  twitter: {
+    card: "summary",
+    title: "Terms of Service | Relius",
+    description: "Terms and conditions for using the Relius church management platform.",
+  },
 };
 
 export default function TermsPage() {

@@ -86,7 +86,7 @@ export function BlogPageContent({ posts, topics }: BlogPageContentProps) {
                     key={tag}
                     type="button"
                     onClick={() => handleTopicClick(tag)}
-                    className={`text-xs font-medium px-2.5 py-1 rounded-full cursor-pointer transition-colors ${
+                    className={`text-xs font-medium px-2.5 py-1 rounded-full cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 ${
                       activeTopic === tag
                         ? "bg-primary-600 text-white"
                         : "bg-slate-100 text-slate-600 hover:bg-slate-200"
@@ -115,7 +115,7 @@ export function BlogPageContent({ posts, topics }: BlogPageContentProps) {
                   key={topic}
                   type="button"
                   onClick={() => handleTopicClick(topic)}
-                  className={`text-sm font-medium px-3 py-1.5 rounded-full cursor-pointer transition-colors ${
+                  className={`text-sm font-medium px-3 py-1.5 rounded-full cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 ${
                     activeTopic === topic
                       ? "bg-primary-600 text-white shadow-sm"
                       : "bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 hover:border-slate-300"
@@ -174,7 +174,7 @@ export function BlogPageContent({ posts, topics }: BlogPageContentProps) {
                           key={tag}
                           type="button"
                           onClick={() => handleTopicClick(tag)}
-                          className={`text-xs font-medium px-2.5 py-1 rounded-full cursor-pointer transition-colors ${
+                          className={`text-xs font-medium px-2.5 py-1 rounded-full cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2 ${
                             activeTopic === tag
                               ? "bg-primary-600 text-white"
                               : "bg-slate-100 text-slate-600 hover:bg-slate-200"

@@ -14,6 +14,19 @@ export const metadata: Metadata = {
   title: MIGRATION_PAGE_META["churchtrac"].title,
   description: MIGRATION_PAGE_META["churchtrac"].description,
   keywords: MIGRATION_PAGE_META["churchtrac"].keywords,
+  alternates: {
+    canonical: "https://relius.ai/switch/churchtrac/",
+  },
+  openGraph: {
+    title: "Switch from ChurchTrac to Relius | Free Migration",
+    description: "Step-by-step guide to migrate your church data from ChurchTrac to Relius with free assisted migration.",
+    url: "https://relius.ai/switch/churchtrac/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Switch from ChurchTrac to Relius | Free Migration",
+    description: "Step-by-step guide to migrate your church data from ChurchTrac to Relius with free assisted migration.",
+  },
 };
 
 export default function ChurchTracMigrationPage() {

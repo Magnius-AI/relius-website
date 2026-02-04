@@ -18,19 +18,23 @@ function initializePostHog() {
     return;
   }
 
-  posthog.init(apiKey, {
-    api_host: apiHost || "https://us.i.posthog.com",
-    capture_pageview: false, // We handle this manually for SPA routing
-    capture_pageleave: true, // Automatic time-on-page tracking
-    persistence: "memory", // Cookieless mode - no consent banner needed
-    autocapture: true, // Auto-capture clicks, form submissions
-    disable_session_recording: false,
-    session_recording: {
-      maskAllInputs: true, // Privacy: mask form inputs in recordings
-    },
-  });
+  try {
+    posthog.init(apiKey, {
+      api_host: apiHost || "https://us.i.posthog.com",
+      capture_pageview: false, // We handle this manually for SPA routing
+      capture_pageleave: true, // Automatic time-on-page tracking
+      persistence: "memory", // Cookieless mode - no consent banner needed
+      autocapture: true, // Auto-capture clicks, form submissions
+      disable_session_recording: false,
+      session_recording: {
+        maskAllInputs: true, // Privacy: mask form inputs in recordings
+      },
+    });
 
-  isInitialized = true;
+    isInitialized = true;
+  } catch (error) {
+    console.warn("PostHog initialization failed:", error);
+  }
 }
 
 export function Analytics() {

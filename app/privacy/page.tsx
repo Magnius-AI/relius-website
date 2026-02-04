@@ -3,6 +3,19 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy | Relius",
   description: "Learn how Relius collects, uses, and protects your data. Our privacy policy explains our commitment to safeguarding your church's information.",
+  alternates: {
+    canonical: "https://relius.ai/privacy/",
+  },
+  openGraph: {
+    title: "Privacy Policy | Relius",
+    description: "How Relius collects, uses, and protects your church's data.",
+    url: "https://relius.ai/privacy/",
+  },
+  twitter: {
+    card: "summary",
+    title: "Privacy Policy | Relius",
+    description: "How Relius collects, uses, and protects your church's data.",
+  },
 };
 
 export default function PrivacyPage() {

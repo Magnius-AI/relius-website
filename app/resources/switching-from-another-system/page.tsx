@@ -1,9 +1,24 @@
 import Link from 'next/link';
 import { ArrowRight, CheckCircle, Clock, AlertTriangle, Database, Upload, Users, HelpCircle } from 'lucide-react';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
     title: 'Switching from another system | Relius Resources',
     description: 'A comprehensive guide to migrating your church data to Relius safely and effectively.',
+    alternates: {
+        canonical: 'https://relius.ai/resources/switching-from-another-system/',
+    },
+    openGraph: {
+        title: 'Switching from Another System | Relius Resources',
+        description: 'A comprehensive guide to migrating your church data to Relius safely and effectively.',
+        url: 'https://relius.ai/resources/switching-from-another-system/',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Switching from Another System | Relius Resources',
+        description: 'A comprehensive guide to migrating your church data to Relius safely and effectively.',
+    },
+    keywords: ['church software migration', 'switch church management', 'data migration guide'],
 };
 
 export default function SwitchingSystemPage() {

@@ -11,6 +11,19 @@ export const metadata: Metadata = {
   title: MIGRATION_PAGE_META.hub.title,
   description: MIGRATION_PAGE_META.hub.description,
   keywords: MIGRATION_PAGE_META.hub.keywords,
+  alternates: {
+    canonical: "https://relius.ai/switch/",
+  },
+  openGraph: {
+    title: "Switch to Relius | Free Church Data Migration",
+    description: "Migrate from Planning Center, ChurchTrac, or Tithe.ly to Relius with free guided migration assistance.",
+    url: "https://relius.ai/switch/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Switch to Relius | Free Church Data Migration",
+    description: "Migrate from Planning Center, ChurchTrac, or Tithe.ly to Relius with free guided migration assistance.",
+  },
 };
 
 const platforms = migrationPlatforms.map((p) => ({

@@ -1,9 +1,24 @@
 import Link from 'next/link';
 import { ArrowRight, CheckCircle, Clock, Settings, Users, Calendar, CreditCard, Shield } from 'lucide-react';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
     title: 'Setting up your church in Relius | Relius Resources',
     description: 'A complete checklist to get your church up and running in Relius in one afternoon.',
+    alternates: {
+        canonical: 'https://relius.ai/resources/setting-up-your-church/',
+    },
+    openGraph: {
+        title: 'Setting Up Your Church in Relius | Resources',
+        description: 'A complete checklist to get your church up and running in Relius in one afternoon.',
+        url: 'https://relius.ai/resources/setting-up-your-church/',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Setting Up Your Church in Relius | Resources',
+        description: 'A complete checklist to get your church up and running in Relius in one afternoon.',
+    },
+    keywords: ['church setup guide', 'Relius onboarding', 'church management setup'],
 };
 
 export default function SetupChecklistPage() {

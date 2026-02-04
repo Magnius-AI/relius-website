@@ -6,6 +6,20 @@ import { Shield, Lock, Eye, Key, AlertTriangle, FileCheck, Server, Users } from 
 export const metadata: Metadata = {
   title: "Security & Compliance",
   description: "Learn how Relius protects your church data with encryption, role-based access control, audit logs, and comprehensive security measures.",
+  alternates: {
+    canonical: "https://relius.ai/security/",
+  },
+  openGraph: {
+    title: "Security & Compliance | Relius",
+    description: "Enterprise-grade security for your church data. Encryption, RBAC, audit logs, and GDPR compliance.",
+    url: "https://relius.ai/security/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Security & Compliance | Relius",
+    description: "Enterprise-grade security for your church data. Encryption, RBAC, audit logs, and GDPR compliance.",
+  },
+  keywords: ["church data security", "church software compliance", "GDPR church", "church data encryption"],
 };
 
 export default function SecurityPage() {

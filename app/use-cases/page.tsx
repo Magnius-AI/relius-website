@@ -11,10 +11,20 @@ const featuredUseCase = useCases[0]!;
 export const metadata: Metadata = {
   title: "Use Cases - See What's Possible",
   description: "Explore how Relius helps churches of all sizes streamline operations, coordinate volunteers, and care for people better.",
+  alternates: {
+    canonical: "https://relius.ai/use-cases/",
+  },
   openGraph: {
     title: "See What's Possible with Relius",
     description: "Explore real-world scenarios showing how Relius can serve your church.",
+    url: "https://relius.ai/use-cases/",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "See What's Possible with Relius",
+    description: "Explore real-world scenarios showing how Relius can serve your church.",
+  },
+  keywords: ["church management use cases", "church software examples", "volunteer coordination", "pastoral care tracking"],
 };
 
 export default function UseCasesPage() {

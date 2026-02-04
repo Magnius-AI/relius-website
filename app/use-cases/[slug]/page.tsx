@@ -20,7 +20,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${useCase.title} - Use Case`,
     description: useCase.subtitle,
+    alternates: {
+      canonical: `https://relius.ai/use-cases/${slug}/`,
+    },
     openGraph: {
+      title: useCase.title,
+      description: useCase.subtitle,
+    },
+    twitter: {
+      card: "summary_large_image",
       title: useCase.title,
       description: useCase.subtitle,
     },

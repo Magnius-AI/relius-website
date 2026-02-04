@@ -1,9 +1,24 @@
 import Link from 'next/link';
 import { ArrowRight, Clock, Users, BookOpen, MessageSquare, MonitorPlay, FileText } from 'lucide-react';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
     title: 'Training your team | Relius Resources',
     description: 'Complete training templates and session outlines to help your church staff adopt Relius.',
+    alternates: {
+        canonical: 'https://relius.ai/resources/training-your-team/',
+    },
+    openGraph: {
+        title: 'Training Your Team | Relius Resources',
+        description: 'Complete training templates and session outlines to help your church staff adopt Relius.',
+        url: 'https://relius.ai/resources/training-your-team/',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Training Your Team | Relius Resources',
+        description: 'Complete training templates and session outlines to help your church staff adopt Relius.',
+    },
+    keywords: ['church staff training', 'church software training', 'team onboarding'],
 };
 
 export default function TrainingTeamPage() {

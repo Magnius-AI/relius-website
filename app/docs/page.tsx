@@ -6,6 +6,20 @@ import { BookOpen } from "lucide-react";
 export const metadata: Metadata = {
   title: "Documentation",
   description: "Comprehensive documentation for Relius Church Management System.",
+  alternates: {
+    canonical: "https://relius.ai/docs/",
+  },
+  openGraph: {
+    title: "Documentation | Relius",
+    description: "Comprehensive guides and API documentation for Relius Church Management System.",
+    url: "https://relius.ai/docs/",
+  },
+  twitter: {
+    card: "summary",
+    title: "Documentation | Relius",
+    description: "Comprehensive guides and API documentation for Relius Church Management System.",
+  },
+  keywords: ["Relius documentation", "church software docs", "API documentation", "church management guides"],
 };
 
 export default function DocsPage() {
