@@ -94,6 +94,7 @@ export default function PricingPage() {
         "Phone Support",
         "Quarterly Strategy Calls",
         "Multi-Site Support (up to 3 locations)",
+      "Pipelines - Track people through any process",
       ],
       notIncluded: [],
     },
@@ -101,13 +102,14 @@ export default function PricingPage() {
       name: "Enterprise",
       description: "White-labeling, unlimited sites, SSO, and dedicated support",
       price: {
-        monthly: "$249",
-        annual: "$2,539",
+        monthly: "Contact Us",
+        annual: "Contact Us",
       },
       popular: false,
       limits: "Unlimited everything - members, events, groups, sites",
       features: [
         "Everything in AI Pro",
+      "Unlimited Pipelines",
         "Unlimited Sites/Campuses",
         "Advanced Multi-Site Management",
         "Single Sign-On (SSO)",
@@ -225,6 +227,7 @@ export default function PricingPage() {
       category: "Advanced Features",
       items: [
         { name: "Custom Branding", starter: false, growth: true, aiPro: true, enterprise: true },
+          { name: "Pipelines", starter: false, growth: false, aiPro: true, enterprise: true },
         { name: "Advanced Reporting", starter: false, growth: true, aiPro: true, enterprise: true },
         { name: "API Access", starter: false, growth: false, aiPro: "Basic", enterprise: "Full" },
         { name: "Single Sign-On (SSO)", starter: false, growth: false, aiPro: false, enterprise: true },
@@ -341,8 +344,8 @@ export default function PricingPage() {
                       className="w-full mb-6"
                       asChild
                     >
-                      <a href={CHECKOUT_URLS.DEFAULT}>
-                        Get Started
+                      <a href={tier.name === "Enterprise" ? "/contact/" : CHECKOUT_URLS.DEFAULT}>
+                        {tier.name === "Enterprise" ? "Contact Us" : "Get Started"}
                       </a>
                     </Button>
                     {tier.limits && (
@@ -406,8 +409,8 @@ export default function PricingPage() {
                       className="w-full mb-6"
                       asChild
                     >
-                      <a href={CHECKOUT_URLS.DEFAULT}>
-                        Get Started
+                      <a href={tier.name === "Enterprise" ? "/contact/" : CHECKOUT_URLS.DEFAULT}>
+                        {tier.name === "Enterprise" ? "Contact Us" : "Get Started"}
                       </a>
                     </Button>
                     {tier.limits && (
