@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { Monitor, Smartphone } from 'lucide-react';
+import { Monitor, Smartphone, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 import { DemoBrowserFrame } from './DemoBrowserFrame';
 import { DemoMobileFrame } from './DemoMobileFrame';
 import { DemoApp } from './DemoApp';
@@ -82,10 +83,9 @@ export function InteractiveDemo() {
               onClick={() => handleViewModeChange('desktop')}
               aria-label="View desktop version"
               aria-pressed={viewMode === 'desktop'}
-              className={`px-3 py-1.5 rounded-md text-sm font-medium flex items-center gap-2 transition-colors
-                ${viewMode === 'desktop'
-                  ? 'bg-blue-100 text-blue-700'
-                  : 'text-gray-600 hover:bg-gray-50'}`}
+              className={`px-3 py-1.5 rounded-md text-sm font-medium flex items-center gap-2 transition-colors ${
+                viewMode === 'desktop' ? 'bg-blue-100 text-blue-700' : 'text-gray-600 hover:bg-gray-50'
+              }`}
             >
               <Monitor className="w-4 h-4" aria-hidden="true" />
               <span className="hidden sm:inline">Desktop</span>
@@ -94,10 +94,9 @@ export function InteractiveDemo() {
               onClick={() => handleViewModeChange('mobile')}
               aria-label="View mobile version"
               aria-pressed={viewMode === 'mobile'}
-              className={`px-3 py-1.5 rounded-md text-sm font-medium flex items-center gap-2 transition-colors
-                ${viewMode === 'mobile'
-                  ? 'bg-blue-100 text-blue-700'
-                  : 'text-gray-600 hover:bg-gray-50'}`}
+              className={`px-3 py-1.5 rounded-md text-sm font-medium flex items-center gap-2 transition-colors ${
+                viewMode === 'mobile' ? 'bg-blue-100 text-blue-700' : 'text-gray-600 hover:bg-gray-50'
+              }`}
             >
               <Smartphone className="w-4 h-4" aria-hidden="true" />
               <span className="hidden sm:inline">Mobile</span>
@@ -124,6 +123,23 @@ export function InteractiveDemo() {
             ? 'Try clicking on sidebar items to navigate between views. Add new people or groups using the buttons.'
             : 'Use the bottom navigation to explore different views. Tap on items to interact.'}
         </p>
+
+        {/* CTA to try free trial */}
+        <div className="mt-10 text-center">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-3 px-6 py-4 rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 shadow-sm">
+            <span className="text-slate-700 font-medium">
+              Want to explore all features?
+            </span>
+            <Link
+              href="/pricing"
+              onClick={() => analytics.trackDemoInteraction('demo_cta_clicked')}
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 transition-colors shadow-sm hover:shadow"
+            >
+              Start your free trial
+              <ArrowRight className="w-4 h-4" aria-hidden="true" />
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   );
