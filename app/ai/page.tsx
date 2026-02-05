@@ -4,6 +4,12 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Brain, Shield, Users, CheckCircle2, Clock, X, Sparkles } from "lucide-react";
+import { SermonPlannerDemo } from "@/components/demo/ai-demos/SermonPlannerDemo";
+import { ContentStudioDemo } from "@/components/demo/ai-demos/ContentStudioDemo";
+import { TranslationDemo } from "@/components/demo/ai-demos/TranslationDemo";
+import { PastoralCareDemo } from "@/components/demo/ai-demos/PastoralCareDemo";
+import { AIInsightsDemo } from "@/components/demo/ai-demos/AIInsightsDemo";
+import { DonationsAIDemo } from "@/components/demo/ai-demos/DonationsAIDemo";
 
 export const metadata: Metadata = {
   title: "AI Church Administration Tools | Workflow Automation Features",
@@ -135,14 +141,14 @@ export default function AiPage() {
                   </li>
                 </ul>
               </div>
-              <div className="bg-gray-100 rounded-xl p-8 flex items-center justify-center aspect-video">
-                <p className="text-gray-500 text-center">Sermon Generator Interface</p>
+              <div className="flex items-center justify-center">
+                <SermonPlannerDemo />
               </div>
             </div>
 
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="order-2 md:order-1 bg-gray-100 rounded-xl p-8 flex items-center justify-center aspect-video">
-                <p className="text-gray-500 text-center">Content Studio Interface</p>
+              <div className="order-2 md:order-1 flex items-center justify-center">
+                <ContentStudioDemo />
               </div>
               <div className="order-1 md:order-2">
                 <Badge variant="default" className="mb-3">Content Studio</Badge>
@@ -189,14 +195,14 @@ export default function AiPage() {
                   </li>
                 </ul>
               </div>
-              <div className="bg-gray-100 rounded-xl p-8 flex items-center justify-center aspect-video">
-                <p className="text-gray-500 text-center">Pastoral Care Dashboard</p>
+              <div className="flex items-center justify-center">
+                <PastoralCareDemo />
               </div>
             </div>
 
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="order-2 md:order-1 bg-gray-100 rounded-xl p-8 flex items-center justify-center aspect-video">
-                <p className="text-gray-500 text-center">AI Insights Dashboard</p>
+              <div className="order-2 md:order-1 flex items-center justify-center">
+                <AIInsightsDemo />
               </div>
               <div className="order-1 md:order-2">
                 <Badge variant="default" className="mb-3">AI Insights</Badge>
@@ -216,6 +222,60 @@ export default function AiPage() {
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                     <span>Actionable insights, not just data</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <Badge variant="default" className="mb-3">Translation Console</Badge>
+                <h3 className="mb-4">Break Language Barriers</h3>
+                <p className="text-slate-500 mb-4">
+                  Instantly translate sermons, announcements, and church communications into 50+ languages. Built-in caching ensures fast, consistent translations across your ministry.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <span>50+ languages supported</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <span>Smart caching for repeated phrases</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <span>Context-aware theological accuracy</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="flex items-center justify-center">
+                <TranslationDemo />
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="order-2 md:order-1 flex items-center justify-center">
+                <DonationsAIDemo />
+              </div>
+              <div className="order-1 md:order-2">
+                <Badge variant="default" className="mb-3">Giving Insights</Badge>
+                <h3 className="mb-4">AI-Powered Donor Retention</h3>
+                <p className="text-slate-500 mb-4">
+                  Identify at-risk donors before they lapse. Get AI-driven insights on giving patterns, engagement opportunities, and personalized outreach recommendations.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <span>At-risk and lapsed donor alerts</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <span>Giving trend analysis and predictions</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <span>Multi-channel donation tracking</span>
                   </li>
                 </ul>
               </div>
@@ -302,16 +362,16 @@ export default function AiPage() {
           </div>
         </div>
 
-        <div className="bg-gradient-to-br from-primary to-primary-700 text-white rounded-2xl p-12 text-center">
-          <h2 className="text-white mb-6">Responsible AI for Ministry</h2>
-          <p className="text-lg text-white/80 mb-8 max-w-3xl mx-auto">
+        <div className="bg-gradient-to-br from-blue-50 to-slate-50 rounded-2xl p-12 text-center">
+          <h2 className="text-slate-900 mb-4">Responsible AI for Ministry</h2>
+          <p className="text-lg text-slate-600 mb-8 max-w-3xl mx-auto">
             We believe AI should augment human ministry, not replace it. Every AI feature is designed with ethical guidelines, privacy protections, and human oversight to ensure technology serves your mission.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="secondary" size="lg" asChild className="bg-white text-primary hover:bg-gray-50">
+            <Button size="lg" asChild className="bg-accent-600 hover:bg-accent-700 text-white">
               <Link href="/contact/">See AI in Action</Link>
             </Button>
-            <Button variant="outline" size="lg" asChild className="border-2 border-white text-white hover:bg-white/10">
+            <Button variant="outline" size="lg" asChild className="border-2 border-slate-300 text-slate-700 hover:bg-white">
               <Link href="/features/#ai">View All AI Features</Link>
             </Button>
           </div>
