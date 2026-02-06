@@ -49,7 +49,7 @@ export function DocsLayout({ children }: DocsLayoutProps) {
             <div className="h-full overflow-y-auto p-6 lg:sticky lg:top-8">
               {/* Header */}
               <div className="mb-6">
-                <h2 className="text-lg font-bold text-slate-900">Documentation</h2>
+                <h2 className="text-xl font-bold text-slate-900 whitespace-nowrap">Docs</h2>
                 <p className="mt-1 text-sm text-slate-600">
                   Everything you need to know about Relius
                 </p>

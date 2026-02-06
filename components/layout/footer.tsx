@@ -19,7 +19,7 @@ export function Footer() {
     ],
     resources: [
       { name: "Use Cases", href: "/use-cases/" },
-      { name: "Resources", href: "/resources/" },
+      { name: "Docs", href: "/resources/docs/" },
       { name: "Documentation", href: "/resources/docs/" },
       { name: "Blog", href: "/blog/" },
       { name: "Support", href: "/contact/" },
