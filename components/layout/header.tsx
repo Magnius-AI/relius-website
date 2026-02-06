@@ -28,75 +28,88 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled
-          ? "bg-white border-b border-gray-200 shadow-sm"
-          : "bg-transparent"
-        }`}
-    >
-      <nav
-        className="container-width flex items-center justify-between py-4"
-        aria-label="Global"
-      >
-        <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2 group">
-            <div className="relative w-8 h-8 transition-transform duration-300 group-hover:scale-110">
-              <Image
-                src="/relius_emblem_circle.png"
-                alt="Relius Logo"
-                fill
-                className="object-contain"
-              />
-            </div>
-            <span className="text-xl font-bold text-primary tracking-tight">
-              Relius
-            </span>
-          </Link>
-        </div>
-        <div className="flex lg:hidden">
-          <button
-            type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-secondary hover:text-primary transition-colors"
-            onClick={() => setMobileMenuOpen(true)}
-            aria-expanded={mobileMenuOpen}
-            aria-controls="mobile-menu"
-            aria-label="Main menu"
-          >
-            <span className="sr-only">Open main menu</span>
-            <Menu className="h-6 w-6" aria-hidden="true" />
-          </button>
-        </div>
-        <div className="hidden lg:flex lg:gap-x-8">
-          {navigation.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="text-sm font-medium leading-6 text-secondary hover:text-accent transition-colors relative group"
-            >
-              {item.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
-            </Link>
-          ))}
-        </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-6 items-center">
-          <Link
-            href="https://app.relius.ai"
-            className="text-sm font-semibold leading-6 text-primary hover:text-accent transition-colors"
-          >
-            Log in
-          </Link>
-          <Link
-            href={DEFAULT_SIGNUP_URL}
-            className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-lg hover:bg-accent hover:shadow-accent/25 transition-all duration-300 flex items-center gap-2 group"
-          >
-            Get started
-            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-          </Link>
-        </div>
-      </nav>
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
 
-      {/* Mobile menu */}
+  return (
+    <>
+      <header
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled
+            ? "bg-white border-b border-gray-200 shadow-sm"
+            : "bg-transparent"
+          }`}
+      >
+        <nav
+          className="container-width flex items-center justify-between py-4"
+          aria-label="Global"
+        >
+          <div className="flex lg:flex-1">
+            <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2 group">
+              <div className="relative w-8 h-8 transition-transform duration-300 group-hover:scale-110">
+                <Image
+                  src="/relius_emblem_circle.png"
+                  alt="Relius Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <span className="text-xl font-bold text-primary tracking-tight">
+                Relius
+              </span>
+            </Link>
+          </div>
+          <div className="flex lg:hidden">
+            <button
+              type="button"
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-secondary hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(true)}
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-menu"
+              aria-label="Main menu"
+            >
+              <span className="sr-only">Open main menu</span>
+              <Menu className="h-6 w-6" aria-hidden="true" />
+            </button>
+          </div>
+          <div className="hidden lg:flex lg:gap-x-8">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-sm font-medium leading-6 text-secondary hover:text-accent transition-colors relative group"
+              >
+                {item.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
+              </Link>
+            ))}
+          </div>
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-6 items-center">
+            <Link
+              href="https://app.relius.ai"
+              className="text-sm font-semibold leading-6 text-primary hover:text-accent transition-colors"
+            >
+              Log in
+            </Link>
+            <Link
+              href={DEFAULT_SIGNUP_URL}
+              className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-lg hover:bg-accent hover:shadow-accent/25 transition-all duration-300 flex items-center gap-2 group"
+            >
+              Get started
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
+        </nav>
+      </header>
+
+      {/* Mobile menu rendered outside <header> to avoid backdrop-filter containing block issues */}
       <div
         className={`lg:hidden fixed inset-0 z-50 ${mobileMenuOpen ? "pointer-events-auto" : "pointer-events-none"
           }`}
@@ -168,6 +181,6 @@ export function Header() {
           </div>
         </div>
       </div>
-    </header>
+    </>
   );
 }
