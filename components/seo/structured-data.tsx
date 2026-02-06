@@ -115,7 +115,7 @@ export function StructuredData() {
         name: "How much does Relius cost?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Relius starts at $49/month for the Starter plan with unlimited members. We offer a 7-day free trial. Growth plan is $99/month, AI Pro is $149/month, and Enterprise is $249/month.",
+          text: "Relius starts at $49/month for the Starter plan with unlimited members. We offer a 14-day free trial. Growth plan is $99/month, AI Pro is $149/month, and Enterprise is $249/month.",
         },
       },
       {

@@ -104,7 +104,7 @@ export function Hero() {
               <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm text-slate-500 animate-fade-in-up [animation-delay:800ms]">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-accent-500" />
-                  <span>7-day free trial</span>
+                  <span>14-day free trial</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-accent-500" />

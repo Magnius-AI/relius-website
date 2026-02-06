@@ -4,7 +4,7 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "Church Management Software Pricing | Plans from $49/month",
   description:
-    "Simple, transparent pricing for Relius church management software. Unlimited members on all plans. Starter $49/mo, Growth $99/mo, AI Pro $149/mo, Enterprise $249/mo. 7-day free trial, no credit card required.",
+    "Simple, transparent pricing for Relius church management software. Unlimited members on all plans. Starter $49/mo, Growth $99/mo, AI Pro $149/mo, Enterprise $249/mo. 14-day free trial, no credit card required.",
   alternates: {
     canonical: "https://relius.ai/pricing/",
   },
