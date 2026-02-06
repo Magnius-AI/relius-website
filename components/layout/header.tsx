@@ -59,6 +59,9 @@ export function Header() {
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-secondary hover:text-primary transition-colors"
             onClick={() => setMobileMenuOpen(true)}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-menu"
+            aria-label="Main menu"
           >
             <span className="sr-only">Open main menu</span>
             <Menu className="h-6 w-6" aria-hidden="true" />
@@ -99,12 +102,16 @@ export function Header() {
           }`}
       >
         <div
-          className={`fixed inset-0 bg-primary/20 backdrop-blur-sm transition-opacity duration-300 ${mobileMenuOpen ? "opacity-100" : "opacity-0"
+          className={`fixed inset-0 bg-black/50 transition-opacity duration-300 ${mobileMenuOpen ? "opacity-100" : "opacity-0"
             }`}
           onClick={() => setMobileMenuOpen(false)}
         />
         <div
-          className={`fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          id="mobile-menu"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Main menu"
+          className={`fixed inset-0 z-50 overflow-y-auto bg-white px-6 py-6 sm:inset-y-0 sm:right-0 sm:left-auto sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 transform transition-transform duration-300 ${mobileMenuOpen ? "translate-x-0" : "translate-x-full"
             }`}
         >
           <div className="flex items-center justify-between">
