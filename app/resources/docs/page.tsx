@@ -42,7 +42,7 @@ export default function DocsPage() {
         </Link>
 
         <Link
-          href="/resources/docs/ai/overview"
+          href="/resources/docs/ai"
           className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:shadow-md hover:border-primary-300"
         >
           <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-accent-100 text-accent-600">
@@ -59,7 +59,7 @@ export default function DocsPage() {
         </Link>
 
         <Link
-          href="/resources/docs/people/overview"
+          href="/resources/docs/people"
           className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all hover:shadow-md hover:border-primary-300"
         >
           <div className="mb-3 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-green-100 text-green-600">

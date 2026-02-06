@@ -40,7 +40,7 @@ export const docsNavigation: DocSection[] = [
     title: 'People',
     icon: Users,
     items: [
-      { title: 'Overview', href: '/resources/docs/people/overview' },
+      { title: 'Overview', href: '/resources/docs/people' },
       { title: 'Member Directory', href: '/resources/docs/people/directory' },
       { title: 'Family Management', href: '/resources/docs/people/families' },
       { title: 'Visitor Tracking', href: '/resources/docs/people/visitors' },
@@ -51,7 +51,7 @@ export const docsNavigation: DocSection[] = [
     title: 'Groups',
     icon: UsersRound,
     items: [
-      { title: 'Overview', href: '/resources/docs/groups/overview' },
+      { title: 'Overview', href: '/resources/docs/groups' },
       { title: 'Creating Groups', href: '/resources/docs/groups/creating' },
       { title: 'Group Types & Categories', href: '/resources/docs/groups/types' },
       { title: 'Group Leaders', href: '/resources/docs/groups/leaders' },
@@ -63,7 +63,7 @@ export const docsNavigation: DocSection[] = [
     title: 'Events & Calendar',
     icon: Calendar,
     items: [
-      { title: 'Overview', href: '/resources/docs/events/overview' },
+      { title: 'Overview', href: '/resources/docs/events' },
       { title: 'Event Calendar', href: '/resources/docs/events/calendar' },
       { title: 'Registration & RSVP', href: '/resources/docs/events/registration' },
       { title: 'Check-In System', href: '/resources/docs/events/check-in' },
@@ -74,7 +74,7 @@ export const docsNavigation: DocSection[] = [
     title: 'Giving',
     icon: DollarSign,
     items: [
-      { title: 'Overview', href: '/resources/docs/giving/overview' },
+      { title: 'Overview', href: '/resources/docs/giving' },
       { title: 'Donation Tracking', href: '/resources/docs/giving/tracking' },
       { title: 'Online Giving Setup', href: '/resources/docs/giving/online-setup' },
       { title: 'Campaigns', href: '/resources/docs/giving/campaigns' },
@@ -87,7 +87,7 @@ export const docsNavigation: DocSection[] = [
     title: 'Communications',
     icon: MessageSquare,
     items: [
-      { title: 'Overview', href: '/resources/docs/communications/overview' },
+      { title: 'Overview', href: '/resources/docs/communications' },
       { title: 'Email Campaigns', href: '/resources/docs/communications/email' },
       { title: 'SMS Messaging', href: '/resources/docs/communications/sms' },
       { title: 'Announcements', href: '/resources/docs/communications/announcements' },
@@ -97,7 +97,7 @@ export const docsNavigation: DocSection[] = [
     title: 'Pastoral Care',
     icon: Heart,
     items: [
-      { title: 'Overview', href: '/resources/docs/pastoral-care/overview' },
+      { title: 'Overview', href: '/resources/docs/pastoral-care' },
       { title: 'Care Notes', href: '/resources/docs/pastoral-care/notes' },
       { title: 'Prayer Requests', href: '/resources/docs/pastoral-care/prayer' },
       { title: 'At-Risk Detection', href: '/resources/docs/pastoral-care/at-risk' },
@@ -107,7 +107,7 @@ export const docsNavigation: DocSection[] = [
     title: 'AI Features',
     icon: Sparkles,
     items: [
-      { title: 'Overview', href: '/resources/docs/ai/overview' },
+      { title: 'Overview', href: '/resources/docs/ai' },
       { title: 'AI Sermon Planner', href: '/resources/docs/ai/sermon-planner' },
       { title: 'AI Content Studio', href: '/resources/docs/ai/content-studio' },
       { title: 'AI Pastoral Insights', href: '/resources/docs/ai/pastoral-insights' },
@@ -121,7 +121,7 @@ export const docsNavigation: DocSection[] = [
     title: 'Public Website',
     icon: Globe,
     items: [
-      { title: 'Overview', href: '/resources/docs/website/overview' },
+      { title: 'Overview', href: '/resources/docs/website' },
       { title: 'Website Setup', href: '/resources/docs/website/setup' },
       { title: 'Pages & Content', href: '/resources/docs/website/pages' },
       { title: 'Online Giving Page', href: '/resources/docs/website/giving' },
@@ -131,7 +131,7 @@ export const docsNavigation: DocSection[] = [
     title: 'Administration',
     icon: Settings,
     items: [
-      { title: 'Overview', href: '/resources/docs/admin/overview' },
+      { title: 'Overview', href: '/resources/docs/admin' },
       { title: 'Church Settings', href: '/resources/docs/admin/settings' },
       { title: 'User Management', href: '/resources/docs/admin/users' },
       { title: 'Security Settings', href: '/resources/docs/admin/security' },
