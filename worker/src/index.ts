@@ -8,6 +8,7 @@ export interface Env {
   ALLOWED_ORIGIN: string;
   TO_EMAIL: string;
   FROM_EMAIL: string;
+  DISCORD_WEBHOOK_URL?: string;
 }
 
 // CTA Click Notification Types
@@ -428,8 +429,96 @@ async function sendCTANotification(
     return { success: false, error: "Failed to send notification" };
   }
 
-  console.log("CTA notification sent for:", data.cta_name);
+  console.log("CTA notification email sent for:", data.cta_name);
+  
+  // Send Discord notification if webhook URL is configured
+  if (env.DISCORD_WEBHOOK_URL) {
+    try {
+      await sendDiscordNotification(data, ctaLabel, timestamp, env.DISCORD_WEBHOOK_URL);
+      console.log("Discord notification sent for:", data.cta_name);
+    } catch (discordError) {
+      console.error("Failed to send Discord notification:", discordError);
+      // Don't fail the whole request if Discord fails
+    }
+  }
+  
   return { success: true };
+}
+
+// Send Discord notification to marketing channel
+async function sendDiscordNotification(
+  data: CTANotification,
+  ctaLabel: string,
+  timestamp: string,
+  webhookUrl: string
+): Promise<void> {
+  // Extract domain from referrer for cleaner display
+  let referrerDisplay = "Direct";
+  if (data.referrer) {
+    try {
+      const url = new URL(data.referrer);
+      referrerDisplay = url.hostname;
+      // Remove www. prefix
+      referrerDisplay = referrerDisplay.replace(/^www\./, '');
+    } catch {
+      referrerDisplay = data.referrer;
+    }
+  }
+
+  // Create Discord embed
+  const discordPayload = {
+    username: "Relius Free Trial Bot",
+    avatar_url: "https://relius.ai/favicon.ico",
+    embeds: [
+      {
+        title: "🚀 Free Trial Button Clicked!",
+        color: 0x10b981, // Green color
+        fields: [
+          {
+            name: "Button Location",
+            value: ctaLabel,
+            inline: true
+          },
+          {
+            name: "Page",
+            value: `[${new URL(data.page_url).pathname}](${data.page_url})`,
+            inline: true
+          },
+          {
+            name: "Time",
+            value: timestamp,
+            inline: true
+          },
+          {
+            name: "Referrer",
+            value: referrerDisplay,
+            inline: true
+          },
+          {
+            name: "CTA Name",
+            value: `\`${data.cta_name}\``,
+            inline: true
+          }
+        ],
+        footer: {
+          text: "Relius Marketing Automation",
+          icon_url: "https://relius.ai/favicon.ico"
+        },
+        timestamp: new Date(data.timestamp).toISOString()
+      }
+    ]
+  };
+
+  const response = await fetch(webhookUrl, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(discordPayload),
+  });
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(`Discord webhook failed: ${response.status} - ${errorText}`);
+  }
 }
 
 function checkRateLimit(ip: string): boolean {

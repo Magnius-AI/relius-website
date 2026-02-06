@@ -5,9 +5,9 @@ import { docsNavigation } from '@/data/docs-navigation';
 import { ArrowLeft, BookOpen } from 'lucide-react';
 
 interface DocPageProps {
-  params: {
+  params: Promise<{
     slug: string[];
-  };
+  }>;
 }
 
 // Generate static params for all documentation pages
@@ -27,7 +27,7 @@ export async function generateStaticParams() {
 
 // Generate metadata for each page
 export async function generateMetadata({ params }: DocPageProps): Promise<Metadata> {
-  const { slug } = params;
+  const { slug } = await params;
   const href = `/resources/docs/${slug.join('/')}`;
 
   // Find the page in navigation
@@ -58,8 +58,8 @@ export async function generateMetadata({ params }: DocPageProps): Promise<Metada
   };
 }
 
-export default function DocPage({ params }: DocPageProps) {
-  const { slug } = params;
+export default async function DocPage({ params }: DocPageProps) {
+  const { slug } = await params;
   const href = `/resources/docs/${slug.join('/')}`;
 
   // Find the current page and section in navigation
