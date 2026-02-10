@@ -37,7 +37,7 @@ export function StructuredData() {
       "AI-powered church management software with church automation tools and workflow automation. Helps churches save 10+ hours weekly on administration.",
     foundingDate: "2024",
     sameAs: [
-      "https://www.facebook.com/relius.ai",
+      "https://www.facebook.com/profile.php?id=61587862231605",
       "https://www.linkedin.com/company/relius-chms-platform/",
       "https://x.com/ReliusPlatform",
     ],

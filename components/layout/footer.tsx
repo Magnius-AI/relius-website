@@ -25,7 +25,6 @@ export function Footer() {
     ],
     company: [
       { name: "About", href: "/about/" },
-      { name: "Contact", href: "/contact/" },
       { name: "Book a Demo", href: "/contact/" },
       { name: "Privacy Policy", href: "/privacy/" },
       { name: "Terms of Service", href: "/terms/" },
@@ -33,7 +32,7 @@ export function Footer() {
   };
 
   const socialLinks = [
-    { name: "Facebook", href: "https://www.facebook.com/relius.ai", icon: Facebook },
+    { name: "Facebook", href: "https://www.facebook.com/profile.php?id=61587862231605", icon: Facebook },
     { name: "Twitter", href: "https://x.com/ReliusPlatform", icon: Twitter },
     { name: "LinkedIn", href: "https://www.linkedin.com/company/relius-chms-platform/", icon: Linkedin },
   ];
