@@ -22,6 +22,8 @@ interface CTANotification {
 
 // Human-readable CTA names
 const CTA_LABELS: Record<string, string> = {
+  get_started_free_hero: "Hero Section",
+  get_started_free_final: "Final CTA Section",
   start_free_trial_hero: "Hero Section",
   start_free_trial_final: "Final CTA Section",
   start_free_trial_pricing: "Pricing Calculator",

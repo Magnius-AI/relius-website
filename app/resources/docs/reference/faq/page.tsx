@@ -34,7 +34,7 @@ const faqCategories: FAQCategory[] = [
     items: [
       {
         question: 'How do I get started with Relius?',
-        answer: 'Sign up for a free 14-day trial at relius.ai. No credit card required. You\'ll have full access to all features during the trial. Our onboarding wizard will guide you through setting up your church, importing data, and inviting team members.',
+        answer: 'Sign up for free at relius.ai. No credit card required. The Free plan includes full church management, online giving, and AI-powered donation tools with unlimited members. Our onboarding wizard will guide you through setting up your church, importing data, and inviting team members.',
       },
       {
         question: 'Is there a setup fee?',
@@ -56,7 +56,7 @@ const faqCategories: FAQCategory[] = [
     items: [
       {
         question: 'What are the pricing tiers?',
-        answer: 'Relius offers three plans: Starter ($49/mo) for core ChMS features, Growth ($99/mo) adding pastoral care and advanced reporting, and AI Pro ($149/mo) with all AI features and API access. All plans include unlimited everything—no per-person fees.',
+        answer: 'Relius offers a free forever plan with full church management and online giving. Ministry Pro ($60/mo) adds pastoral care, service planning, and unlimited communications. Ministry AI ($150/mo) includes the full AI suite for sermon planning, content creation, and pastoral insights. Enterprise is available for large organizations. All plans include unlimited members.',
       },
       {
         question: 'Can I change plans anytime?',
@@ -64,7 +64,7 @@ const faqCategories: FAQCategory[] = [
       },
       {
         question: 'Do you offer discounts for small churches?',
-        answer: 'Yes! Churches under 100 members qualify for our small church discount. Contact our sales team to learn more. We also offer discounts for annual billing (2 months free).',
+        answer: 'The core platform is free forever! For paid plans, annual billing saves 15%. We also offer 6 months free for church planters and special considerations for churches in unique situations.',
       },
       {
         question: 'What payment methods do you accept?',

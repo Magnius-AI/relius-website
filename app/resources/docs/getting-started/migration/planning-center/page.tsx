@@ -277,11 +277,12 @@ export default function PlanningCenterMigrationPage() {
           </ul>
           <p><strong>Relius</strong> (all-in-one):</p>
           <ul>
-            <li>Unlimited users, all features: $99/month</li>
-            <li>Giving: Same transaction fees (2.9% + $0.30)</li>
-            <li><strong>Total</strong>: $99/month + transaction fees</li>
+            <li>Core platform: Free forever (people, giving, events, groups, check-in)</li>
+            <li>Giving: Lower transaction fees (2% + $0.19 for credit/debit)</li>
+            <li>Ministry Pro (pastoral care, services): $60/month</li>
+            <li>Ministry AI (full AI suite): $150/month</li>
           </ul>
-          <p>Plus: AI features, website hosting, and no per-module pricing.</p>
+          <p>Plus: AI-powered donation tools included free, website hosting, and no per-module pricing.</p>
         </div>
       </details>
 

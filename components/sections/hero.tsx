@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, RefreshCw } from "lucide-react";
 import { analytics } from "@/lib/analytics";
-import { DEFAULT_SIGNUP_URL } from "@/lib/constants";
+import { AUTH_URLS } from "@/lib/constants";
 
 export function Hero() {
   return (
@@ -37,12 +37,12 @@ export function Hero() {
             {/* Content inside the halo */}
             <div className="relative z-10 py-8">
               <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm text-slate-600 text-sm font-medium animate-fade-in-up hover:border-accent-200 hover:text-accent-600 transition-colors cursor-default">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 shadow-sm text-emerald-700 text-sm font-medium animate-fade-in-up hover:border-emerald-300 transition-colors cursor-default">
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-accent-500"></span>
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                 </span>
-                New: AI-Powered Ministry Insights
+                Free Forever - No Credit Card Required
               </div>
 
               <Link
@@ -55,18 +55,17 @@ export function Hero() {
             </div>
 
               <h1 className="text-balance text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 mb-6 animate-fade-in-up [animation-delay:200ms]">
-                AI church management software that gives your team{" "}
+                Free church management & giving{" "}
                 <span className="text-gradient-accent relative inline-block">
-                  time back
+                  powered by AI
                   <svg className="absolute w-full h-3 -bottom-1 left-0 text-accent-200 -z-10" viewBox="0 0 100 10" preserveAspectRatio="none">
                     <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" />
                   </svg>
-                </span>{" "}
-                for ministry
+                </span>
               </h1>
 
               <p className="text-xl text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto animate-fade-in-up [animation-delay:400ms]">
-                Save 10+ hours weekly on content, scheduling, and admin—so you can focus on people. From serving members to equipping teams, Relius helps you do what matters most.
+                The only church platform where giving is truly free. Manage members, track donations with AI-powered tools, and run your ministry - all at no cost. Upgrade for pastoral care and advanced AI.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 w-full sm:w-auto animate-fade-in-up [animation-delay:600ms]">
@@ -77,10 +76,10 @@ export function Hero() {
                   asChild
                 >
                   <a
-                    href={DEFAULT_SIGNUP_URL}
-                    onClick={() => analytics.trackCTAClick("start_free_trial_hero", DEFAULT_SIGNUP_URL)}
+                    href={AUTH_URLS.SIGNUP}
+                    onClick={() => analytics.trackCTAClick("get_started_free_hero", AUTH_URLS.SIGNUP)}
                   >
-                    Start Free Trial
+                    Get Started Free
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </a>
                 </Button>
@@ -103,12 +102,16 @@ export function Hero() {
 
               <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm text-slate-500 animate-fade-in-up [animation-delay:800ms]">
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-accent-500" />
-                  <span>14-day free trial</span>
+                  <CheckCircle2 className="h-4 w-4 text-emerald-500" />
+                  <span>Free forever</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-accent-500" />
-                  <span>Cancel anytime</span>
+                  <CheckCircle2 className="h-4 w-4 text-emerald-500" />
+                  <span>No credit card required</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-emerald-500" />
+                  <span>Unlimited members</span>
                 </div>
               </div>
             </div>

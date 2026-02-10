@@ -8,11 +8,11 @@ export const AUTH_URLS = {
 } as const;
 
 // Checkout URLs
-// The checkout page has built-in plan selection (defaults to Pro plan, monthly billing)
+// The checkout page has built-in plan selection for paid tiers
 export const CHECKOUT_URLS = {
   DEFAULT: `${PLATFORM_BASE_URL}/checkout`,
   ENTERPRISE_CONTACT: "/contact", // Internal route for enterprise inquiries
 } as const;
 
-// Default signup URL - goes to checkout with Pro plan pre-selected
-export const DEFAULT_SIGNUP_URL = CHECKOUT_URLS.DEFAULT;
+// Default signup URL - goes to free signup (no checkout needed for free tier)
+export const DEFAULT_SIGNUP_URL = AUTH_URLS.SIGNUP;

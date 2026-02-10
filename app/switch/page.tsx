@@ -280,7 +280,7 @@ export default function SwitchPage() {
               Ready to make the switch?
             </h2>
             <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto">
-              Start your free trial and import your data today. Our team is here to help every step of the way.
+              Get started free and import your data today. Our team is here to help every step of the way.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button

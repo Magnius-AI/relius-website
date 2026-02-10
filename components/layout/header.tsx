@@ -102,7 +102,7 @@ export function Header() {
               href={DEFAULT_SIGNUP_URL}
               className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-lg hover:bg-accent hover:shadow-accent/25 transition-all duration-300 flex items-center gap-2 group"
             >
-              Get started
+              Get Started Free
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
@@ -173,7 +173,7 @@ export function Header() {
                   href={DEFAULT_SIGNUP_URL}
                   className="flex items-center justify-center gap-2 w-full rounded-full bg-primary px-3 py-3 text-base font-semibold text-white shadow-sm hover:bg-accent transition-colors"
                 >
-                  Get started
+                  Get Started Free
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>

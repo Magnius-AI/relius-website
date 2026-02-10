@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, Clock, Heart } from "lucide-react";
+import { ArrowRight, Shield, Heart, Users } from "lucide-react";
 import { DecorativeOrb } from "@/components/ui/decorative-orb";
 import { analytics } from "@/lib/analytics";
-import { DEFAULT_SIGNUP_URL, AUTH_URLS } from "@/lib/constants";
+import { AUTH_URLS } from "@/lib/constants";
 
 export function FinalCta() {
   return (
@@ -19,15 +19,15 @@ export function FinalCta() {
             Ready to focus more on ministry?
           </h2>
           <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto">
-            Join churches that are spending less time managing software and more time caring for people. See how Relius can serve your ministry.
+            Join churches that are spending less time managing software and more time caring for people. Get started with Relius for free - no credit card required.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button variant="accent" size="lg" asChild className="group shadow-lg">
               <a
-                href={DEFAULT_SIGNUP_URL}
-                onClick={() => analytics.trackCTAClick("start_free_trial_final", DEFAULT_SIGNUP_URL)}
+                href={AUTH_URLS.SIGNUP}
+                onClick={() => analytics.trackCTAClick("get_started_free_final", AUTH_URLS.SIGNUP)}
               >
-                Start Free Trial
+                Get Started Free
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
@@ -56,12 +56,12 @@ export function FinalCta() {
               <span>Secure & private</span>
             </div>
             <div className="flex items-center gap-2 text-sm text-slate-500">
-              <Clock className="w-4 h-4 text-blue-500" />
-              <span>14-day free trial</span>
+              <Heart className="w-4 h-4 text-emerald-500" />
+              <span>Free forever</span>
             </div>
             <div className="flex items-center gap-2 text-sm text-slate-500">
-              <Heart className="w-4 h-4 text-rose-500" />
-              <span>Cancel anytime</span>
+              <Users className="w-4 h-4 text-blue-500" />
+              <span>Unlimited members</span>
             </div>
           </div>
         </div>

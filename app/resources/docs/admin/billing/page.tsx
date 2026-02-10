@@ -93,7 +93,7 @@ export default function BillingPage() {
           <div className="rounded-lg border border-slate-200 bg-white p-5">
             <h3 className="font-semibold text-slate-900 mb-2">Plan Tier</h3>
             <p className="text-sm text-slate-600">
-              Starter, Growth, or AI Pro. Each tier unlocks additional features while 
+              Free, Ministry Pro, Ministry AI, or Enterprise. Each tier unlocks additional features while
               keeping unlimited usage for core features.
             </p>
           </div>
@@ -111,26 +111,29 @@ export default function BillingPage() {
       <section className="space-y-4">
         <h2 className="text-2xl font-bold text-slate-900">Plan Comparison</h2>
         <div className="grid gap-6 md:grid-cols-3">
-          {/* Starter */}
-          <div className="rounded-xl border border-slate-200 bg-white p-6">
-            <h3 className="text-lg font-bold text-slate-900">Starter</h3>
+          {/* Free */}
+          <div className="rounded-xl border-2 border-emerald-400 bg-white p-6 relative">
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-emerald-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+              Free Forever
+            </div>
+            <h3 className="text-lg font-bold text-slate-900">Free</h3>
             <div className="mt-2">
-              <span className="text-3xl font-bold text-slate-900">$49</span>
+              <span className="text-3xl font-bold text-slate-900">$0</span>
               <span className="text-slate-600">/month</span>
             </div>
-            <p className="text-sm text-slate-600 mt-2">Perfect for small churches getting started</p>
+            <p className="text-sm text-slate-600 mt-2">Full church management & giving</p>
             <ul className="mt-4 space-y-2">
               <li className="flex items-center gap-2 text-sm text-slate-600">
                 <Check className="h-4 w-4 text-green-600" /> Unlimited members
               </li>
               <li className="flex items-center gap-2 text-sm text-slate-600">
-                <Check className="h-4 w-4 text-green-600" /> Groups & events
+                <Check className="h-4 w-4 text-green-600" /> Online giving & donations
               </li>
               <li className="flex items-center gap-2 text-sm text-slate-600">
-                <Check className="h-4 w-4 text-green-600" /> Online giving
+                <Check className="h-4 w-4 text-green-600" /> AI Donations Manager
               </li>
               <li className="flex items-center gap-2 text-sm text-slate-600">
-                <Check className="h-4 w-4 text-green-600" /> Check-in
+                <Check className="h-4 w-4 text-green-600" /> Groups, events & check-in
               </li>
               <li className="flex items-center gap-2 text-sm text-slate-600">
                 <Check className="h-4 w-4 text-green-600" /> Email support
@@ -138,53 +141,53 @@ export default function BillingPage() {
             </ul>
           </div>
 
-          {/* Growth */}
-          <div className="rounded-xl border-2 border-primary-500 bg-white p-6 relative">
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
-              Most Popular
-            </div>
-            <h3 className="text-lg font-bold text-slate-900">Growth</h3>
+          {/* Ministry Pro */}
+          <div className="rounded-xl border border-slate-200 bg-white p-6">
+            <h3 className="text-lg font-bold text-slate-900">Ministry Pro</h3>
             <div className="mt-2">
-              <span className="text-3xl font-bold text-slate-900">$99</span>
+              <span className="text-3xl font-bold text-slate-900">$60</span>
               <span className="text-slate-600">/month</span>
             </div>
-            <p className="text-sm text-slate-600 mt-2">For growing churches with more needs</p>
+            <p className="text-sm text-slate-600 mt-2">Pastoral care & church operations</p>
             <ul className="mt-4 space-y-2">
               <li className="flex items-center gap-2 text-sm text-slate-600">
-                <Check className="h-4 w-4 text-green-600" /> Everything in Starter
+                <Check className="h-4 w-4 text-green-600" /> Everything in Free
               </li>
               <li className="flex items-center gap-2 text-sm text-slate-600">
-                <Check className="h-4 w-4 text-green-600" /> Pastoral care tools
+                <Check className="h-4 w-4 text-green-600" /> Pastoral care module
               </li>
               <li className="flex items-center gap-2 text-sm text-slate-600">
-                <Check className="h-4 w-4 text-green-600" /> Advanced reports
+                <Check className="h-4 w-4 text-green-600" /> Volunteer scheduling
               </li>
               <li className="flex items-center gap-2 text-sm text-slate-600">
-                <Check className="h-4 w-4 text-green-600" /> Public website
+                <Check className="h-4 w-4 text-green-600" /> Unlimited communications
               </li>
               <li className="flex items-center gap-2 text-sm text-slate-600">
-                <Check className="h-4 w-4 text-green-600" /> Chat support
+                <Check className="h-4 w-4 text-green-600" /> Priority support
               </li>
             </ul>
           </div>
 
-          {/* AI Pro */}
-          <div className="rounded-xl border border-slate-200 bg-white p-6">
-            <h3 className="text-lg font-bold text-slate-900">AI Pro</h3>
+          {/* Ministry AI */}
+          <div className="rounded-xl border-2 border-primary-500 bg-white p-6 relative">
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+              Most Popular
+            </div>
+            <h3 className="text-lg font-bold text-slate-900">Ministry AI</h3>
             <div className="mt-2">
-              <span className="text-3xl font-bold text-slate-900">$149</span>
+              <span className="text-3xl font-bold text-slate-900">$150</span>
               <span className="text-slate-600">/month</span>
             </div>
-            <p className="text-sm text-slate-600 mt-2">All features plus AI-powered tools</p>
+            <p className="text-sm text-slate-600 mt-2">Full AI suite - save 10+ hours/week</p>
             <ul className="mt-4 space-y-2">
               <li className="flex items-center gap-2 text-sm text-slate-600">
-                <Check className="h-4 w-4 text-green-600" /> Everything in Growth
-              </li>
-              <li className="flex items-center gap-2 text-sm text-slate-600">
-                <Check className="h-4 w-4 text-green-600" /> AI Content Studio
+                <Check className="h-4 w-4 text-green-600" /> Everything in Ministry Pro
               </li>
               <li className="flex items-center gap-2 text-sm text-slate-600">
                 <Check className="h-4 w-4 text-green-600" /> AI Sermon Planner
+              </li>
+              <li className="flex items-center gap-2 text-sm text-slate-600">
+                <Check className="h-4 w-4 text-green-600" /> AI Content Studio
               </li>
               <li className="flex items-center gap-2 text-sm text-slate-600">
                 <Check className="h-4 w-4 text-green-600" /> API access
@@ -238,8 +241,8 @@ export default function BillingPage() {
               the prorated difference for the remainder of your current billing cycle.
             </p>
             <p className="text-sm text-slate-500">
-              Example: Upgrading from Starter to Growth mid-month would charge approximately 
-              $25 (half the $50 difference).
+              Example: Upgrading from Free to Ministry Pro mid-month would charge approximately
+              $30 (half the $60 difference).
             </p>
           </div>
           <div className="rounded-lg border border-slate-200 bg-white p-6">
@@ -289,24 +292,19 @@ export default function BillingPage() {
       <section className="rounded-xl border border-primary-200 bg-gradient-to-br from-primary-50 to-white p-8">
         <h2 className="text-xl font-bold text-slate-900 mb-4">Save with Annual Billing</h2>
         <p className="text-slate-600 mb-6">
-          Pay annually and get 2 months free — that's a 17% savings. Switch to annual 
+          Pay annually and save 15% on Ministry Pro and Ministry AI. Switch to annual
           billing anytime from your Billing settings.
         </p>
-        <div className="grid gap-4 sm:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2">
           <div className="text-center">
-            <div className="text-2xl font-bold text-slate-900">$490</div>
-            <div className="text-sm text-slate-600">Starter (annual)</div>
-            <div className="text-xs text-green-600">Save $98/year</div>
+            <div className="text-2xl font-bold text-slate-900">$612</div>
+            <div className="text-sm text-slate-600">Ministry Pro (annual)</div>
+            <div className="text-xs text-green-600">Save $108/year</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-slate-900">$990</div>
-            <div className="text-sm text-slate-600">Growth (annual)</div>
-            <div className="text-xs text-green-600">Save $198/year</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-slate-900">$1,490</div>
-            <div className="text-sm text-slate-600">AI Pro (annual)</div>
-            <div className="text-xs text-green-600">Save $298/year</div>
+            <div className="text-2xl font-bold text-slate-900">$1,530</div>
+            <div className="text-sm text-slate-600">Ministry AI (annual)</div>
+            <div className="text-xs text-green-600">Save $270/year</div>
           </div>
         </div>
       </section>

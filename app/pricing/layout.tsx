@@ -3,23 +3,23 @@ import Script from "next/script";
 import { BreadcrumbSchema } from "@/components/seo/structured-data";
 
 export const metadata: Metadata = {
-  title: "Church Management Software Pricing | Plans from $49/month",
+  title: "Free Church Management Software | Relius Pricing",
   description:
-    "Simple, transparent pricing for Relius church management software. Unlimited members on all plans. Starter $49/mo, Growth $99/mo, AI Pro $149/mo, Enterprise $249/mo. 14-day free trial, no credit card required.",
+    "Free church management software with online giving, AI-powered donation tools, and unlimited members. Free forever. Ministry Pro $60/mo, Ministry AI $150/mo for advanced features.",
   alternates: {
     canonical: "https://relius.ai/pricing/",
   },
   openGraph: {
-    title: "Church Management Software Pricing | Relius",
+    title: "Free Church Management Software | Relius Pricing",
     description:
-      "Affordable church management features. Unlimited members, transparent pricing. Start your free trial today.",
+      "Free church management with online giving and AI donation tools. Unlimited members, no credit card required. Upgrade for pastoral care and AI features.",
     url: "https://relius.ai/pricing/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Church Management Software Pricing | Relius",
+    title: "Free Church Management Software | Relius Pricing",
     description:
-      "Affordable church management features. Unlimited members, transparent pricing. Start your free trial today.",
+      "Free church management with online giving and AI donation tools. Unlimited members, no credit card required. Upgrade for pastoral care and AI features.",
   },
 };
 
@@ -29,18 +29,18 @@ const pricingFaqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "How do I know which Relius plan is right for our church?",
+      name: "Is Relius church management software really free?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Start with your church's needs. Starter is perfect for churches wanting solid core features. Growth adds the full Pastoral Care system, services planning, and communications. AI Pro is ideal if you want AI to help with sermon prep, content creation, and pastoral insights. Enterprise is for large organizations needing unlimited sites, SSO, and white-labeling.",
+        text: "Yes! Relius offers a free forever plan that includes full church management, online giving, AI-powered donation tools, and unlimited members. Revenue comes from competitive processing fees on donations (2% + $0.19 per transaction for credit/debit). Paid upgrades are available for pastoral care (Ministry Pro, $60/mo) and advanced AI features (Ministry AI, $150/mo).",
       },
     },
     {
       "@type": "Question",
-      name: "Is there a free trial for Relius church management software?",
+      name: "How do Relius processing fees compare to competitors?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes! We offer a 14-day free trial so you can experience Relius risk-free. We'll walk you through setup so you can see how it fits your church.",
+        text: "Relius charges 2% + $0.19 per transaction for credit/debit donations, which is lower than most competitors. For example, Tithe.ly charges 2.9% + $0.30 on their free giving plan. Bank transfers/ACH are just $0.19 flat.",
       },
     },
     {
@@ -56,7 +56,7 @@ const pricingFaqSchema = {
       name: "Can we upgrade our Relius plan later?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Absolutely! Many churches start with Starter, add Growth for Pastoral Care and services features, and upgrade to AI Pro when they're ready for AI automation. You can upgrade anytime and get immediate access to new features. Your data comes with you.",
+        text: "Absolutely! Many churches start with the Free plan and upgrade to Ministry Pro for pastoral care and volunteer scheduling, or Ministry AI for AI-powered sermon planning and content creation. You can upgrade anytime and get immediate access to new features.",
       },
     },
     {
@@ -64,7 +64,7 @@ const pricingFaqSchema = {
       name: "Do you offer discounts for church management software?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes! Annual billing saves about 15% compared to monthly. We also offer 6 months free for church planters and special considerations for churches in unique situations.",
+        text: "Yes! Annual billing saves 15% compared to monthly on Ministry Pro and Ministry AI. We also offer 6 months free for church planters and special considerations for churches in unique situations.",
       },
     },
     {
@@ -72,7 +72,7 @@ const pricingFaqSchema = {
       name: "Can we cancel Relius anytime?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, no long-term contracts. If Relius isn't the right fit, you can cancel anytime. We'll help you export your data so you're never locked in.",
+        text: "Yes, no long-term contracts. The Free plan is free forever with no cancellation needed. For paid plans, you can cancel anytime and we'll help you export your data so you're never locked in.",
       },
     },
   ],

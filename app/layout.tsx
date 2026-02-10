@@ -20,13 +20,15 @@ export const metadata: Metadata = {
     default: "Relius | AI Church Management Software & Planning Center Alternative",
     template: "%s | Relius",
   },
-  description: "AI-powered church management software that saves 10+ hours weekly. The modern Planning Center alternative with volunteer scheduling, pastoral care, and church CRM. Start free trial.",
+  description: "Free church management software with AI-powered giving tools. The modern Planning Center alternative with volunteer scheduling, pastoral care, and church CRM. Free forever, no credit card required.",
   icons: {
     icon: "/relius_emblem_circle.png",
     apple: "/relius_emblem_circle.png",
   },
   keywords: [
-    "church management software",
+    "free church management software",
+    "free online giving for churches",
+    "church donation software free",
     "AI church management software",
     "Planning Center alternative",
     "church CRM",
@@ -37,8 +39,7 @@ export const metadata: Metadata = {
     "ministry software",
     "church database",
     "church automation tools",
-    "church workflow automation",
-    "church administration software",
+    "free church management",
   ],
   authors: [{ name: "Relius" }],
   openGraph: {

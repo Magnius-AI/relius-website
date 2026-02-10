@@ -11,7 +11,7 @@ import { InteractiveDemo } from "@/components/demo";
 export const metadata: Metadata = {
   title: "AI Church Management Software | Relius - Save 10+ Hours Weekly",
   description:
-    "AI-powered church management software with workflow automation, volunteer scheduling, and pastoral care tools. The modern Planning Center alternative that saves 10+ hours weekly. Start your free trial.",
+    "Free church management software with AI-powered giving tools, volunteer scheduling, and pastoral care. The modern Planning Center alternative. Free forever, no credit card required.",
   alternates: {
     canonical: "https://relius.ai/",
   },

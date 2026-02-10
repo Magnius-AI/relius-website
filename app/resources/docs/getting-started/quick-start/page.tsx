@@ -294,9 +294,9 @@ export default function QuickStartPage() {
 
                 <div className="space-y-6">
                     <div>
-                        <h3 className="font-bold text-slate-900 mb-2">Q: Can I try Relius for free?</h3>
+                        <h3 className="font-bold text-slate-900 mb-2">Q: Is Relius really free?</h3>
                         <p className="text-slate-600">
-                            A: Yes! Relius offers a 14-day free trial with full access to all features. No credit card required to start.
+                            A: Yes! Relius offers a free forever plan with full church management, online giving, and AI-powered donation tools. No credit card required. Upgrade to Ministry Pro or Ministry AI when you need advanced features.
                         </p>
                     </div>
 

@@ -124,7 +124,7 @@ export function InteractiveDemo() {
             : 'Use the bottom navigation to explore different views. Tap on items to interact.'}
         </p>
 
-        {/* CTA to try free trial */}
+        {/* CTA to get started */}
         <div className="mt-10 text-center">
           <div className="inline-flex flex-col sm:flex-row items-center gap-3 px-6 py-4 rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 shadow-sm">
             <span className="text-slate-700 font-medium">
@@ -135,7 +135,7 @@ export function InteractiveDemo() {
               onClick={() => analytics.trackDemoInteraction('demo_cta_clicked')}
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 transition-colors shadow-sm hover:shadow"
             >
-              Start your free trial
+              Get Started Free
               <ArrowRight className="w-4 h-4" aria-hidden="true" />
             </Link>
           </div>

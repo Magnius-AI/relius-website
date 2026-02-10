@@ -262,7 +262,7 @@ export default function PlanningCenterMigrationPage() {
               Ready to switch from {platform.name}?
             </h2>
             <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto">
-              Start your free trial and bring your church data with you. Our team is here to help.
+              Get started free and bring your church data with you. Our team is here to help.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button

@@ -1,67 +1,137 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import Link from "next/link";
-import { CheckCircle2, X, Sparkles } from "lucide-react";
-import { CHECKOUT_URLS, AUTH_URLS } from "@/lib/constants";
-import { PricingCalculator } from "@/components/PricingCalculator";
+import { CheckCircle2, X, Sparkles, ArrowRight, Calculator } from "lucide-react";
+import { CHECKOUT_URLS, AUTH_URLS, DEFAULT_SIGNUP_URL } from "@/lib/constants";
+
+function FeeCalculator() {
+  const [amount, setAmount] = useState(100);
+  const creditFee = amount * 0.02 + 0.19;
+  const achFee = 0.19;
+  const amexFee = amount * 0.029 + 0.25;
+
+  return (
+    <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
+      <div className="flex items-center gap-3 mb-6">
+        <Calculator className="w-6 h-6 text-blue-600" />
+        <h3 className="text-xl font-bold text-slate-900">Processing Fee Calculator</h3>
+      </div>
+      <p className="text-slate-600 mb-6">See exactly what your church receives from each donation. No hidden fees.</p>
+      <div className="mb-6">
+        <label htmlFor="donation-amount" className="block text-sm font-medium text-slate-700 mb-2">
+          Donation Amount
+        </label>
+        <div className="relative">
+          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-lg font-medium">$</span>
+          <input
+            id="donation-amount"
+            type="number"
+            min="1"
+            max="100000"
+            value={amount}
+            onChange={(e) => setAmount(Math.max(1, Number(e.target.value)))}
+            className="w-full pl-8 pr-4 py-3 border border-slate-300 rounded-lg text-lg font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+      </div>
+      <div className="grid sm:grid-cols-3 gap-4">
+        <div className="bg-slate-50 rounded-lg p-4">
+          <div className="text-sm font-medium text-slate-500 mb-1">Credit/Debit</div>
+          <div className="text-xs text-slate-400 mb-2">2% + $0.19</div>
+          <div className="text-lg font-bold text-emerald-600">
+            ${(amount - creditFee).toFixed(2)}
+          </div>
+          <div className="text-xs text-slate-400">-${creditFee.toFixed(2)} fee</div>
+        </div>
+        <div className="bg-slate-50 rounded-lg p-4">
+          <div className="text-sm font-medium text-slate-500 mb-1">Bank Transfer/ACH</div>
+          <div className="text-xs text-slate-400 mb-2">$0.19 flat</div>
+          <div className="text-lg font-bold text-emerald-600">
+            ${(amount - achFee).toFixed(2)}
+          </div>
+          <div className="text-xs text-slate-400">-${achFee.toFixed(2)} fee</div>
+        </div>
+        <div className="bg-slate-50 rounded-lg p-4">
+          <div className="text-sm font-medium text-slate-500 mb-1">AMEX</div>
+          <div className="text-xs text-slate-400 mb-2">2.9% + $0.25</div>
+          <div className="text-lg font-bold text-emerald-600">
+            ${(amount - amexFee).toFixed(2)}
+          </div>
+          <div className="text-xs text-slate-400">-${amexFee.toFixed(2)} fee</div>
+        </div>
+      </div>
+      <p className="text-sm text-slate-500 mt-4 text-center">
+        Compare: Tithe.ly charges 2.9% + $0.30 per transaction on their free giving plan
+      </p>
+    </div>
+  );
+}
 
 export default function PricingPage() {
   const tiers = [
     {
-      name: "Starter",
-      description: "Essential church management for growing congregations",
+      name: "Free",
+      tagline: "Everything your church needs to get started - free forever",
+      description: "Full church management + online giving with AI-powered donation tools",
       price: {
-        monthly: "$49",
-        annual: "$499",
+        monthly: "$0",
+        annual: "$0",
       },
       popular: false,
+      featured: true,
       limits: "Unlimited members, events, and groups",
       features: [
-        "Member Management & Directory",
-        "Group Management",
-        "Event Calendar",
-        "Donation Tracking & Donor Analytics",
-        "Check-In System & QR Codes",
-        "Basic Reporting",
-        "Data Migration Wizard",
+        "People Management & Directory",
+        "Online Giving & Donations (full suite)",
+        "AI-Powered Donations Manager",
+        "Donor Analytics & Basic Reporting",
+        "Groups Management",
+        "Events & Calendar",
+        "Check-In System with QR Codes",
+        "Pipelines (member journey tracking)",
+        "New Member Contact Tracking",
         "Public Church Website",
-        "Email support",
+        "Data Migration (Planning Center, Tithe.ly, ChurchTrac)",
       ],
       notIncluded: [
-        "Pastoral Care System",
-        "Services & Volunteer Scheduling",
+        "Pastoral Care Module",
+        "Service Planning & Volunteer Scheduling",
         "Communications Hub",
-        "AI Features",
+        "AI Sermon Planner & Content Studio",
       ],
+      cta: "Get Started Free",
+      ctaUrl: AUTH_URLS.SIGNUP,
     },
     {
-      name: "Growth",
-      description: "Complete pastoral care, services, and communications",
+      name: "Ministry Pro",
+      tagline: "Complete pastoral care and church operations",
+      description: "Everything in Free, plus pastoral care, service planning, and advanced communications",
       price: {
-        monthly: "$99",
-        annual: "$1,009",
+        monthly: "$60",
+        annual: "$612",
       },
       popular: false,
       limits: "Unlimited members, events, and groups",
       features: [
-        "Everything in Starter",
-        "Pastoral Care System",
+        "Everything in Free",
+        "Pastoral Care Module",
         "Prayer Request Management",
-        "At-Risk Member Detection",
-        "Services Planning (Teams, Songs, Templates)",
+        "Service Planning & Liturgy Builder",
         "Volunteer Scheduling",
         "Communications Hub (Unlimited Emails)",
-        "New Member Follow-ups",
-        "Advanced Reporting",
+        "Advanced Reporting & Analytics",
         "Custom Branding",
-        "Room Rentals",
-        "Priority support (email & phone)",
+        "Room Rentals & Facility Management",
+        "Follow-Up Tracking",
+        "Milestone Tracking",
+        "At-Risk Member Detection",
+        "Priority Support",
       ],
       notIncluded: [
         "AI Sermon Planner",
@@ -69,75 +139,77 @@ export default function PricingPage() {
         "AI Pastoral Insights",
         "Translation Console",
       ],
+      cta: "Start Ministry Pro",
+      ctaUrl: CHECKOUT_URLS.DEFAULT,
     },
     {
-      name: "AI Pro",
-      description: "Full AI suite - Save 10+ hours per week with intelligent automation",
+      name: "Ministry AI",
+      tagline: "AI-powered ministry - save 10+ hours per week",
+      description: "Everything in Ministry Pro, plus full AI suite for sermon planning, content, and insights",
       price: {
-        monthly: "$149",
-        annual: "$1,519",
+        monthly: "$150",
+        annual: "$1,530",
       },
       popular: true,
-      bestValue: true,
       limits: "Unlimited members, events, and groups",
       features: [
-        "Everything in Growth",
-        "AI Sermon Planner - Save 3-5 hrs/week",
-        "AI Content Studio - Sermon → Email/Social auto-generation",
-        "AI Pastoral Insights - Sentiment analysis & at-risk detection",
-        "AI Volunteer Scheduler - Smart matching & burnout detection",
-        "AI Donations Manager - Churn prediction & segmentation",
-        "Translation Console - 50+ languages, real-time translation",
-        "Semantic Bible Search - Meaning-based scripture search",
-        "Advanced Pastoral Analytics",
+        "Everything in Ministry Pro",
+        "AI Sermon Planner (outline generation, scripture suggestions, series planning)",
+        "AI Content Studio (auto-generate social media, emails, newsletters from sermons)",
+        "AI Pastoral Insights (sentiment analysis, congregation health scoring)",
+        "AI Volunteer Scheduler (smart matching, availability optimization, burnout prevention)",
+        "Translation Console (50+ languages, real-time)",
+        "Semantic Bible Search (meaning-based, not just keyword)",
+        "Sentiment Analysis across Communications",
         "API Access",
-        "Phone Support",
-        "Pipelines - Track people through any process",
-        "Custom Public Site Support",
       ],
       notIncluded: [],
+      cta: "Start Ministry AI",
+      ctaUrl: CHECKOUT_URLS.DEFAULT,
     },
     {
       name: "Enterprise",
-      description: "White-labeling, unlimited sites, SSO, and dedicated support",
+      tagline: "For large and multi-site churches",
+      description: "Everything in Ministry AI, plus unlimited campuses, SSO, white-labeling, and dedicated support",
       price: {
-        monthly: "Contact Us",
-        annual: "Contact Us",
+        monthly: "Contact Sales",
+        annual: "Contact Sales",
       },
       popular: false,
       limits: "Unlimited everything - members, events, groups, sites",
       features: [
-        "Everything in AI Pro",
-        "Unlimited Pipelines",
-        "Unlimited Sites/Campuses",
-        "Advanced Multi-Site Management",
+        "Everything in Ministry AI",
+        "Unlimited Campus/Site Management",
         "Single Sign-On (SSO)",
-        "White-Labeling - Remove Relius branding",
-        "Custom Website Creation - Fully synced with platform",
-        "Full API Access - Higher rate limits",
-        "Custom Integrations",
+        "White-Labeling (fully branded experience)",
+        "Full API Access with Higher Rate Limits",
         "Dedicated Account Manager",
-        "Onboarding Assistance",
-        "Custom Training Sessions",
+        "Custom Onboarding & Training",
         "99.9% Uptime SLA",
-        "Priority Feature Requests",
+        "Advanced Security (SOC 2 Ready)",
       ],
       notIncluded: [],
+      cta: "Contact Sales",
+      ctaUrl: "/contact/",
     },
   ];
 
   const faqs = [
     {
+      question: "Is the Free plan really free forever?",
+      answer: "Yes! The Free plan includes full church management, online giving, and AI-powered donation tools at no monthly cost, forever. We sustain this through small processing fees on donations (2% + $0.19 per transaction for credit/debit). There are no hidden charges, no trial periods, and no feature restrictions on the Free tier.",
+    },
+    {
+      question: "How do processing fees work?",
+      answer: "Processing fees only apply to donations made through the platform. Credit/Debit cards are charged 2% + $0.19 per transaction, AMEX is 2.9% + $0.25, and Bank Transfers/ACH are just $0.19 flat. These rates are lower than most competitors - for example, Tithe.ly charges 2.9% + $0.30 on their free giving plan.",
+    },
+    {
       question: "How do I know which plan is right for our church?",
-      answer: "Start with your church's needs. Starter is perfect for churches wanting solid core features. Growth adds the full Pastoral Care system for tracking prayer requests, follow-ups, and member milestones. AI Pro is ideal if you want AI to help with sermon prep, content creation, and pastoral insights (saves 10+ hours/week). Enterprise is for large organizations or denominations needing white-labeling, unlimited sites, and SSO. Not sure? Let's talk—we'll help you find the right fit.",
+      answer: "Start with Free - it includes everything most churches need to get started, including online giving with AI-powered donation tools. Upgrade to Ministry Pro when you need pastoral care, volunteer scheduling, and unlimited communications. Choose Ministry AI if you want AI to help with sermon prep, content creation, and pastoral insights (saves 10+ hours/week). Enterprise is for large organizations needing unlimited sites, SSO, and white-labeling.",
     },
     {
-      question: "Can we start with Starter and upgrade later?",
-      answer: "Absolutely! Many churches start with Starter, add Growth for Pastoral Care features, and upgrade to AI Pro when they're ready for AI automation. You can upgrade anytime and get immediate access to new features. Your data comes with you—nothing gets lost.",
-    },
-    {
-      question: "Is there a free trial?",
-      answer: "Yes! We offer a 14-day free trial so you can experience Relius risk-free. We'll walk you through setup so you can see how it fits your church.",
+      question: "Can we start with Free and upgrade later?",
+      answer: "Absolutely! Many churches start with Free and upgrade when they're ready for more advanced features. You can upgrade anytime and get immediate access to new features. Your data comes with you - nothing gets lost.",
     },
     {
       question: "Are there member limits on any plan?",
@@ -145,19 +217,15 @@ export default function PricingPage() {
     },
     {
       question: "Do you offer discounts or special pricing?",
-      answer: "Yes! Annual billing saves 15% compared to monthly. We also offer 6 months free for church planters and special considerations for churches in unique situations. Just ask.",
+      answer: "Yes! Annual billing saves 15% compared to monthly on Ministry Pro and Ministry AI. We also offer 6 months free for church planters and special considerations for churches in unique situations. Just ask.",
     },
     {
       question: "What kind of support can we expect?",
-      answer: "All plans include help when you need it. Starter gets email support with responses within 1-2 business days. Growth adds phone support and faster response times. AI Pro gets quarterly strategy calls. Enterprise gets a dedicated account manager who knows your church and proactively helps you succeed.",
+      answer: "Free plan includes email support. Ministry Pro adds priority support with faster response times. Ministry AI includes phone support and quarterly strategy calls. Enterprise gets a dedicated account manager who knows your church.",
     },
     {
-      question: "Can we cancel anytime?",
-      answer: "Yes, no long-term contracts. If Relius isn't the right fit, you can cancel anytime. We'll help you export your data so you're never locked in. We'd rather earn your business month by month.",
-    },
-    {
-      question: "What AI features are included in AI Pro?",
-      answer: "AI Pro includes: AI Sermon Planner (outline & draft assistance), AI Content Studio (turn sermons into social posts and emails), AI Pastoral Insights (sentiment analysis and at-risk member detection), AI Volunteer Scheduler (smart matching and burnout detection), AI Donations Manager (churn prediction and segmentation), and Translation Console (50+ languages). Most pastors save 10+ hours per week with these features.",
+      question: "What AI features are included for free?",
+      answer: "The Free plan includes our AI-Powered Donations Manager, which provides AI-generated thank-you messages, donor re-engagement suggestions, and donor insights. The full AI suite (Sermon Planner, Content Studio, Pastoral Insights, Volunteer Scheduler, Translation Console, and Semantic Bible Search) is available on the Ministry AI plan.",
     },
   ];
 
@@ -165,97 +233,186 @@ export default function PricingPage() {
     {
       category: "Capacity",
       items: [
-        { name: "Members", starter: "Unlimited", growth: "Unlimited", aiPro: "Unlimited", enterprise: "Unlimited" },
-        { name: "Events", starter: "Unlimited", growth: "Unlimited", aiPro: "Unlimited", enterprise: "Unlimited" },
-        { name: "Groups", starter: "Unlimited", growth: "Unlimited", aiPro: "Unlimited", enterprise: "Unlimited" },
-        { name: "Sites/Campuses", starter: "1", growth: "1", aiPro: "Up to 3", enterprise: "Unlimited" },
+        { name: "Members", free: "Unlimited", ministryPro: "Unlimited", ministryAI: "Unlimited", enterprise: "Unlimited" },
+        { name: "Events", free: "Unlimited", ministryPro: "Unlimited", ministryAI: "Unlimited", enterprise: "Unlimited" },
+        { name: "Groups", free: "Unlimited", ministryPro: "Unlimited", ministryAI: "Unlimited", enterprise: "Unlimited" },
+        { name: "Sites/Campuses", free: "1", ministryPro: "1", ministryAI: "Up to 3", enterprise: "Unlimited" },
       ],
     },
     {
       category: "Core Features",
       items: [
-        { name: "Member Management", starter: true, growth: true, aiPro: true, enterprise: true },
-        { name: "Group Management", starter: true, growth: true, aiPro: true, enterprise: true },
-        { name: "Event Calendar", starter: true, growth: true, aiPro: true, enterprise: true },
-        { name: "Donation Tracking", starter: true, growth: true, aiPro: true, enterprise: true },
-        { name: "Donor Analytics", starter: true, growth: true, aiPro: true, enterprise: true },
-        { name: "Check-In System", starter: true, growth: true, aiPro: true, enterprise: true },
-        { name: "QR Code Generation", starter: true, growth: true, aiPro: true, enterprise: true },
-        { name: "Basic Reporting", starter: true, growth: true, aiPro: true, enterprise: true },
-        { name: "Data Migration Wizard", starter: true, growth: true, aiPro: true, enterprise: true },
-        { name: "Public Church Website", starter: true, growth: true, aiPro: true, enterprise: true },
+        { name: "People Management & Directory", free: true, ministryPro: true, ministryAI: true, enterprise: true },
+        { name: "Group Management", free: true, ministryPro: true, ministryAI: true, enterprise: true },
+        { name: "Event Calendar", free: true, ministryPro: true, ministryAI: true, enterprise: true },
+        { name: "Online Giving & Donations", free: true, ministryPro: true, ministryAI: true, enterprise: true },
+        { name: "Donor Analytics & Reporting", free: true, ministryPro: true, ministryAI: true, enterprise: true },
+        { name: "Check-In System & QR Codes", free: true, ministryPro: true, ministryAI: true, enterprise: true },
+        { name: "Pipelines (Member Journey)", free: true, ministryPro: true, ministryAI: true, enterprise: true },
+        { name: "New Member Contact Tracking", free: true, ministryPro: true, ministryAI: true, enterprise: true },
+        { name: "Data Migration Wizard", free: true, ministryPro: true, ministryAI: true, enterprise: true },
+        { name: "Public Church Website", free: true, ministryPro: true, ministryAI: true, enterprise: true },
+      ],
+    },
+    {
+      category: "AI-Powered Giving",
+      items: [
+        { name: "AI Thank-You Messages", free: true, ministryPro: true, ministryAI: true, enterprise: true },
+        { name: "Donor Re-Engagement", free: true, ministryPro: true, ministryAI: true, enterprise: true },
+        { name: "Donor Insights", free: true, ministryPro: true, ministryAI: true, enterprise: true },
       ],
     },
     {
       category: "Pastoral Care & Services",
       items: [
-        { name: "Pastoral Care System", starter: false, growth: true, aiPro: true, enterprise: true },
-        { name: "Prayer Request Management", starter: false, growth: true, aiPro: true, enterprise: true },
-        { name: "At-Risk Member Detection", starter: false, growth: true, aiPro: true, enterprise: true },
-        { name: "Follow-Up Tracking", starter: false, growth: true, aiPro: true, enterprise: true },
-        { name: "Milestone Tracking", starter: false, growth: true, aiPro: true, enterprise: true },
-        { name: "Services Planning (Teams, Songs)", starter: false, growth: true, aiPro: true, enterprise: true },
-        { name: "Volunteer Scheduling", starter: false, growth: true, aiPro: true, enterprise: true },
-        { name: "New Member Follow-ups", starter: false, growth: true, aiPro: true, enterprise: true },
-        { name: "Room Rentals", starter: false, growth: true, aiPro: true, enterprise: true },
+        { name: "Pastoral Care Module", free: false, ministryPro: true, ministryAI: true, enterprise: true },
+        { name: "Prayer Request Management", free: false, ministryPro: true, ministryAI: true, enterprise: true },
+        { name: "At-Risk Member Detection", free: false, ministryPro: true, ministryAI: true, enterprise: true },
+        { name: "Follow-Up Tracking", free: false, ministryPro: true, ministryAI: true, enterprise: true },
+        { name: "Milestone Tracking", free: false, ministryPro: true, ministryAI: true, enterprise: true },
+        { name: "Service Planning & Liturgy Builder", free: false, ministryPro: true, ministryAI: true, enterprise: true },
+        { name: "Volunteer Scheduling", free: false, ministryPro: true, ministryAI: true, enterprise: true },
+        { name: "Room Rentals & Facility Management", free: false, ministryPro: true, ministryAI: true, enterprise: true },
       ],
     },
     {
       category: "Communications",
       items: [
-        { name: "Email Communications", starter: "Limited (500/mo)", growth: "Unlimited", aiPro: "Unlimited", enterprise: "Unlimited" },
-        { name: "Communications Hub", starter: false, growth: true, aiPro: true, enterprise: true },
-        { name: "Automated Communications", starter: false, growth: true, aiPro: true, enterprise: true },
+        { name: "Email Communications", free: "Limited (500/mo)", ministryPro: "Unlimited", ministryAI: "Unlimited", enterprise: "Unlimited" },
+        { name: "Communications Hub", free: false, ministryPro: true, ministryAI: true, enterprise: true },
       ],
     },
     {
       category: "AI Features",
       items: [
-        { name: "AI Sermon Planner", starter: false, growth: false, aiPro: true, enterprise: true },
-        { name: "AI Content Studio", starter: false, growth: false, aiPro: true, enterprise: true },
-        { name: "AI Pastoral Insights", starter: false, growth: false, aiPro: true, enterprise: true },
-        { name: "AI Volunteer Scheduler", starter: false, growth: false, aiPro: true, enterprise: true },
-        { name: "AI Donations Manager", starter: false, growth: false, aiPro: true, enterprise: true },
-        { name: "Translation Console (50+ languages)", starter: false, growth: false, aiPro: true, enterprise: true },
-        { name: "Semantic Bible Search", starter: false, growth: false, aiPro: true, enterprise: true },
-        { name: "Sentiment Analysis", starter: false, growth: false, aiPro: true, enterprise: true },
-        { name: "Advanced Pastoral Analytics", starter: false, growth: false, aiPro: true, enterprise: true },
+        { name: "AI Sermon Planner", free: false, ministryPro: false, ministryAI: true, enterprise: true },
+        { name: "AI Content Studio", free: false, ministryPro: false, ministryAI: true, enterprise: true },
+        { name: "AI Pastoral Insights", free: false, ministryPro: false, ministryAI: true, enterprise: true },
+        { name: "AI Volunteer Scheduler", free: false, ministryPro: false, ministryAI: true, enterprise: true },
+        { name: "Translation Console (50+ languages)", free: false, ministryPro: false, ministryAI: true, enterprise: true },
+        { name: "Semantic Bible Search", free: false, ministryPro: false, ministryAI: true, enterprise: true },
+        { name: "Sentiment Analysis", free: false, ministryPro: false, ministryAI: true, enterprise: true },
       ],
     },
     {
       category: "Advanced Features",
       items: [
-        { name: "Custom Branding", starter: false, growth: true, aiPro: true, enterprise: true },
-          { name: "Pipelines", starter: false, growth: false, aiPro: true, enterprise: true },
-        { name: "Advanced Reporting", starter: false, growth: true, aiPro: true, enterprise: true },
-        { name: "API Access", starter: false, growth: false, aiPro: "Basic", enterprise: "Full" },
-        { name: "Single Sign-On (SSO)", starter: false, growth: false, aiPro: false, enterprise: true },
-        { name: "White-Labeling", starter: false, growth: false, aiPro: false, enterprise: true },
-        { name: "Advanced Security", starter: false, growth: false, aiPro: false, enterprise: true },
+        { name: "Custom Branding", free: false, ministryPro: true, ministryAI: true, enterprise: true },
+        { name: "Advanced Reporting", free: false, ministryPro: true, ministryAI: true, enterprise: true },
+        { name: "API Access", free: false, ministryPro: false, ministryAI: true, enterprise: "Full" },
+        { name: "Single Sign-On (SSO)", free: false, ministryPro: false, ministryAI: false, enterprise: true },
+        { name: "White-Labeling", free: false, ministryPro: false, ministryAI: false, enterprise: true },
+        { name: "Advanced Security (SOC 2)", free: false, ministryPro: false, ministryAI: false, enterprise: true },
       ],
     },
     {
-      category: "Support & Services",
+      category: "Support",
       items: [
-        { name: "Email Support", starter: true, growth: true, aiPro: true, enterprise: true },
-        { name: "Phone Support", starter: false, growth: true, aiPro: true, enterprise: true },
-        { name: "Priority Support", starter: false, growth: true, aiPro: true, enterprise: true },
-        { name: "Quarterly Strategy Calls", starter: false, growth: false, aiPro: true, enterprise: true },
-        { name: "Dedicated Account Manager", starter: false, growth: false, aiPro: false, enterprise: true },
-        { name: "Onboarding Assistance", starter: false, growth: false, aiPro: false, enterprise: true },
-        { name: "Custom Training Sessions", starter: false, growth: false, aiPro: false, enterprise: true },
-        { name: "99.9% Uptime SLA", starter: false, growth: false, aiPro: false, enterprise: true },
+        { name: "Email Support", free: true, ministryPro: true, ministryAI: true, enterprise: true },
+        { name: "Priority Support", free: false, ministryPro: true, ministryAI: true, enterprise: true },
+        { name: "Phone Support", free: false, ministryPro: false, ministryAI: true, enterprise: true },
+        { name: "Quarterly Strategy Calls", free: false, ministryPro: false, ministryAI: true, enterprise: true },
+        { name: "Dedicated Account Manager", free: false, ministryPro: false, ministryAI: false, enterprise: true },
+        { name: "Custom Onboarding & Training", free: false, ministryPro: false, ministryAI: false, enterprise: true },
+        { name: "99.9% Uptime SLA", free: false, ministryPro: false, ministryAI: false, enterprise: true },
       ],
     },
   ];
+
+  const renderCell = (value: boolean | string) => {
+    if (typeof value === "string") {
+      return <span className="text-sm font-medium text-slate-700">{value}</span>;
+    }
+    return value ? (
+      <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" aria-label="Included" />
+    ) : (
+      <X className="w-5 h-5 text-gray-300 mx-auto" aria-label="Not included" />
+    );
+  };
+
+  const renderTierCard = (tier: typeof tiers[0], billing: "monthly" | "annual") => {
+    const isEnterprise = tier.name === "Enterprise";
+    const isFree = tier.name === "Free";
+    const price = billing === "monthly" ? tier.price.monthly : tier.price.annual;
+    const priceSuffix = isEnterprise ? "" : isFree ? "/month" : billing === "monthly" ? "/month" : "/year";
+
+    return (
+      <Card
+        key={tier.name}
+        className={`relative border-2 flex flex-col ${
+          tier.popular
+            ? "border-primary shadow-xl scale-105"
+            : tier.featured
+            ? "border-emerald-400 shadow-lg"
+            : "border-gray-200"
+        }`}
+      >
+        {tier.popular && (
+          <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+            <Badge variant="default" className="bg-primary text-white">
+              <Sparkles className="w-3 h-3 mr-1" />
+              Most Popular
+            </Badge>
+          </div>
+        )}
+        {tier.featured && !tier.popular && (
+          <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+            <Badge className="bg-emerald-600 text-white">
+              Free Forever
+            </Badge>
+          </div>
+        )}
+        <CardHeader>
+          <CardTitle className="text-2xl">{tier.name}</CardTitle>
+          <CardDescription className="text-base">{tier.description}</CardDescription>
+          <div className="mt-4">
+            <span className="text-4xl font-bold">{price}</span>
+            {priceSuffix && <span className="text-slate-500">{priceSuffix}</span>}
+          </div>
+          {!isFree && !isEnterprise && billing === "annual" && (
+            <p className="text-sm text-emerald-600 font-medium mt-1">Save 15% with annual billing</p>
+          )}
+        </CardHeader>
+        <CardContent className="flex flex-col flex-1">
+          <Button
+            variant={tier.popular ? "primary" : tier.featured ? "accent" : "secondary"}
+            className="w-full mb-6"
+            asChild
+          >
+            <a href={tier.ctaUrl}>
+              {tier.cta}
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </a>
+          </Button>
+          {tier.limits && (
+            <p className="text-xs text-slate-500 text-center mb-4">{tier.limits}</p>
+          )}
+          <ul className="space-y-3 flex-1">
+            {tier.features.map((feature, index) => (
+              <li key={index} className="flex items-start gap-2">
+                <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                <span className="text-slate-600 text-sm">{feature}</span>
+              </li>
+            ))}
+            {tier.notIncluded.map((feature, index) => (
+              <li key={index} className="flex items-start gap-2 opacity-50">
+                <X className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" />
+                <span className="text-gray-500 text-sm">{feature}</span>
+              </li>
+            ))}
+          </ul>
+        </CardContent>
+      </Card>
+    );
+  };
 
   return (
     <div className="py-16 px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white">
       <div className="mx-auto max-w-7xl">
         <div className="text-center mb-12">
-          <h1 className="mb-6 text-4xl md:text-5xl font-bold text-slate-900">Church management software pricing</h1>
+          <h1 className="mb-6 text-4xl md:text-5xl font-bold text-slate-900">Free church management software</h1>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            Start with what you need. Add more when you're ready. No member limits, no surprises.
+            Everything your church needs to manage members, events, and giving - free forever. Upgrade when you're ready for more.
           </p>
         </div>
 
@@ -274,24 +431,24 @@ export default function PricingPage() {
           <h3 className="text-lg font-semibold text-slate-900 mb-4 text-center">Which plan is right for your church?</h3>
           <div className="grid md:grid-cols-4 gap-6 text-sm">
             <div className="text-center">
-              <div className="font-semibold text-slate-900 mb-2">Starter</div>
-              <p className="text-slate-600">Perfect for churches who need people, giving, events, groups, and check-ins</p>
-              <p className="text-slate-500 text-xs mt-2 italic">Example: New Life Chapel starting their digital journey</p>
+              <div className="font-semibold text-emerald-700 mb-2">Free</div>
+              <p className="text-slate-600">Perfect for any church wanting people management, giving, events, groups, and check-ins</p>
+              <p className="text-slate-500 text-xs mt-2 italic">Full platform - no time limits</p>
             </div>
             <div className="text-center">
-              <div className="font-semibold text-slate-900 mb-2">Growth</div>
-              <p className="text-slate-600">Best for churches wanting pastoral care, services planning, and communications</p>
-              <p className="text-slate-500 text-xs mt-2 italic">Example: Grace Fellowship with active worship and care teams</p>
+              <div className="font-semibold text-slate-900 mb-2">Ministry Pro</div>
+              <p className="text-slate-600">Best for churches wanting pastoral care, service planning, and unlimited communications</p>
+              <p className="text-slate-500 text-xs mt-2 italic">$60/mo or $612/year</p>
             </div>
             <div className="text-center">
-              <div className="font-semibold text-slate-900 mb-2">AI Pro</div>
+              <div className="font-semibold text-slate-900 mb-2">Ministry AI</div>
               <p className="text-slate-600">Ideal for churches wanting AI to save 10+ hours weekly on content & insights</p>
-              <p className="text-slate-500 text-xs mt-2 italic">Example: City Church leveraging AI for sermon prep</p>
+              <p className="text-slate-500 text-xs mt-2 italic">$150/mo or $1,530/year</p>
             </div>
             <div className="text-center">
               <div className="font-semibold text-slate-900 mb-2">Enterprise</div>
               <p className="text-slate-600">For large organizations and denominations needing unlimited sites and SSO</p>
-              <p className="text-slate-500 text-xs mt-2 italic">Example: Multi-campus networks and denominations</p>
+              <p className="text-slate-500 text-xs mt-2 italic">Custom pricing</p>
             </div>
           </div>
         </div>
@@ -307,138 +464,45 @@ export default function PricingPage() {
 
           <TabsContent value="monthly">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-              {tiers.map((tier) => (
-                <Card
-                  key={tier.name}
-                  className={`relative border-2 ${
-                    tier.popular ? "border-primary shadow-xl scale-105" : tier.bestValue ? "border-purple-400 shadow-lg" : "border-gray-200"
-                  }`}
-                >
-                  {tier.popular && (
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                      <Badge variant="default" className="bg-primary text-white">
-                        Most Popular
-                      </Badge>
-                    </div>
-                  )}
-                  {tier.bestValue && !tier.popular && (
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                      <Badge className="bg-purple-600 text-white">
-                        <Sparkles className="w-3 h-3 mr-1" />
-                        Best Value
-                      </Badge>
-                    </div>
-                  )}
-                  <CardHeader>
-                    <CardTitle className="text-2xl">{tier.name}</CardTitle>
-                    <CardDescription className="text-base">{tier.description}</CardDescription>
-                    <div className="mt-4">
-                      <span className="text-4xl font-bold">{tier.price.monthly}</span>
-                      <span className="text-slate-500">/month</span>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <Button
-                      variant={tier.popular ? "primary" : "secondary"}
-                      className="w-full mb-6"
-                      asChild
-                    >
-                      <a href={tier.name === "Enterprise" ? "/contact/" : CHECKOUT_URLS.DEFAULT}>
-                        {tier.name === "Enterprise" ? "Contact Us" : "Get Started"}
-                      </a>
-                    </Button>
-                    {tier.limits && (
-                      <p className="text-xs text-slate-500 text-center mb-4">{tier.limits}</p>
-                    )}
-                    <ul className="space-y-3">
-                      {tier.features.map((feature, index) => (
-                        <li key={index} className="flex items-start gap-2">
-                          <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                          <span className="text-slate-600 text-sm">{feature}</span>
-                        </li>
-                      ))}
-                      {tier.notIncluded.map((feature, index) => (
-                        <li key={index} className="flex items-start gap-2 opacity-50">
-                          <X className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" />
-                          <span className="text-gray-500 text-sm">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              ))}
+              {tiers.map((tier) => renderTierCard(tier, "monthly"))}
             </div>
           </TabsContent>
 
           <TabsContent value="annual">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-              {tiers.map((tier) => (
-                <Card
-                  key={tier.name}
-                  className={`relative border-2 ${
-                    tier.popular ? "border-primary shadow-xl scale-105" : tier.bestValue ? "border-purple-400 shadow-lg" : "border-gray-200"
-                  }`}
-                >
-                  {tier.popular && (
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                      <Badge variant="default" className="bg-primary text-white">
-                        Most Popular
-                      </Badge>
-                    </div>
-                  )}
-                  {tier.bestValue && !tier.popular && (
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                      <Badge className="bg-purple-600 text-white">
-                        <Sparkles className="w-3 h-3 mr-1" />
-                        Best Value
-                      </Badge>
-                    </div>
-                  )}
-                  <CardHeader>
-                    <CardTitle className="text-2xl">{tier.name}</CardTitle>
-                    <CardDescription className="text-base">{tier.description}</CardDescription>
-                    <div className="mt-4">
-                      <span className="text-4xl font-bold">{tier.price.annual}</span>
-                      <span className="text-slate-500">/year</span>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <Button
-                      variant={tier.popular ? "primary" : "secondary"}
-                      className="w-full mb-6"
-                      asChild
-                    >
-                      <a href={tier.name === "Enterprise" ? "/contact/" : CHECKOUT_URLS.DEFAULT}>
-                        {tier.name === "Enterprise" ? "Contact Us" : "Get Started"}
-                      </a>
-                    </Button>
-                    {tier.limits && (
-                      <p className="text-xs text-slate-500 text-center mb-4">{tier.limits}</p>
-                    )}
-                    <ul className="space-y-3">
-                      {tier.features.map((feature, index) => (
-                        <li key={index} className="flex items-start gap-2">
-                          <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                          <span className="text-slate-600 text-sm">{feature}</span>
-                        </li>
-                      ))}
-                      {tier.notIncluded.map((feature, index) => (
-                        <li key={index} className="flex items-start gap-2 opacity-50">
-                          <X className="w-5 h-5 text-gray-400 flex-shrink-0 mt-0.5" />
-                          <span className="text-gray-500 text-sm">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              ))}
+              {tiers.map((tier) => renderTierCard(tier, "annual"))}
             </div>
           </TabsContent>
         </Tabs>
 
-        {/* Interactive Pricing Calculator */}
-        <div className="my-16">
-          <PricingCalculator />
+        {/* Processing Fee Transparency */}
+        <div className="my-16 max-w-4xl mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-slate-900 mb-3">Transparent Processing Fees</h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              No monthly fee for giving. Just simple, competitive processing fees - lower than most competitors.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-3 gap-6 mb-8">
+            <div className="bg-white border border-slate-200 rounded-xl p-6 text-center shadow-sm">
+              <div className="text-sm font-medium text-slate-500 mb-2">Credit / Debit</div>
+              <div className="text-3xl font-bold text-slate-900">2% + $0.19</div>
+              <div className="text-sm text-slate-500 mt-1">per transaction</div>
+            </div>
+            <div className="bg-white border border-slate-200 rounded-xl p-6 text-center shadow-sm">
+              <div className="text-sm font-medium text-slate-500 mb-2">AMEX</div>
+              <div className="text-3xl font-bold text-slate-900">2.9% + $0.25</div>
+              <div className="text-sm text-slate-500 mt-1">per transaction</div>
+            </div>
+            <div className="bg-white border border-slate-200 rounded-xl p-6 text-center shadow-sm">
+              <div className="text-sm font-medium text-slate-500 mb-2">Bank Transfer / ACH</div>
+              <div className="text-3xl font-bold text-slate-900">$0.19</div>
+              <div className="text-sm text-slate-500 mt-1">per transaction</div>
+            </div>
+          </div>
+
+          <FeeCalculator />
         </div>
 
         <div className="text-center mb-10">
@@ -454,13 +518,13 @@ export default function PricingPage() {
           <h2 className="text-center text-3xl font-bold mb-8">Feature Comparison</h2>
           <div className="overflow-x-auto">
             <table className="w-full border-collapse">
-              <caption className="sr-only">Comparison of features across Starter, Growth, AI Pro, and Enterprise pricing tiers</caption>
+              <caption className="sr-only">Comparison of features across Free, Ministry Pro, Ministry AI, and Enterprise pricing tiers</caption>
               <thead>
                 <tr className="border-b-2 border-gray-200">
                   <th scope="col" className="text-left py-4 px-6 font-semibold">Feature</th>
-                  <th scope="col" className="text-center py-4 px-6 font-semibold">Starter</th>
-                  <th scope="col" className="text-center py-4 px-6 font-semibold">Growth</th>
-                  <th scope="col" className="text-center py-4 px-6 font-semibold">AI Pro</th>
+                  <th scope="col" className="text-center py-4 px-6 font-semibold">Free</th>
+                  <th scope="col" className="text-center py-4 px-6 font-semibold">Ministry Pro</th>
+                  <th scope="col" className="text-center py-4 px-6 font-semibold">Ministry AI</th>
                   <th scope="col" className="text-center py-4 px-6 font-semibold">Enterprise</th>
                 </tr>
               </thead>
@@ -475,42 +539,10 @@ export default function PricingPage() {
                     {category.items.map((item, index) => (
                       <tr key={index} className="border-b border-gray-200">
                         <td className="py-3 px-6">{item.name}</td>
-                        <td className="py-3 px-6 text-center">
-                          {typeof item.starter === "string" ? (
-                            <span className="text-sm font-medium text-slate-700">{item.starter}</span>
-                          ) : item.starter ? (
-                            <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" aria-label="Included" />
-                          ) : (
-                            <X className="w-5 h-5 text-gray-300 mx-auto" aria-label="Not included" />
-                          )}
-                        </td>
-                        <td className="py-3 px-6 text-center">
-                          {typeof item.growth === "string" ? (
-                            <span className="text-sm font-medium text-slate-700">{item.growth}</span>
-                          ) : item.growth ? (
-                            <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" aria-label="Included" />
-                          ) : (
-                            <X className="w-5 h-5 text-gray-300 mx-auto" aria-label="Not included" />
-                          )}
-                        </td>
-                        <td className="py-3 px-6 text-center">
-                          {typeof item.aiPro === "string" ? (
-                            <span className="text-sm font-medium text-slate-700">{item.aiPro}</span>
-                          ) : item.aiPro ? (
-                            <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" aria-label="Included" />
-                          ) : (
-                            <X className="w-5 h-5 text-gray-300 mx-auto" aria-label="Not included" />
-                          )}
-                        </td>
-                        <td className="py-3 px-6 text-center">
-                          {typeof item.enterprise === "string" ? (
-                            <span className="text-sm font-medium text-slate-700">{item.enterprise}</span>
-                          ) : item.enterprise ? (
-                            <CheckCircle2 className="w-5 h-5 text-green-600 mx-auto" aria-label="Included" />
-                          ) : (
-                            <X className="w-5 h-5 text-gray-300 mx-auto" aria-label="Not included" />
-                          )}
-                        </td>
+                        <td className="py-3 px-6 text-center">{renderCell(item.free)}</td>
+                        <td className="py-3 px-6 text-center">{renderCell(item.ministryPro)}</td>
+                        <td className="py-3 px-6 text-center">{renderCell(item.ministryAI)}</td>
+                        <td className="py-3 px-6 text-center">{renderCell(item.enterprise)}</td>
                       </tr>
                     ))}
                   </React.Fragment>
