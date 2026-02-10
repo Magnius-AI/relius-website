@@ -139,6 +139,12 @@
     <changefreq>weekly</changefreq>
   </url>
   <url>
+    <loc>https://relius.ai/blog/church-tax-season-checklist/</loc>
+    <lastmod>2026-02-10</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://relius.ai/blog/digital-giving-trends-2026/</loc>
     <lastmod>2026-01-28</lastmod>
     <priority>0.8</priority>

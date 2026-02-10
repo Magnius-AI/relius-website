@@ -1,9 +1,9 @@
 import { Metadata } from "next";
-import { blogPosts } from "@/data/blog-posts";
+import { publishedBlogPosts } from "@/data/blog-posts";
 import { BlogPageContent } from "@/components/blog/blog-page-content";
 
 // Sort posts by date (newest first)
-const sortedPosts = [...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+const sortedPosts = [...publishedBlogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 const topics = Array.from(new Set(sortedPosts.flatMap((post) => post.topics))).sort();
 
 export const metadata: Metadata = {
