@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, RefreshCw } from "lucide-react";
 import { analytics } from "@/lib/analytics";
-import { AUTH_URLS } from "@/lib/constants";
+import { DEFAULT_SIGNUP_URL } from "@/lib/constants";
 
 export function Hero() {
   return (
@@ -76,8 +76,8 @@ export function Hero() {
                   asChild
                 >
                   <a
-                    href={AUTH_URLS.SIGNUP}
-                    onClick={() => analytics.trackCTAClick("get_started_free_hero", AUTH_URLS.SIGNUP)}
+                    href={DEFAULT_SIGNUP_URL}
+                    onClick={() => analytics.trackCTAClick("get_started_free_hero", DEFAULT_SIGNUP_URL)}
                   >
                     Get Started Free
                     <ArrowRight className="ml-2 h-5 w-5" />

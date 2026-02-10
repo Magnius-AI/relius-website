@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Heart, Users } from "lucide-react";
 import { DecorativeOrb } from "@/components/ui/decorative-orb";
 import { analytics } from "@/lib/analytics";
-import { AUTH_URLS } from "@/lib/constants";
+import { DEFAULT_SIGNUP_URL, AUTH_URLS } from "@/lib/constants";
 
 export function FinalCta() {
   return (
@@ -24,8 +24,8 @@ export function FinalCta() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button variant="accent" size="lg" asChild className="group shadow-lg">
               <a
-                href={AUTH_URLS.SIGNUP}
-                onClick={() => analytics.trackCTAClick("get_started_free_final", AUTH_URLS.SIGNUP)}
+                href={DEFAULT_SIGNUP_URL}
+                onClick={() => analytics.trackCTAClick("get_started_free_final", DEFAULT_SIGNUP_URL)}
               >
                 Get Started Free
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />

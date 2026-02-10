@@ -106,7 +106,7 @@ export default function PricingPage() {
         "AI Sermon Planner & Content Studio",
       ],
       cta: "Get Started Free",
-      ctaUrl: AUTH_URLS.SIGNUP,
+      ctaUrl: DEFAULT_SIGNUP_URL,
     },
     {
       name: "Ministry Pro",

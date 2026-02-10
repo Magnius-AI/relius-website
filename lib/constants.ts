@@ -14,5 +14,5 @@ export const CHECKOUT_URLS = {
   ENTERPRISE_CONTACT: "/contact", // Internal route for enterprise inquiries
 } as const;
 
-// Default signup URL - goes to free signup (no checkout needed for free tier)
-export const DEFAULT_SIGNUP_URL = AUTH_URLS.SIGNUP;
+// Default signup URL - goes to checkout which handles both free and paid signups
+export const DEFAULT_SIGNUP_URL = CHECKOUT_URLS.DEFAULT;
