@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 import { coreFeatures, aiFeatures } from "@/data/features";
+import { BreadcrumbSchema } from "@/components/seo/structured-data";
 
 export const metadata: Metadata = {
   title: "Church Management Software Features | Automation Tools",
@@ -30,7 +31,12 @@ export const metadata: Metadata = {
 
 export default function FeaturesPage() {
   return (
-    <div className="py-16 px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white">
+    <>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://relius.ai/" },
+        { name: "Features", url: "https://relius.ai/features/" },
+      ]} />
+      <div className="py-16 px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center mb-16">
           <div>
@@ -200,5 +206,6 @@ export default function FeaturesPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

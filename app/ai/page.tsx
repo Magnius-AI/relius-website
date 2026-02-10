@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Brain, Shield, Users, CheckCircle2, Clock, X, Sparkles } from "lucide-react";
+import { BreadcrumbSchema } from "@/components/seo/structured-data";
 import { SermonPlannerDemo } from "@/components/demo/ai-demos/SermonPlannerDemo";
 import { ContentStudioDemo } from "@/components/demo/ai-demos/ContentStudioDemo";
 import { TranslationDemo } from "@/components/demo/ai-demos/TranslationDemo";
@@ -53,7 +54,12 @@ export default function AiPage() {
   ];
 
   return (
-    <div className="py-14 px-6 lg:px-8">
+    <>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://relius.ai/" },
+        { name: "AI Features", url: "https://relius.ai/ai/" },
+      ]} />
+      <div className="py-14 px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="text-center mb-10">
           <Badge variant="default" className="mb-4">
@@ -378,5 +384,6 @@ export default function AiPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

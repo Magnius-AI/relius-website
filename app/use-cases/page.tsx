@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { UseCasesFilterGrid } from "@/components/sections/use-cases-filter-grid";
 import { Lightbulb, ArrowRight, Sparkles } from "lucide-react";
+import { BreadcrumbSchema } from "@/components/seo/structured-data";
 
 const featuredUseCase = useCases[0]!;
 
@@ -29,7 +30,12 @@ export const metadata: Metadata = {
 
 export default function UseCasesPage() {
   return (
-    <div className="py-16 px-6 lg:px-8 bg-gradient-to-b from-white to-slate-50">
+    <>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://relius.ai/" },
+        { name: "Use Cases", url: "https://relius.ai/use-cases/" },
+      ]} />
+      <div className="py-16 px-6 lg:px-8 bg-gradient-to-b from-white to-slate-50">
       <div className="mx-auto max-w-7xl space-y-16">
         <section className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center">
           <div>
@@ -137,5 +143,6 @@ export default function UseCasesPage() {
         </section>
       </div>
     </div>
+    </>
   );
 }

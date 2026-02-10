@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Facebook, Twitter, Linkedin, Youtube, Mail } from "lucide-react";
+import { Facebook, Twitter, Linkedin, Mail } from "lucide-react";
 import { NewsletterForm } from "@/components/forms/newsletter-form";
 
 export function Footer() {
@@ -19,7 +19,6 @@ export function Footer() {
     ],
     resources: [
       { name: "Use Cases", href: "/use-cases/" },
-      { name: "Docs", href: "/resources/docs/" },
       { name: "Documentation", href: "/resources/docs/" },
       { name: "Blog", href: "/blog/" },
       { name: "Support", href: "/contact/" },
@@ -34,10 +33,9 @@ export function Footer() {
   };
 
   const socialLinks = [
-    { name: "Facebook", href: "#", icon: Facebook },
-    { name: "Twitter", href: "#", icon: Twitter },
-    { name: "LinkedIn", href: "#", icon: Linkedin },
-    { name: "YouTube", href: "#", icon: Youtube },
+    { name: "Facebook", href: "https://www.facebook.com/relius.ai", icon: Facebook },
+    { name: "Twitter", href: "https://x.com/ReliusPlatform", icon: Twitter },
+    { name: "LinkedIn", href: "https://www.linkedin.com/company/relius-chms-platform/", icon: Linkedin },
   ];
 
   return (
@@ -82,14 +80,16 @@ export function Footer() {
               {socialLinks.map((item) => {
                 const Icon = item.icon;
                 return (
-                  <Link
+                  <a
                     key={item.name}
                     href={item.href}
                     className="text-slate-400 hover:text-primary transition-colors"
                     aria-label={item.name}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <Icon className="h-5 w-5" />
-                  </Link>
+                  </a>
                 );
               })}
             </div>

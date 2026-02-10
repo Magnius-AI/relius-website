@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Script from "next/script";
+import { BreadcrumbSchema } from "@/components/seo/structured-data";
 
 export const metadata: Metadata = {
   title: "Church Management Software Pricing | Plans from $49/month",
@@ -84,6 +85,10 @@ export default function PricingLayout({
 }) {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://relius.ai/" },
+        { name: "Pricing", url: "https://relius.ai/pricing/" },
+      ]} />
       <Script
         id="pricing-faq-schema"
         type="application/ld+json"

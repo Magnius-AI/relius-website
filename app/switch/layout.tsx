@@ -1,4 +1,5 @@
 import Script from "next/script";
+import { BreadcrumbSchema } from "@/components/seo/structured-data";
 
 const migrationFaqSchema = {
   "@context": "https://schema.org",
@@ -54,6 +55,10 @@ export default function SwitchLayout({
 }) {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://relius.ai/" },
+        { name: "Switch to Relius", url: "https://relius.ai/switch/" },
+      ]} />
       <Script
         id="migration-faq-schema"
         type="application/ld+json"

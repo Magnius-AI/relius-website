@@ -1,5 +1,31 @@
 import Script from "next/script";
 
+type BreadcrumbItem = {
+  name: string;
+  url: string;
+};
+
+export function BreadcrumbSchema({ items }: { items: BreadcrumbItem[] }) {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+
+  return (
+    <Script
+      id={`breadcrumb-schema-${items[items.length - 1]?.name?.toLowerCase().replace(/\s+/g, "-")}`}
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+    />
+  );
+}
+
 export function StructuredData() {
   const organizationSchema = {
     "@context": "https://schema.org",
@@ -12,9 +38,8 @@ export function StructuredData() {
     foundingDate: "2024",
     sameAs: [
       "https://www.facebook.com/relius.ai",
-      "https://www.linkedin.com/company/relius",
-      "https://twitter.com/relius_ai",
-      "https://www.youtube.com/@relius",
+      "https://www.linkedin.com/company/relius-chms-platform/",
+      "https://x.com/ReliusPlatform",
     ],
     contactPoint: {
       "@type": "ContactPoint",
