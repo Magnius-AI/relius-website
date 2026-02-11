@@ -211,10 +211,10 @@ export default function TeamsPage() {
       <ul>
         <li><a href="/resources/docs/services/plans">Service Plans</a> – Assign team members to service elements</li>
         <li><a href="/resources/docs/services/scheduling">Volunteer Scheduling</a> – Build schedules using your teams</li>
-        <li><a href="/resources/docs/people/member-directory">Member Directory</a> – Source volunteers from your congregation</li>
-        <li><a href="/resources/docs/groups/overview">Groups</a> – Teams can function as ministry groups</li>
-        <li><a href="/resources/docs/communications/overview">Communications</a> – Message your teams</li>
-        <li><a href="/resources/docs/ai/volunteer-scheduler">AI Volunteer Scheduler</a> – Use AI to optimize team assignments</li>
+        <li><a href="/resources/docs/people/directory">People Directory</a> – Source volunteers from your congregation</li>
+        <li><a href="/resources/docs/groups">Groups</a> – Teams can function as ministry groups</li>
+        <li><a href="/resources/docs/communications">Communications</a> – Message your teams</li>
+        <li><a href="/resources/docs/ai/donations-manager">AI Features</a> – Use AI to optimize team assignments</li>
       </ul>
     </div>
   );

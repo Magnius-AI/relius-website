@@ -117,7 +117,7 @@ export default function GettingStartedPage() {
                     </Link>
 
                     <Link 
-                        href="/resources/docs/getting-started/user-roles" 
+                        href="/resources/docs/getting-started/roles"
                         className="block bg-white border border-slate-200 rounded-lg p-5 hover:border-blue-600 hover:shadow-md transition-all group"
                     >
                         <div className="flex items-start justify-between gap-4">
@@ -145,29 +145,23 @@ export default function GettingStartedPage() {
                                     Switching from another church management system? We've created step-by-step migration guides for popular platforms:
                                 </p>
                                 <div className="space-y-2">
-                                    <Link 
-                                        href="/resources/docs/getting-started/migration-guides/planning-center" 
+                                    <Link
+                                        href="/resources/docs/getting-started/migration/planning-center"
                                         className="block text-blue-600 hover:text-blue-700 text-sm font-medium hover:underline"
                                     >
                                         → From Planning Center
                                     </Link>
-                                    <Link 
-                                        href="/resources/docs/getting-started/migration-guides/churchtrac" 
+                                    <Link
+                                        href="/resources/docs/getting-started/migration/churchtrac"
                                         className="block text-blue-600 hover:text-blue-700 text-sm font-medium hover:underline"
                                     >
                                         → From ChurchTrac
                                     </Link>
-                                    <Link 
-                                        href="/resources/docs/getting-started/migration-guides/tithely" 
+                                    <Link
+                                        href="/resources/docs/getting-started/migration"
                                         className="block text-blue-600 hover:text-blue-700 text-sm font-medium hover:underline"
                                     >
-                                        → From Tithe.ly
-                                    </Link>
-                                    <Link 
-                                        href="/resources/docs/getting-started/migration-guides/generic" 
-                                        className="block text-blue-600 hover:text-blue-700 text-sm font-medium hover:underline"
-                                    >
-                                        → From Any System (Generic CSV Import)
+                                        → From Any System (Migration Overview)
                                     </Link>
                                 </div>
                             </div>
@@ -289,8 +283,8 @@ export default function GettingStartedPage() {
                 </p>
 
                 <div className="grid md:grid-cols-3 gap-4 not-prose">
-                    <Link href="/resources/docs/people-management" className="block bg-white border border-slate-200 rounded-lg p-4 hover:border-blue-600 hover:shadow-md transition-all">
-                        <h3 className="font-bold text-slate-900 mb-1">People Management</h3>
+                    <Link href="/resources/docs/people" className="block bg-white border border-slate-200 rounded-lg p-4 hover:border-blue-600 hover:shadow-md transition-all">
+                        <h3 className="font-bold text-slate-900 mb-1">People</h3>
                         <p className="text-slate-600 text-sm">Member directory, families, visitors, and pipelines</p>
                     </Link>
 
@@ -314,7 +308,7 @@ export default function GettingStartedPage() {
                         <p className="text-slate-600 text-sm">Email, SMS, announcements, and messaging</p>
                     </Link>
 
-                    <Link href="/resources/docs/ai-features" className="block bg-white border border-slate-200 rounded-lg p-4 hover:border-blue-600 hover:shadow-md transition-all">
+                    <Link href="/resources/docs/ai" className="block bg-white border border-slate-200 rounded-lg p-4 hover:border-blue-600 hover:shadow-md transition-all">
                         <h3 className="font-bold text-slate-900 mb-1">AI Features</h3>
                         <p className="text-slate-600 text-sm">Sermon planner, content studio, and insights</p>
                     </Link>

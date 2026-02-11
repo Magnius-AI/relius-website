@@ -229,8 +229,8 @@ export default function IntegrationsPage() {
       <h2>Related Topics</h2>
       <ul>
         <li><a href="/resources/docs/giving/online-setup">Online Giving Setup</a> – Detailed Stripe configuration guide</li>
-        <li><a href="/resources/docs/services/song-library">Song Library</a> – Managing worship songs for CCLI reporting</li>
-        <li><a href="/resources/docs/events/calendar">Event Calendar</a> – Creating events that sync to external calendars</li>
+        <li><a href="/resources/docs/services/songs">Song Library</a> – Managing worship songs for CCLI reporting</li>
+        <li><a href="/resources/docs/events/scheduler">Events Scheduler</a> – Creating events that sync to external calendars</li>
         <li><a href="/resources/docs/admin/security">Security Settings</a> – API key management and security</li>
         <li><a href="/resources/docs/admin/data">Data Management</a> – Import/export for integration data</li>
         <li><a href="/resources/docs/admin">Administration Overview</a> – All administrative features</li>

@@ -9,13 +9,10 @@ export default function GroupsOverviewPage() {
 
       <h2>Overview</h2>
       <p>
-        Groups are where life happens in your church. Whether it's a Wednesday night Bible study in someone's living room, a Sunday morning discipleship class, or the worship team preparing for weekend services, groups create the relational fabric that transforms a congregation into a community. Relius makes it easy to launch, organize, and sustain groups of all types and sizes.
+        The Groups Directory lets you manage all types of church groups — small groups, classes, committees, and ministry teams. When you open the Groups page, you'll see summary stats at the top (Total Groups, Active Members, Avg. Attendance, Growth Rate) followed by a card grid of all your groups.
       </p>
       <p>
-        Our groups platform serves multiple purposes: small group leaders can track attendance and communicate with members, administrative staff can see participation trends across the whole church, and members can discover and join groups that fit their interests through the Small Group Finder. From a men's prayer breakfast with six attendees to a marriage enrichment class with 40 couples, Relius scales to meet your needs.
-      </p>
-      <p>
-        Whether you're launching a small groups ministry from scratch, managing dozens of ongoing Bible studies, coordinating ministry teams, or tracking Sunday school attendance, Relius provides the structure and flexibility to help people connect, grow, and serve together.
+        Each group card displays the group name, a colored type tag (e.g., "Small Group" in blue, "Class" in orange, "Volunteer Team" in pink), the leader's name, meeting schedule, location, member count, attendance percentage, and month-over-month growth. Use the "View Details" and "Manage" buttons on each card to dig deeper.
       </p>
 
       <h2>Key Concepts</h2>
@@ -162,7 +159,7 @@ export default function GroupsOverviewPage() {
         <li><a href="/resources/docs/groups/finder">Small Group Finder</a> – Help people discover groups</li>
         <li><a href="/resources/docs/communications/email">Email Campaigns</a> – Communicate with groups</li>
         <li><a href="/resources/docs/people/directory">Member Directory</a> – Add people to groups</li>
-        <li><a href="/resources/docs/events/calendar">Event Calendar</a> – Schedule group meetings</li>
+        <li><a href="/resources/docs/events/scheduler">Events Scheduler</a> – Schedule group meetings</li>
       </ul>
     </div>
   );

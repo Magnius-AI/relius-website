@@ -187,7 +187,7 @@ export default function CreatingGroupsPage() {
         <li><a href="/resources/docs/groups/leaders">Group Leaders</a> – Assign and empower leaders</li>
         <li><a href="/resources/docs/groups/finder">Small Group Finder</a> – Make groups discoverable</li>
         <li><a href="/resources/docs/people/directory">Member Directory</a> – Add people to groups</li>
-        <li><a href="/resources/docs/events/calendar">Event Calendar</a> – Schedule group meetings</li>
+        <li><a href="/resources/docs/events/scheduler">Events Scheduler</a> – Schedule group meetings</li>
       </ul>
     </div>
   );

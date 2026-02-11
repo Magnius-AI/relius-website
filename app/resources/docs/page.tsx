@@ -54,7 +54,7 @@ export default function DocsPage() {
             AI Features
           </h3>
           <p className="text-sm text-slate-600">
-            Discover how AI can save you 10+ hours weekly on ministry tasks.
+            Explore AI-powered tools for sermon planning, content creation, and more.
           </p>
         </Link>
 

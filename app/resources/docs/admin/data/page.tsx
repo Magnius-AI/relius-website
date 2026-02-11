@@ -251,7 +251,7 @@ export default function DataManagementPage() {
       <ul>
         <li><a href="/resources/docs/getting-started/migration">Migration Guides</a> – Importing from Planning Center, ChurchTrac, etc.</li>
         <li><a href="/resources/docs/admin/security">Security Settings</a> – Audit logs and access control</li>
-        <li><a href="/resources/docs/people/member-directory">Member Directory</a> – Managing member profiles</li>
+        <li><a href="/resources/docs/people/directory">Member Directory</a> – Managing member profiles</li>
         <li><a href="/resources/docs/giving/tracking">Donation Tracking</a> – Recording and managing donations</li>
         <li><a href="/resources/docs/admin/integrations">Integrations</a> – Syncing data with external systems</li>
         <li><a href="/resources/docs/admin">Administration Overview</a> – All administrative features</li>

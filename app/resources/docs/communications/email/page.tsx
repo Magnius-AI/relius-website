@@ -300,8 +300,8 @@ export default function EmailCampaignsPage() {
         <li><a href="/resources/docs/communications">Communications Overview</a> - All communication channels</li>
         <li><a href="/resources/docs/communications/sms">SMS Messaging</a> - Text message campaigns</li>
         <li><a href="/resources/docs/communications/announcements">Announcements</a> - Multi-channel broadcasts</li>
-        <li><a href="/resources/docs/people-management/member-directory">Member Directory</a> - Managing email addresses</li>
-        <li><a href="/resources/docs/ai-features/ai-content-studio">AI Content Studio</a> - Auto-generate email content from sermons</li>
+        <li><a href="/resources/docs/people/directory">People Directory</a> - Managing email addresses</li>
+        <li><a href="/resources/docs/ai/content-studio">AI Content Studio</a> - Auto-generate email content from sermons</li>
       </ul>
     </div>
   );

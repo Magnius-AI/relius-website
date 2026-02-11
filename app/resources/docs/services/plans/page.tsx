@@ -227,8 +227,8 @@ export default function ServicePlansPage() {
         <li><a href="/resources/docs/services/songs">Song Library</a> – Add songs to service plans from your library</li>
         <li><a href="/resources/docs/services/teams">Teams</a> – Assign team members to service items</li>
         <li><a href="/resources/docs/services/scheduling">Volunteer Scheduling</a> – Ensure volunteers are scheduled before assigning them to plans</li>
-        <li><a href="/resources/docs/events/calendar">Event Calendar</a> – Link service plans to calendar events</li>
-        <li><a href="/resources/docs/communications/overview">Communications</a> – Notify teams about service plan updates</li>
+        <li><a href="/resources/docs/events/scheduler">Events Scheduler</a> – Link service plans to calendar events</li>
+        <li><a href="/resources/docs/communications">Communications</a> – Notify teams about service plan updates</li>
         <li><a href="/resources/docs/ai/sermon-planner">AI Sermon Planner</a> – Generate sermon outlines to attach to service plans</li>
       </ul>
     </div>

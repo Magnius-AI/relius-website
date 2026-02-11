@@ -143,10 +143,10 @@ export default function ServicesOverviewPage() {
         <li><a href="/resources/docs/services/plans">Service Plans</a> – Build detailed run sheets</li>
         <li><a href="/resources/docs/services/scheduling">Volunteer Scheduling</a> – Assign and manage volunteer shifts</li>
         <li><a href="/resources/docs/services/songs">Song Library</a> – Organize worship music and arrangements</li>
-        <li><a href="/resources/docs/people/member-directory">Member Directory</a> – Source volunteers from your congregation</li>
-        <li><a href="/resources/docs/communications/overview">Communications</a> – Message your teams and volunteers</li>
-        <li><a href="/resources/docs/events/calendar">Event Calendar</a> – Link service plans to calendar events</li>
-        <li><a href="/resources/docs/ai/volunteer-scheduler">AI Volunteer Scheduler</a> – Use AI to optimize schedules and prevent burnout</li>
+        <li><a href="/resources/docs/people/directory">People Directory</a> – Source volunteers from your congregation</li>
+        <li><a href="/resources/docs/communications">Communications</a> – Message your teams and volunteers</li>
+        <li><a href="/resources/docs/events/scheduler">Events Scheduler</a> – Link service plans to calendar events</li>
+        <li><a href="/resources/docs/ai/donations-manager">AI Features</a> – Use AI to optimize schedules and prevent burnout</li>
       </ul>
     </div>
   );

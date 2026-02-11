@@ -336,7 +336,7 @@ export default function SMSMessagingPage() {
         <li><a href="/resources/docs/communications">Communications Overview</a> - All communication channels</li>
         <li><a href="/resources/docs/communications/email">Email Campaigns</a> - For longer, less urgent messages</li>
         <li><a href="/resources/docs/communications/announcements">Announcements</a> - Multi-channel broadcasts</li>
-        <li><a href="/resources/docs/people-management/member-directory">Member Directory</a> - Managing phone numbers</li>
+        <li><a href="/resources/docs/people/directory">People Directory</a> - Managing phone numbers</li>
         <li><a href="/resources/docs/groups">Groups</a> - Group-specific messaging</li>
       </ul>
     </div>

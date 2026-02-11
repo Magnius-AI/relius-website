@@ -39,24 +39,21 @@ export default function EventsOverviewPage() {
             <div className="prose prose-lg prose-slate max-w-none">
                 <h2 className="text-2xl font-bold text-slate-900 mb-4">Overview</h2>
                 <p>
-                    Events are the heartbeat of church life—weekly worship, midweek gatherings, special services, community events, classes, and outreach. Relius Events & Calendar helps you plan, promote, and manage everything happening in your ministry, from recurring Sunday services to one-time special events.
+                    The Events & Scheduling section helps you plan, manage, and track everything happening at your church — from recurring Sunday services to one-time special events, retreats, and community outreach. Create events, collect registrations, check in attendees, and view analytics.
                 </p>
                 <p>
-                    Whether you need to track who's coming to the church dinner, manage capacity limits for a retreat, check kids into children's ministry, or coordinate room bookings across multiple ministries, Relius brings it all together in one intuitive system. No more juggling spreadsheets, paper sign-ups, and scattered information—everything you need is in one place.
-                </p>
-                <p>
-                    The calendar integrates seamlessly with the rest of Relius: attendance flows into member profiles, volunteers are scheduled from your teams database, RSVP lists sync with communications, and room reservations prevent double-bookings automatically.
+                    Attendance data flows into member profiles, volunteers can be assigned from your service teams, and room reservations prevent double-bookings automatically.
                 </p>
 
                 <h2 className="text-2xl font-bold text-slate-900 mt-12 mb-4">Key Features</h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                    <Link href="/resources/docs/events/calendar/" className="block bg-white border-2 border-slate-200 rounded-xl p-6 hover:border-purple-400 hover:shadow-lg transition-all group">
+                    <Link href="/resources/docs/events/scheduler" className="block bg-white border-2 border-slate-200 rounded-xl p-6 hover:border-purple-400 hover:shadow-lg transition-all group">
                         <div className="flex items-center gap-3 mb-3">
                             <div className="bg-purple-100 p-3 rounded-lg group-hover:bg-purple-200 transition-colors">
                                 <Calendar className="w-6 h-6 text-purple-600" />
                             </div>
-                            <h3 className="text-xl font-bold text-slate-900">Event Calendar</h3>
+                            <h3 className="text-xl font-bold text-slate-900">Events Scheduler</h3>
                         </div>
                         <p className="text-slate-600 mb-0">
                             Create, manage, and view all your church events in one place. Support for recurring events, multiple calendar views, RSVP collection, and capacity management.
@@ -80,22 +77,22 @@ export default function EventsOverviewPage() {
                             <div className="bg-purple-100 p-3 rounded-lg group-hover:bg-purple-200 transition-colors">
                                 <Clock className="w-6 h-6 text-purple-600" />
                             </div>
-                            <h3 className="text-xl font-bold text-slate-900">Check-In System</h3>
+                            <h3 className="text-xl font-bold text-slate-900">Check-Ins & Attendance</h3>
                         </div>
                         <p className="text-slate-600 mb-0">
-                            Fast, secure check-in with QR codes, kiosk mode for self-service, name tag printing, and real-time attendance tracking for kids, adults, and volunteers.
+                            QR code check-in, guest check-in, real-time attendance tracking, and daily check-in feeds for monitoring event participation.
                         </p>
                     </Link>
 
-                    <Link href="/resources/docs/events/rentals/" className="block bg-white border-2 border-slate-200 rounded-xl p-6 hover:border-purple-400 hover:shadow-lg transition-all group">
+                    <Link href="/resources/docs/events/creating" className="block bg-white border-2 border-slate-200 rounded-xl p-6 hover:border-purple-400 hover:shadow-lg transition-all group">
                         <div className="flex items-center gap-3 mb-3">
                             <div className="bg-purple-100 p-3 rounded-lg group-hover:bg-purple-200 transition-colors">
                                 <Home className="w-6 h-6 text-purple-600" />
                             </div>
-                            <h3 className="text-xl font-bold text-slate-900">Room Rentals</h3>
+                            <h3 className="text-xl font-bold text-slate-900">Creating Events</h3>
                         </div>
                         <p className="text-slate-600 mb-0">
-                            Manage facility reservations for internal events and external groups. Track availability, handle rental requests, collect payments, and generate QR access codes.
+                            Step-by-step guide to creating events with the event form — including event types, rooms, registration, cost, recurrence, and visibility settings.
                         </p>
                     </Link>
                 </div>
@@ -109,7 +106,7 @@ export default function EventsOverviewPage() {
                             Families arrive and check their kids into children's ministry using the self-service kiosk. Name tags print automatically with age-appropriate room assignments. Parents receive a pickup tag with matching security code. Staff see real-time attendance counts and can text parents if needed during service. After service, attendance data flows into each child's profile for tracking patterns.
                         </p>
                         <p className="text-sm text-slate-600 mb-0">
-                            <strong>Tools used:</strong> Check-In System, Event Calendar, Attendance Tracking
+                            <strong>Tools used:</strong> Check-In System, Events Scheduler, Attendance Tracking
                         </p>
                     </div>
 
@@ -119,7 +116,7 @@ export default function EventsOverviewPage() {
                             Your church is hosting a community Easter egg hunt. Create the event, enable public registration with a custom form asking for number of children and ages, set a capacity limit of 200 kids, promote it on your website and social media, and collect RSVPs. When you hit capacity, new registrations automatically go to a waitlist. Send reminder emails the day before, and use check-in on event day to track attendance.
                         </p>
                         <p className="text-sm text-slate-600 mb-0">
-                            <strong>Tools used:</strong> Event Calendar, Registration & RSVP, Email Communications, Check-In
+                            <strong>Tools used:</strong> Events Scheduler, Registration & RSVP, Email Communications, Check-In
                         </p>
                     </div>
 
@@ -129,7 +126,7 @@ export default function EventsOverviewPage() {
                             Multiple ministries need space on Wednesday night: youth group in the gym, women's Bible study in the fellowship hall, and an outside organization renting the conference room. The calendar shows all bookings, prevents double-bookings, and allows each group to check in and track attendance independently. The rental organization pays online and receives a QR code for building access.
                         </p>
                         <p className="text-sm text-slate-600 mb-0">
-                            <strong>Tools used:</strong> Room Rentals, Event Calendar, Check-In System, Online Payments
+                            <strong>Tools used:</strong> Room Rentals, Events Scheduler, Check-In System, Online Payments
                         </p>
                     </div>
                 </div>
@@ -201,13 +198,13 @@ export default function EventsOverviewPage() {
                         Ready to streamline your events?
                     </h3>
                     <p className="text-slate-600 mb-6 max-w-xl mx-auto">
-                        Start with the Event Calendar to understand the foundation, then explore specialized features as your needs grow.
+                        Start with the Events Scheduler to understand the foundation, then explore specialized features as your needs grow.
                     </p>
                     <Link
-                        href="/resources/docs/events/calendar/"
+                        href="/resources/docs/events/scheduler"
                         className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
                     >
-                        Go to Event Calendar
+                        Go to Events Scheduler
                         <Calendar className="w-4 h-4" />
                     </Link>
                 </div>

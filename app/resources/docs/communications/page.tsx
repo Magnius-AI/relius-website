@@ -200,9 +200,9 @@ export default function CommunicationsOverviewPage() {
         <li><a href="/resources/docs/communications/email">Email Campaigns</a> - Detailed email features and templates</li>
         <li><a href="/resources/docs/communications/sms">SMS Messaging</a> - Text message setup and best practices</li>
         <li><a href="/resources/docs/communications/announcements">Announcements</a> - Multi-channel broadcasts</li>
-        <li><a href="/resources/docs/people-management/member-directory">Member Directory</a> - Managing contact information</li>
+        <li><a href="/resources/docs/people/directory">People Directory</a> - Managing contact information</li>
         <li><a href="/resources/docs/groups">Groups</a> - Group-specific communications</li>
-        <li><a href="/resources/docs/events-calendar">Events</a> - Event-related messaging</li>
+        <li><a href="/resources/docs/events/scheduler">Events</a> - Event-related messaging</li>
       </ul>
     </div>
   );

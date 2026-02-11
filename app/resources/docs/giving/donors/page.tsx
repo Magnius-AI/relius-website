@@ -177,7 +177,7 @@ export default function DonorManagementPage() {
         <li><a href="/resources/docs/giving/receipts">Tax Receipts</a> – Generating statements for donor records</li>
         <li><a href="/resources/docs/communications/email">Email Campaigns</a> – Messaging segmented donor groups</li>
         <li><a href="/resources/docs/ai/donations-manager">AI Donations Manager</a> – Predicting churn and identifying engagement opportunities</li>
-        <li><a href="/resources/docs/people/member-directory">Member Directory</a> – Managing donor contact information</li>
+        <li><a href="/resources/docs/people/directory">Member Directory</a> – Managing donor contact information</li>
       </ul>
     </div>
   );

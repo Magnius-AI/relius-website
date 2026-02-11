@@ -268,7 +268,7 @@ export default function SongLibraryPage() {
       <ul>
         <li><a href="/resources/docs/services/plans">Service Plans</a> – Add songs from your library to service plans</li>
         <li><a href="/resources/docs/services/teams">Teams</a> – Assign musicians to songs in your library</li>
-        <li><a href="/resources/docs/administration/integrations">Integrations</a> – Connect CCLI and music streaming services</li>
+        <li><a href="/resources/docs/admin/settings">Settings</a> – Connect CCLI and music streaming services</li>
         <li><a href="/resources/docs/ai/sermon-planner">AI Sermon Planner</a> – Get song suggestions based on sermon themes</li>
       </ul>
     </div>

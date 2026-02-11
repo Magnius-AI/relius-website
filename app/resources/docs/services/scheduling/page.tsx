@@ -257,10 +257,10 @@ export default function VolunteerSchedulingPage() {
       <ul>
         <li><a href="/resources/docs/services/teams">Teams</a> – Build teams before scheduling volunteers</li>
         <li><a href="/resources/docs/services/plans">Service Plans</a> – Link volunteer schedules to specific services</li>
-        <li><a href="/resources/docs/people/member-directory">Member Directory</a> – Source volunteers from your congregation</li>
-        <li><a href="/resources/docs/communications/overview">Communications</a> – Send schedule notifications and reminders</li>
-        <li><a href="/resources/docs/ai/volunteer-scheduler">AI Volunteer Scheduler</a> – Use AI to optimize schedules and prevent burnout</li>
-        <li><a href="/resources/docs/events/calendar">Event Calendar</a> – View volunteer commitments alongside church events</li>
+        <li><a href="/resources/docs/people/directory">People Directory</a> – Source volunteers from your congregation</li>
+        <li><a href="/resources/docs/communications">Communications</a> – Send schedule notifications and reminders</li>
+        <li><a href="/resources/docs/ai/donations-manager">AI Features</a> – Use AI to optimize schedules and prevent burnout</li>
+        <li><a href="/resources/docs/events/scheduler">Events Scheduler</a> – View volunteer commitments alongside church events</li>
       </ul>
     </div>
   );

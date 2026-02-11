@@ -267,12 +267,12 @@ export default function PagesContentPage() {
           </Link>
         </li>
         <li>
-          <Link href="/resources/docs/events/calendar" className="text-blue-600 hover:underline">
-            Event Calendar
+          <Link href="/resources/docs/events/scheduler" className="text-blue-600 hover:underline">
+            Events Scheduler
           </Link>
         </li>
         <li>
-          <Link href="/resources/docs/people/member-directory" className="text-blue-600 hover:underline">
+          <Link href="/resources/docs/people/directory" className="text-blue-600 hover:underline">
             Member Directory
           </Link>
         </li>

@@ -170,7 +170,7 @@ export default function DonationTrackingPage() {
         <li><a href="/resources/docs/giving/campaigns">Campaigns</a> – Track donations toward specific goals</li>
         <li><a href="/resources/docs/giving/donors">Donor Management</a> – View complete giving histories</li>
         <li><a href="/resources/docs/giving/receipts">Tax Receipts</a> – Generate documentation for donors</li>
-        <li><a href="/resources/docs/people/member-directory">Member Directory</a> – Create donor profiles</li>
+        <li><a href="/resources/docs/people/directory">Member Directory</a> – Create donor profiles</li>
         <li><a href="/resources/docs/administration/integrations">Integrations</a> – Connect Stripe and other platforms</li>
       </ul>
     </div>
