@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { Metadata } from "next";
 import { ContactForm } from "@/components/forms/contact-form";
 import { Mail, Calendar, MessageCircle } from "lucide-react";
+import { BreadcrumbSchema } from "@/components/seo/structured-data";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
     title: "Contact Relius | Book a Demo",
     description: "Book a personalized demo to see how Relius can transform your church management.",
     url: "https://relius.ai/contact/",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Contact Relius" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -24,6 +26,11 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
+    <>
+    <BreadcrumbSchema items={[
+      { name: "Home", url: "https://relius.ai/" },
+      { name: "Contact", url: "https://relius.ai/contact/" },
+    ]} />
     <div className="py-14 px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="text-center mb-10">
@@ -100,5 +107,6 @@ export default function ContactPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }
