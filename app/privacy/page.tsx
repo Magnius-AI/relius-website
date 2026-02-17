@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { BreadcrumbSchema } from "@/components/seo/structured-data";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Relius",
@@ -20,6 +21,11 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
+    <>
+    <BreadcrumbSchema items={[
+      { name: "Home", url: "https://relius.ai/" },
+      { name: "Privacy Policy", url: "https://relius.ai/privacy/" },
+    ]} />
     <div className="py-16 px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white">
       <div className="mx-auto max-w-4xl">
         {/* Header */}
@@ -307,5 +313,6 @@ export default function PrivacyPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

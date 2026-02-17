@@ -8,9 +8,10 @@ import {
   CareSupportIllustration,
   GrowthPlanningIllustration,
 } from "@/components/illustrations";
+import { BreadcrumbSchema } from "@/components/seo/structured-data";
 
 export const metadata: Metadata = {
-  title: "About Relius",
+  title: "About Relius | Purpose-Built Church Software",
   description: "Learn about Relius and our commitment to helping churches spend less time on logistics and more time on ministry.",
   alternates: {
     canonical: "https://relius.ai/about/",
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
     title: "About Relius | Purpose-Built for Ministry",
     description: "Learn about Relius and our commitment to helping churches spend less time on logistics and more time on ministry.",
     url: "https://relius.ai/about/",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "About Relius" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -29,6 +31,11 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "https://relius.ai/" },
+    { name: "About", url: "https://relius.ai/about/" },
+  ];
+
   const values = [
     {
       icon: Heart,
@@ -53,6 +60,8 @@ export default function AboutPage() {
   ];
 
   return (
+    <>
+    <BreadcrumbSchema items={breadcrumbItems} />
     <div className="py-16 px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white">
       <div className="mx-auto max-w-7xl">
         <div className="mb-16">
@@ -69,7 +78,7 @@ export default function AboutPage() {
             </div>
             <div className="bg-white border border-slate-200 rounded-3xl shadow-sm p-6">
               <Image
-                src="/Hero Relius Image.png"
+                src="/hero-relius-image.png"
                 alt="Relius platform overview"
                 width={800}
                 height={600}
@@ -188,5 +197,6 @@ export default function AboutPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }
