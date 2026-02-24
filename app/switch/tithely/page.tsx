@@ -7,6 +7,7 @@ import { MigrationSteps } from "@/components/ui/migration-steps";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { getMigrationPlatform, migrationSteps, commonMigrationFAQs } from "@/data/migrations";
 import { MIGRATION_PAGE_META, getContactUrlForMigration } from "@/lib/migration-urls";
+import { BreadcrumbSchema } from "@/components/seo/structured-data";
 import { Badge } from "@/components/ui/badge";
 
 const platform = getMigrationPlatform("tithely")!;
@@ -19,20 +20,27 @@ export const metadata: Metadata = {
     canonical: "https://relius.ai/switch/tithely/",
   },
   openGraph: {
-    title: "Switch from Tithe.ly to Relius | Free Migration",
-    description: "Step-by-step guide to migrate your church data from Tithe.ly to Relius with free assisted migration.",
+        title: "Tithe.ly Alternative - Complete Church Management Beyond Just Giving",
+        description: "Move beyond just giving with Relius: free church management with AI-powered donations, volunteer scheduling, and pastoral care. Import all your Tithe.ly data easily.",
     url: "https://relius.ai/switch/tithely/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Switch from Tithe.ly to Relius | Free Migration",
-    description: "Step-by-step guide to migrate your church data from Tithe.ly to Relius with free assisted migration.",
+        title: "Tithe.ly Alternative - Complete Church Management Beyond Just Giving",
+        description: "Move beyond just giving with Relius: free church management with AI-powered donations, volunteer scheduling, and pastoral care. Import all your Tithe.ly data easily.",
   },
 };
 
 export default function TithelyMigrationPage() {
   return (
     <main className="pt-24">
+            <BreadcrumbSchema
+                      items={[
+                        { name: "Home", url: "https://relius.ai/" },
+                        { name: "Switch", url: "https://relius.ai/switch/" },
+                        { name: "Tithe.ly", url: "https://relius.ai/switch/tithely/" },
+                                ]}
+                    />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-white py-16 lg:py-24">
         <div className="absolute inset-0 bg-pattern-grid opacity-[0.03] pointer-events-none" />
