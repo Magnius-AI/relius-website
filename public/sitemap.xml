@@ -234,6 +234,12 @@
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>https://relius.ai/blog/church-volunteer-scheduling-playbook/</loc>
+    <lastmod>2026-02-23</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 
   <!-- Documentation - Getting Started -->
   <url>

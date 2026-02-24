@@ -11,23 +11,23 @@ import {
 import { BreadcrumbSchema } from "@/components/seo/structured-data";
 
 export const metadata: Metadata = {
-  title: "About Relius | Purpose-Built Church Software",
-  description: "Learn about Relius and our commitment to helping churches spend less time on logistics and more time on ministry.",
+  title: "About Relius | The Team Behind Free Church Management Software",
+  description: "Meet the team behind Relius — free church management software purpose-built for ministry. Learn why we built an AI-powered platform to help churches save time and care for people better.",
   alternates: {
     canonical: "https://relius.ai/about/",
   },
   openGraph: {
-    title: "About Relius | Purpose-Built for Ministry",
-    description: "Learn about Relius and our commitment to helping churches spend less time on logistics and more time on ministry.",
+    title: "About Relius | Free Church Management Software",
+    description: "Meet the team building free church management software purpose-built for ministry.",
     url: "https://relius.ai/about/",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "About Relius" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Relius | Purpose-Built for Ministry",
-    description: "Learn about Relius and our commitment to helping churches spend less time on logistics and more time on ministry.",
+    title: "About Relius | Free Church Management Software",
+    description: "Meet the team building free church management software purpose-built for ministry.",
   },
-  keywords: ["about Relius", "church management company", "ministry software team", "church technology"],
+  keywords: ["about Relius", "church management software company", "ministry software team", "church technology", "free church software"],
 };
 
 export default function AboutPage() {
@@ -68,9 +68,9 @@ export default function AboutPage() {
           <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center">
             <div className="text-left">
               <p className="text-sm font-semibold uppercase tracking-wide text-primary-600 mb-3">Purpose-built for ministry</p>
-              <h1 className="mb-6 text-4xl md:text-5xl font-bold text-slate-900">We're here to serve churches</h1>
+              <h1 className="mb-6 text-4xl md:text-5xl font-bold text-slate-900">About Relius — free church management software built for ministry</h1>
               <p className="text-xl text-slate-600 leading-relaxed">
-                Relius exists to help church leaders spend less time on logistics and more time on the ministry they're called to do.
+                Relius exists to help church leaders spend less time on logistics and more time on the ministry they&apos;re called to do.
               </p>
               <p className="text-lg text-slate-600 mt-4 leading-relaxed">
                 Every workflow, reminder, and insight is built with pastors, directors, and volunteers at the table.

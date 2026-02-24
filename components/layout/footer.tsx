@@ -61,9 +61,9 @@ export function Footer() {
 
             {/* Newsletter */}
             <div className="pt-2">
-              <h4 className="text-sm font-semibold text-slate-900 mb-3">
+              <p className="text-sm font-semibold text-slate-900 mb-3">
                 Ministry insights, delivered monthly
-              </h4>
+              </p>
               <NewsletterForm variant="compact" className="max-w-xs" />
               <p className="text-xs text-slate-500 mt-2">No spam, unsubscribe anytime.</p>
             </div>

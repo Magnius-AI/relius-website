@@ -3,11 +3,10 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 
-// Redirect /resources/migration-checklist/ to migration docs
-export default function MigrationChecklistRedirect() {
+export default function TrainingRedirect() {
   const router = useRouter();
   useEffect(() => {
-    router.replace("/resources/docs/getting-started/migration/");
+    router.replace("/resources/docs/getting-started/roles/");
   }, [router]);
 
   return (

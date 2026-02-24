@@ -18,14 +18,15 @@ export const metadata: Metadata = {
     canonical: "https://relius.ai/switch/churchtrac/",
   },
   openGraph: {
-    title: "Switch from ChurchTrac to Relius | Free Migration",
-    description: "Step-by-step guide to migrate your church data from ChurchTrac to Relius with free assisted migration.",
+    title: "ChurchTrac Alternative | Cloud-Based Church Software — Free",
+    description: "Upgrade from ChurchTrac to Relius: cloud-based access, AI-powered features, and a modern interface. Easy migration preserves all your historical data.",
     url: "https://relius.ai/switch/churchtrac/",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Switch from ChurchTrac to Relius" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Switch from ChurchTrac to Relius | Free Migration",
-    description: "Step-by-step guide to migrate your church data from ChurchTrac to Relius with free assisted migration.",
+    title: "ChurchTrac Alternative | Cloud-Based Church Software — Free",
+    description: "Upgrade from ChurchTrac to Relius: cloud-based access, AI-powered features, and a modern interface. Start free today.",
   },
 };
 

@@ -95,6 +95,7 @@ export function DemoPeopleDirectory({
             value={roleFilter}
             onChange={(e) => onRoleFilterChange(e.target.value as PersonRole | 'all')}
             className="demo-input !w-32 appearance-none"
+            aria-label="Filter by role"
           >
             <option value="all">All Roles</option>
             <option value="admin">Admin</option>

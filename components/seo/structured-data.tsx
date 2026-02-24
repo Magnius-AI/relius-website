@@ -106,45 +106,6 @@ export function StructuredData() {
     ],
   };
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "What is Relius?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Relius is free church management software with AI-powered giving tools. It includes member management, online giving, events, groups, and check-ins at no cost. Paid upgrades are available for pastoral care and advanced AI features.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Is Relius a Planning Center alternative?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes, Relius is a modern alternative to Planning Center with AI-powered features. Churches can easily migrate from Planning Center, ChurchTrac, or Tithe.ly with our guided migration process that typically takes 2-4 hours.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "How much does Relius cost?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Relius core platform is free forever with unlimited members, including online giving and AI-powered donation tools. Ministry Pro is $60/month for pastoral care and service planning. Ministry AI is $150/month for the full AI suite. Processing fees on donations are 2% + $0.19 per transaction.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What AI features does Relius include?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "The free plan includes AI-powered donation tools (thank-you messages, donor re-engagement, donor insights). The Ministry AI plan adds AI sermon planning, content studio, pastoral insights, volunteer scheduling with burnout detection, translation console, and semantic Bible search.",
-        },
-      },
-    ],
-  };
-
   return (
     <>
       <Script
@@ -159,13 +120,6 @@ export function StructuredData() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(softwareApplicationSchema),
-        }}
-      />
-      <Script
-        id="faq-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
         }}
       />
     </>

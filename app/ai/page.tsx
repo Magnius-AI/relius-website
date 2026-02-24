@@ -13,25 +13,26 @@ import { AIInsightsDemo } from "@/components/demo/ai-demos/AIInsightsDemo";
 import { DonationsAIDemo } from "@/components/demo/ai-demos/DonationsAIDemo";
 
 export const metadata: Metadata = {
-  title: "AI Church Administration Tools | Workflow Automation Features",
+  title: "AI Church Software | Sermon Planning, Content Creation & Pastoral Insights",
   description:
-    "AI-powered church administration tools that automate content creation, pastoral care insights, and sermon planning. Church workflow automation that saves 10+ hours weekly.",
+    "AI-powered tools built for ministry: sermon planning assistant, content studio, translation console, pastoral care insights, and donor engagement automation. See how AI saves churches 10+ hours weekly.",
   alternates: {
     canonical: "https://relius.ai/ai/",
   },
   openGraph: {
-    title: "AI Church Administration & Automation Tools | Relius",
+    title: "AI Church Software | Sermon Planning & Content Creation | Relius",
     description:
-      "Church automation tools for content creation, pastoral care, and workflow automation. Save 10+ hours weekly.",
+      "AI-powered sermon planner, content studio, translation console, and pastoral care insights. Save 10+ hours weekly.",
     url: "https://relius.ai/ai/",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Relius AI Church Tools" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Church Administration & Automation Tools | Relius",
+    title: "AI Church Software | Sermon Planning & Content Creation | Relius",
     description:
-      "Church automation tools for content creation, pastoral care, and workflow automation. Save 10+ hours weekly.",
+      "AI-powered sermon planner, content studio, translation console, and pastoral care insights. Save 10+ hours weekly.",
   },
-  keywords: ["AI church tools", "church automation", "AI sermon planner", "church workflow automation", "AI pastoral insights"],
+  keywords: ["AI church software", "church management software ai", "AI sermon planner", "ai church tools", "church content creation", "AI pastoral insights"],
 };
 
 export default function AiPage() {

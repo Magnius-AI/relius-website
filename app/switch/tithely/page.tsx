@@ -19,14 +19,15 @@ export const metadata: Metadata = {
     canonical: "https://relius.ai/switch/tithely/",
   },
   openGraph: {
-    title: "Switch from Tithe.ly to Relius | Free Migration",
-    description: "Step-by-step guide to migrate your church data from Tithe.ly to Relius with free assisted migration.",
+    title: "Switch from Tithe.ly to Relius | Free Migration, Better Features",
+    description: "Move from Tithe.ly to Relius in 3-4 hours. Import people, donations, tags, and attendance — free. AI-powered giving tools and volunteer scheduling included.",
     url: "https://relius.ai/switch/tithely/",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Switch from Tithe.ly to Relius" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Switch from Tithe.ly to Relius | Free Migration",
-    description: "Step-by-step guide to migrate your church data from Tithe.ly to Relius with free assisted migration.",
+    title: "Switch from Tithe.ly to Relius | Free Migration, Better Features",
+    description: "Move from Tithe.ly to Relius in 3-4 hours. Import people, donations, tags, and attendance — free. AI-powered giving tools included.",
   },
 };
 
