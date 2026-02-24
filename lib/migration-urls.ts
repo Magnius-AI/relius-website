@@ -1,16 +1,16 @@
 // SEO constants and metadata for migration pages
 
 export type MigrationPageMeta = {
-  title: string;
-  description: string;
-  keywords: string[];
+    title: string;
+    description: string;
+    keywords: string[];
 };
 
 export const MIGRATION_URLS = {
-  HUB: "/switch",
-  PLANNING_CENTER: "/switch/planning-center",
-  CHURCHTRAC: "/switch/churchtrac",
-  TITHELY: "/switch/tithely",
+    HUB: "/switch",
+    PLANNING_CENTER: "/switch/planning-center",
+    CHURCHTRAC: "/switch/churchtrac",
+    TITHELY: "/switch/tithely",
 } as const;
 
 export const MIGRATION_PAGE_META: Record<string, MigrationPageMeta> = {
@@ -72,12 +72,12 @@ export const MIGRATION_PAGE_META: Record<string, MigrationPageMeta> = {
 
 // Contact form pre-population values
 export const CONTACT_FROM_PLATFORMS = {
-  "planning-center": "Planning Center",
-  churchtrac: "ChurchTrac",
-  tithely: "Tithe.ly",
+    "planning-center": "Planning Center",
+    churchtrac: "ChurchTrac",
+    tithely: "Tithe.ly",
 } as const;
 
 // Generate contact URL with platform pre-selected
 export function getContactUrlForMigration(platformSlug: string): string {
-  return `/contact?from=${platformSlug}&interest=migration-help`;
+    return `/contact?from=${platformSlug}&interest=migration-help`;
 }
