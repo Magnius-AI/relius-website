@@ -75,13 +75,13 @@ export function SocialProof() {
               <div>
                 <div className="flex items-center gap-2 mb-4">
                   <Sparkles className="w-5 h-5 text-primary-600" />
-                  <span className="text-sm font-semibold uppercase tracking-wide text-primary-600">Join Our Founding Churches</span>
+                  <span className="text-sm font-semibold uppercase tracking-wide text-primary-600">Get Started Free</span>
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
-                  Be part of shaping the future of church software
+                  Church software that feels like it was built for you
                 </h3>
                 <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                  We're building Relius with input from church leaders who understand that ministry software should feel pastoral, not corporate. As a founding church, you'll help shape the features and experience.
+                  Relius is built with input from church leaders who understand that ministry software should feel pastoral, not corporate. Every feature is shaped by real ministry needs.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button variant="gradient" asChild>

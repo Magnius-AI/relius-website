@@ -131,7 +131,7 @@ export function DemoDashboard() {
             <div className="text-2xl font-bold text-gray-900">Dashboard</div>
             <p className="text-sm text-gray-500 mt-1">Welcome back! Here&apos;s what&apos;s happening with your church.</p>
           </div>
-          <select className="demo-input !w-36 text-sm appearance-none" disabled>
+          <select className="demo-input !w-36 text-sm appearance-none" disabled aria-label="Time period">
             <option>This Week</option>
             <option>This Month</option>
             <option>This Year</option>

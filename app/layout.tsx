@@ -17,10 +17,10 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://relius.ai"),
   title: {
-    default: "Relius | AI Church Management Software & Planning Center Alternative",
+    default: "Relius | Free Church Management Software with AI",
     template: "%s | Relius",
   },
-  description: "Free church management software with AI-powered giving tools. The modern Planning Center alternative with volunteer scheduling, pastoral care, and church CRM. Free forever, no credit card required.",
+  description: "100% free church management software with AI-powered giving, volunteer scheduling, and pastoral care. The modern Planning Center & Tithe.ly alternative. No credit card, no hidden fees — free forever.",
   icons: {
     icon: "/relius_emblem_circle.png",
     apple: "/relius_emblem_circle.png",
@@ -30,16 +30,21 @@ export const metadata: Metadata = {
     "free online giving for churches",
     "church donation software free",
     "AI church management software",
+    "ai church software",
     "Planning Center alternative",
+    "tithely alternative",
+    "churchtrac alternative",
     "church CRM",
     "ChMS",
     "volunteer scheduling software",
+    "church volunteer scheduling software",
     "pastoral care tools",
     "church admin software",
     "ministry software",
     "church database",
     "church automation tools",
     "free church management",
+    "church donor data migration",
   ],
   authors: [{ name: "Relius" }],
   openGraph: {
@@ -47,8 +52,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://relius.ai",
     siteName: "Relius",
-    title: "Relius | AI Church Management Software & Planning Center Alternative",
-    description: "AI-powered church management software that saves 10+ hours weekly. Modern volunteer scheduling, pastoral care, and church CRM built for ministry teams.",
+    title: "Relius | Free Church Management Software with AI",
+    description: "100% free church management with AI-powered giving, volunteer scheduling, and pastoral care. Save 10+ hours weekly. The modern Planning Center & Tithe.ly alternative.",
     images: [
       {
         url: "/og-image.png",
@@ -60,8 +65,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Relius | AI Church Management Software",
-    description: "Save 10+ hours weekly with AI-powered church management. Volunteer scheduling, pastoral care, and church CRM built for ministry.",
+    title: "Relius | Free Church Management Software with AI",
+    description: "100% free church management with AI-powered giving, volunteer scheduling, and pastoral care. Save 10+ hours weekly.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -78,6 +83,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <head>
+        <link rel="alternate" hrefLang="en" href="https://relius.ai" />
+        <link rel="alternate" hrefLang="x-default" href="https://relius.ai" />
         <link rel="dns-prefetch" href="https://us.i.posthog.com" />
         <link rel="dns-prefetch" href="https://us-assets.i.posthog.com" />
         <link rel="preconnect" href="https://us.i.posthog.com" crossOrigin="anonymous" />
@@ -96,12 +103,15 @@ export default function RootLayout({
         </Script>
       </head>
       <body>
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:top-4 focus:left-4 focus:bg-white focus:text-primary focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg focus:text-sm focus:font-medium">
+          Skip to main content
+        </a>
         <Suspense fallback={null}>
           <Analytics />
         </Suspense>
         <StructuredData />
         <Header />
-        <main className="min-h-screen">
+        <main id="main-content" className="min-h-screen">
           {children}
         </main>
         <Footer />

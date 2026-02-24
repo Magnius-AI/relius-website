@@ -14,66 +14,60 @@ export const MIGRATION_URLS = {
 } as const;
 
 export const MIGRATION_PAGE_META: Record<string, MigrationPageMeta> = {
-    hub: {
-          title:
-                  "Switch to Relius | Free Church Software Migration in Under 3 Hours",
-          description:
-                  "Migrate your church data from Planning Center, ChurchTrac, or Tithe.ly to Relius in under 3 hours — completely free. Keep all your people, donations, and history intact.",
-          keywords: [
-                  "church software migration",
-                  "planning center alternative",
-                  "churchtrac alternative",
-                  "tithely alternative",
-                  "church management software",
-                  "switch church software",
-                  "free church software migration",
-                ],
-    },
-    "planning-center": {
-          title:
-                  "Planning Center Alternative — Save $200+/mo with Free AI Church Software",
-          description:
-                  "Churches are switching from Planning Center to Relius for free AI-powered management, simpler pricing, and an all-in-one platform. Import your people and donations in under 3 hours.",
-          keywords: [
-                  "planning center alternative",
-                  "planning center migration",
-                  "switch from planning center",
-                  "planning center vs relius",
-                  "church software comparison",
-                  "free planning center alternative",
-                  "planning center free alternative",
-                ],
-    },
-    churchtrac: {
-          title:
-                  "ChurchTrac Alternative — Free Cloud-Based Church Software with AI",
-          description:
-                  "Upgrade from ChurchTrac to Relius: modern cloud-based interface, AI-powered giving tools, and unlimited members — free forever. Migrate all your data in 2-3 hours.",
-          keywords: [
-                  "churchtrac alternative",
-                  "churchtrac migration",
-                  "switch from churchtrac",
-                  "churchtrac vs relius",
-                  "modern church software",
-                  "cloud church management software",
-                  "churchtrac integrations",
-                ],
-    },
-    tithely: {
-          title:
-                  "Tithe.ly Alternative — Complete Church Management Beyond Just Giving",
-          description:
-                  "Move beyond just giving with Relius: free church management with AI-powered donations, volunteer scheduling, and pastoral care. Import all your Tithe.ly data easily.",
-          keywords: [
-                  "tithely alternative",
-                  "tithe.ly alternative",
-                  "tithely migration",
-                  "switch from tithely",
-                  "tithely vs relius",
-                  "church management platform",
-                  "tithe ai",
-                ],
-    },
+  hub: {
+    title: "Switch to Relius | Free Church Data Migration in Hours",
+    description:
+      "Bring your church data with you when you switch to Relius. Free guided migration from Planning Center, ChurchTrac, and Tithe.ly in just 2-4 hours. People, donations, and history transfer safely.",
+    keywords: [
+      "church software migration",
+      "planning center alternative",
+      "churchtrac alternative",
+      "tithely alternative",
+      "church management software",
+      "switch church software",
+      "church data migration",
+    ],
+  },
+  "planning-center": {
+    title: "Free Planning Center Alternative 2026 | Switch to Relius in 3 Hours",
+    description:
+      "The free alternative to Planning Center with AI-powered features. Import your people and donations in under 3 hours. Simpler pricing, modern interface, and all-in-one church management.",
+    keywords: [
+      "planning center alternative",
+      "planning center free alternative",
+      "planning center migration",
+      "switch from planning center",
+      "planning center vs relius",
+      "church software comparison",
+    ],
+  },
+  churchtrac: {
+    title: "ChurchTrac Alternative | Cloud-Based Church Software with AI — Free",
+    description:
+      "Upgrade from ChurchTrac to Relius: cloud-based access, AI-powered features, and a modern interface. Easy migration preserves all your historical data. Start free today.",
+    keywords: [
+      "churchtrac alternative",
+      "churchtrac migration",
+      "switch from churchtrac",
+      "churchtrac vs relius",
+      "churchtrac integrations",
+      "modern church software",
+    ],
+  },
+  tithely: {
+    title: "Switch from Tithe.ly to Relius | Free Migration, Better Features",
+    description:
+      "Move from Tithe.ly to Relius in 3-4 hours. Import people, donations, tags, and attendance — free. Get AI-powered giving tools, pastoral care, and volunteer scheduling your church actually needs.",
+    keywords: [
+      "tithely alternative",
+      "tithe ai",
+      "tithely migration",
+      "switch from tithely",
+      "tithely vs relius",
+      "tithely pricing",
+      "church management platform",
+    ],
+  },
 };
 
 // Contact form pre-population values
