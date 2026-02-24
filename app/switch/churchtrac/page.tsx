@@ -7,6 +7,8 @@ import { MigrationSteps } from "@/components/ui/migration-steps";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { getMigrationPlatform, migrationSteps, commonMigrationFAQs } from "@/data/migrations";
 import { MIGRATION_PAGE_META, getContactUrlForMigration } from "@/lib/migration-urls";
+import { BreadcrumbSchema } from "@/components/seo/structured-data";
+import Script from "next/script";
 
 const platform = getMigrationPlatform("churchtrac")!;
 
@@ -18,20 +20,27 @@ export const metadata: Metadata = {
     canonical: "https://relius.ai/switch/churchtrac/",
   },
   openGraph: {
-    title: "Switch from ChurchTrac to Relius | Free Migration",
-    description: "Step-by-step guide to migrate your church data from ChurchTrac to Relius with free assisted migration.",
+            title: "ChurchTrac Alternative - Free Cloud-Based Church Software with AI",
+        description: "Upgrade from ChurchTrac to Relius: modern cloud-based interface, AI-powered giving tools, and unlimited members. Free forever. Migrate all your data in 2-3 hours.",
     url: "https://relius.ai/switch/churchtrac/",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Switch from ChurchTrac to Relius | Free Migration",
-    description: "Step-by-step guide to migrate your church data from ChurchTrac to Relius with free assisted migration.",
+        title: "ChurchTrac Alternative - Free Cloud-Based Church Software with AI",
+        description: "Upgrade from ChurchTrac to Relius: modern cloud-based interface, AI-powered giving tools, and unlimited members. Free forever. Migrate all your data in 2-3 hours.",
   },
 };
 
 export default function ChurchTracMigrationPage() {
   return (
     <main className="pt-24">
+            <BreadcrumbSchema
+                      items={[
+                        { name: "Home", url: "https://relius.ai/" },
+                        { name: "Switch", url: "https://relius.ai/switch/" },
+                        { name: "ChurchTrac", url: "https://relius.ai/switch/churchtrac/" },
+                                ]}
+                    />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-white py-16 lg:py-24">
         <div className="absolute inset-0 bg-pattern-grid opacity-[0.03] pointer-events-none" />
