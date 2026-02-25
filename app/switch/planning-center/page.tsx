@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ComparisonTable } from "@/components/ui/comparison-table";
 import { MigrationSteps } from "@/components/ui/migration-steps";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+import { FAQSchema } from "@/components/seo/faq-schema";
 import { getMigrationPlatform, migrationSteps, commonMigrationFAQs } from "@/data/migrations";
 import { MIGRATION_PAGE_META, getContactUrlForMigration } from "@/lib/migration-urls";
 import { BreadcrumbSchema } from "@/components/seo/structured-data";
@@ -39,11 +40,12 @@ export default function PlanningCenterMigrationPage() {
         { name: "Switch to Relius", url: "https://relius.ai/switch/" },
         { name: "Planning Center Alternative", url: "https://relius.ai/switch/planning-center/" },
       ]} />
+              <FAQSchema faqs={[...platform.faqs, ...commonMigrationFAQs.slice(0, 3)]} id="planning-center-faq" />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-white py-16 lg:py-24">
         <div className="absolute inset-0 bg-pattern-grid opacity-[0.03] pointer-events-none" />
         <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-30 -z-10 pointer-events-none" />
-
+              
         <div className="container-width px-6 lg:px-8">
           <Link
             href="/switch/"
