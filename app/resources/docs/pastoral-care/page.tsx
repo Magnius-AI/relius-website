@@ -244,7 +244,7 @@ export default function PastoralCarePage() {
         <h2 className="text-lg font-semibold text-slate-900">Related Topics</h2>
         <div className="flex flex-wrap gap-3">
           <Link
-            href="/resources/docs/ai/pastoral-insights"
+            href="/resources/docs/ai/pastoral-care/"
             className="rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 hover:border-primary-300 hover:text-primary-600 transition-all"
           >
             AI Pastoral Insights →

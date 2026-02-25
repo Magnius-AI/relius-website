@@ -373,7 +373,7 @@ export default function AISermonPlannerPage() {
                         </div>
                         <p className="text-sm text-slate-600 mb-0">Turn sermons into emails, social posts, and study guides</p>
                     </Link>
-                    <Link href="/resources/docs/services/planning/" className="block p-4 bg-white border border-slate-200 rounded-lg hover:border-purple-300 hover:shadow-md transition-all">
+                    <Link href="/resources/docs/services/plans/" className="block p-4 bg-white border border-slate-200 rounded-lg hover:border-purple-300 hover:shadow-md transition-all">
                         <h3 className="font-bold text-slate-900 mb-1">Service Planning</h3>
                         <p className="text-sm text-slate-600 mb-0">Build complete worship services around your sermons</p>
                     </Link>

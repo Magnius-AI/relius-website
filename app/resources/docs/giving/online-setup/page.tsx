@@ -177,8 +177,8 @@ export default function OnlineGivingSetupPage() {
         <li><a href="/resources/docs/giving/campaigns">Campaigns</a> – Create dedicated giving pages for specific fundraisers</li>
         <li><a href="/resources/docs/giving/donors">Donor Management</a> – View who's giving online and their patterns</li>
         <li><a href="/resources/docs/giving/receipts">Tax Receipts</a> – Automatic receipting for online donations</li>
-        <li><a href="/resources/docs/website/online-giving-page">Public Website - Online Giving</a> – Embedding giving on your church site</li>
-        <li><a href="/resources/docs/administration/integrations">Integrations</a> – Managing your Stripe connection</li>
+        <li><a href="/resources/docs/website/giving/">Public Website - Online Giving</a> – Embedding giving on your church site</li>
+        <li><a href="/resources/docs/admin/">Integrations</a> – Managing your Stripe connection</li>
       </ul>
     </div>
   );

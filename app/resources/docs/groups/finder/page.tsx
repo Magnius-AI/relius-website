@@ -212,7 +212,7 @@ export default function GroupFinderPage() {
         <li><a href="/resources/docs/groups/types">Group Types & Categories</a> – How categories enable filtering</li>
         <li><a href="/resources/docs/groups/leaders">Group Leaders</a> – How leaders respond to join requests</li>
         <li><a href="/resources/docs/website/pages">Public Website</a> – Embedding the Finder on your site</li>
-        <li><a href="/resources/docs/people/visitor-tracking">Visitor Tracking</a> – Converting Finder users to members</li>
+        <li><a href="/resources/docs/people/visitors/">Visitor Tracking</a> – Converting Finder users to members</li>
       </ul>
     </div>
   );

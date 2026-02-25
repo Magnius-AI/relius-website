@@ -222,7 +222,7 @@ export default function GroupLeadersPage() {
         <li><a href="/resources/docs/groups/attendance">Group Attendance</a> – How leaders track attendance</li>
         <li><a href="/resources/docs/communications/email">Email Campaigns</a> – Advanced communication tools for staff</li>
         <li><a href="/resources/docs/people/directory">Member Directory</a> – Where leaders find member info</li>
-        <li><a href="/resources/docs/getting-started/permissions">User Roles & Permissions</a> – Understanding permission levels</li>
+        <li><a href="/resources/docs/getting-started/roles/">User Roles & Permissions</a> – Understanding permission levels</li>
       </ul>
     </div>
   );

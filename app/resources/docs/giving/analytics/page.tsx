@@ -230,7 +230,7 @@ export default function GivingAnalyticsPage() {
         <li><a href="/resources/docs/giving/campaigns">Campaigns</a> – Tracking campaign progress and velocity</li>
         <li><a href="/resources/docs/giving/receipts">Tax Receipts</a> – Year-end giving summaries</li>
         <li><a href="/resources/docs/ai/donations-manager">AI Donations Manager</a> – AI-powered giving predictions</li>
-        <li><a href="/resources/docs/administration/reporting">Reports & Exports</a> – Custom report creation</li>
+        <li><a href="/resources/docs/giving/insights/">Reports & Exports</a> – Custom report creation</li>
       </ul>
     </div>
   );

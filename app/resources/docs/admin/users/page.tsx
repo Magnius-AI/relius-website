@@ -207,7 +207,7 @@ export default function UserManagementPage() {
 
       <h2>Related Topics</h2>
       <ul>
-        <li><a href="/resources/docs/getting-started/roles-permissions">User Roles & Permissions</a> – Understanding access levels</li>
+        <li><a href="/resources/docs/getting-started/roles/">User Roles & Permissions</a> – Understanding access levels</li>
         <li><a href="/resources/docs/admin/security">Security Settings</a> – Password policies, audit logs, session management</li>
         <li><a href="/resources/docs/admin/settings">Church Settings</a> – Configuring church-wide preferences</li>
         <li><a href="/resources/docs/admin">Administration Overview</a> – All administrative features</li>

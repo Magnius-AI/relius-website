@@ -365,9 +365,9 @@ export default function AnnouncementsPage() {
         <li><a href="/resources/docs/communications">Communications Overview</a> - All communication channels</li>
         <li><a href="/resources/docs/communications/email">Email Campaigns</a> - Detailed email features</li>
         <li><a href="/resources/docs/communications/sms">SMS Messaging</a> - Text message alerts</li>
-        <li><a href="/resources/docs/events-calendar">Events & Calendar</a> - Event-specific announcements</li>
+        <li><a href="/resources/docs/events/">Events & Calendar</a> - Event-specific announcements</li>
         <li><a href="/resources/docs/groups">Groups</a> - Group announcements</li>
-        <li><a href="/resources/docs/public-website">Public Website</a> - Website announcement banners</li>
+        <li><a href="/resources/docs/website/">Public Website</a> - Website announcement banners</li>
       </ul>
     </div>
   );
