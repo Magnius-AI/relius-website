@@ -122,7 +122,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
         <header className="space-y-6">
           <div className="flex flex-wrap items-center gap-3 text-sm text-slate-500">
             <span className="font-semibold text-primary-700 bg-primary-50 px-3 py-1 rounded-full">{post.category}</span>
-            <span>{new Date(post.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</span>
+              <time dateTime={post.date}>{new Date(post.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</time>
             <span aria-hidden="true">|</span>
             <span>{post.readTime}</span>
           </div>
