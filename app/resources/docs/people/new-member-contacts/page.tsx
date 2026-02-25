@@ -179,7 +179,7 @@ export default function NewMemberContactsPage() {
             <h2>Related Topics</h2>
             <ul>
                 <li>
-                    <Link href="/resources/docs/people/visitors">Visitor Tracking</Link> -- capture
+                    <Link href="/resources/docs/people/visitors/">Visitor Tracking</Link> -- capture
                     and manage first-time guest information
                 </li>
                 <li>

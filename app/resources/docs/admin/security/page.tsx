@@ -215,7 +215,7 @@ export default function SecuritySettingsPage() {
         <li><a href="/resources/docs/admin/settings">Church Settings</a> – Configuring church-wide preferences</li>
         <li><a href="/resources/docs/admin/data">Data Management</a> – Backup, export, and GDPR compliance</li>
         <li><a href="/resources/docs/admin/integrations">Integrations</a> – API key usage for external connections</li>
-        <li><a href="/resources/docs/getting-started/roles-permissions">User Roles & Permissions</a> – Understanding access control</li>
+        <li><a href="/resources/docs/getting-started/roles/">User Roles & Permissions</a> – Understanding access control</li>
         <li><a href="/resources/docs/admin">Administration Overview</a> – All administrative features</li>
       </ul>
     </div>

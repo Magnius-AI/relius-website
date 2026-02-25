@@ -139,7 +139,7 @@ export default function AdministrationOverviewPage() {
       <h2>Related Topics</h2>
       <ul>
         <li><a href="/resources/docs/getting-started/setup">Setting Up Your Church</a> – Initial configuration walkthrough</li>
-        <li><a href="/resources/docs/getting-started/roles-permissions">User Roles & Permissions</a> – Understanding access levels</li>
+        <li><a href="/resources/docs/getting-started/roles/">User Roles & Permissions</a> – Understanding access levels</li>
         <li><a href="/resources/docs/giving/online-setup">Online Giving Setup</a> – Stripe integration guide</li>
         <li><a href="/resources/docs/admin/settings">Church Settings</a> – Detailed settings documentation</li>
         <li><a href="/resources/docs/admin/users">User Management</a> – Managing your team</li>

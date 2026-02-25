@@ -204,7 +204,7 @@ export default function PipelinesPage() {
             <h2>Related Topics</h2>
             <ul>
                 <li>
-                    <Link href="/resources/docs/people/visitors">Visitor Tracking</Link> -- capture
+                    <Link href="/resources/docs/people/visitors/">Visitor Tracking</Link> -- capture
                     and follow up with first-time guests
                 </li>
                 <li>

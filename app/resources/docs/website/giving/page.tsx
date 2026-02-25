@@ -263,7 +263,7 @@ export default function OnlineGivingPage() {
           </Link>
         </li>
         <li>
-          <Link href="/resources/docs/giving/donation-tracking" className="text-blue-600 hover:underline">
+          <Link href="/resources/docs/giving/tracking/" className="text-blue-600 hover:underline">
             Donation Tracking
           </Link>
         </li>
@@ -273,12 +273,12 @@ export default function OnlineGivingPage() {
           </Link>
         </li>
         <li>
-          <Link href="/resources/docs/giving/tax-receipts" className="text-blue-600 hover:underline">
+          <Link href="/resources/docs/giving/receipts/" className="text-blue-600 hover:underline">
             Tax Receipts & Year-End Statements
           </Link>
         </li>
         <li>
-          <Link href="/resources/docs/administration/integrations" className="text-blue-600 hover:underline">
+          <Link href="/resources/docs/admin/" className="text-blue-600 hover:underline">
             Integrations (Stripe)
           </Link>
         </li>

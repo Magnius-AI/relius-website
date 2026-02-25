@@ -181,7 +181,7 @@ export default function VisitorTrackingPage() {
             <h2>Related Topics</h2>
             <ul>
                 <li>
-                    <Link href="/resources/docs/people/directory">People Directory</Link> -- use the
+                    <Link href="/resources/docs/people/directory/">People Directory</Link> -- use the
                     New Members toggle to find recently added visitors
                 </li>
                 <li>

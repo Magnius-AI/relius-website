@@ -371,7 +371,7 @@ export default function AtRiskDetectionPage() {
             Care Notes →
           </Link>
           <Link
-            href="/resources/docs/ai/pastoral-insights"
+            href="/resources/docs/ai/pastoral-care/"
             className="rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 hover:border-rose-300 hover:text-rose-600 transition-all"
           >
             AI Pastoral Insights →

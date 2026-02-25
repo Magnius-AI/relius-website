@@ -1,8 +1,31 @@
 import { Metadata } from 'next';
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 import Link from 'next/link';
 import { docsNavigation } from '@/data/docs-navigation';
 import { ArrowLeft, BookOpen } from 'lucide-react';
+
+// Redirect old/broken URLs to their correct destinations
+const REDIRECT_MAP: Record<string, string> = {
+  'giving/donation-tracking': '/resources/docs/giving/tracking/',
+  'giving/tax-receipts': '/resources/docs/giving/receipts/',
+  'giving/online-giving-setup': '/resources/docs/giving/online-setup/',
+  'administration/integrations': '/resources/docs/admin/',
+  'administration/church-settings': '/resources/docs/admin/settings/',
+  'administration/reporting': '/resources/docs/giving/insights/',
+  'people/family': '/resources/docs/people/families/',
+  'people/visitor': '/resources/docs/people/visitors/',
+  'people/visitor-tracking': '/resources/docs/people/visitors/',
+  'people/bulk-import': '/resources/docs/people/',
+  'getting-started/roles-permissions': '/resources/docs/getting-started/roles/',
+  'getting-started/permissions': '/resources/docs/getting-started/roles/',
+  'ai/pastoral-insights': '/resources/docs/ai/pastoral-care/',
+  'ai/volunteer-scheduler': '/resources/docs/ai/',
+  'events-calendar': '/resources/docs/events/',
+  'public-website': '/resources/docs/website/',
+  'services/planning': '/resources/docs/services/plans/',
+  'services/service-planning': '/resources/docs/services/plans/',
+  'website/online-giving-page': '/resources/docs/website/giving/',
+};
 
 interface DocPageProps {
   params: Promise<{
@@ -22,13 +45,25 @@ export async function generateStaticParams() {
     });
   });
 
+  // Add redirect source paths so they get built as static pages
+  Object.keys(REDIRECT_MAP).forEach((oldSlug) => {
+    paths.push({ slug: oldSlug.split('/') });
+  });
+
   return paths;
 }
 
 // Generate metadata for each page
 export async function generateMetadata({ params }: DocPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const href = `/resources/docs/${slug.join('/')}`;
+  const slugPath = slug.join('/');
+
+  // Redirect pages don't need real metadata
+  if (REDIRECT_MAP[slugPath]) {
+    return { title: 'Redirecting...' };
+  }
+
+  const href = `/resources/docs/${slugPath}`;
 
   // Find the page in navigation
   let pageTitle = '';
@@ -52,6 +87,10 @@ export async function generateMetadata({ params }: DocPageProps): Promise<Metada
   return {
     title: `${pageTitle} - ${sectionTitle} - Relius Documentation`,
     description: `Learn about ${pageTitle.toLowerCase()} in Relius church management software.`,
+    robots: {
+      index: false,
+      follow: true,
+    },
     alternates: {
       canonical: `https://relius.ai${href}`,
     },
@@ -60,7 +99,14 @@ export async function generateMetadata({ params }: DocPageProps): Promise<Metada
 
 export default async function DocPage({ params }: DocPageProps) {
   const { slug } = await params;
-  const href = `/resources/docs/${slug.join('/')}`;
+  const slugPath = slug.join('/');
+
+  // Handle redirects for old/broken URLs
+  if (REDIRECT_MAP[slugPath]) {
+    redirect(REDIRECT_MAP[slugPath]);
+  }
+
+  const href = `/resources/docs/${slugPath}`;
 
   // Find the current page and section in navigation
   let currentPage = null;

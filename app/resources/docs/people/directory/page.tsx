@@ -427,7 +427,7 @@ export default function PeopleDirectoryPage() {
 
                 <h2 className="text-2xl font-bold text-slate-900 mt-12 mb-4">Related Topics</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <Link href="/resources/docs/people/family/" className="block p-4 bg-white border border-slate-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all">
+                    <Link href="/resources/docs/people/families/" className="block p-4 bg-white border border-slate-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all">
                         <h3 className="font-bold text-slate-900 mb-1">Family Management</h3>
                         <p className="text-sm text-slate-600 mb-0">Organize people into household units</p>
                     </Link>

@@ -267,7 +267,7 @@ export default function MigrationOverviewPage() {
           </Link>
         </li>
         <li>
-          <Link href="/resources/docs/people/bulk-import" className="text-blue-600 hover:underline">
+          <Link href="/resources/docs/people/" className="text-blue-600 hover:underline">
             Bulk Import/Export
           </Link>
         </li>

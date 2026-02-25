@@ -7,6 +7,7 @@ import { MigrationSteps } from "@/components/ui/migration-steps";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { getMigrationPlatform, migrationSteps, commonMigrationFAQs } from "@/data/migrations";
 import { MIGRATION_PAGE_META, getContactUrlForMigration } from "@/lib/migration-urls";
+import { BreadcrumbSchema } from "@/components/seo/structured-data";
 
 const platform = getMigrationPlatform("planning-center")!;
 
@@ -33,6 +34,11 @@ export const metadata: Metadata = {
 export default function PlanningCenterMigrationPage() {
   return (
     <main className="pt-24">
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://relius.ai/" },
+        { name: "Switch to Relius", url: "https://relius.ai/switch/" },
+        { name: "Planning Center Alternative", url: "https://relius.ai/switch/planning-center/" },
+      ]} />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-white py-16 lg:py-24">
         <div className="absolute inset-0 bg-pattern-grid opacity-[0.03] pointer-events-none" />

@@ -209,7 +209,7 @@ export default function TaxReceiptsPage() {
         <li><a href="/resources/docs/giving/online-setup">Online Giving Setup</a> – Automatic receipting for online donations</li>
         <li><a href="/resources/docs/giving/campaigns">Campaigns</a> – Receipting campaign-specific gifts</li>
         <li><a href="/resources/docs/communications/email">Email Campaigns</a> – Sending bulk receipt emails</li>
-        <li><a href="/resources/docs/administration/church-settings">Church Settings</a> – Configuring EIN and legal name</li>
+        <li><a href="/resources/docs/admin/settings/">Church Settings</a> – Configuring EIN and legal name</li>
       </ul>
     </div>
   );

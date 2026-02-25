@@ -345,12 +345,12 @@ export default function PlanningCenterMigrationPage() {
           </Link>
         </li>
         <li>
-          <Link href="/resources/docs/people/bulk-import" className="text-blue-600 hover:underline">
+          <Link href="/resources/docs/people/" className="text-blue-600 hover:underline">
             Bulk Import/Export
           </Link>
         </li>
         <li>
-          <Link href="/resources/docs/giving/online-giving-setup" className="text-blue-600 hover:underline">
+          <Link href="/resources/docs/giving/online-setup/" className="text-blue-600 hover:underline">
             Online Giving Setup
           </Link>
         </li>

@@ -277,7 +277,7 @@ export default function PagesContentPage() {
           </Link>
         </li>
         <li>
-          <Link href="/resources/docs/services/service-planning" className="text-blue-600 hover:underline">
+          <Link href="/resources/docs/services/plans/" className="text-blue-600 hover:underline">
             Service Planning (Sermons)
           </Link>
         </li>

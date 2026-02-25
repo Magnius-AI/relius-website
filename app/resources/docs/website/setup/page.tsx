@@ -247,7 +247,7 @@ export default function WebsiteSetupPage() {
           </Link>
         </li>
         <li>
-          <Link href="/resources/docs/administration/church-settings" className="text-blue-600 hover:underline">
+          <Link href="/resources/docs/admin/settings/" className="text-blue-600 hover:underline">
             Church Settings
           </Link>
         </li>

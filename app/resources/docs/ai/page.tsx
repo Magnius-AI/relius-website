@@ -76,7 +76,7 @@ export default function AIFeaturesOverviewPage() {
                         </p>
                     </Link>
 
-                    <Link href="/resources/docs/ai/pastoral-insights/" className="block bg-white border-2 border-slate-200 rounded-xl p-6 hover:border-purple-400 hover:shadow-lg transition-all group">
+                    <Link href="/resources/docs/ai/pastoral-care/" className="block bg-white border-2 border-slate-200 rounded-xl p-6 hover:border-purple-400 hover:shadow-lg transition-all group">
                         <div className="flex items-center gap-3 mb-3">
                             <div className="bg-purple-100 p-3 rounded-lg group-hover:bg-purple-200 transition-colors">
                                 <Heart className="w-6 h-6 text-purple-600" />
@@ -88,7 +88,7 @@ export default function AIFeaturesOverviewPage() {
                         </p>
                     </Link>
 
-                    <Link href="/resources/docs/ai/volunteer-scheduler/" className="block bg-white border-2 border-slate-200 rounded-xl p-6 hover:border-purple-400 hover:shadow-lg transition-all group">
+                    <Link href="/resources/docs/ai/" className="block bg-white border-2 border-slate-200 rounded-xl p-6 hover:border-purple-400 hover:shadow-lg transition-all group">
                         <div className="flex items-center gap-3 mb-3">
                             <div className="bg-purple-100 p-3 rounded-lg group-hover:bg-purple-200 transition-colors">
                                 <UserCheck className="w-6 h-6 text-purple-600" />

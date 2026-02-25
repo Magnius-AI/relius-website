@@ -60,7 +60,7 @@ export default function PeopleOverviewPage() {
                         </p>
                     </Link>
 
-                    <Link href="/resources/docs/people/family/" className="block bg-white border-2 border-slate-200 rounded-xl p-6 hover:border-blue-400 hover:shadow-lg transition-all group">
+                    <Link href="/resources/docs/people/families/" className="block bg-white border-2 border-slate-200 rounded-xl p-6 hover:border-blue-400 hover:shadow-lg transition-all group">
                         <div className="flex items-center gap-3 mb-3">
                             <div className="bg-blue-100 p-3 rounded-lg group-hover:bg-blue-200 transition-colors">
                                 <Users className="w-6 h-6 text-blue-600" />
@@ -72,7 +72,7 @@ export default function PeopleOverviewPage() {
                         </p>
                     </Link>
 
-                    <Link href="/resources/docs/people/visitor/" className="block bg-white border-2 border-slate-200 rounded-xl p-6 hover:border-blue-400 hover:shadow-lg transition-all group">
+                    <Link href="/resources/docs/people/visitors/" className="block bg-white border-2 border-slate-200 rounded-xl p-6 hover:border-blue-400 hover:shadow-lg transition-all group">
                         <div className="flex items-center gap-3 mb-3">
                             <div className="bg-blue-100 p-3 rounded-lg group-hover:bg-blue-200 transition-colors">
                                 <UserPlus className="w-6 h-6 text-blue-600" />
