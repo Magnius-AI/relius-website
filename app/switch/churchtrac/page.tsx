@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ComparisonTable } from "@/components/ui/comparison-table";
 import { MigrationSteps } from "@/components/ui/migration-steps";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+import { FAQSchema } from "@/components/seo/faq-schema";
 import { getMigrationPlatform, migrationSteps, commonMigrationFAQs } from "@/data/migrations";
 import { MIGRATION_PAGE_META, getContactUrlForMigration } from "@/lib/migration-urls";
 import { BreadcrumbSchema } from "@/components/seo/structured-data";
@@ -42,6 +43,7 @@ export default function ChurchTracMigrationPage() {
                         { name: "ChurchTrac", url: "https://relius.ai/switch/churchtrac/" },
                                 ]}
                     />
+              <FAQSchema faqs={[...platform.faqs, ...commonMigrationFAQs.slice(0, 3)]} id="churchtrac-faq" />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-white py-16 lg:py-24">
         <div className="absolute inset-0 bg-pattern-grid opacity-[0.03] pointer-events-none" />
