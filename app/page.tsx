@@ -6,6 +6,7 @@ import { ProductPillars } from "@/components/sections/product-pillars";
 import { MigrationCallout } from "@/components/sections/migration-callout";
 import { SocialProof } from "@/components/sections/social-proof";
 import { FinalCta } from "@/components/sections/final-cta";
+import { HomepageFAQ } from "@/components/sections/homepage-faq";
 import { InteractiveDemo } from "@/components/demo";
 
 export const metadata: Metadata = {
@@ -49,6 +50,7 @@ export default function Home() {
       <ProductPillars />
       <MigrationCallout />
       <SocialProof />
+            <HomepageFAQ />
       <FinalCta />
     </>
   );

@@ -9,6 +9,7 @@ import { getMigrationPlatform, migrationSteps, commonMigrationFAQs } from "@/dat
 import { MIGRATION_PAGE_META, getContactUrlForMigration } from "@/lib/migration-urls";
 import { BreadcrumbSchema } from "@/components/seo/structured-data";
 import Script from "next/script";
+import { FAQSchema } from "@/components/seo/faq-schema";
 
 const platform = getMigrationPlatform("churchtrac")!;
 
@@ -20,14 +21,14 @@ export const metadata: Metadata = {
     canonical: "https://relius.ai/switch/churchtrac/",
   },
   openGraph: {
-    title: "ChurchTrac Alternative | Cloud-Based Church Software — Free",
+    title: "Best ChurchTrac Alternative 2026 — Free AI Church Software",
     description: "Upgrade from ChurchTrac to Relius: cloud-based access, AI-powered features, and a modern interface. Easy migration preserves all your historical data.",
     url: "https://relius.ai/switch/churchtrac/",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Switch from ChurchTrac to Relius" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ChurchTrac Alternative | Cloud-Based Church Software — Free",
+    title: "Best ChurchTrac Alternative 2026 — Free AI Church Software",
     description: "Upgrade from ChurchTrac to Relius: cloud-based access, AI-powered features, and a modern interface. Start free today.",
   },
 };
@@ -42,6 +43,10 @@ export default function ChurchTracMigrationPage() {
                         { name: "ChurchTrac", url: "https://relius.ai/switch/churchtrac/" },
                                 ]}
                     />
+                            <FAQSchema
+          items={[...platform.faqs, ...commonMigrationFAQs.slice(0, 3)]}
+          id="migration-faq-schema"
+        />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-white py-16 lg:py-24">
         <div className="absolute inset-0 bg-pattern-grid opacity-[0.03] pointer-events-none" />

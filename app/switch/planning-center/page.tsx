@@ -8,6 +8,7 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 import { getMigrationPlatform, migrationSteps, commonMigrationFAQs } from "@/data/migrations";
 import { MIGRATION_PAGE_META, getContactUrlForMigration } from "@/lib/migration-urls";
 import { BreadcrumbSchema } from "@/components/seo/structured-data";
+import { FAQSchema } from "@/components/seo/faq-schema";
 
 const platform = getMigrationPlatform("planning-center")!;
 
@@ -19,14 +20,14 @@ export const metadata: Metadata = {
     canonical: "https://relius.ai/switch/planning-center/",
   },
   openGraph: {
-    title: "Free Planning Center Alternative 2026 | Switch to Relius",
+    title: "Free Planning Center Alternative 2026 | AI Church Management Software",
     description: "The free alternative to Planning Center with AI-powered features. Import your people and donations in under 3 hours. Simpler pricing, all-in-one platform.",
     url: "https://relius.ai/switch/planning-center/",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Switch from Planning Center to Relius" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Free Planning Center Alternative 2026 | Switch to Relius",
+    title: "Free Planning Center Alternative 2026 | AI Church Management Software",
     description: "The free alternative to Planning Center with AI-powered features. Import your people and donations in under 3 hours.",
   },
 };
@@ -39,6 +40,10 @@ export default function PlanningCenterMigrationPage() {
         { name: "Switch to Relius", url: "https://relius.ai/switch/" },
         { name: "Planning Center Alternative", url: "https://relius.ai/switch/planning-center/" },
       ]} />
+              <FAQSchema
+          items={[...platform.faqs, ...commonMigrationFAQs.slice(0, 3)]}
+          id="migration-faq-schema"
+        />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-white py-16 lg:py-24">
         <div className="absolute inset-0 bg-pattern-grid opacity-[0.03] pointer-events-none" />

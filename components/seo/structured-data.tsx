@@ -106,6 +106,24 @@ export function StructuredData() {
     ],
   };
 
+    const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Relius",
+    url: "https://relius.ai",
+    description:
+      "Free church management software with AI-powered giving, volunteer scheduling, and pastoral care.",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate:
+          "https://relius.ai/resources/docs/?q={search_term_string}",
+      },
+      "query-input": "required name=search_term_string",
+    },
+  };
+
   return (
     <>
       <Script
@@ -120,6 +138,13 @@ export function StructuredData() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(softwareApplicationSchema),
+        }}
+      />
+            <Script
+        id="website-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(websiteSchema),
         }}
       />
     </>

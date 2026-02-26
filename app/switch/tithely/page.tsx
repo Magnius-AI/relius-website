@@ -9,6 +9,7 @@ import { getMigrationPlatform, migrationSteps, commonMigrationFAQs } from "@/dat
 import { MIGRATION_PAGE_META, getContactUrlForMigration } from "@/lib/migration-urls";
 import { BreadcrumbSchema } from "@/components/seo/structured-data";
 import { Badge } from "@/components/ui/badge";
+import { FAQSchema } from "@/components/seo/faq-schema";
 
 const platform = getMigrationPlatform("tithely")!;
 
@@ -20,14 +21,14 @@ export const metadata: Metadata = {
     canonical: "https://relius.ai/switch/tithely/",
   },
   openGraph: {
-    title: "Switch from Tithe.ly to Relius | Free Migration, Better Features",
+    title: "Tithe.ly Alternative 2026 — Free Church Giving & Management",
     description: "Move from Tithe.ly to Relius in 3-4 hours. Import people, donations, tags, and attendance — free. AI-powered giving tools and volunteer scheduling included.",
     url: "https://relius.ai/switch/tithely/",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Switch from Tithe.ly to Relius" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Switch from Tithe.ly to Relius | Free Migration, Better Features",
+    title: "Tithe.ly Alternative 2026 — Free Church Giving & Management",
     description: "Move from Tithe.ly to Relius in 3-4 hours. Import people, donations, tags, and attendance — free. AI-powered giving tools included.",
   },
 };
@@ -42,6 +43,10 @@ export default function TithelyMigrationPage() {
                         { name: "Tithe.ly", url: "https://relius.ai/switch/tithely/" },
                                 ]}
                     />
+                            <FAQSchema
+          items={[...platform.faqs, ...commonMigrationFAQs.slice(0, 3)]}
+          id="migration-faq-schema"
+        />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-white py-16 lg:py-24">
         <div className="absolute inset-0 bg-pattern-grid opacity-[0.03] pointer-events-none" />
