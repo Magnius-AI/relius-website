@@ -94,8 +94,8 @@ export const analytics = {
     });
 
     // 2. Send real-time notification (non-blocking)
-    // Only notify for free trial buttons
-    if (ctaName.includes("free_trial")) {
+    // Only notify for signup buttons
+    if (ctaName.includes("free_trial") || ctaName.includes("get_started_free")) {
       fetch(`${CTA_NOTIFICATION_URL}/notify-cta`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },

@@ -5,8 +5,11 @@ import { Button } from "@/components/ui/button";
 import { ComparisonTable } from "@/components/ui/comparison-table";
 import { MigrationSteps } from "@/components/ui/migration-steps";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+import { FAQSchema } from "@/components/seo/faq-schema";
 import { getMigrationPlatform, migrationSteps, commonMigrationFAQs } from "@/data/migrations";
 import { MIGRATION_PAGE_META, getContactUrlForMigration } from "@/lib/migration-urls";
+import { BreadcrumbSchema } from "@/components/seo/structured-data";
+import Script from "next/script";
 
 const platform = getMigrationPlatform("churchtrac")!;
 
@@ -18,20 +21,29 @@ export const metadata: Metadata = {
     canonical: "https://relius.ai/switch/churchtrac/",
   },
   openGraph: {
-    title: "Switch from ChurchTrac to Relius | Free Migration",
-    description: "Step-by-step guide to migrate your church data from ChurchTrac to Relius with free assisted migration.",
+    title: "ChurchTrac Alternative | Cloud-Based Church Software — Free",
+    description: "Upgrade from ChurchTrac to Relius: cloud-based access, AI-powered features, and a modern interface. Easy migration preserves all your historical data.",
     url: "https://relius.ai/switch/churchtrac/",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Switch from ChurchTrac to Relius" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Switch from ChurchTrac to Relius | Free Migration",
-    description: "Step-by-step guide to migrate your church data from ChurchTrac to Relius with free assisted migration.",
+    title: "ChurchTrac Alternative | Cloud-Based Church Software — Free",
+    description: "Upgrade from ChurchTrac to Relius: cloud-based access, AI-powered features, and a modern interface. Start free today.",
   },
 };
 
 export default function ChurchTracMigrationPage() {
   return (
     <main className="pt-24">
+            <BreadcrumbSchema
+                      items={[
+                        { name: "Home", url: "https://relius.ai/" },
+                        { name: "Switch", url: "https://relius.ai/switch/" },
+                        { name: "ChurchTrac", url: "https://relius.ai/switch/churchtrac/" },
+                                ]}
+                    />
+              <FAQSchema faqs={[...platform.faqs, ...commonMigrationFAQs.slice(0, 3)]} id="churchtrac-faq" />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-white py-16 lg:py-24">
         <div className="absolute inset-0 bg-pattern-grid opacity-[0.03] pointer-events-none" />
@@ -262,7 +274,7 @@ export default function ChurchTracMigrationPage() {
               Ready to switch from {platform.name}?
             </h2>
             <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto">
-              Start your free trial and bring your church data with you. Our team is here to help.
+              Get started free and bring your church data with you. Our team is here to help.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button

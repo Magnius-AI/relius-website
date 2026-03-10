@@ -5,8 +5,10 @@ import { Button } from "@/components/ui/button";
 import { ComparisonTable } from "@/components/ui/comparison-table";
 import { MigrationSteps } from "@/components/ui/migration-steps";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+import { FAQSchema } from "@/components/seo/faq-schema";
 import { getMigrationPlatform, migrationSteps, commonMigrationFAQs } from "@/data/migrations";
 import { MIGRATION_PAGE_META, getContactUrlForMigration } from "@/lib/migration-urls";
+import { BreadcrumbSchema } from "@/components/seo/structured-data";
 
 const platform = getMigrationPlatform("planning-center")!;
 
@@ -18,25 +20,32 @@ export const metadata: Metadata = {
     canonical: "https://relius.ai/switch/planning-center/",
   },
   openGraph: {
-    title: "Switch from Planning Center to Relius | Free Migration",
-    description: "Step-by-step guide to migrate your church data from Planning Center to Relius with free assisted migration.",
+    title: "Free Planning Center Alternative 2026 | Switch to Relius",
+    description: "The free alternative to Planning Center with AI-powered features. Import your people and donations in under 3 hours. Simpler pricing, all-in-one platform.",
     url: "https://relius.ai/switch/planning-center/",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Switch from Planning Center to Relius" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Switch from Planning Center to Relius | Free Migration",
-    description: "Step-by-step guide to migrate your church data from Planning Center to Relius with free assisted migration.",
+    title: "Free Planning Center Alternative 2026 | Switch to Relius",
+    description: "The free alternative to Planning Center with AI-powered features. Import your people and donations in under 3 hours.",
   },
 };
 
 export default function PlanningCenterMigrationPage() {
   return (
     <main className="pt-24">
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://relius.ai/" },
+        { name: "Switch to Relius", url: "https://relius.ai/switch/" },
+        { name: "Planning Center Alternative", url: "https://relius.ai/switch/planning-center/" },
+      ]} />
+              <FAQSchema faqs={[...platform.faqs, ...commonMigrationFAQs.slice(0, 3)]} id="planning-center-faq" />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-white py-16 lg:py-24">
         <div className="absolute inset-0 bg-pattern-grid opacity-[0.03] pointer-events-none" />
         <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-30 -z-10 pointer-events-none" />
-
+              
         <div className="container-width px-6 lg:px-8">
           <Link
             href="/switch/"
@@ -262,7 +271,7 @@ export default function PlanningCenterMigrationPage() {
               Ready to switch from {platform.name}?
             </h2>
             <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto">
-              Start your free trial and bring your church data with you. Our team is here to help.
+              Get started free and bring your church data with you. Our team is here to help.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button

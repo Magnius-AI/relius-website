@@ -32,7 +32,7 @@ export const pillars = [
     icon: UserCheck,
     title: "Volunteers & Services",
     description: "Right people, right roles, right times.",
-    href: "/features#volunteers",
+    href: "/features#groups",
     color: "text-amber-500",
     bg: "bg-amber-50",
     hoverBg: "group-hover:bg-amber-500",

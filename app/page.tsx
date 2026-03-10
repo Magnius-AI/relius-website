@@ -9,9 +9,9 @@ import { FinalCta } from "@/components/sections/final-cta";
 import { InteractiveDemo } from "@/components/demo";
 
 export const metadata: Metadata = {
-  title: "AI Church Management Software | Relius - Save 10+ Hours Weekly",
+  title: "Free Church Management Software with AI | Save 10+ Hours Weekly",
   description:
-    "AI-powered church management software with workflow automation, volunteer scheduling, and pastoral care tools. The modern Planning Center alternative that saves 10+ hours weekly. Start your free trial.",
+    "100% free church management software with AI-powered giving, volunteer scheduling, and pastoral care. The modern Planning Center & Tithe.ly alternative used by churches nationwide. No credit card, no hidden fees.",
   alternates: {
     canonical: "https://relius.ai/",
   },
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://relius.ai",
     siteName: "Relius",
-    title: "AI Church Management Software | Relius",
+    title: "Free Church Management Software with AI | Relius",
     description:
-      "Church automation tools that save 10+ hours weekly. AI-powered volunteer scheduling, pastoral care, and church administration software.",
+      "100% free church management with AI-powered giving, volunteer scheduling, and pastoral care. Save 10+ hours weekly. No credit card required.",
     images: [
       {
         url: "/og-image.png",
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Church Management Software | Relius",
-    description: "Save 10+ hours weekly with AI-powered church management. Volunteer scheduling, pastoral care, and church CRM.",
+    title: "Free Church Management Software with AI | Relius",
+    description: "100% free church management with AI-powered giving, volunteer scheduling, and pastoral care. Save 10+ hours weekly.",
     images: ["/og-image.png"],
   },
 };

@@ -1,9 +1,10 @@
 import { Metadata } from "next";
-import { blogPosts } from "@/data/blog-posts";
+import { publishedBlogPosts } from "@/data/blog-posts";
 import { BlogPageContent } from "@/components/blog/blog-page-content";
+import { BreadcrumbSchema } from "@/components/seo/structured-data";
 
 // Sort posts by date (newest first)
-const sortedPosts = [...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+const sortedPosts = [...publishedBlogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 const topics = Array.from(new Set(sortedPosts.flatMap((post) => post.topics))).sort();
 
 export const metadata: Metadata = {
@@ -27,5 +28,13 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
-  return <BlogPageContent posts={sortedPosts} topics={topics} />;
+  return (
+    <>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://relius.ai/" },
+        { name: "Blog", url: "https://relius.ai/blog/" },
+      ]} />
+      <BlogPageContent posts={sortedPosts} topics={topics} />
+    </>
+  );
 }

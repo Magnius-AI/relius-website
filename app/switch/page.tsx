@@ -15,14 +15,15 @@ export const metadata: Metadata = {
     canonical: "https://relius.ai/switch/",
   },
   openGraph: {
-    title: "Switch to Relius | Free Church Data Migration",
-    description: "Migrate from Planning Center, ChurchTrac, or Tithe.ly to Relius with free guided migration assistance.",
+    title: "Switch to Relius | Free Church Data Migration in Hours",
+    description: "Free guided migration from Planning Center, ChurchTrac, or Tithe.ly to Relius. People, donations, and history transfer safely in 2-4 hours.",
     url: "https://relius.ai/switch/",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Switch to Relius" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Switch to Relius | Free Church Data Migration",
-    description: "Migrate from Planning Center, ChurchTrac, or Tithe.ly to Relius with free guided migration assistance.",
+    title: "Switch to Relius | Free Church Data Migration in Hours",
+    description: "Free guided migration from Planning Center, ChurchTrac, or Tithe.ly. People, donations, and history transfer safely in 2-4 hours.",
   },
 };
 
@@ -280,7 +281,7 @@ export default function SwitchPage() {
               Ready to make the switch?
             </h2>
             <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto">
-              Start your free trial and import your data today. Our team is here to help every step of the way.
+              Get started free and import your data today. Our team is here to help every step of the way.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button

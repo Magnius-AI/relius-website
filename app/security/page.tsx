@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Shield, Lock, Eye, Key, AlertTriangle, FileCheck, Server, Users } from "lucide-react";
+import { BreadcrumbSchema } from "@/components/seo/structured-data";
 
 export const metadata: Metadata = {
   title: "Security & Compliance",
@@ -13,6 +14,7 @@ export const metadata: Metadata = {
     title: "Security & Compliance | Relius",
     description: "Enterprise-grade security for your church data. Encryption, RBAC, audit logs, and GDPR compliance.",
     url: "https://relius.ai/security/",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Relius Security & Compliance" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -23,6 +25,11 @@ export const metadata: Metadata = {
 };
 
 export default function SecurityPage() {
+  const breadcrumbItems = [
+    { name: "Home", url: "https://relius.ai/" },
+    { name: "Security", url: "https://relius.ai/security/" },
+  ];
+
   const securityFeatures = [
     {
       icon: Lock,
@@ -100,6 +107,8 @@ export default function SecurityPage() {
   ];
 
   return (
+    <>
+    <BreadcrumbSchema items={breadcrumbItems} />
     <div className="py-14 px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="text-center mb-10">
@@ -269,7 +278,6 @@ export default function SecurityPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }
-
-

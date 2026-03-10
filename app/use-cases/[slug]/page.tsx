@@ -5,6 +5,7 @@ import { useCases, getUseCase } from "@/data/use-cases";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowLeft, CheckCircle2, Lightbulb, ArrowRight } from "lucide-react";
+import { BreadcrumbSchema } from "@/components/seo/structured-data";
 
 export async function generateStaticParams() {
   return useCases.map((useCase) => ({
@@ -17,20 +18,23 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const useCase = getUseCase(slug);
   if (!useCase) return { title: "Use Case Not Found" };
 
+  const metaDescription = `${useCase.subtitle}. ${useCase.solution}`.slice(0, 155).trim() + (useCase.solution.length > 90 ? "..." : "");
+
   return {
     title: `${useCase.title} - Use Case`,
-    description: useCase.subtitle,
+    description: metaDescription,
     alternates: {
       canonical: `https://relius.ai/use-cases/${slug}/`,
     },
     openGraph: {
       title: useCase.title,
-      description: useCase.subtitle,
+      description: metaDescription,
+      images: [{ url: "/og-image.png", width: 1200, height: 630, alt: `${useCase.title} - Relius` }],
     },
     twitter: {
       card: "summary_large_image",
       title: useCase.title,
-      description: useCase.subtitle,
+      description: metaDescription,
     },
   };
 }
@@ -43,6 +47,12 @@ export default async function UseCaseDetailPage({ params }: { params: Promise<{ 
   const otherUseCases = useCases.filter((uc) => uc.slug !== slug).slice(0, 2);
 
   return (
+    <>
+    <BreadcrumbSchema items={[
+      { name: "Home", url: "https://relius.ai/" },
+      { name: "Use Cases", url: "https://relius.ai/use-cases/" },
+      { name: useCase.title, url: `https://relius.ai/use-cases/${slug}/` },
+    ]} />
     <div className="py-16 px-6 lg:px-8 bg-gradient-to-b from-white to-slate-50">
       <div className="mx-auto max-w-4xl space-y-12">
         <Link
@@ -172,5 +182,6 @@ export default async function UseCaseDetailPage({ params }: { params: Promise<{ 
         )}
       </div>
     </div>
+    </>
   );
 }

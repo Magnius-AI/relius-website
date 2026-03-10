@@ -5,31 +5,38 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { UseCasesFilterGrid } from "@/components/sections/use-cases-filter-grid";
 import { Lightbulb, ArrowRight, Sparkles } from "lucide-react";
+import { BreadcrumbSchema } from "@/components/seo/structured-data";
 
 const featuredUseCase = useCases[0]!;
 
 export const metadata: Metadata = {
-  title: "Use Cases - See What's Possible",
-  description: "Explore how Relius helps churches of all sizes streamline operations, coordinate volunteers, and care for people better.",
+  title: "Church Management Use Cases | Volunteers, Care & Multi-Site",
+  description: "See how churches of all sizes use Relius to coordinate volunteers, track pastoral care, manage multi-campus operations, and streamline administration. Real scenarios, practical solutions.",
   alternates: {
     canonical: "https://relius.ai/use-cases/",
   },
   openGraph: {
-    title: "See What's Possible with Relius",
-    description: "Explore real-world scenarios showing how Relius can serve your church.",
+    title: "Church Management Use Cases | Relius",
+    description: "See how churches use Relius to coordinate volunteers, track pastoral care, and manage multi-campus operations.",
     url: "https://relius.ai/use-cases/",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Relius Use Cases" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "See What's Possible with Relius",
-    description: "Explore real-world scenarios showing how Relius can serve your church.",
+    title: "Church Management Use Cases | Relius",
+    description: "See how churches use Relius to coordinate volunteers, track pastoral care, and manage multi-campus operations.",
   },
-  keywords: ["church management use cases", "church software examples", "volunteer coordination", "pastoral care tracking"],
+  keywords: ["church management use cases", "church volunteer coordination", "pastoral care tracking", "multi-campus church management", "church software examples"],
 };
 
 export default function UseCasesPage() {
   return (
-    <div className="py-16 px-6 lg:px-8 bg-gradient-to-b from-white to-slate-50">
+    <>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://relius.ai/" },
+        { name: "Use Cases", url: "https://relius.ai/use-cases/" },
+      ]} />
+      <div className="py-16 px-6 lg:px-8 bg-gradient-to-b from-white to-slate-50">
       <div className="mx-auto max-w-7xl space-y-16">
         <section className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center">
           <div>
@@ -58,8 +65,8 @@ export default function UseCasesPage() {
                   <p className="text-lg text-slate-700">
                     We're building Relius with input from church leaders who want software that feels pastoral, not corporate.
                   </p>
-                  <p className="text-sm font-semibold text-primary-600 mt-3">Join our founding churches</p>
-                  <p className="text-sm text-slate-500">Be part of shaping the future of church software</p>
+                  <p className="text-sm font-semibold text-primary-600 mt-3">Get started free today</p>
+                  <p className="text-sm text-slate-500">See how Relius can work for your church</p>
                 </div>
               </div>
             </CardContent>
@@ -137,5 +144,6 @@ export default function UseCasesPage() {
         </section>
       </div>
     </div>
+    </>
   );
 }

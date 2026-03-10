@@ -3,7 +3,7 @@ import Script from "next/script";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { blogPosts, getBlogPost } from "@/data/blog-posts";
+import { blogPosts, publishedBlogPosts, getBlogPost } from "@/data/blog-posts";
 import { StoryIllustration } from "@/components/illustrations";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -64,7 +64,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
     notFound();
   }
 
-  const relatedPosts = blogPosts
+  const relatedPosts = publishedBlogPosts
     .filter((item) => item.slug !== post.slug && item.topics.some((topic) => post.topics.includes(topic)))
     .slice(0, 3);
 
@@ -122,7 +122,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
         <header className="space-y-6">
           <div className="flex flex-wrap items-center gap-3 text-sm text-slate-500">
             <span className="font-semibold text-primary-700 bg-primary-50 px-3 py-1 rounded-full">{post.category}</span>
-            <span>{new Date(post.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</span>
+              <time dateTime={post.date}>{new Date(post.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</time>
             <span aria-hidden="true">|</span>
             <span>{post.readTime}</span>
           </div>

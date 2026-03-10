@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Brain, Shield, Users, CheckCircle2, Clock, X, Sparkles } from "lucide-react";
+import { BreadcrumbSchema } from "@/components/seo/structured-data";
 import { SermonPlannerDemo } from "@/components/demo/ai-demos/SermonPlannerDemo";
 import { ContentStudioDemo } from "@/components/demo/ai-demos/ContentStudioDemo";
 import { TranslationDemo } from "@/components/demo/ai-demos/TranslationDemo";
@@ -12,25 +13,26 @@ import { AIInsightsDemo } from "@/components/demo/ai-demos/AIInsightsDemo";
 import { DonationsAIDemo } from "@/components/demo/ai-demos/DonationsAIDemo";
 
 export const metadata: Metadata = {
-  title: "AI Church Administration Tools | Workflow Automation Features",
+  title: "AI Church Software | Sermon Planning, Content Creation & Pastoral Insights",
   description:
-    "AI-powered church administration tools that automate content creation, pastoral care insights, and sermon planning. Church workflow automation that saves 10+ hours weekly.",
+    "AI-powered tools built for ministry: sermon planning assistant, content studio, translation console, pastoral care insights, and donor engagement automation. See how AI saves churches 10+ hours weekly.",
   alternates: {
     canonical: "https://relius.ai/ai/",
   },
   openGraph: {
-    title: "AI Church Administration & Automation Tools | Relius",
+    title: "AI Church Software | Sermon Planning & Content Creation | Relius",
     description:
-      "Church automation tools for content creation, pastoral care, and workflow automation. Save 10+ hours weekly.",
+      "AI-powered sermon planner, content studio, translation console, and pastoral care insights. Save 10+ hours weekly.",
     url: "https://relius.ai/ai/",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Relius AI Church Tools" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Church Administration & Automation Tools | Relius",
+    title: "AI Church Software | Sermon Planning & Content Creation | Relius",
     description:
-      "Church automation tools for content creation, pastoral care, and workflow automation. Save 10+ hours weekly.",
+      "AI-powered sermon planner, content studio, translation console, and pastoral care insights. Save 10+ hours weekly.",
   },
-  keywords: ["AI church tools", "church automation", "AI sermon planner", "church workflow automation", "AI pastoral insights"],
+  keywords: ["AI church software", "church management software ai", "AI sermon planner", "ai church tools", "church content creation", "AI pastoral insights"],
 };
 
 export default function AiPage() {
@@ -53,7 +55,12 @@ export default function AiPage() {
   ];
 
   return (
-    <div className="py-14 px-6 lg:px-8">
+    <>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://relius.ai/" },
+        { name: "AI Features", url: "https://relius.ai/ai/" },
+      ]} />
+      <div className="py-14 px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="text-center mb-10">
           <Badge variant="default" className="mb-4">
@@ -378,5 +385,6 @@ export default function AiPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Facebook, Twitter, Linkedin, Youtube, Mail } from "lucide-react";
+import { Facebook, Twitter, Linkedin, Mail } from "lucide-react";
 import { NewsletterForm } from "@/components/forms/newsletter-form";
 
 export function Footer() {
@@ -19,14 +19,12 @@ export function Footer() {
     ],
     resources: [
       { name: "Use Cases", href: "/use-cases/" },
-      { name: "Resources", href: "/resources/" },
-      { name: "Documentation", href: "/docs/" },
+      { name: "Documentation", href: "/resources/docs/" },
       { name: "Blog", href: "/blog/" },
       { name: "Support", href: "/contact/" },
     ],
     company: [
       { name: "About", href: "/about/" },
-      { name: "Contact", href: "/contact/" },
       { name: "Book a Demo", href: "/contact/" },
       { name: "Privacy Policy", href: "/privacy/" },
       { name: "Terms of Service", href: "/terms/" },
@@ -34,10 +32,9 @@ export function Footer() {
   };
 
   const socialLinks = [
-    { name: "Facebook", href: "#", icon: Facebook },
-    { name: "Twitter", href: "#", icon: Twitter },
-    { name: "LinkedIn", href: "#", icon: Linkedin },
-    { name: "YouTube", href: "#", icon: Youtube },
+    { name: "Facebook", href: "https://www.facebook.com/profile.php?id=61587862231605", icon: Facebook },
+    { name: "Twitter", href: "https://x.com/ReliusPlatform", icon: Twitter },
+    { name: "LinkedIn", href: "https://www.linkedin.com/company/relius-chms-platform/", icon: Linkedin },
   ];
 
   return (
@@ -64,9 +61,9 @@ export function Footer() {
 
             {/* Newsletter */}
             <div className="pt-2">
-              <h4 className="text-sm font-semibold text-slate-900 mb-3">
+              <p className="text-sm font-semibold text-slate-900 mb-3">
                 Ministry insights, delivered monthly
-              </h4>
+              </p>
               <NewsletterForm variant="compact" className="max-w-xs" />
               <p className="text-xs text-slate-500 mt-2">No spam, unsubscribe anytime.</p>
             </div>
@@ -82,14 +79,16 @@ export function Footer() {
               {socialLinks.map((item) => {
                 const Icon = item.icon;
                 return (
-                  <Link
+                  <a
                     key={item.name}
                     href={item.href}
                     className="text-slate-400 hover:text-primary transition-colors"
                     aria-label={item.name}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <Icon className="h-5 w-5" />
-                  </Link>
+                  </a>
                 );
               })}
             </div>

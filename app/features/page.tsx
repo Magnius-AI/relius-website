@@ -6,31 +6,46 @@ import Link from "next/link";
 import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 import { coreFeatures, aiFeatures } from "@/data/features";
+import { BreadcrumbSchema } from "@/components/seo/structured-data";
 
 export const metadata: Metadata = {
-  title: "Church Management Software Features | Automation Tools",
+  title: "Free Church Management Features | AI Scheduling, Giving & More",
   description:
-    "Explore Relius church management features: volunteer scheduling, pastoral care tracking, church automation tools, content creation, and workflow automation. See how churches save 10+ hours weekly.",
+    "Explore Relius features: AI volunteer scheduling, online giving, pastoral care tracking, service planning, and automated church communications. All free to start — no credit card required.",
   alternates: {
     canonical: "https://relius.ai/features/",
   },
+  keywords: [
+    "church management features",
+    "volunteer scheduling software",
+    "church giving tools",
+    "pastoral care tracking",
+    "church automation",
+    "free church software features",
+  ],
   openGraph: {
-    title: "Church Management Software Features | Relius",
+    title: "Free Church Management Features | Relius",
     description:
-      "Church automation tools for volunteer scheduling, pastoral care, and ministry workflow automation.",
+      "AI volunteer scheduling, online giving, pastoral care tracking, and automated communications — all free to start.",
     url: "https://relius.ai/features/",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Relius Church Management Features" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Church Management Software Features | Relius",
+    title: "Free Church Management Features | Relius",
     description:
-      "Church automation tools for volunteer scheduling, pastoral care, and ministry workflow automation.",
+      "AI volunteer scheduling, online giving, pastoral care tracking, and automated communications — all free to start.",
   },
 };
 
 export default function FeaturesPage() {
   return (
-    <div className="py-16 px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white">
+    <>
+      <BreadcrumbSchema items={[
+        { name: "Home", url: "https://relius.ai/" },
+        { name: "Features", url: "https://relius.ai/features/" },
+      ]} />
+      <div className="py-16 px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center mb-16">
           <div>
@@ -200,5 +215,6 @@ export default function FeaturesPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }
