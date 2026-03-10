@@ -160,6 +160,10 @@ export default function PricingPage() {
       question: "What AI features are included in AI Pro?",
       answer: "AI Pro includes: AI Sermon Planner (outline & draft assistance), AI Content Studio (turn sermons into social posts and emails), AI Pastoral Insights (sentiment analysis and at-risk member detection), AI Volunteer Scheduler (smart matching and burnout detection), AI Donations Manager (churn prediction and segmentation), and Translation Console (50+ languages). Most pastors save 10+ hours per week with these features.",
     },
+    {
+      question: "Are there transaction fees for online giving?",
+      answer: "Online donations include standard Stripe processing fees (2.9% + $0.30 for cards) plus a 1.3% Relius platform fee. That's it — no hidden charges. Your donors can optionally choose to cover these fees so 100% of their gift goes to your church.",
+    },
   ];
 
   const comparisonFeatures = [
