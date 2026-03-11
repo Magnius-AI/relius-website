@@ -11,6 +11,9 @@ export const MIGRATION_URLS = {
     PLANNING_CENTER: "/switch/planning-center",
     CHURCHTRAC: "/switch/churchtrac",
     TITHELY: "/switch/tithely",
+      CHURCH_360: "/switch/church-360",
+        BREEZE: "/switch/breeze",
+          PUSHPAY: "/switch/pushpay",
 } as const;
 
 export const MIGRATION_PAGE_META: Record<string, MigrationPageMeta> = {
@@ -68,6 +71,42 @@ export const MIGRATION_PAGE_META: Record<string, MigrationPageMeta> = {
       "church management platform",
     ],
   },
+    "church-360": {
+        title: "Church 360 Alternative — Free AI Church Software",
+            description: "Switch from Church 360 to Relius: cloud-native, AI-powered, modern interface. Easy migration keeps all your data. Start free today.",
+                keywords: [
+                      "church 360 alternative",
+                            "church 360 cost",
+                                  "church 360 migration",
+                                        "switch from church 360",
+                                              "church 360 vs relius",
+                                                    "concordia church software",
+                                                        ],
+                                                          },
+                                                            breeze: {
+                                                                title: "Breeze Church Management Alternative — Free AI Software",
+                                                                    description: "Switch from Breeze to Relius: AI-powered features, better reporting, and a free tier. Easy migration in 2-3 hours. Modern church management that scales.",
+                                                                        keywords: [
+                                                                              "breeze church management alternative",
+                                                                                    "breeze chms alternative",
+                                                                                          "switch from breeze",
+                                                                                                "breeze vs relius",
+                                                                                                      "breeze church management pricing",
+                                                                                                            "church management software free",
+                                                                                                                ],
+                                                                                                                  },
+                                                                                                                    pushpay: {
+                                                                                                                        title: "Pushpay Alternative — Free AI Church Management",
+                                                                                                                            description: "Move from Pushpay to Relius: complete church management with lower giving fees. Import your data in hours. AI-powered tools, volunteer scheduling, and more.",
+                                                                                                                                keywords: [
+                                                                                                                                      "pushpay alternative",
+                                                                                                                                            "pushpay pricing",
+                                                                                                                                                  "switch from pushpay",
+                                                                                                                                                        "pushpay vs relius",
+                                                                                                                                                              "church giving platform",
+                                                                                                                                                                    "pushpay fees",
+                                                                                                                                                                        ],
+                                                                                                                                                                          },
 };
 
 // Contact form pre-population values
@@ -75,6 +114,9 @@ export const CONTACT_FROM_PLATFORMS = {
     "planning-center": "Planning Center",
     churchtrac: "ChurchTrac",
     tithely: "Tithe.ly",
+      "church-360": "Church 360",
+        breeze: "Breeze",
+          pushpay: "Pushpay",
 } as const;
 
 // Generate contact URL with platform pre-selected
