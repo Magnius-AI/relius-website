@@ -13,14 +13,14 @@ import { AIInsightsDemo } from "@/components/demo/ai-demos/AIInsightsDemo";
 import { DonationsAIDemo } from "@/components/demo/ai-demos/DonationsAIDemo";
 
 export const metadata: Metadata = {
-  title: "AI Church Software | Sermon Planning, Content Creation & Pastoral Insights",
+  title: "AI Church Software for Ministry | Relius",
   description:
-    "AI-powered tools built for ministry: sermon planning assistant, content studio, translation console, pastoral care insights, and donor engagement automation. See how AI saves churches 10+ hours weekly.",
+    "AI tools for church ministry: sermon planner, content studio, translation, pastoral insights, and donor automation. Save 10+ hours weekly. Free to start.",
   alternates: {
     canonical: "https://relius.ai/ai/",
   },
   openGraph: {
-    title: "AI Church Software | Sermon Planning & Content Creation | Relius",
+    title: "AI Church Software for Ministry | Relius",
     description:
       "AI-powered sermon planner, content studio, translation console, and pastoral care insights. Save 10+ hours weekly.",
     url: "https://relius.ai/ai/",
