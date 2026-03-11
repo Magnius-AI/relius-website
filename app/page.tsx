@@ -9,9 +9,9 @@ import { FinalCta } from "@/components/sections/final-cta";
 import { InteractiveDemo } from "@/components/demo";
 
 export const metadata: Metadata = {
-  title: "Free Church Management Software with AI | Save 10+ Hours Weekly",
+  title: "Free Church Management Software with AI | Relius",
   description:
-    "100% free church management software with AI-powered giving, volunteer scheduling, and pastoral care. The modern Planning Center & Tithe.ly alternative used by churches nationwide. No credit card, no hidden fees.",
+    "100% free church management software with AI-powered giving, scheduling, and pastoral care. The modern Planning Center alternative. No credit card required.",
   alternates: {
     canonical: "https://relius.ai/",
   },

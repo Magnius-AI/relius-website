@@ -29,7 +29,7 @@ export const MIGRATION_PAGE_META: Record<string, MigrationPageMeta> = {
     ],
   },
   "planning-center": {
-    title: "Free Planning Center Alternative 2026 | Switch to Relius in 3 Hours",
+    title: "Free Planning Center Alternative | Switch to Relius",
     description:
       "The free alternative to Planning Center with AI-powered features. Import your people and donations in under 3 hours. Simpler pricing, modern interface, and all-in-one church management.",
     keywords: [
@@ -42,9 +42,9 @@ export const MIGRATION_PAGE_META: Record<string, MigrationPageMeta> = {
     ],
   },
   churchtrac: {
-    title: "ChurchTrac Alternative | Cloud-Based Church Software with AI — Free",
+    title: "ChurchTrac Alternative — Free AI Church Software",
     description:
-      "Upgrade from ChurchTrac to Relius: cloud-based access, AI-powered features, and a modern interface. Easy migration preserves all your historical data. Start free today.",
+      "Switch from ChurchTrac to Relius: cloud-based, AI-powered, modern interface. Easy migration keeps all your data. Start free today.",
     keywords: [
       "churchtrac alternative",
       "churchtrac migration",
@@ -55,7 +55,7 @@ export const MIGRATION_PAGE_META: Record<string, MigrationPageMeta> = {
     ],
   },
   tithely: {
-    title: "Switch from Tithe.ly to Relius | Free Migration, Better Features",
+    title: "Tithe.ly Alternative — Free AI Church Software",
     description:
       "Move from Tithe.ly to Relius in 3-4 hours. Import people, donations, tags, and attendance — free. Get AI-powered giving tools, pastoral care, and volunteer scheduling your church actually needs.",
     keywords: [
