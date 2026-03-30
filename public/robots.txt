@@ -11,7 +11,5 @@ Disallow: /events
 Disallow: /events/
 Disallow: /docs/releases
 Disallow: /docs/releases/
-Disallow: /$
-Disallow: /&
 
 Sitemap: https://relius.ai/sitemap.xml
