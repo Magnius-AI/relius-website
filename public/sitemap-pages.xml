@@ -133,4 +133,17 @@
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
+    <!-- SEO Landing Pages -->
+    <url>
+          <loc>https://relius.ai/free-church-management-software/</loc>
+          <lastmod>2026-03-11</lastmod>
+          <priority>0.8</priority>
+          <changefreq>monthly</changefreq>
+    </url>
+    <url>
+          <loc>https://relius.ai/best-church-crm/</loc>
+          <lastmod>2026-03-11</lastmod>
+          <priority>0.8</priority>
+          <changefreq>monthly</changefreq>
+    </url>h
 </urlset>
