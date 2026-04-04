@@ -12,7 +12,9 @@ import { CHECKOUT_URLS, AUTH_URLS, DEFAULT_SIGNUP_URL } from "@/lib/constants";
 
 function FeeCalculator() {
   const [amount, setAmount] = useState(100);
-  const fee = amount * 0.013;
+  const stripeFee = amount * 0.029 + 0.30;
+  const platformFee = amount * 0.013;
+  const totalFee = stripeFee + platformFee;
 
 
 
@@ -40,34 +42,32 @@ function FeeCalculator() {
           />
         </div>
       </div>
-      <div className="grid sm:grid-cols-1 gap-4 max-w-sm mx-auto">
-        <div className="bg-slate-50 rounded-lg p-4">
-           <div className="text-sm font-medium text-slate-500 mb-1">All Payment Methods</div>
-           <div className="text-xs text-slate-400 mb-2">1.3% flat</div>
-          <div className="text-lg font-bold text-emerald-600">
-             ${(amount - fee).toFixed(2)}
+      <div className="space-y-3 max-w-md mx-auto">
+        <div className="bg-slate-50 rounded-lg p-4 flex justify-between items-center">
+          <div>
+            <div className="text-sm font-medium text-slate-700">Stripe processing</div>
+            <div className="text-xs text-slate-400">2.9% + $0.30 — industry standard</div>
           </div>
-           <div className="text-xs text-slate-400">-${fee.toFixed(2)} fee</div>
+          <div className="text-sm font-semibold text-slate-600">-${stripeFee.toFixed(2)}</div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4 flex justify-between items-center">
+          <div>
+            <div className="text-sm font-medium text-emerald-800">Relius platform fee</div>
+            <div className="text-xs text-emerald-600">Just 1.3% — that’s it</div>
+          </div>
+          <div className="text-sm font-semibold text-emerald-700">-${platformFee.toFixed(2)}</div>
+        </div>
+        <div className="bg-white border-2 border-emerald-400 rounded-lg p-4 flex justify-between items-center">
+          <div>
+            <div className="text-base font-bold text-slate-900">Your church receives</div>
+            <div className="text-xs text-slate-500">Total fees: ${totalFee.toFixed(2)} (${(totalFee / amount * 100).toFixed(1)}%)</div>
+          </div>
+          <div className="text-xl font-bold text-emerald-600">${(amount - totalFee).toFixed(2)}</div>
+        </div>
+        <p className="text-xs text-center text-slate-400">Donors can choose to cover fees so your church receives 100%</p>
       </div>
       <p className="text-sm text-slate-500 mt-4 text-center">
-        <p className="text-sm text-slate-500 mt-4 text-center">
+          Compare: Tithe.ly charges 2.9% + $0.30 with no platform subsidy. Relius adds just 1.3%.
       </p>
     </div>
   );
@@ -197,11 +197,11 @@ export default function PricingPage() {
   const faqs = [
     {
       question: "Is the Free plan really free forever?",
-      answer: "Yes! The Free plan includes full church management, online giving, and AI-powered donation tools at no monthly cost, forever. We sustain this through a small 1.3% processing fee on donations. There are no hidden charges, no trial periods, and no feature restrictions on the Free tier.",
+      answer: "Yes! The Free plan includes full church management, online giving, and AI-powered donation tools at no monthly cost, forever. We sustain this through a small 1.3% platform fee on donations (plus standard Stripe processing). There are no hidden charges, no monthly fees, no trial periods, and no feature restrictions on the Free tier.",
     },
     {
       question: "How do processing fees work?",
-      answer: "Processing fees only apply to donations made through the platform. All payment methods are charged a flat 1.3% per transaction - the same rate for credit, debit, AMEX, and ACH. These rates are significantly lower than most competitors - for example, Tithe.ly charges 2.9% + $0.30 on their free giving plan.",
+      answer: "Processing fees only apply to donations made through the platform. Every donation includes standard Stripe processing (2.9% + $0.30 for cards) plus Relius’s 1.3% platform fee. On a $100 donation, that’s about $4.20 total — and your church receives $95.80. Compare that to Tithe.ly, which charges 2.9% + $0.30 and layers on additional platform costs. Donors can also choose to cover the fees so your church receives 100%.",
     },
     {
       question: "How do I know which plan is right for our church?",
@@ -229,7 +229,7 @@ export default function PricingPage() {
     },
     {
       question: "Are there transaction fees for online giving?",
-      answer: "Online donations include a 1.3% Relius platform fee. That's it — no hidden charges. Your donors can optionally choose to cover this fee so 100% of their gift goes to your church.",
+      answer: "Online donations include standard Stripe processing (2.9% + $0.30 for cards) plus a 1.3% Relius platform fee. That’s it — no monthly charges, no hidden costs. Your donors can optionally choose to cover these fees so 100% of their gift goes to your church.",
     },
   ];
 
@@ -484,19 +484,27 @@ export default function PricingPage() {
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-slate-900 mb-3">Transparent Processing Fees</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              No monthly fee for giving. Just simple, competitive processing fees - lower than most competitors.
+              No monthly fees for giving. Standard Stripe processing plus just 1.3% from us. Lower total cost than competitors who hide fees behind monthly subscriptions.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-1 gap-6 mb-8 max-w-sm mx-auto">
+          <div className="grid sm:grid-cols-2 gap-6 mb-4 max-w-2xl mx-auto">
             <div className="bg-white border border-slate-200 rounded-xl p-6 text-center shadow-sm">
-              <div className="text-sm font-medium text-slate-500 mb-2">All Payment Methods</div>
-              <div className="text-3xl font-bold text-slate-900">1.3%</div>
-              <div className="text-sm text-slate-500 mt-1">per transaction</div>
+              <div className="text-sm font-medium text-slate-500 mb-2">Stripe Processing</div>
+              <div className="text-3xl font-bold text-slate-900">2.9% + $0.30</div>
+              <div className="text-sm text-slate-500 mt-1">industry standard — same everywhere</div>
+            </div>
+            <div className="bg-emerald-50 border border-emerald-300 rounded-xl p-6 text-center shadow-sm">
+              <div className="text-sm font-medium text-emerald-700 mb-2">Relius Platform Fee</div>
+              <div className="text-3xl font-bold text-emerald-700">1.3%</div>
+              <div className="text-sm text-emerald-600 mt-1">our only fee — no monthly charges</div>
             </div>
             
             
           </div>
+          <p className="text-center text-sm text-slate-500 mb-8 max-w-2xl mx-auto">
+            On a $100 donation, your church receives <strong className="text-emerald-700">$95.80</strong>. With Tithe.ly’s free plan, the same donation yields just $96.80 — but they charge $0/mo only because they take a higher cut. With Relius, you get a full platform free and the lowest combined rate in the industry.
+          </p>
 
           <FeeCalculator />
         </div>
