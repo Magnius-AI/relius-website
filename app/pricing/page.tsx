@@ -12,9 +12,9 @@ import { CHECKOUT_URLS, AUTH_URLS, DEFAULT_SIGNUP_URL } from "@/lib/constants";
 
 function FeeCalculator() {
   const [amount, setAmount] = useState(100);
-  const creditFee = amount * 0.02 + 0.19;
-  const achFee = 0.19;
-  const amexFee = amount * 0.029 + 0.25;
+  const fee = amount * 0.013;
+
+
 
   return (
     <div className="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
@@ -40,34 +40,34 @@ function FeeCalculator() {
           />
         </div>
       </div>
-      <div className="grid sm:grid-cols-3 gap-4">
+      <div className="grid sm:grid-cols-1 gap-4 max-w-sm mx-auto">
         <div className="bg-slate-50 rounded-lg p-4">
-          <div className="text-sm font-medium text-slate-500 mb-1">Credit/Debit</div>
-          <div className="text-xs text-slate-400 mb-2">2% + $0.19</div>
+           <div className="text-sm font-medium text-slate-500 mb-1">All Payment Methods</div>
+           <div className="text-xs text-slate-400 mb-2">1.3% flat</div>
           <div className="text-lg font-bold text-emerald-600">
-            ${(amount - creditFee).toFixed(2)}
+             ${(amount - fee).toFixed(2)}
           </div>
-          <div className="text-xs text-slate-400">-${creditFee.toFixed(2)} fee</div>
+           <div className="text-xs text-slate-400">-${fee.toFixed(2)} fee</div>
         </div>
-        <div className="bg-slate-50 rounded-lg p-4">
-          <div className="text-sm font-medium text-slate-500 mb-1">Bank Transfer/ACH</div>
-          <div className="text-xs text-slate-400 mb-2">$0.19 flat</div>
-          <div className="text-lg font-bold text-emerald-600">
-            ${(amount - achFee).toFixed(2)}
-          </div>
-          <div className="text-xs text-slate-400">-${achFee.toFixed(2)} fee</div>
-        </div>
-        <div className="bg-slate-50 rounded-lg p-4">
-          <div className="text-sm font-medium text-slate-500 mb-1">AMEX</div>
-          <div className="text-xs text-slate-400 mb-2">2.9% + $0.25</div>
-          <div className="text-lg font-bold text-emerald-600">
-            ${(amount - amexFee).toFixed(2)}
-          </div>
-          <div className="text-xs text-slate-400">-${amexFee.toFixed(2)} fee</div>
-        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       </div>
       <p className="text-sm text-slate-500 mt-4 text-center">
-        Compare: Tithe.ly charges 2.9% + $0.30 per transaction on their free giving plan
+        <p className="text-sm text-slate-500 mt-4 text-center">
       </p>
     </div>
   );
@@ -197,11 +197,11 @@ export default function PricingPage() {
   const faqs = [
     {
       question: "Is the Free plan really free forever?",
-      answer: "Yes! The Free plan includes full church management, online giving, and AI-powered donation tools at no monthly cost, forever. We sustain this through small processing fees on donations (2% + $0.19 per transaction for credit/debit). There are no hidden charges, no trial periods, and no feature restrictions on the Free tier.",
+      answer: "Yes! The Free plan includes full church management, online giving, and AI-powered donation tools at no monthly cost, forever. We sustain this through a small 1.3% processing fee on donations. There are no hidden charges, no trial periods, and no feature restrictions on the Free tier.",
     },
     {
       question: "How do processing fees work?",
-      answer: "Processing fees only apply to donations made through the platform. Credit/Debit cards are charged 2% + $0.19 per transaction, AMEX is 2.9% + $0.25, and Bank Transfers/ACH are just $0.19 flat. These rates are lower than most competitors - for example, Tithe.ly charges 2.9% + $0.30 on their free giving plan.",
+      answer: "Processing fees only apply to donations made through the platform. All payment methods are charged a flat 1.3% per transaction - the same rate for credit, debit, AMEX, and ACH. These rates are significantly lower than most competitors - for example, Tithe.ly charges 2.9% + $0.30 on their free giving plan.",
     },
     {
       question: "How do I know which plan is right for our church?",
@@ -229,7 +229,7 @@ export default function PricingPage() {
     },
     {
       question: "Are there transaction fees for online giving?",
-      answer: "Online donations include standard Stripe processing fees (2.9% + $0.30 for cards) plus a 1.3% Relius platform fee. That's it — no hidden charges. Your donors can optionally choose to cover these fees so 100% of their gift goes to your church.",
+      answer: "Online donations include a 1.3% Relius platform fee. That's it — no hidden charges. Your donors can optionally choose to cover this fee so 100% of their gift goes to your church.",
     },
   ];
 
@@ -488,22 +488,14 @@ export default function PricingPage() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-3 gap-6 mb-8">
+          <div className="grid sm:grid-cols-1 gap-6 mb-8 max-w-sm mx-auto">
             <div className="bg-white border border-slate-200 rounded-xl p-6 text-center shadow-sm">
-              <div className="text-sm font-medium text-slate-500 mb-2">Credit / Debit</div>
-              <div className="text-3xl font-bold text-slate-900">2% + $0.19</div>
+              <div className="text-sm font-medium text-slate-500 mb-2">All Payment Methods</div>
+              <div className="text-3xl font-bold text-slate-900">1.3%</div>
               <div className="text-sm text-slate-500 mt-1">per transaction</div>
             </div>
-            <div className="bg-white border border-slate-200 rounded-xl p-6 text-center shadow-sm">
-              <div className="text-sm font-medium text-slate-500 mb-2">AMEX</div>
-              <div className="text-3xl font-bold text-slate-900">2.9% + $0.25</div>
-              <div className="text-sm text-slate-500 mt-1">per transaction</div>
-            </div>
-            <div className="bg-white border border-slate-200 rounded-xl p-6 text-center shadow-sm">
-              <div className="text-sm font-medium text-slate-500 mb-2">Bank Transfer / ACH</div>
-              <div className="text-3xl font-bold text-slate-900">$0.19</div>
-              <div className="text-sm text-slate-500 mt-1">per transaction</div>
-            </div>
+            
+            
           </div>
 
           <FeeCalculator />
