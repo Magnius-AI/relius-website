@@ -66,9 +66,7 @@ function FeeCalculator() {
         </div>
         <p className="text-xs text-center text-slate-400">Donors can choose to cover fees so your church receives 100%</p>
       </div>
-      <p className="text-sm text-slate-500 mt-4 text-center">
-          Other platforms charge monthly fees on top of processing. Relius replaces subscriptions with just 1.3%.
-      </p>
+      
     </div>
   );
 }
