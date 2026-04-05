@@ -67,7 +67,7 @@ function FeeCalculator() {
         <p className="text-xs text-center text-slate-400">Donors can choose to cover fees so your church receives 100%</p>
       </div>
       <p className="text-sm text-slate-500 mt-4 text-center">
-          Compare: Tithe.ly charges 2.9% + $0.30 with no platform subsidy. Relius adds just 1.3%.
+          Other platforms charge monthly fees on top of processing. Relius replaces subscriptions with just 1.3%.
       </p>
     </div>
   );
@@ -201,7 +201,7 @@ export default function PricingPage() {
     },
     {
       question: "How do processing fees work?",
-      answer: "Processing fees only apply to donations made through the platform. Every donation includes standard Stripe processing (2.9% + $0.30 for cards) plus Relius’s 1.3% platform fee. On a $100 donation, that’s about $4.20 total — and your church receives $95.80. Compare that to Tithe.ly, which charges 2.9% + $0.30 and layers on additional platform costs. Donors can also choose to cover the fees so your church receives 100%.",
+      answer: "Processing fees only apply to donations made through the platform. Every donation includes standard Stripe processing (2.9% + $0.30 for cards) plus Relius’s 1.3% platform fee. On a $100 donation, that’s $4.50 total — your church receives $95.50. The difference? Other platforms charge $49—$149/mo in subscriptions on top of similar processing fees. With Relius, there are no monthly fees — ever. Donors can also choose to cover the fees so your church receives 100%.",
     },
     {
       question: "How do I know which plan is right for our church?",
@@ -484,7 +484,7 @@ export default function PricingPage() {
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-slate-900 mb-3">Transparent Processing Fees</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              No monthly fees for giving. Standard Stripe processing plus just 1.3% from us. Lower total cost than competitors who hide fees behind monthly subscriptions.
+              No monthly fees for giving. Standard Stripe processing plus just 1.3% from us. When you factor in the $49—$149/mo other platforms charge, Relius saves your church more overall.
             </p>
           </div>
 
@@ -503,7 +503,7 @@ export default function PricingPage() {
             
           </div>
           <p className="text-center text-sm text-slate-500 mb-8 max-w-2xl mx-auto">
-            On a $100 donation, your church receives <strong className="text-emerald-700">$95.80</strong>. With Tithe.ly’s free plan, the same donation yields just $96.80 — but they charge $0/mo only because they take a higher cut. With Relius, you get a full platform free and the lowest combined rate in the industry.
+            On a $100 donation, your church receives <strong className="text-emerald-700">$95.50</strong> after all fees. Other platforms may show lower per-transaction rates — but they charge <strong>$49—$149/mo</strong> in subscription fees on top. With Relius, there are zero monthly fees. Your savings start from day one.
           </p>
 
           <FeeCalculator />
