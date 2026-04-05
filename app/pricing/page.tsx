@@ -502,9 +502,7 @@ export default function PricingPage() {
             
             
           </div>
-          <p className="text-center text-sm text-slate-500 mb-8 max-w-2xl mx-auto">
-            On a $100 donation, your church receives <strong className="text-emerald-700">$95.50</strong> after all fees. Other platforms may show lower per-transaction rates — but they charge <strong>$49—$149/mo</strong> in subscription fees on top. With Relius, there are zero monthly fees. Your savings start from day one.
-          </p>
+          
 
           <FeeCalculator />
         </div>
