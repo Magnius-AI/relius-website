@@ -11,7 +11,7 @@ export type ContentBlock = ParagraphBlock | ListBlock | SubheadingBlock | Callou
 export type BlogSection = {
   heading: string;
   blocks: ContentBlock[];
-};hh
+};
 
 export type BlogPost = {
   slug: string;
