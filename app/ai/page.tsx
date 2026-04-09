@@ -13,26 +13,26 @@ import { AIInsightsDemo } from "@/components/demo/ai-demos/AIInsightsDemo";
 import { DonationsAIDemo } from "@/components/demo/ai-demos/DonationsAIDemo";
 
 export const metadata: Metadata = {
-  title: "AI Church Software for Ministry | Relius",
+  title: "Free AI Church Management Software — Sermon Planner, Content Studio & More | Relius",
   description:
-    "AI tools for church ministry: sermon planner, content studio, translation, pastoral insights, and donor automation. Save 10+ hours weekly. Free to start.",
+    "Free AI church management software with sermon planner, content studio, 50+ language translation, pastoral care insights, and donor analytics. Save 10+ hours weekly. No credit card required.",
   alternates: {
     canonical: "https://relius.ai/ai/",
   },
   openGraph: {
-    title: "AI Church Software for Ministry | Relius",
+    title: "Free AI Church Management Software | Relius",
     description:
-      "AI-powered sermon planner, content studio, translation console, and pastoral care insights. Save 10+ hours weekly.",
+      "Free AI-powered sermon planner, content studio, translation console, and pastoral care insights for churches. Save 10+ hours weekly.",
     url: "https://relius.ai/ai/",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Relius AI Church Tools" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Church Software | Sermon Planning & Content Creation | Relius",
+    title: "Free AI Church Software | Sermon Planner & Content Studio | Relius",
     description:
       "AI-powered sermon planner, content studio, translation console, and pastoral care insights. Save 10+ hours weekly.",
   },
-  keywords: ["AI church software", "church management software ai", "AI sermon planner", "ai church tools", "church content creation", "AI pastoral insights"],
+  keywords: ["AI church software", "church management software ai", "AI sermon planner", "ai church tools", "church content creation", "AI pastoral insights", "free ai church software", "ai planning center alternative", "tithe ai"],
 };
 
 export default function AiPage() {
@@ -68,7 +68,7 @@ export default function AiPage() {
           </Badge>
           <h1 className="mb-4">AI-Powered Church Administration Tools</h1>
           <p className="text-xl text-slate-500 max-w-3xl mx-auto">
-            Save 10+ hours weekly with AI that drafts content, spots needs, and handles routine tasks—so you can focus on people and ministry.
+            Save 10+ hours weekly with AI that drafts content, spots needs, and handles routine tasksâso you can focus on people and ministry.
           </p>
         </div>
 
@@ -338,7 +338,7 @@ export default function AiPage() {
                 <ul className="space-y-3 text-sm">
                   <li className="flex items-center gap-2 text-slate-700">
                     <CheckCircle2 className="w-4 h-4 text-accent-600" />
-                    <strong>Content Studio</strong> - One sermon → 6+ formats
+                    <strong>Content Studio</strong> - One sermon â 6+ formats
                   </li>
                   <li className="flex items-center gap-2 text-slate-700">
                     <CheckCircle2 className="w-4 h-4 text-accent-600" />
