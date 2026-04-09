@@ -542,8 +542,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "why-churches-switching-planning-center-2025",
-    title: "Why churches are switching from Planning Center in 2026",
-    excerpt: "Planning Center built the category, but the category has evolved. Here's what church leaders are telling us about why they're making the switch — and what they wish they'd known sooner.",
+    title: "Planning Center Alternative 2026: Why Churches Are Making the Switch to Free Software",
+    excerpt: "Planning Center costs $200+/mo and lacks AI. See why hundreds of churches are switching to free alternatives with AI-powered sermon planning, donor analytics, and migration tools built in.",
     author: "Felix Tang",
     role: "Relius Founder",
     date: "2025-01-18",
