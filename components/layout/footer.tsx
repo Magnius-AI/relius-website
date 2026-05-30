@@ -9,7 +9,7 @@ export function Footer() {
       { name: "Features", href: "/features/" },
       { name: "AI Features", href: "/ai/" },
       { name: "Pricing", href: "/pricing/" },
-      { name: "Security", href: "/security/" },
+      { name: "Security", href: "/resources/docs/admin/security/" },
     ],
     switchToRelius: [
       { name: "Migration Hub", href: "/switch/" },

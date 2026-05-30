@@ -138,7 +138,7 @@ export default function PricingPage() {
         "Translation Console",
       ],
       cta: "Start Ministry Pro",
-      ctaUrl: CHECKOUT_URLS.DEFAULT,
+      ctaUrl: CHECKOUT_URLS.PRO,
     },
     {
       name: "Ministry AI",
@@ -163,7 +163,7 @@ export default function PricingPage() {
       ],
       notIncluded: [],
       cta: "Start Ministry AI",
-      ctaUrl: CHECKOUT_URLS.DEFAULT,
+      ctaUrl: CHECKOUT_URLS.AI,
     },
     {
       name: "Enterprise",
@@ -337,6 +337,10 @@ export default function PricingPage() {
     const isFree = tier.name === "Free";
     const price = billing === "monthly" ? tier.price.monthly : tier.price.annual;
     const priceSuffix = isEnterprise ? "" : isFree ? "/month" : billing === "monthly" ? "/month" : "/year";
+    const billingQuery = billing === "annual" ? "yearly" : "monthly";
+    const ctaHref = !isEnterprise && !isFree
+      ? `${tier.ctaUrl}${tier.ctaUrl.includes("?") ? "&" : "?"}interval=${billingQuery}`
+      : tier.ctaUrl;
 
     return (
       <Card
@@ -381,7 +385,7 @@ export default function PricingPage() {
             className="w-full mb-6"
             asChild
           >
-            <a href={tier.ctaUrl}>
+            <a href={ctaHref}>
               {tier.cta}
               <ArrowRight className="ml-2 h-4 w-4" />
             </a>
