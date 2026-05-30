@@ -1,6 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Shield, CheckCircle2, Clock, HelpCircle } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle2,
+  Clock,
+  Database,
+  FileCheck2,
+  HelpCircle,
+  LockKeyhole,
+  RefreshCcw,
+  Shield,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { MigrationSteps } from "@/components/ui/migration-steps";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
@@ -34,6 +44,43 @@ const platforms = migrationPlatforms.map((p) => ({
   dataTypes: p.dataTypes,
 }));
 
+const supportedImportTypes = [
+  "People & households",
+  "Contact details",
+  "Giving history",
+  "Tags & groups",
+  "Attendance",
+  "Custom fields",
+];
+
+const safetyProof = [
+  {
+    title: "Source system stays untouched",
+    description:
+      "You export CSVs from your current platform. Relius imports copies only, so your existing system remains your fallback during the transition.",
+    icon: LockKeyhole,
+  },
+  {
+    title: "Preview before anything changes",
+    description:
+      "Review detected columns, sample rows, and duplicate matches before committing records to your Relius account.",
+    icon: FileCheck2,
+  },
+  {
+    title: "Recoverable by design",
+    description:
+      "Per-record savepoints and downloadable error reports make it easy to fix and re-import only the rows that need attention.",
+    icon: RefreshCcw,
+  },
+];
+
+const migrationTimeline = [
+  "Export your current data",
+  "Upload CSVs to Relius",
+  "Review mappings and duplicates",
+  "Import, audit, and invite your team",
+];
+
 export default function SwitchPage() {
   return (
     <main className="pt-24">
@@ -54,10 +101,24 @@ export default function SwitchPage() {
               <span className="text-gradient-accent">Switch in an afternoon.</span>
             </h1>
 
-            <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed">
               Your member records, donation history, and years of data don&apos;t have to stay behind.
               Our guided migration wizard makes switching to Relius simple and safe.
             </p>
+
+            <div className="mb-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <Button variant="accent" size="lg" className="group shadow-lg" asChild>
+                <Link href="/contact/?interest=migration-help">
+                  Book a free migration review
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </Button>
+              <Button variant="outline" size="lg" asChild>
+                <Link href="https://app.relius.ai/checkout?plan=free">
+                  Start free, import when ready
+                </Link>
+              </Button>
+            </div>
 
             {/* Trust signals */}
             <div className="flex flex-wrap justify-center gap-6 mb-12 text-sm text-slate-500">
@@ -67,6 +128,76 @@ export default function SwitchPage() {
                   <span>{signal}</span>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Migration Proof */}
+      <section className="border-y border-slate-200 bg-slate-50 px-6 py-16 lg:px-8">
+        <div className="container-width">
+          <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-4 py-1.5 text-sm font-medium text-emerald-700">
+                <Database className="h-4 w-4" />
+                Migration safety plan
+              </div>
+              <h2 className="mt-5 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+                Know exactly what transfers before you commit.
+              </h2>
+              <p className="mt-4 text-lg leading-relaxed text-slate-600">
+                Relius is built for the real-world messiness of church exports: partial columns,
+                duplicate households, historical giving, tags, and spreadsheets that have grown over years.
+              </p>
+              <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-500">
+                  Commonly supported imports
+                </h3>
+                <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                  {supportedImportTypes.map((type) => (
+                    <div key={type} className="flex items-center gap-2 text-sm font-medium text-slate-700">
+                      <CheckCircle2 className="h-4 w-4 flex-none text-emerald-500" />
+                      <span>{type}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-5">
+              {safetyProof.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <div key={item.title} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div className="flex gap-4">
+                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-xl bg-accent-50 text-accent-600">
+                        <Icon className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-slate-900">{item.title}</h3>
+                        <p className="mt-2 text-sm leading-relaxed text-slate-600">{item.description}</p>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+
+              <div className="rounded-2xl border border-accent-200 bg-white p-6 shadow-sm">
+                <h3 className="text-lg font-semibold text-slate-900">A typical migration afternoon</h3>
+                <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                  {migrationTimeline.map((step, index) => (
+                    <div key={step} className="flex items-center gap-3 rounded-xl bg-slate-50 p-3 text-sm font-medium text-slate-700">
+                      <span className="flex h-7 w-7 flex-none items-center justify-center rounded-full bg-accent-600 text-xs font-bold text-white">
+                        {index + 1}
+                      </span>
+                      <span>{step}</span>
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-4 text-sm text-slate-500">
+                  Prefer help? Send us your source platform and we&apos;ll review the safest import path with you.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -132,7 +263,7 @@ export default function SwitchPage() {
               Using a different platform? We can help with that too.
             </p>
             <Button variant="outline" className="rounded-full" asChild>
-              <Link href="/contact/?interest=migration">
+              <Link href="/contact/?interest=migration-help">
                 Contact us for custom migration help
               </Link>
             </Button>
@@ -290,7 +421,7 @@ export default function SwitchPage() {
                 className="group shadow-lg"
                 asChild
               >
-                <Link href="/contact/?interest=migration">
+                <Link href="/contact/?interest=migration-help">
                   Start Your Migration
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Link>

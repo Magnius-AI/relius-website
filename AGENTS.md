@@ -43,6 +43,7 @@ Quick orientation for Codex/Hermes and future AI chats working in this repo.
 - Worker dev: `cd worker && npm ci && npm run dev`.
 - Worker deploy: `cd worker && npm run deploy`.
 - Serena index refresh: `uvx --from git+https://github.com/oraios/serena serena project index . --name relius-website --language typescript`.
+- Cross-repo agent/AWS runbook: `/Users/madhulekh/Projects/relius/docs/operations/AGENT_CONTEXT_AND_AWS_READONLY.md`.
 
 ## Deployment
 - Static site deploys from `.github/workflows/deploy.yml`.
