@@ -119,8 +119,8 @@ const faqCategories: FAQCategory[] = [
         answer: 'Yes! Relius includes integrated giving through Stripe with competitive processing rates (2.2% + $0.30 per transaction). You can accept one-time and recurring gifts, run campaigns, and generate tax-deductible receipts.',
       },
       {
-        question: 'Does Relius have a mobile app?',
-        answer: 'Yes, Relius has a mobile app for iOS and Android. Members can view the directory, RSVP to events, give, and access group resources. Staff can manage check-ins and view dashboards on the go.',
+        question: 'Can I use Relius on a phone?',
+        answer: 'Yes. Relius is mobile-responsive, so members and staff can use supported web workflows from a phone or tablet browser. Native iOS and Android apps are planned but are not available yet.',
       },
       {
         question: 'Can I create a public website with Relius?',

@@ -68,7 +68,7 @@ export default function AiPage() {
           </Badge>
           <h1 className="mb-4">AI-Powered Church Administration Tools</h1>
           <p className="text-xl text-slate-500 max-w-3xl mx-auto">
-            Save 10+ hours weekly with AI that drafts content, spots needs, and handles routine tasksâso you can focus on people and ministry.
+            Save 10+ hours weekly with AI that drafts content, spots needs, and handles routine tasks - so you can focus on people and ministry.
           </p>
         </div>
 
@@ -338,7 +338,7 @@ export default function AiPage() {
                 <ul className="space-y-3 text-sm">
                   <li className="flex items-center gap-2 text-slate-700">
                     <CheckCircle2 className="w-4 h-4 text-accent-600" />
-                    <strong>Content Studio</strong> - One sermon â 6+ formats
+                    <strong>Content Studio</strong> - One sermon to 6+ formats
                   </li>
                   <li className="flex items-center gap-2 text-slate-700">
                     <CheckCircle2 className="w-4 h-4 text-accent-600" />

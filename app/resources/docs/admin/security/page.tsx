@@ -113,13 +113,13 @@ export default function SecuritySettingsPage() {
 
       <h3>API Key Management</h3>
       <p>
-        API keys allow external applications and custom integrations to access Relius data programmatically. For example, if you build a custom iOS app that displays upcoming events, that app needs an API key to authenticate requests to Relius's servers.
+        API keys allow external applications and custom integrations to access Relius data programmatically. For example, if you build a custom event display that shows upcoming events, that service needs an API key to authenticate requests to Relius's servers.
       </p>
       <p>
         API key best practices:
       </p>
       <ul>
-        <li><strong>Create keys for specific purposes:</strong> "Mobile App API," "Website Integration," "Data Sync Script"</li>
+        <li><strong>Create keys for specific purposes:</strong> "Events Display API," "Website Integration," "Data Sync Script"</li>
         <li><strong>Assign minimal permissions:</strong> Each key should only have access to the data it needs (e.g., "Events: Read Only")</li>
         <li><strong>Rotate keys regularly:</strong> Regenerate keys every 6-12 months or immediately if compromised</li>
         <li><strong>Monitor usage:</strong> Track API calls per key to detect unusual activity or abuse</li>

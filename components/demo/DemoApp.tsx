@@ -155,7 +155,7 @@ export function DemoApp({ isMobileView = false }: DemoAppProps) {
   // Mobile layout with bottom navigation
   if (isMobileView) {
     return (
-      <div className="demo-app h-full flex flex-col bg-gray-50">
+      <div className="demo-app h-full min-w-0 overflow-hidden flex flex-col bg-gray-50">
         {/* Simplified mobile header */}
         <header className="h-12 bg-white border-b border-gray-200 flex items-center px-4 flex-shrink-0">
           <div className="relative w-7 h-7">
@@ -170,7 +170,7 @@ export function DemoApp({ isMobileView = false }: DemoAppProps) {
         </header>
 
         {/* Content area - full width */}
-        <main className="flex-1 overflow-y-auto demo-scrollbar">
+        <main className="flex-1 min-w-0 overflow-y-auto overflow-x-hidden demo-scrollbar">
           {renderView()}
         </main>
 

@@ -51,7 +51,7 @@ export default function CommunicationsOverviewPage() {
         <div className="border rounded-lg p-6 hover:shadow-lg transition-shadow">
           <h3 className="text-xl font-semibold mb-3 text-gray-900">📢 Announcements</h3>
           <p className="text-gray-600 mb-4">
-            Broadcast announcements across multiple channels—mobile app, email, and screens—all from one place. 
+            Broadcast announcements across multiple channels—member portal, email, and screens—all from one place. 
             Schedule and target specific groups.
           </p>
           <a href="/resources/docs/communications/announcements" className="text-blue-600 hover:text-blue-700 font-medium">
@@ -62,7 +62,7 @@ export default function CommunicationsOverviewPage() {
 
       <h2>Key Features</h2>
       <ul>
-        <li><strong>Multi-Channel Delivery</strong>: Reach people via email, SMS, app notifications, and digital screens</li>
+        <li><strong>Multi-Channel Delivery</strong>: Reach people via email, SMS, member portal notices, and digital screens</li>
         <li><strong>Audience Segmentation</strong>: Target specific groups, teams, age ranges, or custom filters</li>
         <li><strong>Template Library</strong>: Pre-built templates for newsletters, event invites, and announcements</li>
         <li><strong>Scheduling</strong>: Plan messages in advance or send immediately</li>

@@ -4,7 +4,7 @@ export default function AnnouncementsPage() {
       <h1>Announcements</h1>
 
       <blockquote className="border-l-4 border-blue-500 pl-4 italic text-gray-700">
-        <strong>Quick Summary</strong>: Broadcast important updates across multiple channels—mobile app, email, and screens—all from one place.
+        <strong>Quick Summary</strong>: Broadcast important updates across multiple channels—member portal, email, and screens—all from one place.
       </blockquote>
 
       <h2>Overview</h2>
@@ -14,7 +14,7 @@ export default function AnnouncementsPage() {
         These are announcements—official church communications that deserve maximum visibility.
       </p>
       <p>
-        Relius announcements broadcast across multiple channels simultaneously: your church mobile app, email 
+        Relius announcements broadcast across multiple channels simultaneously: your church member portal, email 
         inboxes, and on-screen displays during services. Create the message once, and Relius delivers it everywhere 
         your people look. No copying and pasting between platforms, no wondering if you reached everyone.
       </p>
@@ -27,11 +27,11 @@ export default function AnnouncementsPage() {
       <h2>Key Concepts</h2>
       <ul>
         <li><strong>Announcement</strong>: A single message broadcast to multiple channels at once</li>
-        <li><strong>Channels</strong>: Where announcements appear (app, email, screens, website)</li>
+        <li><strong>Channels</strong>: Where announcements appear (member portal, email, screens, website)</li>
         <li><strong>Priority</strong>: Normal (general updates) or Urgent (time-sensitive alerts)</li>
         <li><strong>Expiration</strong>: When an announcement automatically stops displaying</li>
         <li><strong>Target Audience</strong>: Who sees the announcement (everyone, specific groups, custom filters)</li>
-        <li><strong>Pinned</strong>: Featured announcements that stay at the top of the app feed</li>
+        <li><strong>Pinned</strong>: Featured announcements that stay at the top of the member portal feed</li>
         <li><strong>Category</strong>: Classification (event, ministry, campus-wide, pastoral)</li>
       </ul>
 
@@ -53,13 +53,13 @@ export default function AnnouncementsPage() {
         Select where this announcement should appear:
       </p>
       <ul>
-        <li><strong>Mobile App</strong>: Appears in the announcements feed; urgent sends push notification</li>
+        <li><strong>Member Portal</strong>: Appears in the announcements feed; urgent adds a prominent alert</li>
         <li><strong>Email</strong>: Sends immediately as a standalone email</li>
         <li><strong>Screens</strong>: Displays on lobby screens, service slides, or digital signage</li>
         <li><strong>Website</strong>: Shows in your public website announcement banner (optional)</li>
       </ul>
       <p>
-        You can choose one, some, or all channels. Most churches use app + screens for general updates, adding 
+        You can choose one, some, or all channels. Most churches use the member portal + screens for general updates, adding 
         email for urgent or time-sensitive announcements.
       </p>
 
@@ -98,23 +98,23 @@ export default function AnnouncementsPage() {
         The power of announcements is unified delivery:
       </p>
       <ul>
-        <li><strong>Mobile App</strong>: Appears at the top of the announcements tab; urgent triggers push notification</li>
+        <li><strong>Member Portal</strong>: Appears at the top of the announcements tab; urgent adds a prominent alert</li>
         <li><strong>Email</strong>: Sends formatted email to selected audience with full announcement content</li>
         <li><strong>Screens</strong>: Auto-formats for lobby displays and service slides (image + title + key points)</li>
         <li><strong>Website</strong>: Optional banner on homepage or dedicated announcements page</li>
       </ul>
       <p>
         Each channel adapts the content format automatically—full text for email, condensed for screens, 
-        notification-style for app push. You write once; Relius handles the rest.
+        condensed for portal alerts. You write once; Relius handles the rest.
       </p>
 
       <h3>Priority Levels</h3>
       <p>
-        Two priority levels control visibility and notifications:
+        Two priority levels control visibility and alerts:
       </p>
       <ul>
-        <li><strong>Normal</strong>: Appears in feeds and on screens; no push notification</li>
-        <li><strong>Urgent</strong>: Bold visual styling + push notification to app users (use sparingly)</li>
+        <li><strong>Normal</strong>: Appears in feeds and on screens; no priority alert</li>
+        <li><strong>Urgent</strong>: Bold visual styling + priority alert in the member portal (use sparingly)</li>
       </ul>
       <p>
         Reserve urgent for actual urgency: weather cancellations, security alerts, emergency prayer requests, or 
@@ -145,7 +145,7 @@ export default function AnnouncementsPage() {
 
       <h3>Pinned Announcements</h3>
       <p>
-        Pin high-priority announcements to the top of the mobile app feed:
+        Pin high-priority announcements to the top of the member portal feed:
       </p>
       <ul>
         <li>New member class registration</li>
@@ -249,10 +249,10 @@ export default function AnnouncementsPage() {
             Track how people engage with your announcements:
           </p>
           <ul>
-            <li><strong>Views</strong>: How many people saw the announcement (app opens, email opens)</li>
+            <li><strong>Views</strong>: How many people saw the announcement (portal views, email opens)</li>
             <li><strong>Clicks</strong>: How many clicked embedded links or buttons</li>
-            <li><strong>Shares</strong>: How often it was shared outside the app</li>
-            <li><strong>Push Open Rate</strong>: For urgent announcements, % who opened the push notification</li>
+            <li><strong>Shares</strong>: How often it was shared outside the portal</li>
+            <li><strong>Alert Click Rate</strong>: For urgent announcements, % who opened the priority alert</li>
           </ul>
           <p>
             View analytics under each announcement's detail page. Compare performance across categories to learn 
@@ -290,23 +290,23 @@ export default function AnnouncementsPage() {
       <p>
         Grace Church is starting a 6-week series on prayer. They create an announcement titled "New Series: The Power 
         of Prayer Starts This Sunday." Message includes series overview, key dates, and invitation to join a prayer 
-        challenge. Published to app + screens, scheduled for Saturday 6 PM, expires 7 days later. Featured image: 
-        series graphic designed by creative team. Result: 68% of active app users view it; 240 people join the prayer 
+        challenge. Published to member portal + screens, scheduled for Saturday 6 PM, expires 7 days later. Featured image: 
+        series graphic designed by creative team. Result: 68% of active portal users view it; 240 people join the prayer 
         challenge via the embedded link.
       </p>
 
       <h3>Scenario 2: Emergency Weather Cancellation</h3>
       <p>
         Blizzard hits Saturday night. At 5:30 AM Sunday, pastor creates urgent announcement: "All Services Canceled 
-        Today—Stay Safe!" Channels: app (push notification) + email + website banner. Target: everyone. By 6 AM, 
-        1,200 members receive push notification, 900 check email, 400 visit website. Zero confused families drive 
+        Today—Stay Safe!" Channels: member portal alert + email + website banner. Target: everyone. By 6 AM, 
+        1,200 members see the portal alert, 900 check email, 400 visit website. Zero confused families drive 
         through dangerous conditions.
       </p>
 
       <h3>Scenario 3: Volunteer Recruitment</h3>
       <p>
         VBS needs 50 volunteers. Children's ministry publishes announcement: "VBS Needs You! Volunteer June 10-14." 
-        Target: families with kids ages 5-12 + anyone tagged "enjoys working with children." Channels: app + email. 
+        Target: families with kids ages 5-12 + anyone tagged "enjoys working with children." Channels: member portal + email. 
         Includes volunteer role descriptions and sign-up link. Published Monday, expires when all slots filled (6 days 
         later). Result: 54 volunteers sign up; announcement auto-expires early.
       </p>
@@ -315,7 +315,7 @@ export default function AnnouncementsPage() {
       <p>
         Church is raising $2M for new worship center. Monthly pinned announcement shares progress: "We're 60% to Our 
         Goal! $1.2M Raised." Updates monthly with new percentage and testimonial video. Pinned to stay top-of-mind. 
-        Channels: app + screens (email reserved for major milestones). Category: Campus-Wide. Expires when campaign 
+        Channels: member portal + screens (email reserved for major milestones). Category: Campus-Wide. Expires when campaign 
         concludes in 18 months.
       </p>
 
@@ -334,10 +334,10 @@ export default function AnnouncementsPage() {
         maximizing visibility.
       </p>
 
-      <p><strong>Q: What happens if someone doesn't have the mobile app?</strong></p>
+      <p><strong>Q: What happens if someone doesn't use the member portal?</strong></p>
       <p>
-        A: They won't see app-only announcements. Best practice: use app + email for important updates to reach 
-        everyone. Encourage app adoption by highlighting its benefits (announcements, giving, event registration 
+        A: They won't see portal-only announcements. Best practice: use member portal + email for important updates to reach 
+        everyone. Encourage portal use by highlighting its benefits (announcements, giving, event registration 
         all in one place).
       </p>
 

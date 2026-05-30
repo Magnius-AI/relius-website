@@ -124,7 +124,7 @@ export default function WebsitePage() {
       <h2>Why Use Relius for Your Website?</h2>
       <ul>
         <li>
-          <strong>No duplicate data entry</strong>: Update once in Relius, and it appears everywhere—your admin dashboard, mobile app, and public website.
+          <strong>No duplicate data entry</strong>: Update once in Relius, and it appears everywhere—your admin dashboard, responsive web views, and public website.
         </li>
         <li>
           <strong>Always current</strong>: No more "oops, we forgot to update the website" moments. Events, staff, and sermons update automatically.

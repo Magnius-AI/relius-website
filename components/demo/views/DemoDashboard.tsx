@@ -123,15 +123,15 @@ export function DemoDashboard() {
   ];
 
   return (
-    <div className="p-4 sm:p-6 max-w-7xl mx-auto">
+    <div className="min-w-0 p-4 sm:p-6 max-w-7xl mx-auto">
       {/* Page Header */}
       <div className="mb-6">
-        <div className="flex items-center justify-between">
-          <div>
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div className="min-w-0">
             <div className="text-2xl font-bold text-gray-900">Dashboard</div>
-            <p className="text-sm text-gray-500 mt-1">Welcome back! Here&apos;s what&apos;s happening with your church.</p>
+            <p className="text-sm text-gray-500 mt-1 max-w-[16rem] sm:max-w-none">Welcome back! Here&apos;s what&apos;s happening with your church.</p>
           </div>
-          <select className="demo-input !w-36 text-sm appearance-none" disabled aria-label="Time period">
+          <select className="demo-input sm:!w-36 text-sm appearance-none" disabled aria-label="Time period">
             <option>This Week</option>
             <option>This Month</option>
             <option>This Year</option>

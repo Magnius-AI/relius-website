@@ -65,7 +65,7 @@ const releases: Release[] = [
       { type: 'feature', description: 'AI Sermon Planner with outline generation and scripture suggestions' },
       { type: 'feature', description: 'Translation Console supporting 50+ languages' },
       { type: 'feature', description: 'Live captioning for services (beta)' },
-      { type: 'improvement', description: 'Mobile check-in app performance improvements' },
+      { type: 'improvement', description: 'Mobile web check-in performance improvements' },
       { type: 'improvement', description: 'Dashboard now shows 30-day engagement trends' },
       { type: 'fix', description: 'Fixed SMS opt-out handling for Twilio' },
     ],

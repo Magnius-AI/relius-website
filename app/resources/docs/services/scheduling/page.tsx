@@ -122,7 +122,7 @@ export default function VolunteerSchedulingPage() {
         <li><strong>Morning of service</strong>: "Today: You're scheduled for tech team at 10:30 AM"</li>
       </ul>
       <p>
-        Reminders go via email, SMS, or push notification based on each volunteer's preferences. Reduce no-shows by 80% simply by reminding people what they committed to.
+        Reminders go via email, SMS, or portal alert based on each volunteer's preferences. Reduce no-shows by 80% simply by reminding people what they committed to.
       </p>
 
       <h3>Workload Tracking and Burnout Prevention</h3>

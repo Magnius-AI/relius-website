@@ -1,30 +1,28 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { Monitor, Smartphone, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { DemoBrowserFrame } from './DemoBrowserFrame';
-import { DemoMobileFrame } from './DemoMobileFrame';
 import { DemoApp } from './DemoApp';
 import { analytics } from '@/lib/analytics';
 
-type ViewMode = 'desktop' | 'mobile';
-
 export function InteractiveDemo() {
-    const [viewMode, setViewMode] = useState<ViewMode>('desktop');
     const [isSmallScreen, setIsSmallScreen] = useState(false);
     const sectionRef = useRef<HTMLElement>(null);
     const hasTrackedView = useRef(false);
 
-    // Auto-detect if user is on a small screen and default to mobile view
+    // Match Tailwind's sm breakpoint so the demo updates correctly on resize.
     useEffect(() => {
-        if (typeof window !== 'undefined') {
-            const small = window.innerWidth < 640;
-            setIsSmallScreen(small);
-            if (small) {
-                setViewMode('mobile');
-            }
-        }
+        if (typeof window === 'undefined') return;
+
+        const mediaQuery = window.matchMedia('(max-width: 639px)');
+        const updateScreenMode = () => setIsSmallScreen(mediaQuery.matches);
+
+        updateScreenMode();
+        mediaQuery.addEventListener('change', updateScreenMode);
+
+        return () => mediaQuery.removeEventListener('change', updateScreenMode);
     }, []);
 
     // Track when demo section comes into view
@@ -45,11 +43,6 @@ export function InteractiveDemo() {
 
         return () => observer.disconnect();
     }, []);
-
-    const handleViewModeChange = (mode: ViewMode) => {
-        analytics.trackDemoInteraction('view_mode_changed', { mode });
-        setViewMode(mode);
-    };
 
     return (
         <section
@@ -73,67 +66,35 @@ export function InteractiveDemo() {
                     </div>
                     <h2
                         id="demo-heading"
-                        className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4"
+                        className="mx-auto max-w-[18rem] text-2xl sm:max-w-none sm:text-4xl font-bold text-slate-900 mb-4"
                     >
                         Experience Relius in action
                     </h2>
-                    <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                    <p className="text-base sm:text-lg text-slate-600 max-w-[18rem] sm:max-w-2xl mx-auto">
                         Explore the platform that helps churches serve their communities better.
                         Click around to see how it works.
                     </p>
                 </div>
 
-                {/* View mode toggle - hidden on small screens where mobile is forced */}
-                <div className="hidden sm:flex justify-end max-w-6xl mx-auto mb-4">
-                    <div className="inline-flex rounded-lg border border-gray-200 p-1 bg-white shadow-sm" role="group" aria-label="Demo view mode">
-                        <button
-                            onClick={() => handleViewModeChange('desktop')}
-                            aria-label="View desktop version"
-                            aria-pressed={viewMode === 'desktop'}
-                            className={`px-3 py-1.5 rounded-md text-sm font-medium flex items-center gap-2 transition-colors ${
-                                viewMode === 'desktop' ? 'bg-blue-100 text-blue-700' : 'text-gray-600 hover:bg-gray-50'
-                            }`}
-                        >
-                            <Monitor className="w-4 h-4" aria-hidden="true" />
-                            <span>Desktop</span>
-                        </button>
-                        <button
-                            onClick={() => handleViewModeChange('mobile')}
-                            aria-label="View mobile version"
-                            aria-pressed={viewMode === 'mobile'}
-                            className={`px-3 py-1.5 rounded-md text-sm font-medium flex items-center gap-2 transition-colors ${
-                                viewMode === 'mobile' ? 'bg-blue-100 text-blue-700' : 'text-gray-600 hover:bg-gray-50'
-                            }`}
-                        >
-                            <Smartphone className="w-4 h-4" aria-hidden="true" />
-                            <span>Mobile</span>
-                        </button>
-                    </div>
-                </div>
-
                 {/* Demo container */}
                 <div className="max-w-6xl mx-auto">
                     {isSmallScreen ? (
-                        /* On small screens, render mobile app directly without phone frame */
+                        /* On small screens, render the responsive web demo directly without device chrome. */
                         <div className="rounded-xl overflow-hidden shadow-2xl border border-gray-200/50 bg-white">
                             <div className="h-[500px] overflow-hidden bg-gray-50">
                                 <DemoApp isMobileView />
                             </div>
                         </div>
-                    ) : viewMode === 'desktop' ? (
+                    ) : (
                         <DemoBrowserFrame>
                             <DemoApp />
                         </DemoBrowserFrame>
-                    ) : (
-                        <DemoMobileFrame>
-                            <DemoApp isMobileView />
-                        </DemoMobileFrame>
                     )}
                 </div>
 
                 {/* Hint text */}
                 <p className="text-center mt-6 text-sm text-slate-500">
-                    {isSmallScreen || viewMode === 'mobile'
+                    {isSmallScreen
                         ? 'Use the bottom navigation to explore different views. Tap on items to interact.'
                         : 'Try clicking on sidebar items to navigate between views. Add new people or groups using the buttons.'}
                 </p>

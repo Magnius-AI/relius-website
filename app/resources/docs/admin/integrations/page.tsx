@@ -139,7 +139,7 @@ export default function IntegrationsPage() {
         <li>Enable the webhook to start receiving real events</li>
       </ol>
       <p>
-        <em>Example: A tech-savvy church builds a custom mobile app. They create webhooks for "Event Created" and "Event Updated" that send data to their app's backend API. When staff add events in Relius, they instantly appear in the mobile app without manual publishing.</em>
+        <em>Example: A tech-savvy church builds a custom mobile experience. They create webhooks for "Event Created" and "Event Updated" that send data to their backend API. When staff add events in Relius, they instantly appear in that custom experience without manual publishing.</em>
       </p>
 
       <details>

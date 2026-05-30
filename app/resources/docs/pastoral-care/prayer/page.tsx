@@ -141,9 +141,9 @@ export default function PrayerRequestsPage() {
             include contact information.
           </p>
 
-          <h3>Member App</h3>
+          <h3>Member Portal</h3>
           <p>
-            Logged-in members can submit requests through the Relius app. Their name is 
+            Logged-in members can submit requests through the Relius member portal. Their name is 
             automatically associated (unless they choose anonymous), and they can track 
             updates on their own requests.
           </p>

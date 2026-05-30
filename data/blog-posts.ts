@@ -174,7 +174,7 @@ export const blogPosts: BlogPost[] = [
           { type: "list", style: "unordered", heading: "Common mismatch examples:", items: [
             "Buying a platform for its giving module when your real pain is volunteer scheduling",
             "Choosing a system with powerful reporting when nobody on staff reads reports",
-            "Prioritizing a slick mobile app when your volunteers primarily use desktop",
+            "Prioritizing slick mobile access when your volunteers primarily use desktop",
             "Selecting based on AI features when your team hasn't mastered basic workflows yet",
           ] },
           { type: "paragraph", text: "The right software solves the problem you actually have, not the one that's most impressive in a demo." },
@@ -844,7 +844,7 @@ export const blogPosts: BlogPost[] = [
           { type: "subheading", text: "Usability" },
           { type: "list", style: "unordered", items: [
             "Can my team's least technical person complete core tasks without help?",
-            "Does the mobile app work well for volunteers and staff?",
+            "Does mobile access work well for volunteers and staff?",
             "Does the vocabulary match how our church talks about people and ministry?",
           ] },
           { type: "subheading", text: "Cost" },
@@ -1229,7 +1229,7 @@ export const blogPosts: BlogPost[] = [
           { type: "callout", variant: "tip", title: "The two-channel rule", body: "Pick **one channel for detailed information** (email or app) and **one channel for urgency** (text). Train your congregation to expect important things there. Everything else -- social media, bulletin, website -- is backup, not primary." },
           { type: "subheading", text: "How to pick your primary channels" },
           { type: "paragraph", text: "Survey your congregation. Not a lengthy questionnaire -- three questions: Where do you prefer to receive church updates? How often is too often? What information do you actually need from us? The answers might surprise you. Many churches assume everyone wants the app. In practice, most members over 40 prefer email, and most members under 30 prefer text. Meet people where they already are." },
-          { type: "paragraph", text: "Relius centralizes communications so your team doesn't duplicate work. Send an email, text, or push notification from the same dashboard. Write the message once, choose your channels, and send. No copying and pasting between five different tools." },
+          { type: "paragraph", text: "Relius centralizes communications so your team doesn't duplicate work. Send an email, text, or portal alert from the same dashboard. Write the message once, choose your channels, and send. No copying and pasting between five different tools." },
         ],
       },
       {
@@ -1382,8 +1382,8 @@ export const blogPosts: BlogPost[] = [
             "Emergency contact information (beyond the parent who dropped off)",
             "Behavioral notes or special needs accommodations",
           ] },
-          { type: "paragraph", text: "Volunteers also receive push notifications via the Relius app when a child with medical alerts is checked into their room. No chance of the information being overlooked." },
-          { type: "paragraph", text: "Parents update this information once -- during initial registration -- and it persists across every visit. If something changes, they can update it through the app or at the kiosk. No paper forms to fill out each Sunday. No risk of last week's allergy note getting lost in a pile of old check-in sheets." },
+          { type: "paragraph", text: "Volunteers also see prominent medical alerts in the responsive Relius check-in view when a child with medical alerts is checked into their room. No chance of the information being overlooked." },
+          { type: "paragraph", text: "Parents update this information once -- during initial registration -- and it persists across every visit. If something changes, they can update it through the member portal or at the kiosk. No paper forms to fill out each Sunday. No risk of last week's allergy note getting lost in a pile of old check-in sheets." },
           { type: "cta", heading: "Try Relius check-in", body: "Security codes, allergy alerts, guest flows, and pre-check-in --all in one system.", buttonText: "Explore use cases", buttonHref: "/use-cases/" },
         ],
       },
