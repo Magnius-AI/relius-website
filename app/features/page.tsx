@@ -79,8 +79,8 @@ export default function FeaturesPage() {
           <div className="bg-white border border-slate-200 rounded-3xl shadow-xl p-6 relative overflow-hidden">
             <div className="absolute inset-x-10 top-8 h-32 bg-primary-50/40 rounded-full blur-3xl pointer-events-none" aria-hidden="true" />
             <Image
-              src="/images/illustrations/worship-celebration.webp"
-              alt="Coordinated worship services"
+              src="/images/features-hero.webp"
+              alt="Church building with rose window"
               width={600}
               height={400}
               className="relative z-10 w-full h-auto object-contain"
