@@ -78,7 +78,7 @@ export default function AboutPage() {
             </div>
             <div className="bg-white border border-slate-200 rounded-3xl shadow-sm p-6">
               <Image
-                src="/hero-relius-image.png"
+                src="/images/about-hero.webp"
                 alt="Relius platform overview"
                 width={800}
                 height={600}
