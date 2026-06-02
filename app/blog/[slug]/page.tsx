@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { clampDescription } from "@/lib/seo";
 import Script from "next/script";
 import Link from "next/link";
 import Image from "next/image";
@@ -31,8 +32,8 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
     : "https://relius.ai/og-image.png";
 
   return {
-    title: `${post.title} | Relius Blog`,
-    description: post.excerpt,
+    title: post.title,
+    description: clampDescription(post.excerpt),
     keywords: post.topics,
     alternates: {
       canonical: `https://relius.ai/blog/${slug}/`,
@@ -40,7 +41,7 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
     openGraph: {
       type: "article",
       title: post.title,
-      description: post.excerpt,
+      description: clampDescription(post.excerpt),
       url: `https://relius.ai/blog/${slug}/`,
       publishedTime: post.date,
       authors: [post.author],
@@ -51,7 +52,7 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
     twitter: {
       card: "summary_large_image",
       title: post.title,
-      description: post.excerpt,
+      description: clampDescription(post.excerpt),
       images: [ogImage],
     },
   };

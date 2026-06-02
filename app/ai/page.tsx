@@ -13,9 +13,9 @@ import { AIInsightsDemo } from "@/components/demo/ai-demos/AIInsightsDemo";
 import { DonationsAIDemo } from "@/components/demo/ai-demos/DonationsAIDemo";
 
 export const metadata: Metadata = {
-  title: "Free AI Church Management Software — Sermon Planner, Content Studio & More | Relius",
+  title: "AI Church Management Software",
   description:
-    "Free AI church management software with sermon planner, content studio, 50+ language translation, pastoral care insights, and donor analytics. Save 10+ hours weekly. No credit card required.",
+    "AI-native church management: sermon planner, content studio, translation, pastoral care insights, and donor analytics. Save 10+ hours a week. Free.",
   alternates: {
     canonical: "https://relius.ai/ai/",
   },

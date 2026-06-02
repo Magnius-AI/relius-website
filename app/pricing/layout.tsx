@@ -2,9 +2,9 @@ import { Metadata } from "next";
 import { BreadcrumbSchema } from "@/components/seo/structured-data";
 
 export const metadata: Metadata = {
-  title: "Free Church Management Software | Relius Pricing",
+  title: "Church Management Software Pricing",
   description:
-    "Free church management software with online giving, AI-powered donation tools, and unlimited members. Free forever. Ministry Pro $60/mo, Ministry AI $150/mo for advanced features.",
+    "Church management software that's free to start — online giving, AI donation tools, unlimited members. Ministry Pro $60/mo, Ministry AI $150/mo.",
   alternates: {
     canonical: "https://relius.ai/pricing/",
   },

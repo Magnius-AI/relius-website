@@ -18,9 +18,9 @@ export const MIGRATION_URLS = {
 
 export const MIGRATION_PAGE_META: Record<string, MigrationPageMeta> = {
   hub: {
-    title: "Switch to Relius | Free Church Data Migration in Hours",
+    title: "Switch Church Software — Free Data Migration",
     description:
-      "Bring your church data with you when you switch to Relius. Free guided migration from Planning Center, ChurchTrac, and Tithe.ly in just 2-4 hours. People, donations, and history transfer safely.",
+      "Bring your data when you switch. Free guided migration from Planning Center, ChurchTrac, and Tithe.ly in 2-4 hours — people, donations, and history.",
     keywords: [
       "church software migration",
       "planning center alternative",
@@ -32,9 +32,9 @@ export const MIGRATION_PAGE_META: Record<string, MigrationPageMeta> = {
     ],
   },
   "planning-center": {
-    title: "Free Planning Center Alternative | Switch to Relius",
+    title: "Free Planning Center Alternative (2026)",
     description:
-      "The free alternative to Planning Center with AI-powered features. Import your people and donations in under 3 hours. Simpler pricing, modern interface, and all-in-one church management.",
+      "Free, AI-powered alternative to Planning Center. Import people and donations in under 3 hours. Simpler pricing, one all-in-one church platform.",
     keywords: [
       "planning center alternative",
       "planning center free alternative",

@@ -9,9 +9,9 @@ import { coreFeatures, aiFeatures } from "@/data/features";
 import { BreadcrumbSchema } from "@/components/seo/structured-data";
 
 export const metadata: Metadata = {
-  title: "Free Church Management Features | AI Scheduling, Giving & More",
+  title: "Church Management Software Features",
   description:
-    "Explore Relius features: AI volunteer scheduling, online giving, pastoral care tracking, service planning, and automated church communications. All free to start — no credit card required.",
+    "Relius features: AI volunteer scheduling, online giving, kids check-in, groups, events, service planning, and a built-in church website. Free to start.",
   alternates: {
     canonical: "https://relius.ai/features/",
   },
