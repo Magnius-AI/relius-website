@@ -3,13 +3,13 @@ import { Sparkles, FileText, Paintbrush, Share2, CheckCircle } from 'lucide-reac
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'AI Content Studio | Relius Documentation',
+    title: 'AI Content Studio | Documentation',
     description: 'Generate social media posts, newsletters, sermon series graphics, and church communications using AI-powered content creation tools.',
     alternates: {
         canonical: 'https://relius.ai/resources/docs/ai/content-studio/',
     },
     openGraph: {
-        title: 'AI Content Studio | Relius Documentation',
+        title: 'AI Content Studio | Documentation',
         description: 'Generate social media posts, newsletters, sermon series graphics, and church communications using AI-powered content creation tools.',
         url: 'https://relius.ai/resources/docs/ai/content-studio/',
     },

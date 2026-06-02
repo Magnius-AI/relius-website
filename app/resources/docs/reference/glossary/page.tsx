@@ -3,13 +3,13 @@ import Link from 'next/link';
 import { BookMarked, ChevronRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Glossary - Reference - Relius Documentation',
+  title: 'Glossary - Reference - Documentation',
   description: 'Definitions of terms used throughout Relius church management software and church administration.',
   alternates: {
     canonical: 'https://relius.ai/resources/docs/reference/glossary',
   },
   openGraph: {
-    title: 'Glossary | Relius Documentation',
+    title: 'Glossary | Documentation',
     description: 'Definitions of terms used throughout Relius and church management.',
     url: 'https://relius.ai/resources/docs/reference/glossary',
   },

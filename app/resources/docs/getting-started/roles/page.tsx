@@ -3,13 +3,13 @@ import { Shield, Users } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'User Roles & Permissions | Relius Documentation',
+    title: 'User Roles & Permissions | Documentation',
     description: 'Understand the admin and super_admin roles in Relius, how to manage users, invite team members, transfer super admin ownership, and follow security best practices.',
     alternates: {
         canonical: 'https://relius.ai/resources/docs/getting-started/roles/',
     },
     openGraph: {
-        title: 'User Roles & Permissions | Relius Documentation',
+        title: 'User Roles & Permissions | Documentation',
         description: 'Understand the admin and super_admin roles in Relius, how to manage users, invite team members, transfer super admin ownership, and follow security best practices.',
         url: 'https://relius.ai/resources/docs/getting-started/roles/',
     },

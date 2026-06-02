@@ -3,13 +3,13 @@ import { Sparkles, DollarSign, TrendingUp, BarChart3, Mail, CheckCircle } from '
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Donations AI | Relius Documentation',
+    title: 'Donations AI | Documentation',
     description: 'AI-powered giving insights, donor engagement analysis, campaign optimization suggestions, and automated thank-you messaging.',
     alternates: {
         canonical: 'https://relius.ai/resources/docs/ai/donations-manager/',
     },
     openGraph: {
-        title: 'Donations AI | Relius Documentation',
+        title: 'Donations AI | Documentation',
         description: 'AI-powered giving insights, donor engagement analysis, campaign optimization suggestions, and automated thank-you messaging.',
         url: 'https://relius.ai/resources/docs/ai/donations-manager/',
     },

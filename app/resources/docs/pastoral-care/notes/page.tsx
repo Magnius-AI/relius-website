@@ -3,13 +3,13 @@ import Link from 'next/link';
 import { FileText, Plus, Search, Calendar, Lock, Users, ChevronRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Care Notes - Pastoral Care - Relius Documentation',
+  title: 'Care Notes - Pastoral Care - Documentation',
   description: 'Document pastoral visits, counseling sessions, and member care with confidential notes in Relius.',
   alternates: {
     canonical: 'https://relius.ai/resources/docs/pastoral-care/notes',
   },
   openGraph: {
-    title: 'Care Notes | Relius Documentation',
+    title: 'Care Notes | Documentation',
     description: 'Document pastoral visits, counseling sessions, and member care with confidential notes in Relius.',
     url: 'https://relius.ai/resources/docs/pastoral-care/notes',
   },

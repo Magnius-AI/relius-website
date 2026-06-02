@@ -3,13 +3,13 @@ import Link from 'next/link';
 import { FileText, ChevronRight, Sparkles, Bug, Zap, Shield } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Release Notes - Reference - Relius Documentation',
+  title: 'Release Notes - Reference - Documentation',
   description: 'What\'s new in Relius. Feature releases, improvements, bug fixes, and upcoming changes.',
   alternates: {
     canonical: 'https://relius.ai/resources/docs/reference/releases',
   },
   openGraph: {
-    title: 'Release Notes | Relius Documentation',
+    title: 'Release Notes | Documentation',
     description: 'What\'s new in Relius. Feature releases, improvements, and bug fixes.',
     url: 'https://relius.ai/resources/docs/reference/releases',
   },

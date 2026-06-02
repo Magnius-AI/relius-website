@@ -3,13 +3,13 @@ import Link from 'next/link';
 import { Code, ChevronRight, Key, Shield, Zap, BookOpen } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'API Documentation - Reference - Relius Documentation',
+  title: 'API Documentation - Reference - Documentation',
   description: 'Build custom integrations with the Relius REST API. Authentication, endpoints, rate limits, and code examples.',
   alternates: {
     canonical: 'https://relius.ai/resources/docs/reference/api',
   },
   openGraph: {
-    title: 'API Documentation | Relius Documentation',
+    title: 'API Documentation | Documentation',
     description: 'Build custom integrations with the Relius REST API. Authentication, endpoints, and examples.',
     url: 'https://relius.ai/resources/docs/reference/api',
   },

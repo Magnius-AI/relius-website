@@ -2,13 +2,13 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Pipelines | Relius Documentation',
+    title: 'Pipelines | Documentation',
     description: 'Use visual Kanban-style workflow boards to track people through processes like new member assimilation, baptism preparation, volunteer onboarding, and leadership development.',
     alternates: {
         canonical: 'https://relius.ai/resources/docs/people/pipelines/',
     },
     openGraph: {
-        title: 'Pipelines | Relius Documentation',
+        title: 'Pipelines | Documentation',
         description: 'Use visual Kanban-style workflow boards to track people through processes like new member assimilation, baptism preparation, volunteer onboarding, and leadership development.',
         url: 'https://relius.ai/resources/docs/people/pipelines/',
     },

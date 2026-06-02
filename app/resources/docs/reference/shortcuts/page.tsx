@@ -3,13 +3,13 @@ import Link from 'next/link';
 import { Keyboard, ChevronRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Keyboard Shortcuts - Reference - Relius Documentation',
+  title: 'Keyboard Shortcuts - Reference - Documentation',
   description: 'Speed up your workflow with keyboard shortcuts for common actions in Relius church management software.',
   alternates: {
     canonical: 'https://relius.ai/resources/docs/reference/shortcuts',
   },
   openGraph: {
-    title: 'Keyboard Shortcuts | Relius Documentation',
+    title: 'Keyboard Shortcuts | Documentation',
     description: 'Speed up your workflow with keyboard shortcuts for common actions in Relius.',
     url: 'https://relius.ai/resources/docs/reference/shortcuts',
   },

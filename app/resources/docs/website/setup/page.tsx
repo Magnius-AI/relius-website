@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Website Setup | Relius Documentation",
+  title: "Website Setup | Documentation",
   description: "Configure your church's public website with custom branding, domain, and site settings.",
 };
 

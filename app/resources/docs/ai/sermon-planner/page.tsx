@@ -3,13 +3,13 @@ import { Sparkles, BookOpen, Lightbulb, Calendar, MessageSquare, CheckCircle, Al
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'AI Sermon Planner | Relius Documentation',
+    title: 'AI Sermon Planner | Documentation',
     description: 'AI-powered sermon preparation and series planning - generate outlines, find scriptures, and plan sermon series with intelligent assistance.',
     alternates: {
         canonical: 'https://relius.ai/resources/docs/ai/sermon-planner/',
     },
     openGraph: {
-        title: 'AI Sermon Planner | Relius Documentation',
+        title: 'AI Sermon Planner | Documentation',
         description: 'AI-powered sermon preparation and series planning - generate outlines, find scriptures, and plan sermon series with intelligent assistance.',
         url: 'https://relius.ai/resources/docs/ai/sermon-planner/',
     },

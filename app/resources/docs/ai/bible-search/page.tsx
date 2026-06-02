@@ -3,13 +3,13 @@ import { Sparkles, Search, BookOpen, Lightbulb, CheckCircle } from 'lucide-react
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Semantic Bible Search | Relius Documentation',
+    title: 'Semantic Bible Search | Documentation',
     description: 'Search the Bible by concept, theme, or natural language questions rather than just keywords. Find relevant passages for sermons, studies, and counseling.',
     alternates: {
         canonical: 'https://relius.ai/resources/docs/ai/bible-search/',
     },
     openGraph: {
-        title: 'Semantic Bible Search | Relius Documentation',
+        title: 'Semantic Bible Search | Documentation',
         description: 'Search the Bible by concept, theme, or natural language questions rather than just keywords. Find relevant passages for sermons, studies, and counseling.',
         url: 'https://relius.ai/resources/docs/ai/bible-search/',
     },

@@ -3,13 +3,13 @@ import { Sparkles, Heart, Users, ShieldCheck, AlertTriangle, CheckCircle } from 
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Pastoral Care AI | Relius Documentation',
+    title: 'Pastoral Care AI | Documentation',
     description: 'AI-powered insights for identifying at-risk members, suggesting follow-up actions, and helping pastoral teams prioritize care.',
     alternates: {
         canonical: 'https://relius.ai/resources/docs/ai/pastoral-care/',
     },
     openGraph: {
-        title: 'Pastoral Care AI | Relius Documentation',
+        title: 'Pastoral Care AI | Documentation',
         description: 'AI-powered insights for identifying at-risk members, suggesting follow-up actions, and helping pastoral teams prioritize care.',
         url: 'https://relius.ai/resources/docs/ai/pastoral-care/',
     },

@@ -2805,6 +2805,273 @@ export const blogPosts: BlogPost[] = [
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 quote: "Every percentage point matters when you are stewarding the generosity of your congregation.",
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     image: "/images/blog/church-giving-no-fees.webp",
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       },
+  {
+    slug: "how-to-set-up-text-to-give",
+    title: "How to Set Up Text-to-Give for Your Church (Step by Step)",
+    excerpt: "Text-to-give lets your congregation give in seconds from any phone. Here is the exact setup — connect payments, enable your giving page, get your keyword, and promote it.",
+    author: "Felix Tang",
+    role: "Relius Founder",
+    date: "2026-06-02",
+    readTime: "6 min",
+    category: "Best Practice",
+    contentType: "Guide",
+    topics: ["Giving", "Technology"],
+    churchSizeFocus: ["Small", "Mid-size"],
+    content: [
+      {
+        heading: "The fastest way to give on a Sunday",
+        blocks: [
+          { type: "callout", variant: "info", title: "Quick answer", body: "To set up text-to-give: (1) connect a payment processor like Stripe, (2) enable your public giving page, (3) turn on text-to-give to get a dedicated number and keyword (e.g. text GIVE to your number), (4) choose funds and allow recurring gifts, and (5) promote the number on screens, bulletins, and your website. Most churches finish in about 20 minutes." },
+          { type: "paragraph", text: "Text-to-give is the fastest way for someone to give during a service — no app to download, no website to dig through. They text a number, tap one link the first time, and they are done. Here is the exact setup." },
+        ],
+      },
+      {
+        heading: "Step 1 — Connect a payment processor",
+        blocks: [
+          { type: "paragraph", text: "Before any donation can reach your bank, you need a processor connected. In Relius, open Giving then Overview and start the Donation Activation checklist; the first item is Connect payments (Stripe). This links your church bank account so donations deposit automatically. If you have never used Stripe, leave a few extra minutes to verify your bank and organization details." },
+        ],
+      },
+      {
+        heading: "Step 2 — Enable your public giving page",
+        blocks: [
+          { type: "paragraph", text: "The first time someone gives by text, they get a secure link to a page where they enter their card or bank details. Turn this on under Enable public giving. It is hosted securely and PCI-compliant, and doubles as your online giving page, so it does double duty. Preview it before going live." },
+        ],
+      },
+      {
+        heading: "Step 3 — Turn on text-to-give and set your keyword",
+        blocks: [
+          { type: "paragraph", text: "Go to Giving then Text-to-Give and switch it to Active. You get a dedicated giving number and a keyword (the default is GIVE). Donors can text the keyword to start, or text a dollar amount directly — texting 50 starts a fifty dollar gift. Pick a memorable keyword if you like, such as OFFERING or your church name." },
+        ],
+      },
+      {
+        heading: "Step 4 — Set funds and recurring options",
+        blocks: [
+          { type: "paragraph", text: "Decide what donors can do once they are in:" },
+          { type: "list", style: "unordered", items: [
+            "Funds — let them choose General, Missions, Building, or Youth, and keep a sensible default (most use General).",
+            "Recurring — allow weekly or monthly gifts so a one-time donor becomes a regular giver in one tap.",
+          ] },
+        ],
+      },
+      {
+        heading: "Step 5 — Promote it (where most churches stall)",
+        blocks: [
+          { type: "paragraph", text: "A text number only works if people know it. Use the Print Card and shareable graphic, and put it everywhere:" },
+          { type: "list", style: "unordered", items: [
+            "On the giving slide before and after the offering",
+            "In the bulletin and welcome card",
+            "In your website footer and a pinned social post",
+            "Said out loud from the front at least monthly: to give right now, text GIVE to your number",
+          ] },
+          { type: "callout", variant: "tip", title: "Make it automatic", body: "Once giving is live, gifts flow straight into your reports and year-end statements — no manual entry." },
+        ],
+      },
+      {
+        heading: "What it costs",
+        blocks: [
+          { type: "paragraph", text: "You pay standard payment-processing fees on each donation (Stripe is about 2.9% plus 30 cents for cards). On Relius there is a small platform fee, and donors can opt to cover fees so 100% reaches your church. There is no separate per-text charge on the giving itself." },
+        ],
+      },
+      {
+        heading: "Frequently asked questions",
+        blocks: [
+          { type: "subheading", text: "How does text-to-give work for churches?" },
+          { type: "paragraph", text: "A donor texts a keyword or dollar amount to your church dedicated number. The first time, they get a secure link to enter card or bank details. After that, every future gift is a single text that processes instantly." },
+          { type: "subheading", text: "How much does text-to-give cost?" },
+          { type: "paragraph", text: "You pay standard processing fees per donation (about 2.9% plus 30 cents for cards) plus any platform fee on your plan. Donors can choose to cover the fees so the full gift reaches your church." },
+          { type: "subheading", text: "Is text-to-give secure?" },
+          { type: "paragraph", text: "Yes. Card details are entered on a secure, PCI-compliant page hosted by your processor, not stored in the text. Your church never sees full card numbers." },
+          { type: "subheading", text: "Can donors give to a specific fund by text?" },
+          { type: "paragraph", text: "Yes — you can offer funds like General, Missions, or Building, and let donors set up recurring weekly or monthly gifts." },
+          { type: "subheading", text: "How long does setup take?" },
+          { type: "paragraph", text: "About 20 minutes once your processor is connected. First-time Stripe setup can take longer if you still need to verify your bank." },
+          { type: "cta", heading: "Turn on giving in Relius", body: "Online and text giving, year-end statements, and donor insights in one place.", buttonText: "Explore features", buttonHref: "/features/" },
+        ],
+      },
+    ],
+    takeaway: [
+      "Text-to-give needs three things live first: a connected payment processor, an enabled giving page, and a keyword.",
+      "Donors text a keyword or amount; the first gift takes one setup tap, every gift after is instant.",
+      "Adoption depends on promotion — put the number on screens, bulletins, and your website, and say it monthly.",
+    ],
+    quote: "The best giving tool is the one your congregation will actually use in the moment.",
+  },
+  {
+    slug: "church-management-software-cost",
+    title: "How Much Does Church Management Software Cost? (2026 Pricing Guide)",
+    excerpt: "Church management software ranges from free to over a thousand dollars a month. Here is what each tier really costs in 2026 — including the processing fees most pricing pages hide.",
+    author: "Felix Tang",
+    role: "Relius Founder",
+    date: "2026-06-01",
+    readTime: "7 min",
+    category: "Best Practice",
+    contentType: "Guide",
+    topics: ["Finance", "Giving", "Technology"],
+    churchSizeFocus: ["Small", "Mid-size", "Growing"],
+    content: [
+      {
+        heading: "The honest answer on price",
+        blocks: [
+          { type: "callout", variant: "info", title: "Quick answer", body: "In 2026, church management software costs roughly 0 to 100 dollars a month for most churches, with enterprise platforms running 500 to 1,000-plus a month. Free tiers exist (Relius, ChurchTrac, ChurchCRM). The cost most pricing pages bury is payment processing — about 2.9% plus 30 cents per donation — which for a church taking 200,000 dollars a year online can be about 6,000 dollars a year." },
+          { type: "paragraph", text: "Every vendor structures pricing differently — per person, per module, flat, or contact sales — which makes comparison painful. Here is a straight answer." },
+        ],
+      },
+      {
+        heading: "The three pricing models",
+        blocks: [
+          { type: "list", style: "ordered", items: [
+            "Flat monthly (for example Breeze, around 72 dollars a month) — one price regardless of size. Predictable; you pay the same at 50 or 500 people.",
+            "Per-person or tiered by size (for example ChurchTrac, from about 9 to 24 dollars a month) — scales with how many people you track. Great for small churches.",
+            "Per-module (for example Planning Center) — free base, then pay for each product like Giving, Check-Ins, or Services. Flexible, but the total climbs fast.",
+          ] },
+        ],
+      },
+      {
+        heading: "What the major platforms cost (2026)",
+        blocks: [
+          { type: "list", style: "unordered", items: [
+            "Relius — free to start; Ministry Pro 60 dollars a month; Ministry AI 150 dollars a month. Full church management and giving are free; paid tiers add pastoral care and AI.",
+            "ChurchTrac — about 9 to 24 dollars a month, per-person, includes accounting.",
+            "Breeze (Tithely) — about 72 dollars a month, flat, no free plan.",
+            "Tithe.ly — 0 to 79 dollars a month, giving-first with add-on modules.",
+            "Planning Center — free base, often 50 to 100 dollars a month once you add modules.",
+            "Pushpay and Subsplash — 500 to 1,000-plus a month, enterprise.",
+            "ChurchCRM — free and open source (you host and maintain it).",
+          ] },
+          { type: "callout", variant: "info", body: "Prices change often — confirm on each vendor site before deciding. Figures reflect public pricing as of 2026." },
+        ],
+      },
+      {
+        heading: "The cost everyone forgets: processing fees",
+        blocks: [
+          { type: "paragraph", text: "Online and text giving carry payment-processing fees of about 2.9% plus 30 cents per transaction, sometimes plus a small platform fee. That is usually the biggest line item:" },
+          { type: "list", style: "unordered", items: [
+            "50,000 dollars a year online is about 1,500-plus in fees",
+            "200,000 dollars a year online is about 6,000-plus in fees",
+          ] },
+          { type: "paragraph", text: "Two things to check: the platform fee on top of the processor, and whether donors can cover the fees. Many platforms, including Relius, let givers add the fee so 100% reaches the church." },
+        ],
+      },
+      {
+        heading: "So what should a church budget?",
+        blocks: [
+          { type: "list", style: "unordered", items: [
+            "Under 200 people or tight budget: a free tier or ChurchTrac — 0 to 25 dollars a month plus processing.",
+            "200 to 1,000, want all-in-one plus AI: Relius free or Ministry Pro and AI, or Breeze — 0 to 150 dollars a month plus processing.",
+            "1,000-plus or enterprise giving: a Pushpay or Subsplash tier — 500-plus a month plus processing.",
+          ] },
+          { type: "paragraph", text: "Add it up the honest way: subscription plus per-module fees plus processing fees, then weigh that against the hours your staff and volunteers will save." },
+        ],
+      },
+      {
+        heading: "Frequently asked questions",
+        blocks: [
+          { type: "subheading", text: "How much does church management software cost per month?" },
+          { type: "paragraph", text: "Most churches pay 0 to 100 dollars a month. Free tiers exist; mid-tier flat plans run about 72 dollars a month; per-person plans start around 9 to 24 dollars a month; enterprise platforms run 500 to 1,000-plus a month." },
+          { type: "subheading", text: "Is there free church management software?" },
+          { type: "paragraph", text: "Yes. Relius and ChurchTrac offer free tiers, and ChurchCRM is free and open source and self-hosted. Free plans usually trade away support, AI features, or some modules." },
+          { type: "subheading", text: "What are church giving processing fees?" },
+          { type: "paragraph", text: "Roughly 2.9% plus 30 cents per online or text donation, sometimes plus a small platform fee. Many platforms let donors choose to cover the fee." },
+          { type: "subheading", text: "Why is church software pricing so hard to compare?" },
+          { type: "paragraph", text: "Vendors use different models — flat, per-person, or per-module — and often quote a base price while charging extra for giving, check-in, or texting. Always total subscription plus modules plus processing." },
+          { type: "cta", heading: "See transparent Relius pricing", body: "Free to start, with clear paid tiers and no per-module surprises.", buttonText: "View pricing", buttonHref: "/pricing/" },
+        ],
+      },
+    ],
+    takeaway: [
+      "Plan on 0 to 100 dollars a month for most churches under about 500 people; enterprise platforms run 500 to 1,000-plus.",
+      "The hidden cost is payment processing — about 2.9% plus 30 cents per gift, which can dwarf the subscription.",
+      "Free tiers are real, but check what is gated: support, AI, backups, and modules.",
+    ],
+  },
+  {
+    slug: "tithely-alternatives",
+    title: "Best Tithe.ly Alternatives for Churches (2026)",
+    excerpt: "Looking to switch from Tithe.ly? Here is an honest 2026 comparison of the best alternatives — by budget, by features, and by what your church actually needs.",
+    author: "Felix Tang",
+    role: "Relius Founder",
+    date: "2026-05-30",
+    readTime: "8 min",
+    category: "Best Practice",
+    contentType: "Guide",
+    topics: ["Giving", "Migration", "Technology"],
+    churchSizeFocus: ["Small", "Mid-size", "Growing"],
+    content: [
+      {
+        heading: "The short list",
+        blocks: [
+          { type: "callout", variant: "info", title: "Quick answer", body: "The best Tithe.ly alternatives in 2026 by use case: Relius (best all-in-one with a free tier plus AI), ChurchTrac (cheapest, includes accounting), Pushpay (giving-first, enterprise budget), Subsplash (premium apps and design), Planning Center and Church Center (modular, free if you are already on PC), and ChMeetings (all-in-one, 7,000-plus churches)." },
+          { type: "paragraph", text: "Tithe.ly is a solid giving platform, but churches outgrow it when giving and module fees add up, when they want full church management rather than giving-first tools, or when they want AI features and a built-in website. Here are the strongest alternatives and who each is for." },
+        ],
+      },
+      {
+        heading: "1. Relius — best all-in-one with a free tier",
+        blocks: [
+          { type: "paragraph", text: "Relius bundles online and text giving, a people directory, kids check-in, groups, events, reporting with year-end tax statements, a built-in church website, and an AI suite — without charging per module. There is a genuine free tier, and a built-in migration wizard imports your Tithe.ly people, donations, tags, and attendance directly. Best if you want one login that does everything." },
+        ],
+      },
+      {
+        heading: "2. ChurchTrac — cheapest, includes accounting",
+        blocks: [
+          { type: "paragraph", text: "Per-person pricing (about 9 to 24 dollars a month) makes ChurchTrac the budget pick, and unlike Tithe.ly it includes built-in fund accounting. Best if cost is the number one constraint and you are comfortable with a more utilitarian interface." },
+        ],
+      },
+      {
+        heading: "3. Pushpay — giving-first, enterprise",
+        blocks: [
+          { type: "paragraph", text: "Pushpay has some of the highest giving-conversion rates in the industry, but it is priced for larger churches (500 to 1,000-plus a month). Best if digital giving is your top priority and you have the budget." },
+        ],
+      },
+      {
+        heading: "4. Subsplash — premium apps and design",
+        blocks: [
+          { type: "paragraph", text: "Polished templates, a branded mobile app, and strong content management (about 300 to 500-plus a month). Best if a beautiful church app and media experience matter most." },
+        ],
+      },
+      {
+        heading: "5. Planning Center and Church Center — modular, free base",
+        blocks: [
+          { type: "paragraph", text: "Free base with paid modules; the Church Center member app is free if you are already in the Planning Center ecosystem. Best if you want granular control and a strong services workflow — just watch the per-module total." },
+        ],
+      },
+      {
+        heading: "6. ChMeetings — affordable all-in-one",
+        blocks: [
+          { type: "paragraph", text: "Trusted by 7,000-plus churches for people, groups, events, donations, accounting, and communications in one place. Best if you want an affordable all-in-one and Relius is not a fit." },
+        ],
+      },
+      {
+        heading: "How to choose (90-second version)",
+        blocks: [
+          { type: "list", style: "unordered", items: [
+            "List your must-haves. Most churches need giving, a directory, check-in, a calendar, and a website.",
+            "Total the real cost: subscription plus per-module fees plus processing fees (about 2.9% plus 30 cents per gift).",
+            "Check migration. Can you import your Tithe.ly data without re-typing? Relius imports it directly.",
+            "Test the Sunday workflow. Have a volunteer try giving and check-in on a phone before you commit.",
+          ] },
+        ],
+      },
+      {
+        heading: "Frequently asked questions",
+        blocks: [
+          { type: "subheading", text: "What is the best Tithe.ly alternative?" },
+          { type: "paragraph", text: "For most churches, an all-in-one platform with a free tier — Relius — is the best fit. ChurchTrac is best on budget, Pushpay best for giving-first enterprises, and Subsplash best for premium apps and design." },
+          { type: "subheading", text: "Why do churches switch from Tithe.ly?" },
+          { type: "paragraph", text: "Common reasons: giving and module fees add up, it is giving-first rather than full church management, and teams want AI tools or a built-in website included." },
+          { type: "subheading", text: "Can I move my data off Tithe.ly?" },
+          { type: "paragraph", text: "Yes. Tithe.ly exports to CSV, and some platforms import it directly — the Relius migration wizard brings over people, donations, tags, and attendance in a few hours." },
+          { type: "subheading", text: "Is there a free alternative to Tithe.ly?" },
+          { type: "paragraph", text: "Yes. Relius has a free tier, ChurchCRM is free and open source, and Planning Center has a free base plan. Compare what is gated, such as support, AI, and modules, before deciding." },
+          { type: "cta", heading: "Switch from Tithe.ly to Relius", body: "Free guided migration of people, donations, tags, and attendance — usually in 3 to 4 hours.", buttonText: "See the switch guide", buttonHref: "/switch/tithely/" },
+        ],
+      },
+    ],
+    takeaway: [
+      "Pick by what you are optimizing for: all-in-one plus free (Relius), budget (ChurchTrac), giving-first (Pushpay), design (Subsplash).",
+      "Watch giving fees and module add-ons — that is where the real cost lives, not the sticker price.",
+      "Most platforms export to CSV; Relius imports Tithe.ly people, donations, tags, and attendance directly.",
+    ],
+  },
 ];
 
 export type BlogFilterOptions = {

@@ -3,13 +3,13 @@ import Link from 'next/link';
 import { HandHeart, Users, Bell, Lock, MessageCircle, ChevronRight, CheckCircle, Globe } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Prayer Requests - Pastoral Care - Relius Documentation',
+  title: 'Prayer Requests - Pastoral Care - Documentation',
   description: 'Manage prayer requests from your congregation with privacy controls and prayer team coordination in Relius.',
   alternates: {
     canonical: 'https://relius.ai/resources/docs/pastoral-care/prayer',
   },
   openGraph: {
-    title: 'Prayer Requests | Relius Documentation',
+    title: 'Prayer Requests | Documentation',
     description: 'Manage prayer requests from your congregation with privacy controls and prayer team coordination.',
     url: 'https://relius.ai/resources/docs/pastoral-care/prayer',
   },

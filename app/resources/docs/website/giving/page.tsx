@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Online Giving Page | Relius Documentation",
+  title: "Online Giving Page | Documentation",
   description: "Set up and customize your church's online giving page for secure, seamless donations.",
 };
 

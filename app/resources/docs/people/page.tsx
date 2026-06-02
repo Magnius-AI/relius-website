@@ -3,13 +3,13 @@ import { Users, UserPlus, Heart, GitBranch, Search } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'People Management | Relius Documentation',
+    title: 'People Management | Documentation',
     description: 'Manage your church members, families, visitors, and pastoral care with powerful people management tools.',
     alternates: {
         canonical: 'https://relius.ai/resources/docs/people/',
     },
     openGraph: {
-        title: 'People Management | Relius Documentation',
+        title: 'People Management | Documentation',
         description: 'Manage your church members, families, visitors, and pastoral care with powerful people management tools.',
         url: 'https://relius.ai/resources/docs/people/',
     },

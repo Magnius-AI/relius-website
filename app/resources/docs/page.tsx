@@ -4,7 +4,7 @@ import { docsNavigation } from '@/data/docs-navigation';
 import { ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Documentation - Relius',
+  title: 'Documentation',
   description:
     'Complete documentation for Relius church management software. Learn how to use all features, from people management to AI-powered tools.',
   alternates: {
@@ -17,7 +17,7 @@ export default function DocsPage() {
     <div className="space-y-12">
       {/* Hero Section */}
       <div className="space-y-4">
-        <h1 className="text-4xl font-bold text-slate-900">Relius Documentation</h1>
+        <h1 className="text-4xl font-bold text-slate-900">Documentation</h1>
         <p className="text-xl text-slate-600 leading-relaxed">
           Everything you need to know about using Relius to manage your church ministry.
           From quick-start guides to advanced AI features, we've got you covered.

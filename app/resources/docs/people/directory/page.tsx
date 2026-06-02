@@ -3,13 +3,13 @@ import { Users, Search, UserPlus, Upload, AlertCircle, LayoutGrid, Eye, Pencil }
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'People Directory | Relius Documentation',
+    title: 'People Directory | Documentation',
     description: 'Search, filter, and manage everyone in your church from the People Directory — a card-based grid of profiles with role filtering and engagement tracking.',
     alternates: {
         canonical: 'https://relius.ai/resources/docs/people/directory/',
     },
     openGraph: {
-        title: 'People Directory | Relius Documentation',
+        title: 'People Directory | Documentation',
         description: 'Search, filter, and manage everyone in your church from the People Directory — a card-based grid of profiles with role filtering and engagement tracking.',
         url: 'https://relius.ai/resources/docs/people/directory/',
     },

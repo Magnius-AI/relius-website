@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Migrating from ChurchTrac | Relius Documentation",
+  title: "Migrating from ChurchTrac | Documentation",
   description: "Step-by-step guide to migrating from ChurchTrac to Relius with all your data intact.",
 };
 

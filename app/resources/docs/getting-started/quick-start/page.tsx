@@ -3,13 +3,13 @@ import { ArrowRight, Users, Settings, CheckCircle, Lightbulb } from 'lucide-reac
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Quick Start Guide | Relius Documentation',
+    title: 'Quick Start Guide | Documentation',
     description: 'Get Relius running for your church in 15 minutes. Create your account, configure settings, and add your first people.',
     alternates: {
         canonical: 'https://relius.ai/resources/docs/getting-started/quick-start/',
     },
     openGraph: {
-        title: 'Quick Start Guide | Relius Documentation',
+        title: 'Quick Start Guide | Documentation',
         description: 'Get Relius running for your church in 15 minutes. Create your account, configure settings, and add your first people.',
         url: 'https://relius.ai/resources/docs/getting-started/quick-start/',
     },

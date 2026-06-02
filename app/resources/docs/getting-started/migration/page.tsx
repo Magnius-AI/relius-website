@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Migration Overview | Relius Documentation",
+  title: "Migration Overview | Documentation",
   description: "Switch to Relius from your current ChMS with confidence. We'll help every step of the way.",
 };
 

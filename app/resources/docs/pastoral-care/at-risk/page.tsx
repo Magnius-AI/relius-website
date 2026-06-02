@@ -3,13 +3,13 @@ import Link from 'next/link';
 import { AlertTriangle, TrendingDown, Calendar, DollarSign, Users, ChevronRight, Brain, Bell, Settings } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'At-Risk Detection - Pastoral Care - Relius Documentation',
+  title: 'At-Risk Detection - Pastoral Care - Documentation',
   description: 'AI-powered alerts identify members who may need pastoral care based on attendance, giving, and engagement patterns.',
   alternates: {
     canonical: 'https://relius.ai/resources/docs/pastoral-care/at-risk',
   },
   openGraph: {
-    title: 'At-Risk Detection | Relius Documentation',
+    title: 'At-Risk Detection | Documentation',
     description: 'AI-powered alerts identify members who may need pastoral care based on attendance and engagement patterns.',
     url: 'https://relius.ai/resources/docs/pastoral-care/at-risk',
   },

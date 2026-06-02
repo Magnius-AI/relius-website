@@ -2,13 +2,13 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'New Member Contacts | Relius Documentation',
+    title: 'New Member Contacts | Documentation',
     description: 'A dedicated task system for following up with new members. Track contact tasks, mark them complete, and ensure every new person gets a personal welcome.',
     alternates: {
         canonical: 'https://relius.ai/resources/docs/people/new-member-contacts/',
     },
     openGraph: {
-        title: 'New Member Contacts | Relius Documentation',
+        title: 'New Member Contacts | Documentation',
         description: 'A dedicated task system for following up with new members. Track contact tasks, mark them complete, and ensure every new person gets a personal welcome.',
         url: 'https://relius.ai/resources/docs/people/new-member-contacts/',
     },

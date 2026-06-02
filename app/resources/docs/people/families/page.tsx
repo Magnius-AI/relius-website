@@ -2,13 +2,13 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Family Management | Relius Documentation',
+    title: 'Family Management | Documentation',
     description: 'Link people into family and household units, manage relationships like spouse, child, and parent, send family-level communications, and generate family giving statements.',
     alternates: {
         canonical: 'https://relius.ai/resources/docs/people/families/',
     },
     openGraph: {
-        title: 'Family Management | Relius Documentation',
+        title: 'Family Management | Documentation',
         description: 'Link people into family and household units, manage relationships like spouse, child, and parent, send family-level communications, and generate family giving statements.',
         url: 'https://relius.ai/resources/docs/people/families/',
     },

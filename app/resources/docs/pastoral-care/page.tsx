@@ -3,13 +3,13 @@ import Link from 'next/link';
 import { Heart, FileText, HandHeart, AlertTriangle, Users, Calendar, TrendingUp } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Pastoral Care - Relius Documentation',
+  title: 'Pastoral Care - Documentation',
   description: 'Track care needs, prayer requests, and support your congregation with Relius pastoral care tools.',
   alternates: {
     canonical: 'https://relius.ai/resources/docs/pastoral-care',
   },
   openGraph: {
-    title: 'Pastoral Care | Relius Documentation',
+    title: 'Pastoral Care | Documentation',
     description: 'Track care needs, prayer requests, and support your congregation with Relius pastoral care tools.',
     url: 'https://relius.ai/resources/docs/pastoral-care',
   },

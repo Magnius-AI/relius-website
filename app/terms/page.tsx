@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { BreadcrumbSchema } from "@/components/seo/structured-data";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Relius",
+  title: "Terms of Service",
   description: "Read the terms and conditions for using Relius church management platform. Understand your rights and responsibilities as a user.",
   alternates: {
     canonical: "https://relius.ai/terms/",

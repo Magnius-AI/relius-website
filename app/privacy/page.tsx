@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { BreadcrumbSchema } from "@/components/seo/structured-data";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Relius",
+  title: "Privacy Policy",
   description: "Learn how Relius collects, uses, and protects your data. Our privacy policy explains our commitment to safeguarding your church's information.",
   alternates: {
     canonical: "https://relius.ai/privacy/",

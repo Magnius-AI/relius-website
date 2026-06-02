@@ -3,13 +3,13 @@ import { Sparkles, BookOpen, FileText, Heart, UserCheck, DollarSign, Languages, 
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'AI Features | Relius Documentation',
+    title: 'AI Features | Documentation',
     description: 'Intelligent AI-powered tools for sermon planning, content creation, pastoral insights, volunteer scheduling, and more.',
     alternates: {
         canonical: 'https://relius.ai/resources/docs/ai/',
     },
     openGraph: {
-        title: 'AI Features | Relius Documentation',
+        title: 'AI Features | Documentation',
         description: 'Intelligent AI-powered tools for sermon planning, content creation, pastoral insights, volunteer scheduling, and more.',
         url: 'https://relius.ai/resources/docs/ai/',
     },

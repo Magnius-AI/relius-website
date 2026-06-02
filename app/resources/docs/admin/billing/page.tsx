@@ -3,13 +3,13 @@ import Link from 'next/link';
 import { CreditCard, ChevronRight, Check, ArrowUpRight, ArrowDownRight, FileText } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Billing & Subscription - Administration - Relius Documentation',
+  title: 'Billing & Subscription - Administration - Documentation',
   description: 'Manage your Relius subscription, view invoices, and understand billing for your church management software.',
   alternates: {
     canonical: 'https://relius.ai/resources/docs/admin/billing',
   },
   openGraph: {
-    title: 'Billing & Subscription | Relius Documentation',
+    title: 'Billing & Subscription | Documentation',
     description: 'Manage your Relius subscription, view invoices, and understand billing.',
     url: 'https://relius.ai/resources/docs/admin/billing',
   },

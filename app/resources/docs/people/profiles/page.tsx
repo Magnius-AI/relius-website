@@ -2,13 +2,13 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Person Profiles | Relius Documentation',
+    title: 'Person Profiles | Documentation',
     description: 'View and manage individual person profiles including contact info, engagement metrics, group memberships, attendance history, and care notes.',
     alternates: {
         canonical: 'https://relius.ai/resources/docs/people/profiles/',
     },
     openGraph: {
-        title: 'Person Profiles | Relius Documentation',
+        title: 'Person Profiles | Documentation',
         description: 'View and manage individual person profiles including contact info, engagement metrics, group memberships, attendance history, and care notes.',
         url: 'https://relius.ai/resources/docs/people/profiles/',
     },

@@ -3,13 +3,13 @@ import { Sparkles, Languages, Globe, Settings, CheckCircle } from 'lucide-react'
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Translation Console | Relius Documentation',
+    title: 'Translation Console | Documentation',
     description: 'Translate church communications, documents, and content into multiple languages to serve multilingual congregations.',
     alternates: {
         canonical: 'https://relius.ai/resources/docs/ai/translation/',
     },
     openGraph: {
-        title: 'Translation Console | Relius Documentation',
+        title: 'Translation Console | Documentation',
         description: 'Translate church communications, documents, and content into multiple languages to serve multilingual congregations.',
         url: 'https://relius.ai/resources/docs/ai/translation/',
     },

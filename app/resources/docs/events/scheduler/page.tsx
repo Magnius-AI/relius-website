@@ -3,13 +3,13 @@ import { Calendar, Plus, Repeat, Users, Clock, Filter, BarChart3, Eye, QrCode, A
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Events Scheduler | Relius Documentation',
+    title: 'Events Scheduler | Documentation',
     description: 'Create and manage church events with calendar views, registration, volunteer coordination, and analytics.',
     alternates: {
         canonical: 'https://relius.ai/resources/docs/events/scheduler/',
     },
     openGraph: {
-        title: 'Events Scheduler | Relius Documentation',
+        title: 'Events Scheduler | Documentation',
         description: 'Create and manage church events with calendar views, registration, volunteer coordination, and analytics.',
         url: 'https://relius.ai/resources/docs/events/scheduler/',
     },

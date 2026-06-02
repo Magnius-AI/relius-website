@@ -3,13 +3,13 @@ import Link from 'next/link';
 import { Settings, ChevronRight, Shield, Bell, Users, MapPin, Clock } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Church Settings - Administration - Relius Documentation',
+  title: 'Church Settings - Administration - Documentation',
   description: 'Configure your church general settings, billing, notifications, security, and new member contact preferences in Relius.',
   alternates: {
     canonical: 'https://relius.ai/resources/docs/admin/settings',
   },
   openGraph: {
-    title: 'Church Settings | Relius Documentation',
+    title: 'Church Settings | Documentation',
     description: 'Configure your church general settings, billing, notifications, security, and new member outreach in Relius.',
     url: 'https://relius.ai/resources/docs/admin/settings',
   },

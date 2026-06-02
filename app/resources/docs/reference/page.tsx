@@ -3,13 +3,13 @@ import Link from 'next/link';
 import { BookOpen, Keyboard, Code, BookMarked, FileText, HelpCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Reference - Relius Documentation',
+  title: 'Reference - Documentation',
   description: 'Quick reference guides, API documentation, glossary, release notes, and FAQ for Relius church management software.',
   alternates: {
     canonical: 'https://relius.ai/resources/docs/reference',
   },
   openGraph: {
-    title: 'Reference | Relius Documentation',
+    title: 'Reference | Documentation',
     description: 'Quick reference guides, API documentation, glossary, release notes, and FAQ for Relius.',
     url: 'https://relius.ai/resources/docs/reference',
   },

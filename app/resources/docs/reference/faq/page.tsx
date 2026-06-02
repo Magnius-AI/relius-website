@@ -3,13 +3,13 @@ import Link from 'next/link';
 import { HelpCircle, ChevronRight, ChevronDown } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'FAQ - Reference - Relius Documentation',
+  title: 'FAQ - Reference - Documentation',
   description: 'Frequently asked questions about Relius church management software. Billing, data, features, migration, and more.',
   alternates: {
     canonical: 'https://relius.ai/resources/docs/reference/faq',
   },
   openGraph: {
-    title: 'FAQ | Relius Documentation',
+    title: 'FAQ | Documentation',
     description: 'Frequently asked questions about Relius. Billing, data, features, and more.',
     url: 'https://relius.ai/resources/docs/reference/faq',
   },

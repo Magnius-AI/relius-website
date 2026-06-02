@@ -3,13 +3,13 @@ import { ArrowRight, Settings, CreditCard, Users, Shield, Bell, UserPlus, Buildi
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Setting Up Your Church | Relius Documentation',
+    title: 'Setting Up Your Church | Documentation',
     description: 'Guide to configuring your church in Relius: General Settings, Billing, Notifications, Security, User Management, and campus setup.',
     alternates: {
         canonical: 'https://relius.ai/resources/docs/getting-started/setup/',
     },
     openGraph: {
-        title: 'Setting Up Your Church | Relius Documentation',
+        title: 'Setting Up Your Church | Documentation',
         description: 'Guide to configuring your church in Relius: General Settings, Billing, Notifications, Security, User Management, and campus setup.',
         url: 'https://relius.ai/resources/docs/getting-started/setup/',
     },

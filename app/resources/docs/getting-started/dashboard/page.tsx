@@ -3,13 +3,13 @@ import { LayoutDashboard, DollarSign, UserPlus, CalendarDays, Users, Clock, List
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Understanding the Dashboard | Relius Documentation',
+    title: 'Understanding the Dashboard | Documentation',
     description: 'Learn what each widget on the Relius dashboard shows, including stat cards, new member contacts, schedule requests, recent activity, and the calendar mini-view.',
     alternates: {
         canonical: 'https://relius.ai/resources/docs/getting-started/dashboard/',
     },
     openGraph: {
-        title: 'Understanding the Dashboard | Relius Documentation',
+        title: 'Understanding the Dashboard | Documentation',
         description: 'Learn what each widget on the Relius dashboard shows, including stat cards, new member contacts, schedule requests, recent activity, and the calendar mini-view.',
         url: 'https://relius.ai/resources/docs/getting-started/dashboard/',
     },

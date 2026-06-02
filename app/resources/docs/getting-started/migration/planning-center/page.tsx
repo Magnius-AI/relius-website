@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Migrating from Planning Center | Relius Documentation",
+  title: "Migrating from Planning Center | Documentation",
   description: "Complete guide to transitioning from Planning Center to Relius with confidence.",
 };
 

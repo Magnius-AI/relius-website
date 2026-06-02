@@ -85,7 +85,7 @@ export async function generateMetadata({ params }: DocPageProps): Promise<Metada
   }
 
   return {
-    title: `${pageTitle} - ${sectionTitle} - Relius Documentation`,
+    title: `${pageTitle} - ${sectionTitle} - Documentation`,
     description: `Learn about ${pageTitle.toLowerCase()} in Relius church management software.`,
     robots: {
       index: false,

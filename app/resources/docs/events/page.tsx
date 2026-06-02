@@ -3,13 +3,13 @@ import { Calendar, CheckSquare, Home, Clock } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Events & Calendar | Relius Documentation',
+    title: 'Events & Calendar | Documentation',
     description: 'Manage church events, track attendance, handle registrations, and coordinate facilities with powerful event management tools.',
     alternates: {
         canonical: 'https://relius.ai/resources/docs/events/',
     },
     openGraph: {
-        title: 'Events & Calendar | Relius Documentation',
+        title: 'Events & Calendar | Documentation',
         description: 'Manage church events, track attendance, handle registrations, and coordinate facilities with powerful event management tools.',
         url: 'https://relius.ai/resources/docs/events/',
     },

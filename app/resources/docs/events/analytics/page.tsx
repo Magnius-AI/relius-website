@@ -2,13 +2,13 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Event Analytics | Relius Documentation',
+    title: 'Event Analytics | Documentation',
     description: 'View event statistics, attendance trends, registration rates, and performance metrics across all events using the Analytics tab in the Events Scheduler.',
     alternates: {
         canonical: 'https://relius.ai/resources/docs/events/analytics/',
     },
     openGraph: {
-        title: 'Event Analytics | Relius Documentation',
+        title: 'Event Analytics | Documentation',
         description: 'View event statistics, attendance trends, registration rates, and performance metrics across all events using the Analytics tab in the Events Scheduler.',
         url: 'https://relius.ai/resources/docs/events/analytics/',
     },
