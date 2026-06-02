@@ -10,9 +10,9 @@ import { BreadcrumbSchema } from "@/components/seo/structured-data";
 import { DEFAULT_SIGNUP_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Best Church CRM Software Compared (2026) | Relius",
+  title: "Best Church CRM Software Compared (2026)",
   description:
-    "Compare the best church CRM platforms for 2026. See how Relius, Planning Center, Breeze, ChurchTrac, and Tithely stack up on features, pricing, and ease of use.",
+    "Compare the best church CRM platforms for 2026 — Relius, Planning Center, Breeze, ChurchTrac, and Tithely on features, pricing, and ease of use.",
   keywords: [
     "best church CRM",
     "church CRM software",

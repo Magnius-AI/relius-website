@@ -2898,7 +2898,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "church-management-software-cost",
-    title: "How Much Does Church Management Software Cost? (2026 Pricing Guide)",
+    title: "How Much Does Church Management Software Cost?",
     excerpt: "Church management software ranges from free to over a thousand dollars a month. Here is what each tier really costs in 2026 — including the processing fees most pricing pages hide.",
     author: "Felix Tang",
     role: "Relius Founder",

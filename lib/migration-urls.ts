@@ -60,7 +60,7 @@ export const MIGRATION_PAGE_META: Record<string, MigrationPageMeta> = {
   tithely: {
     title: "Tithe.ly Alternative — Free AI Church Software",
     description:
-      "Move from Tithe.ly to Relius in 3-4 hours. Import people, donations, tags, and attendance — free. Get AI-powered giving tools, pastoral care, and volunteer scheduling your church actually needs.",
+      "Move from Tithe.ly to Relius in 3-4 hours. Import people, donations, tags, and attendance free — plus AI giving and volunteer scheduling.",
     keywords: [
       "tithely alternative",
       "tithe ai",
@@ -84,7 +84,7 @@ export const MIGRATION_PAGE_META: Record<string, MigrationPageMeta> = {
                                                         ],
                                                           },
                                                             breeze: {
-                                                                title: "Breeze Church Management Alternative — Free AI Software",
+                                                                title: "Breeze Alternative — Free AI Church Software",
                                                                     description: "Switch from Breeze to Relius: AI-powered features, better reporting, and a free tier. Easy migration in 2-3 hours. Modern church management that scales.",
                                                                         keywords: [
                                                                               "breeze church management alternative",

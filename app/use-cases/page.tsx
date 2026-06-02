@@ -10,8 +10,8 @@ import { BreadcrumbSchema } from "@/components/seo/structured-data";
 const featuredUseCase = useCases[0]!;
 
 export const metadata: Metadata = {
-  title: "Church Management Use Cases | Volunteers, Care & Multi-Site",
-  description: "See how churches of all sizes use Relius to coordinate volunteers, track pastoral care, manage multi-campus operations, and streamline administration. Real scenarios, practical solutions.",
+  title: "Church Management Use Cases",
+  description: "See how churches use Relius to coordinate volunteers, track pastoral care, and run multi-campus operations — real scenarios, practical solutions.",
   alternates: {
     canonical: "https://relius.ai/use-cases/",
   },

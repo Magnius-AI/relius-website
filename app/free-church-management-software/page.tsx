@@ -19,7 +19,7 @@ import { BreadcrumbSchema } from "@/components/seo/structured-data";
 import { DEFAULT_SIGNUP_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Free Church Management Software | Relius",
+  title: "Free Church Management Software",
   description:
     "Relius is free church management software for core people, groups, giving, check-in, and church website workflows. No credit card required.",
   keywords: [

@@ -12,7 +12,7 @@ import { BreadcrumbSchema } from "@/components/seo/structured-data";
 
 export const metadata: Metadata = {
   title: { absolute: "About Relius — Free Church Management Software" },
-  description: "Meet the team behind Relius — free church management software purpose-built for ministry. Learn why we built an AI-powered platform to help churches save time and care for people better.",
+  description: "Meet the team behind Relius — free, AI-powered church management software purpose-built for ministry to help churches save time and care for people better.",
   alternates: {
     canonical: "https://relius.ai/about/",
   },
