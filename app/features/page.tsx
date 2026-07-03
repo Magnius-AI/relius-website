@@ -1,17 +1,17 @@
-import { Metadata } from "next";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import Image from "next/image";
-import { CheckCircle2 } from "lucide-react";
 import { coreFeatures, aiFeatures } from "@/data/features";
 import { BreadcrumbSchema } from "@/components/seo/structured-data";
+import { FAQSchema } from "@/components/seo/faq-schema";
 
 export const metadata: Metadata = {
   title: "Church Management Software Features",
   description:
-    "Relius features: AI volunteer scheduling, online giving, kids check-in, groups, events, service planning, and a built-in church website. Free to start.",
+    "Relius features: people management, online giving, kids check-in, groups, events, service planning, pastoral care, and practical AI workflows.",
   alternates: {
     canonical: "https://relius.ai/features/",
   },
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Free Church Management Features | Relius",
     description:
-      "AI volunteer scheduling, online giving, pastoral care tracking, and automated communications — all free to start.",
+      "People, giving, events, groups, check-in, pastoral care, and AI workflows in one calm church operating system.",
     url: "https://relius.ai/features/",
     images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Relius Church Management Features" }],
   },
@@ -34,222 +34,207 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Free Church Management Features | Relius",
     description:
-      "AI volunteer scheduling, online giving, pastoral care tracking, and automated communications — all free to start.",
+      "People, giving, events, groups, check-in, pastoral care, and AI workflows in one calm church operating system.",
   },
 };
+
+const featureFAQs = [
+  {
+    question: "What features does Relius include?",
+    answer:
+      "Relius includes people management, groups, events, check-in, online giving, reporting, pastoral care workflows, service planning, communications, and AI-assisted tools depending on plan.",
+  },
+  {
+    question: "Is Relius really free to start?",
+    answer:
+      "Yes. The Free plan includes core church management and online giving with unlimited members. Donations include standard processor fees plus the Relius platform fee.",
+  },
+  {
+    question: "Which AI features are available?",
+    answer:
+      "Relius includes AI workflows for sermon preparation, content repurposing, pastoral care, giving insights, translation, and ministry recommendations on eligible plans.",
+  },
+];
+
+const workflowHighlights = [
+  "One profile for every person, family, donation, note, and next step",
+  "Free core workflows with transparent giving economics",
+  "Upgrade paths for pastoral care, services, communications, and AI",
+];
 
 export default function FeaturesPage() {
   return (
     <>
-      <BreadcrumbSchema items={[
-        { name: "Home", url: "https://relius.ai/" },
-        { name: "Features", url: "https://relius.ai/features/" },
-      ]} />
-      <div className="py-16 px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white">
-      <div className="mx-auto max-w-7xl">
-        <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] items-center mb-16">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-primary-600 mb-3">Ministry operating system</p>
-            <h1 className="mb-6 text-4xl md:text-5xl font-bold text-slate-900 text-balance">Church management features that save you time</h1>
-            <p className="text-xl text-slate-600 mb-6 leading-relaxed">
-              Relius brings people, services, giving, and communication into one warm, ministry-focused home. Plan with confidence, care with clarity, and never lose track of what matters.
-            </p>
-            <div className="grid sm:grid-cols-2 gap-4 mb-8">
-              {[
-                "Unified calendar + volunteer schedules",
-                "Pastoral care and prayer follow-up",
-                "Insights that feel pastoral",
-                "AI helpers that sound like you",
-              ].map((item) => (
-                <div key={item} className="flex items-start gap-2">
-                  <span className="mt-1 inline-block h-2 w-2 rounded-full bg-accent-500" />
-                  <p className="text-sm font-semibold text-slate-700">{item}</p>
-                </div>
-              ))}
-            </div>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Button variant="gradient" asChild>
-                <Link href="/contact/">Walk through the platform</Link>
-              </Button>
-              <Button variant="secondary" asChild>
-                <Link href="/use-cases/">See use cases</Link>
-              </Button>
-            </div>
-          </div>
-          <div className="bg-white border border-slate-200 rounded-3xl shadow-xl p-6 relative overflow-hidden">
-            <div className="absolute inset-x-10 top-8 h-32 bg-primary-50/40 rounded-full blur-3xl pointer-events-none" aria-hidden="true" />
-            <Image
-              src="/images/features-hero.webp"
-              alt="Church building with rose window"
-              width={600}
-              height={400}
-              className="relative z-10 w-full h-auto object-contain"
-            />
-          </div>
-        </div>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "https://relius.ai/" },
+          { name: "Features", url: "https://relius.ai/features/" },
+        ]}
+      />
+      <FAQSchema faqs={featureFAQs} id="features-faq-schema" />
 
-        <div className="mb-24">
-          <div className="flex items-center gap-5 mb-12">
-            <div className="hidden md:block w-32">
-              <Image
-                src="/images/illustrations/ministry-essentials-v2.webp"
-                alt="Ministry essentials illustration"
-                width={128}
-                height={96}
-                className="h-24 w-full object-contain"
-              />
-            </div>
+      <main className="bg-white">
+        <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 to-white px-6 py-16 lg:px-8 lg:py-24">
+          <div className="absolute inset-0 bg-pattern-grid opacity-[0.025]" />
+          <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.02fr_0.98fr]">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-wide text-primary-600 mb-2">Core workflows</p>
-              <h2 className="text-3xl font-bold text-slate-900">Ministry essentials</h2>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-primary-600">
+                Ministry operating system
+              </p>
+              <h1 className="mb-6 text-balance text-4xl font-bold text-slate-950 md:text-5xl">
+                One calm place to run the work behind ministry
+              </h1>
+              <p className="mb-8 max-w-2xl text-xl leading-relaxed text-slate-600">
+                Relius keeps people, giving, teams, events, care, and AI-assisted tasks connected so your staff can move from scattered administration to clear next steps.
+              </p>
+
+              <div className="mb-8 grid gap-3 sm:grid-cols-3">
+                {workflowHighlights.map((item) => (
+                  <div key={item} className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+                    <CheckCircle2 className="mb-3 h-5 w-5 text-emerald-500" />
+                    <p className="text-sm font-semibold leading-6 text-slate-700">{item}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <Button variant="primary" size="lg" asChild>
+                  <Link href="/pricing/">
+                    Start free
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+                <Button variant="secondary" size="lg" asChild>
+                  <Link href="/contact/">Talk through your workflows</Link>
+                </Button>
+              </div>
             </div>
-          </div>
 
-          <div className="space-y-12">
-            {coreFeatures.map((feature) => {
-              const Icon = feature.icon;
-              return (
-                <div key={feature.id} id={feature.id} className="scroll-mt-24">
-                  <Card className="border-2">
-                    <CardHeader>
-                      <div className="flex items-start gap-4">
-                        <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary-50 flex items-center justify-center">
-                          <Icon className="w-6 h-6 text-primary" />
-                        </div>
-                        <div className="flex-1">
-                          <CardTitle className="text-2xl mb-2">{feature.title}</CardTitle>
-                          <p className="text-slate-500">{feature.description}</p>
-                        </div>
-                      </div>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="grid md:grid-cols-2 gap-4">
-                        {feature.highlights.map((highlight, index) => (
-                          <div key={index} className="flex items-start gap-2">
-                            <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                            <span className="text-slate-600">{highlight}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        <div className="mb-10">
-          <div className="flex flex-col gap-6 mb-12 lg:flex-row lg:items-center lg:justify-between">
-            <div className="flex items-center gap-5">
-              <div className="hidden md:block w-32">
+            <div className="rounded-3xl border border-slate-200 bg-white p-4 shadow-2xl shadow-slate-200/70">
+              <div className="rounded-2xl border border-slate-100 bg-slate-50 p-5">
                 <Image
-                  src="/images/illustrations/ai-features-v2.webp"
-                  alt="AI features illustration"
-                  width={128}
-                  height={96}
-                  className="h-24 w-full object-contain"
+                  src="/images/features-hero.webp"
+                  alt="Church building with a rose window"
+                  width={600}
+                  height={400}
+                  className="mb-5 h-auto w-full rounded-xl object-contain"
+                  priority
                 />
-              </div>
-              <div>
-                <p className="text-sm font-semibold uppercase tracking-wide text-primary-600 mb-2">Optional helpers</p>
-                <div className="flex items-center gap-3">
-                  <h2 id="ai" className="text-3xl font-bold text-slate-900">Work smarter with AI</h2>
-                  <Badge variant="default" className="text-xs whitespace-nowrap self-center">Optional Add-on</Badge>
+                <div className="grid gap-3 sm:grid-cols-3">
+                  {["People", "Giving", "Care"].map((label) => (
+                    <div key={label} className="rounded-xl bg-white p-3 text-center shadow-sm">
+                      <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">{label}</p>
+                      <p className="text-sm font-bold text-slate-900">Connected</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
-            <p className="text-lg text-slate-600 max-w-2xl">
-              AI features that save you hours every week, so you can spend more time on what matters. They amplify ministry-they never replace it.
+          </div>
+        </section>
+
+        <section className="px-6 py-16 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-10 max-w-3xl">
+              <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-primary-600">Core workflows</p>
+              <h2 className="text-3xl font-bold text-slate-900">Free essentials that do not feel stripped down</h2>
+              <p className="mt-3 text-slate-600">
+                Start with the daily work every church needs, then add advanced care, services, communications, and AI when your team is ready.
+              </p>
+            </div>
+
+            <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+              {coreFeatures.map((feature) => {
+                const Icon = feature.icon;
+                return (
+                  <article key={feature.id} id={feature.id} className="scroll-mt-24 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+                    <div className="mb-5 flex items-start gap-4">
+                      <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-primary-50">
+                        <Icon className="h-6 w-6 text-primary-700" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-slate-900">{feature.title}</h3>
+                        <p className="mt-2 text-sm leading-6 text-slate-600">{feature.description}</p>
+                      </div>
+                    </div>
+                    <ul className="space-y-3">
+                      {feature.highlights.slice(0, 4).map((highlight) => (
+                        <li key={highlight} className="flex gap-2 text-sm text-slate-600">
+                          <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500" />
+                          <span>{highlight}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </article>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-accent-50 px-6 py-16 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-10 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+              <div className="max-w-3xl">
+                <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-accent-700">AI that stays practical</p>
+                <h2 className="text-3xl font-bold text-slate-900">Use AI where it saves staff time</h2>
+                <p className="mt-3 text-slate-600">
+                  Relius AI helps draft, summarize, translate, and surface patterns. It supports ministry judgement instead of replacing it.
+                </p>
+              </div>
+              <Badge className="w-fit border-accent-200 bg-white text-accent-700">
+                <Sparkles className="mr-1 h-3.5 w-3.5" />
+                Available on Ministry AI
+              </Badge>
+            </div>
+
+            <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+              {aiFeatures.map((feature) => {
+                const Icon = feature.icon;
+                return (
+                  <article key={feature.id} id={feature.id} className="scroll-mt-24 rounded-2xl border border-accent-100 bg-white p-6 shadow-sm">
+                    <div className="mb-5 flex items-start gap-4">
+                      <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-accent-50">
+                        <Icon className="h-6 w-6 text-accent-700" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-slate-900">{feature.title}</h3>
+                        <p className="mt-2 text-sm leading-6 text-slate-600">{feature.description}</p>
+                      </div>
+                    </div>
+                    <ul className="space-y-3">
+                      {feature.highlights.slice(0, 3).map((highlight) => (
+                        <li key={highlight} className="flex gap-2 text-sm text-slate-600">
+                          <CheckCircle2 className="mt-0.5 h-4 w-4 flex-shrink-0 text-accent-600" />
+                          <span>{highlight}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </article>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        <section className="px-6 py-16 lg:px-8">
+          <div className="mx-auto max-w-4xl rounded-3xl border border-slate-200 bg-slate-50 p-8 text-center md:p-12">
+            <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-primary-600">See it together</p>
+            <h2 className="mb-4 text-3xl font-bold text-slate-900">Map Relius to your ministry week</h2>
+            <p className="mx-auto mb-8 max-w-2xl text-lg text-slate-600">
+              Bring your current tools, volunteer rhythms, giving setup, and care process. We will show where Relius fits and where it should stay out of the way.
             </p>
+            <div className="flex flex-col justify-center gap-4 sm:flex-row">
+              <Button variant="primary" size="lg" asChild>
+                <Link href="/contact/">Schedule a conversation</Link>
+              </Button>
+              <Button variant="secondary" size="lg" asChild>
+                <Link href="/pricing/">Compare plans</Link>
+              </Button>
+            </div>
           </div>
-
-          <div className="space-y-12">
-            {aiFeatures.map((feature) => {
-              const Icon = feature.icon;
-              return (
-                <div key={feature.id} id={feature.id} className="scroll-mt-24">
-                  <Card className="border-2 border-primary/30 bg-gradient-to-br from-white to-accent-50/30">
-                    <CardHeader>
-                      <div className="flex items-start gap-4">
-                        <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-accent-100 flex items-center justify-center">
-                          <Icon className="w-6 h-6 text-accent" />
-                        </div>
-                        <div className="flex-1">
-                          <CardTitle className="text-2xl mb-2">{feature.title}</CardTitle>
-                          <p className="text-slate-500">{feature.description}</p>
-                        </div>
-                      </div>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="grid md:grid-cols-2 gap-4">
-                        {feature.highlights.map((highlight, index) => (
-                          <div key={index} className="flex items-start gap-2">
-                            <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                            <span className="text-slate-600">{highlight}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        <div className="text-center bg-white border border-slate-200 rounded-2xl p-12 shadow-sm">
-          <h3 className="mb-4 text-2xl font-bold text-slate-900">See how it all works together</h3>
-          <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Let&apos;s talk about your church&apos;s unique needs. We&apos;ll show you how Relius can help you spend less time on logistics and more time on ministry.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="primary" size="lg" asChild>
-              <Link href="/contact/">Schedule a Conversation</Link>
-            </Button>
-            <Button variant="secondary" size="lg" asChild>
-              <Link href="/pricing/">See Pricing</Link>
-            </Button>
-          </div>
-          <p className="text-sm text-slate-500 mt-6">No pressure, just answers.</p>
-        </div>
-      </div>
-    </div>
-          <script
-                  type="application/ld+json"
-                          dangerouslySetInnerHTML={{
-                                    __html: JSON.stringify({
-                                                "@context": "https://schema.org",
-                                                            "@type": "FAQPage",
-                                                                        mainEntity: [
-                                                                                      {
-                                                                                                      "@type": "Question",
-                                                                                                                      name: "What features does Relius church management software include?",
-                                                                                                                                      acceptedAnswer: {
-                                                                                                                                                        "@type": "Answer",
-                                                                                                                                                                          text: "Relius includes people management, volunteer scheduling, online giving, pastoral care tracking, service planning, AI-powered insights, group management, event management, and automated church communications — all free.",
-                                                                                                                                                                                          },
-                                                                                                                                                                                                        },
-                                                                                                                                                                                                                      {
-                                                                                                                                                                                                                                      "@type": "Question",
-                                                                                                                                                                                                                                                      name: "Is Relius really free for churches?",
-                                                                                                                                                                                                                                                                      acceptedAnswer: {
-                                                                                                                                                                                                                                                                                        "@type": "Answer",
-                                                                                                                                                                                                                                                                                                          text: "Yes, Relius offers a completely free plan with unlimited members, online giving, AI tools, and core church management features. We only charge small processing fees on donations.",
-                                                                                                                                                                                                                                                                                                                          },
-                                                                                                                                                                                                                                                                                                                                        },
-                                                                                                                                                                                                                                                                                                                                                      {
-                                                                                                                                                                                                                                                                                                                                                                      "@type": "Question",
-                                                                                                                                                                                                                                                                                                                                                                                      name: "Does Relius have AI features for churches?",
-                                                                                                                                                                                                                                                                                                                                                                                                      acceptedAnswer: {
-                                                                                                                                                                                                                                                                                                                                                                                                                        "@type": "Answer",
-                                                                                                                                                                                                                                                                                                                                                                                                                                          text: "Yes, Relius includes AI-powered sermon preparation, content creation, pastoral care insights, giving analytics, and volunteer scheduling optimization to save ministry leaders 10+ hours per week.",
-                                                                                                                                                                                                                                                                                                                                                                                                                                                          },
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                        },
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ],
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              }),
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      }}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            />
+        </section>
+      </main>
     </>
   );
 }

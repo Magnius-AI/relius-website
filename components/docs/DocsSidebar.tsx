@@ -9,6 +9,9 @@ interface DocsSidebarProps {
   currentPath: string;
 }
 
+const getSectionId = (title: string) =>
+  `docs-section-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+
 export function DocsSidebar({ currentPath }: DocsSidebarProps) {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(() => {
     // Auto-expand the section that contains the current page
@@ -36,11 +39,16 @@ export function DocsSidebar({ currentPath }: DocsSidebarProps) {
         const isExpanded = expandedSections.has(section.title);
         const Icon = section.icon;
         const hasActiveItem = section.items.some((item) => currentPath === item.href);
+        const sectionId = getSectionId(section.title);
+        const triggerId = `${sectionId}-trigger`;
 
         return (
           <div key={section.title}>
             <button
+              id={triggerId}
               onClick={() => toggleSection(section.title)}
+              aria-expanded={isExpanded}
+              aria-controls={sectionId}
               className={`
                 w-full flex items-center justify-between px-3 py-2 rounded-lg
                 text-sm font-semibold transition-colors
@@ -52,10 +60,11 @@ export function DocsSidebar({ currentPath }: DocsSidebarProps) {
               `}
             >
               <span className="flex items-center gap-2">
-                <Icon className="h-4 w-4" />
+                <Icon className="h-4 w-4" aria-hidden="true" />
                 {section.title}
               </span>
               <ChevronDown
+                aria-hidden="true"
                 className={`
                   h-4 w-4 text-slate-400 transition-transform duration-200
                   ${isExpanded ? 'rotate-180' : ''}
@@ -64,6 +73,11 @@ export function DocsSidebar({ currentPath }: DocsSidebarProps) {
             </button>
 
             <div
+              id={sectionId}
+              role="region"
+              aria-labelledby={triggerId}
+              aria-hidden={!isExpanded}
+              inert={!isExpanded}
               className={`
                 overflow-hidden transition-all duration-200 ease-in-out
                 ${isExpanded ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}
@@ -76,6 +90,7 @@ export function DocsSidebar({ currentPath }: DocsSidebarProps) {
                     <Link
                       key={item.href}
                       href={item.href}
+                      aria-current={isActive ? 'page' : undefined}
                       className={`
                         block px-3 py-1.5 rounded-md text-sm transition-colors
                         ${

@@ -52,11 +52,14 @@ export function Header() {
           aria-label="Global"
         >
           <div className="flex lg:flex-1">
-            <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2 group">
+            <Link
+              href="/"
+              className="-m-1.5 p-1.5 flex items-center gap-2 group rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2"
+            >
               <div className="relative w-8 h-8 transition-transform duration-300 group-hover:scale-110">
                 <Image
                   src="/relius_emblem_circle.png"
-                  alt="Relius Logo"
+                  alt=""
                   fill
                   className="object-contain"
                 />
@@ -69,11 +72,11 @@ export function Header() {
           <div className="flex lg:hidden">
             <button
               type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-secondary hover:text-primary transition-colors"
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-secondary hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2"
               onClick={() => setMobileMenuOpen(true)}
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-menu"
-              aria-label="Main menu"
+              aria-label="Open main menu"
             >
               <span className="sr-only">Open main menu</span>
               <Menu className="h-6 w-6" aria-hidden="true" />
@@ -84,7 +87,7 @@ export function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium leading-6 text-secondary hover:text-accent transition-colors relative group"
+                className="text-sm font-medium leading-6 text-secondary hover:text-accent transition-colors relative group rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-4"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
@@ -94,13 +97,13 @@ export function Header() {
           <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-6 items-center">
             <Link
               href="https://app.relius.ai"
-              className="text-sm font-semibold leading-6 text-primary hover:text-accent transition-colors"
+              className="rounded-sm text-sm font-semibold leading-6 text-primary hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-4"
             >
               Log in
             </Link>
             <Link
               href={DEFAULT_SIGNUP_URL}
-              className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-lg hover:bg-accent hover:shadow-accent/25 transition-all duration-300 flex items-center gap-2 group"
+              className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-lg hover:bg-accent hover:shadow-accent/25 transition-all duration-300 flex items-center gap-2 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2"
             >
               Get Started Free
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -113,10 +116,13 @@ export function Header() {
       <div
         className={`lg:hidden fixed inset-0 z-50 ${mobileMenuOpen ? "pointer-events-auto" : "pointer-events-none"
           }`}
+        aria-hidden={!mobileMenuOpen}
+        inert={!mobileMenuOpen}
       >
         <div
           className={`fixed inset-0 bg-black/50 transition-opacity duration-300 ${mobileMenuOpen ? "opacity-100" : "opacity-0"
             }`}
+          aria-hidden="true"
           onClick={() => setMobileMenuOpen(false)}
         />
         <div
@@ -128,11 +134,15 @@ export function Header() {
             }`}
         >
           <div className="flex items-center justify-between">
-            <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
+            <Link
+              href="/"
+              className="-m-1.5 p-1.5 flex items-center gap-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2"
+              onClick={() => setMobileMenuOpen(false)}
+            >
               <div className="relative w-8 h-8">
                 <Image
                   src="/relius_emblem_circle.png"
-                  alt="Relius Logo"
+                  alt=""
                   fill
                   className="object-contain"
                 />
@@ -141,8 +151,9 @@ export function Header() {
             </Link>
             <button
               type="button"
-              className="-m-2.5 rounded-md p-2.5 text-secondary hover:text-primary transition-colors"
+              className="-m-2.5 rounded-md p-2.5 text-secondary hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2"
               onClick={() => setMobileMenuOpen(false)}
+              aria-label="Close main menu"
             >
               <span className="sr-only">Close menu</span>
               <X className="h-6 w-6" aria-hidden="true" />
@@ -155,7 +166,7 @@ export function Header() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary hover:bg-gray-50 hover:text-accent transition-colors"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-primary hover:bg-gray-50 hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
@@ -165,13 +176,15 @@ export function Header() {
               <div className="py-6 space-y-4">
                 <Link
                   href="https://app.relius.ai"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-primary hover:bg-gray-50 hover:text-accent transition-colors"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-primary hover:bg-gray-50 hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2"
+                  onClick={() => setMobileMenuOpen(false)}
                 >
                   Log in
                 </Link>
                 <Link
                   href={DEFAULT_SIGNUP_URL}
-                  className="flex items-center justify-center gap-2 w-full rounded-full bg-primary px-3 py-3 text-base font-semibold text-white shadow-sm hover:bg-accent transition-colors"
+                  className="flex items-center justify-center gap-2 w-full rounded-full bg-primary px-3 py-3 text-base font-semibold text-white shadow-sm hover:bg-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2"
+                  onClick={() => setMobileMenuOpen(false)}
                 >
                   Get Started Free
                   <ArrowRight className="w-4 h-4" />

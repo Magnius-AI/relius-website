@@ -68,7 +68,7 @@ export const coreFeatures = [
       "Generate year-end statements effortlessly",
       "Support multiple funds and campaigns",
       "Identify donors who might need a check-in",
-      "Online giving integration coming soon",
+      "Online giving with transparent processing and platform fees",
     ],
   },
   {

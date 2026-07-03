@@ -7,25 +7,24 @@ import { aiFeaturesSummary } from "@/data/features";
 export function AiDifference() {
 
   return (
-    <section className="py-24 px-6 lg:px-8 bg-slate-950 relative overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-accent-500/20 blur-[120px] rounded-full pointer-events-none" />
+    <section className="py-24 px-6 lg:px-8 bg-accent-50 relative overflow-hidden">
+      <div className="absolute inset-0 bg-pattern-grid opacity-[0.04]" />
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent-200 to-transparent" />
 
       <div className="mx-auto max-w-7xl relative z-10">
         <div className="text-center mb-20">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-accent-300 text-sm font-medium mb-6 backdrop-blur-sm">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-accent-200 text-accent-700 text-sm font-medium mb-6 shadow-sm">
             <Sparkles className="w-4 h-4" />
-            <span className="bg-gradient-to-r from-accent-300 to-white bg-clip-text text-transparent">
+            <span>
               Powered by Advanced AI
             </span>
           </div>
 
-          <h2 className="text-balance mb-6 text-white text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
-            AI that helps, <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-cyan-300">not hinders</span>
+          <h2 className="text-balance mb-6 text-slate-900 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
+            AI that helps, <span className="text-gradient-accent">not hinders</span>
           </h2>
 
-          <p className="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
             Save hours every week with thoughtful AI assistance. From drafting sermons to spotting care needs, Relius handles the heavy lifting so you can focus on people.
           </p>
         </div>
@@ -34,19 +33,19 @@ export function AiDifference() {
           {aiFeaturesSummary.map((feature) => {
             const Icon = feature.icon;
             return (
-              <Card key={feature.title} className="group bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 overflow-hidden relative">
-                <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+              <Card key={feature.title} className="group bg-white border-accent-100 hover:border-accent-200 transition-all duration-300 overflow-hidden relative">
+                <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-[0.03] transition-opacity duration-500`} />
 
                 <CardContent className="p-8 relative z-10">
                   <div className={`mb-6 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br ${feature.gradient} shadow-lg shadow-black/20 group-hover:scale-110 transition-transform duration-300`}>
                     <Icon className="w-6 h-6 text-white" />
                   </div>
 
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent-300 transition-colors">
+                  <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-accent-700 transition-colors">
                     {feature.title}
                   </h3>
 
-                  <p className="text-slate-400 leading-relaxed text-sm group-hover:text-slate-300 transition-colors">
+                  <p className="text-slate-600 leading-relaxed text-sm transition-colors">
                     {feature.description}
                   </p>
                 </CardContent>

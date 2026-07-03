@@ -4,7 +4,7 @@ import Script from "next/script";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { blogPosts, publishedBlogPosts, getBlogPost } from "@/data/blog-posts";
+import { publishedBlogPosts, getBlogPost } from "@/data/blog-posts";
 import { StoryIllustration } from "@/components/illustrations";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -15,7 +15,7 @@ type BlogPageProps = {
 };
 
 export async function generateStaticParams() {
-  return blogPosts.map((post) => ({ slug: post.slug }));
+  return publishedBlogPosts.map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({ params }: BlogPageProps): Promise<Metadata> {

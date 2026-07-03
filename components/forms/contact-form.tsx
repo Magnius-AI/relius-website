@@ -8,9 +8,7 @@ import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { analytics } from "@/lib/analytics";
-
-// Cloudflare Worker endpoint for form submissions
-const FORM_ENDPOINT = process.env.NEXT_PUBLIC_CONTACT_FORM_ENDPOINT || "https://relius-contact-form.kishor-panthi00.workers.dev";
+import { WORKER_ENDPOINTS } from "@/lib/constants";
 
 const CURRENT_SOFTWARE_OPTIONS = [
   { value: "", label: "Select current software" },
@@ -89,7 +87,7 @@ export function ContactForm() {
     setSubmitError(null);
 
     try {
-      const response = await fetch(FORM_ENDPOINT, {
+      const response = await fetch(WORKER_ENDPOINTS.CONTACT, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

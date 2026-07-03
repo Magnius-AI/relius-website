@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useId, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Loader2, CheckCircle2, Mail } from "lucide-react";
 import { analytics } from "@/lib/analytics";
+import { WORKER_ENDPOINTS } from "@/lib/constants";
 
 interface NewsletterFormProps {
   variant?: "default" | "compact";
@@ -11,9 +12,12 @@ interface NewsletterFormProps {
 }
 
 export function NewsletterForm({ variant = "default", className = "" }: NewsletterFormProps) {
+  const generatedId = useId().replace(/:/g, "");
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const emailInputId = `newsletter-email-${variant}-${generatedId}`;
+  const errorId = `${emailInputId}-error`;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -28,13 +32,13 @@ export function NewsletterForm({ variant = "default", className = "" }: Newslett
     setErrorMessage("");
 
     try {
-      const response = await fetch("/api/newsletter", {
+      const response = await fetch(WORKER_ENDPOINTS.NEWSLETTER, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email: email.trim() }),
       });
 
-      const data = await response.json();
+      const data = await response.json().catch(() => ({}));
 
       if (!response.ok) {
         throw new Error(data.error || "Failed to subscribe");
@@ -67,15 +71,17 @@ export function NewsletterForm({ variant = "default", className = "" }: Newslett
     return (
       <form onSubmit={handleSubmit} className={`flex flex-col gap-2 ${className}`}>
         <div className="flex gap-2">
-          <label className="sr-only" htmlFor="newsletter-email-compact">
+          <label className="sr-only" htmlFor={emailInputId}>
             Email address
           </label>
           <input
-            id="newsletter-email-compact"
+            id={emailInputId}
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="you@church.org"
+            aria-invalid={status === "error"}
+            aria-describedby={status === "error" ? errorId : undefined}
             className="flex-1 min-w-0 px-3 py-2 text-sm rounded-lg border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
             disabled={status === "loading"}
             required
@@ -95,7 +101,9 @@ export function NewsletterForm({ variant = "default", className = "" }: Newslett
           </Button>
         </div>
         {status === "error" && (
-          <p className="text-xs text-red-500">{errorMessage}</p>
+          <p id={errorId} className="text-xs text-red-500" role="alert" aria-live="polite">
+            {errorMessage}
+          </p>
         )}
       </form>
     );
@@ -104,17 +112,19 @@ export function NewsletterForm({ variant = "default", className = "" }: Newslett
   return (
     <form onSubmit={handleSubmit} className={`space-y-3 ${className}`}>
       <div className="flex flex-col sm:flex-row gap-3">
-        <label className="sr-only" htmlFor="newsletter-email">
+        <label className="sr-only" htmlFor={emailInputId}>
           Email address
         </label>
         <div className="relative flex-1">
           <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
           <input
-            id="newsletter-email"
+            id={emailInputId}
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="you@church.org"
+            aria-invalid={status === "error"}
+            aria-describedby={status === "error" ? errorId : undefined}
             className="w-full pl-10 pr-4 py-2.5 text-sm rounded-xl border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
             disabled={status === "loading"}
             required
@@ -137,7 +147,9 @@ export function NewsletterForm({ variant = "default", className = "" }: Newslett
         </Button>
       </div>
       {status === "error" && (
-        <p className="text-sm text-red-500">{errorMessage}</p>
+        <p id={errorId} className="text-sm text-red-500" role="alert" aria-live="polite">
+          {errorMessage}
+        </p>
       )}
     </form>
   );

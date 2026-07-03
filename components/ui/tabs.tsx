@@ -59,10 +59,12 @@ export function TabsTrigger({ value, children, className }: TabsTriggerProps) {
 
   const { activeTab, setActiveTab } = context;
   const isSelected = activeTab === value;
+  const triggerId = `tab-${value}`;
   const contentId = `tab-content-${value}`;
 
   return (
     <button
+      id={triggerId}
       role="tab"
       aria-selected={isSelected}
       aria-controls={contentId}
@@ -92,6 +94,7 @@ export function TabsContent({ value, children, className }: TabsContentProps) {
   if (!context) throw new Error("TabsContent must be used within Tabs");
 
   const { activeTab } = context;
+  const triggerId = `tab-${value}`;
   const contentId = `tab-content-${value}`;
 
   if (activeTab !== value) return null;
@@ -100,7 +103,7 @@ export function TabsContent({ value, children, className }: TabsContentProps) {
     <div
       role="tabpanel"
       id={contentId}
-      aria-labelledby={`tab-${value}`}
+      aria-labelledby={triggerId}
       tabIndex={0}
       className={className}
     >

@@ -5,6 +5,8 @@
 
 export interface Env {
   RESEND_API_KEY: string;
+  BEEHIIV_API_KEY: string;
+  BEEHIIV_PUBLICATION_ID: string;
   ALLOWED_ORIGIN: string;
   TO_EMAIL: string;
   FROM_EMAIL: string;
@@ -41,12 +43,27 @@ interface ContactFormData {
   honeypot?: string;
 }
 
+interface NewsletterFormData {
+  email: string;
+}
+
 interface ResendResponse {
   id?: string;
   error?: {
     message: string;
     name: string;
   };
+}
+
+type ServiceResult = {
+  success: boolean;
+  error?: string;
+  message?: string;
+};
+
+function normalizePath(pathname: string): string {
+  const normalized = pathname.replace(/\/+$/, "");
+  return normalized || "/";
 }
 
 // CORS headers helper
@@ -63,6 +80,10 @@ function corsHeaders(origin: string, allowedOrigin: string): HeadersInit {
     "Access-Control-Allow-Headers": "Content-Type",
     "Access-Control-Max-Age": "86400",
   };
+}
+
+function isValidEmail(email: string): boolean {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
 // Validation function
@@ -99,8 +120,7 @@ function validateFormData(data: unknown): {
   }
 
   // Email format validation
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(formData.email as string)) {
+  if (!isValidEmail(formData.email as string)) {
     return { valid: false, error: "Invalid email format" };
   }
 
@@ -129,6 +149,32 @@ function validateFormData(data: unknown): {
         : undefined,
       goals: (formData.goals as string).trim(),
     },
+  };
+}
+
+function validateNewsletterData(data: unknown): {
+  valid: boolean;
+  error?: string;
+  data?: NewsletterFormData;
+} {
+  if (!data || typeof data !== "object") {
+    return { valid: false, error: "Invalid request body" };
+  }
+
+  const formData = data as Record<string, unknown>;
+
+  if (!formData.email || typeof formData.email !== "string") {
+    return { valid: false, error: "Valid email is required" };
+  }
+
+  const email = formData.email.trim().toLowerCase();
+  if (!isValidEmail(email)) {
+    return { valid: false, error: "Valid email is required" };
+  }
+
+  return {
+    valid: true,
+    data: { email },
   };
 }
 
@@ -276,12 +322,7 @@ async function sendEmail(
     text: formatEmailText(data),
   };
 
-  console.log("Sending email with payload:", JSON.stringify({
-    from: emailPayload.from,
-    to: emailPayload.to,
-    reply_to: emailPayload.reply_to,
-    subject: emailPayload.subject,
-  }));
+  console.log("Sending contact notification email");
 
   const response = await fetch("https://api.resend.com/emails", {
     method: "POST",
@@ -294,18 +335,20 @@ async function sendEmail(
 
   const responseText = await response.text();
   console.log("Resend API response status:", response.status);
-  console.log("Resend API response body:", responseText);
 
   let result: ResendResponse;
   try {
     result = JSON.parse(responseText);
   } catch {
-    console.error("Failed to parse Resend response:", responseText);
+    console.error("Failed to parse Resend response");
     return { success: false, error: "Invalid response from email service" };
   }
 
   if (!response.ok || result.error) {
-    console.error("Resend API error:", result.error);
+    console.error("Resend API error", {
+      status: response.status,
+      name: result.error?.name,
+    });
     return {
       success: false,
       error: result.error?.message || "Failed to send email",
@@ -314,6 +357,56 @@ async function sendEmail(
 
   console.log("Email sent successfully, ID:", result.id);
   return { success: true };
+}
+
+async function subscribeToNewsletter(
+  data: NewsletterFormData,
+  env: Env
+): Promise<ServiceResult> {
+  if (!env.BEEHIIV_API_KEY || !env.BEEHIIV_PUBLICATION_ID) {
+    console.error("Missing beehiiv configuration");
+    return {
+      success: false,
+      error: "Newsletter service not configured",
+    };
+  }
+
+  const response = await fetch(
+    `https://api.beehiiv.com/v2/publications/${env.BEEHIIV_PUBLICATION_ID}/subscriptions`,
+    {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${env.BEEHIIV_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: data.email,
+        reactivate_existing: true,
+        send_welcome_email: true,
+        utm_source: "website_footer",
+      }),
+    }
+  );
+
+  if (response.status === 409) {
+    return {
+      success: true,
+      message: "You're already subscribed!",
+    };
+  }
+
+  if (!response.ok) {
+    console.error("beehiiv subscription failed", { status: response.status });
+    return {
+      success: false,
+      error: "Failed to subscribe. Please try again.",
+    };
+  }
+
+  return {
+    success: true,
+    message: "Successfully subscribed to newsletter",
+  };
 }
 
 // Simple in-memory rate limiting (resets on worker restart)
@@ -426,8 +519,7 @@ async function sendCTANotification(
   });
 
   if (!response.ok) {
-    const errorText = await response.text();
-    console.error("CTA notification email failed:", errorText);
+    console.error("CTA notification email failed", { status: response.status });
     return { success: false, error: "Failed to send notification" };
   }
 
@@ -518,8 +610,7 @@ async function sendDiscordNotification(
   });
 
   if (!response.ok) {
-    const errorText = await response.text();
-    throw new Error(`Discord webhook failed: ${response.status} - ${errorText}`);
+    throw new Error(`Discord webhook failed: ${response.status}`);
   }
 }
 
@@ -565,7 +656,7 @@ export default {
     const origin = request.headers.get("Origin") || "";
     const cors = corsHeaders(origin, env.ALLOWED_ORIGIN);
     const url = new URL(request.url);
-    const path = url.pathname;
+    const path = normalizePath(url.pathname);
 
     // Handle CORS preflight
     if (request.method === "OPTIONS") {
@@ -626,6 +717,59 @@ export default {
         console.error("CTA notification error:", error);
         return new Response(
           JSON.stringify({ success: false, error: "Failed to process" }),
+          {
+            status: 500,
+            headers: { ...cors, "Content-Type": "application/json" },
+          }
+        );
+      }
+    }
+
+    // Route: /newsletter - Beehiiv newsletter subscription
+    if (path === "/newsletter") {
+      if (!checkRateLimit(`newsletter:${clientIP}`)) {
+        return new Response(
+          JSON.stringify({
+            success: false,
+            error: "Too many requests. Please try again later.",
+          }),
+          {
+            status: 429,
+            headers: { ...cors, "Content-Type": "application/json" },
+          }
+        );
+      }
+
+      try {
+        const body = await request.json();
+        const validation = validateNewsletterData(body);
+
+        if (!validation.valid || !validation.data) {
+          return new Response(
+            JSON.stringify({ success: false, error: validation.error }),
+            {
+              status: 400,
+              headers: { ...cors, "Content-Type": "application/json" },
+            }
+          );
+        }
+
+        const result = await subscribeToNewsletter(validation.data, env);
+
+        return new Response(
+          JSON.stringify(result),
+          {
+            status: result.success ? 200 : 500,
+            headers: { ...cors, "Content-Type": "application/json" },
+          }
+        );
+      } catch (error) {
+        console.error("Newsletter subscription error:", error);
+        return new Response(
+          JSON.stringify({
+            success: false,
+            error: "Failed to subscribe. Please try again.",
+          }),
           {
             status: 500,
             headers: { ...cors, "Content-Type": "application/json" },

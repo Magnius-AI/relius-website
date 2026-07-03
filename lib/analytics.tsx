@@ -3,15 +3,12 @@
 import { useEffect } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import posthog from "posthog-js";
+import { WORKER_ENDPOINTS } from "@/lib/constants";
 
 // Google Ads conversion tracking constants
 const GOOGLE_ADS_CONVERSION_ID = "AW-17934148646";
 const GOOGLE_ADS_SIGNUP_LABEL = "cz-bCI3y9pMcEKbI1edC";
 const GOOGLE_ADS_SIGNUP_SEND_TO = `${GOOGLE_ADS_CONVERSION_ID}/${GOOGLE_ADS_SIGNUP_LABEL}`;
-
-// Worker endpoint for CTA notifications
-const CTA_NOTIFICATION_URL =
-    process.env.NEXT_PUBLIC_WORKER_URL || "https://contact-form.relius.workers.dev";
 
 // TypeScript declaration for gtag
 declare global {
@@ -123,7 +120,7 @@ export const analytics = {
       // 3. Send real-time notification (non-blocking)
       // Only notify for signup buttons
       if (ctaName.includes("free_trial") || ctaName.includes("get_started_free")) {
-              fetch(`${CTA_NOTIFICATION_URL}/notify-cta`, {
+              fetch(WORKER_ENDPOINTS.CTA_NOTIFICATION, {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
                         body: JSON.stringify({

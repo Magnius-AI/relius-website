@@ -43,11 +43,14 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
           {/* Brand Column */}
           <div className="lg:col-span-4 space-y-6">
-            <Link href="/" className="flex items-center gap-3 group w-fit">
+            <Link
+              href="/"
+              className="flex items-center gap-3 group w-fit rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2"
+            >
               <div className="p-2 rounded-xl bg-white border border-slate-100 shadow-sm transition-all group-hover:shadow-md group-hover:border-primary-100">
                 <Image
                   src="/relius_emblem_circle.png"
-                  alt="Relius Emblem"
+                  alt=""
                   width={40}
                   height={40}
                   className="transition-transform group-hover:scale-105"
@@ -71,7 +74,7 @@ export function Footer() {
             <div className="flex items-center gap-4 pt-2">
               <a
                 href="mailto:support@relius.ai"
-                className="text-slate-400 hover:text-primary transition-colors"
+                className="rounded-md text-slate-400 hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2"
                 aria-label="Email support"
               >
                 <Mail className="h-5 w-5" />
@@ -82,7 +85,7 @@ export function Footer() {
                   <a
                     key={item.name}
                     href={item.href}
-                    className="text-slate-400 hover:text-primary transition-colors"
+                    className="rounded-md text-slate-400 hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2"
                     aria-label={item.name}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -103,7 +106,7 @@ export function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-sm text-slate-600 hover:text-primary transition-colors"
+                      className="rounded-sm text-sm text-slate-600 hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2"
                     >
                       {link.name}
                     </Link>
@@ -119,7 +122,7 @@ export function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-sm text-slate-600 hover:text-primary transition-colors"
+                      className="rounded-sm text-sm text-slate-600 hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2"
                     >
                       {link.name}
                     </Link>
@@ -135,7 +138,7 @@ export function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-sm text-slate-600 hover:text-primary transition-colors"
+                      className="rounded-sm text-sm text-slate-600 hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2"
                     >
                       {link.name}
                     </Link>
@@ -151,7 +154,7 @@ export function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-sm text-slate-600 hover:text-primary transition-colors"
+                      className="rounded-sm text-sm text-slate-600 hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2"
                     >
                       {link.name}
                     </Link>

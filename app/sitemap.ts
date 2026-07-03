@@ -9,8 +9,58 @@ export const dynamic = "force-static";
 
 const BASE_URL = "https://relius.ai";
 
-// Paths disallowed in robots.txt — never list these in the sitemap.
-const DISALLOWED_PREFIXES = ["/groups", "/donations", "/training", "/docs/releases"];
+// Redirect-only and noindex aliases should not be listed in the sitemap.
+const DOC_REDIRECT_ALIASES = [
+  "giving/donation-tracking",
+  "giving/tax-receipts",
+  "giving/online-giving-setup",
+  "administration/integrations",
+  "administration/church-settings",
+  "administration/reporting",
+  "people/family",
+  "people/visitor",
+  "people/visitor-tracking",
+  "people/bulk-import",
+  "getting-started/roles-permissions",
+  "getting-started/permissions",
+  "ai/pastoral-insights",
+  "ai/volunteer-scheduler",
+  "events-calendar",
+  "public-website",
+  "services/planning",
+  "services/service-planning",
+  "website/online-giving-page",
+];
+
+const REDIRECT_ONLY_ROUTES = new Set([
+  "/demo",
+  "/integrations",
+  "/people",
+  "/resources",
+  "/resources/data-cleanup-guide",
+  "/resources/migration-checklist",
+  "/resources/setting-up-your-church",
+  "/resources/staff-communication-template",
+  "/resources/switching-from-another-system",
+  "/resources/training-your-team",
+  "/resources/videos",
+  "/resources/volunteer-recruitment-strategies",
+  "/training",
+  "/resources/docs/administration/integrations",
+  "/resources/docs/events/calendar",
+  "/resources/docs/events/rentals",
+  "/resources/docs/giving/donation-tracking",
+  "/resources/docs/giving/tax-receipts",
+  ...DOC_REDIRECT_ALIASES.map((slug) => `/resources/docs/${slug}`),
+]);
+
+const NOINDEX_PREFIXES = ["/docs"];
+
+function shouldExcludeRoute(route: string): boolean {
+  if (route === "/groups" || route === "/donations") return false;
+  if (REDIRECT_ONLY_ROUTES.has(route)) return true;
+  return NOINDEX_PREFIXES.some((prefix) => route === prefix || route.startsWith(`${prefix}/`));
+}
 
 /**
  * Walk the app/ directory and derive every static route from its page.tsx files.
@@ -39,9 +89,7 @@ function getStaticRoutes(): string[] {
   }
 
   walk(appDir, []);
-  return routes.filter(
-    (r) => !DISALLOWED_PREFIXES.some((p) => r === p || r.startsWith(p + "/"))
-  );
+  return routes.filter((route) => !shouldExcludeRoute(route));
 }
 
 function toUrl(route: string): string {
