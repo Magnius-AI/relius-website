@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title: "Switch to Relius | Free Church Data Migration in Hours",
     description: "Free guided migration from Planning Center, ChurchTrac, or Tithe.ly to Relius. People, donations, and history transfer safely in 2-4 hours.",
     url: "https://relius.ai/switch/",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Switch to Relius" }],
+    images: [{ url: "/og-relius-2026.png", width: 1200, height: 630, alt: "Switch to Relius" }],
   },
   twitter: {
     card: "summary_large_image",

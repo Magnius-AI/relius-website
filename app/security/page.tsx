@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Security & Compliance | Relius",
     description: "Enterprise-grade security for your church data. Encryption, RBAC, audit logs, and GDPR compliance.",
     url: "https://relius.ai/security/",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Relius Security & Compliance" }],
+    images: [{ url: "/og-relius-2026.png", width: 1200, height: 630, alt: "Relius Security & Compliance" }],
   },
   twitter: {
     card: "summary_large_image",

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: "Church Management Use Cases | Relius",
     description: "See how churches use Relius to coordinate volunteers, track pastoral care, and manage multi-campus operations.",
     url: "https://relius.ai/use-cases/",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Relius Use Cases" }],
+    images: [{ url: "/og-relius-2026.png", width: 1200, height: 630, alt: "Relius Use Cases" }],
   },
   twitter: {
     card: "summary_large_image",

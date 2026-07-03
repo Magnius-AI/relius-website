@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: {
       title: useCase.title,
       description: metaDescription,
-      images: [{ url: "/og-image.png", width: 1200, height: 630, alt: `${useCase.title} - Relius` }],
+      images: [{ url: "/og-relius-2026.png", width: 1200, height: 630, alt: `${useCase.title} - Relius` }],
     },
     twitter: {
       card: "summary_large_image",

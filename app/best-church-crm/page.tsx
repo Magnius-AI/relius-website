@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description:
       "Side-by-side comparison of the top church CRM platforms. Find the right fit for your church.",
     url: "https://relius.ai/best-church-crm/",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Best Church CRM Comparison 2026" }],
+    images: [{ url: "/og-relius-2026.png", width: 1200, height: 630, alt: "Best Church CRM Comparison 2026" }],
   },
 };
 

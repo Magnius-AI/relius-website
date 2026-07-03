@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Contact Relius | Book a Demo",
     description: "Book a personalized demo to see how Relius can transform your church management.",
     url: "https://relius.ai/contact/",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Contact Relius" }],
+    images: [{ url: "/og-relius-2026.png", width: 1200, height: 630, alt: "Contact Relius" }],
   },
   twitter: {
     card: "summary_large_image",

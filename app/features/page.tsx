@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     description:
       "People, giving, events, groups, check-in, pastoral care, and AI workflows in one calm church operating system.",
     url: "https://relius.ai/features/",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Relius Church Management Features" }],
+    images: [{ url: "/og-relius-2026.png", width: 1200, height: 630, alt: "Relius Church Management Features" }],
   },
   twitter: {
     card: "summary_large_image",

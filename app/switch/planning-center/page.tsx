@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: "Free Planning Center Alternative 2026 | Switch to Relius",
     description: "The free alternative to Planning Center with AI-powered features. Import your people and donations in under 3 hours. Simpler pricing, all-in-one platform.",
     url: "https://relius.ai/switch/planning-center/",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Switch from Planning Center to Relius" }],
+    images: [{ url: "/og-relius-2026.png", width: 1200, height: 630, alt: "Switch from Planning Center to Relius" }],
   },
   twitter: {
     card: "summary_large_image",

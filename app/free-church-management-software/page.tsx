@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     url: "https://relius.ai/free-church-management-software/",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-relius-2026.png",
         width: 1200,
         height: 630,
         alt: "Relius Free Church Management Software",

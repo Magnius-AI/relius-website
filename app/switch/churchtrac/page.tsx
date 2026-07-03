@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: "ChurchTrac Alternative | Cloud-Based Church Software — Free",
     description: "Upgrade from ChurchTrac to Relius: cloud-based access, AI-powered features, and a modern interface. Easy migration preserves all your historical data.",
     url: "https://relius.ai/switch/churchtrac/",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Switch from ChurchTrac to Relius" }],
+    images: [{ url: "/og-relius-2026.png", width: 1200, height: 630, alt: "Switch from ChurchTrac to Relius" }],
   },
   twitter: {
     card: "summary_large_image",

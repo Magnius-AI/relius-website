@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description:
       "Free church management with online giving and AI donation tools. Unlimited members, no credit card required. Upgrade for pastoral care and AI features.",
     url: "https://relius.ai/pricing/",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Relius Pricing Plans" }],
+    images: [{ url: "/og-relius-2026.png", width: 1200, height: 630, alt: "Relius Pricing Plans" }],
   },
   twitter: {
     card: "summary_large_image",

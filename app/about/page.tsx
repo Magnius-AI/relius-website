@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: "About Relius | Free Church Management Software",
     description: "Meet the team building free church management software purpose-built for ministry.",
     url: "https://relius.ai/about/",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "About Relius" }],
+    images: [{ url: "/og-relius-2026.png", width: 1200, height: 630, alt: "About Relius" }],
   },
   twitter: {
     card: "summary_large_image",

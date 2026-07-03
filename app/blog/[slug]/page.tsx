@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
   }
   const ogImage = post.image
     ? `https://relius.ai${post.image}`
-    : "https://relius.ai/og-image.png";
+    : "https://relius.ai/og-relius-2026.png";
 
   return {
     title: post.title,

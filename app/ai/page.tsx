@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description:
       "Free AI-powered sermon planner, content studio, translation console, and pastoral care insights for churches. Save 10+ hours weekly.",
     url: "https://relius.ai/ai/",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Relius AI Church Tools" }],
+    images: [{ url: "/og-relius-2026.png", width: 1200, height: 630, alt: "Relius AI Church Tools" }],
   },
   twitter: {
     card: "summary_large_image",
