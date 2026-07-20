@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Menu, X, ArrowRight } from "lucide-react";
 import Image from "next/image";
@@ -11,14 +11,15 @@ const navigation = [
   { name: "AI", href: "/ai/" },
   { name: "Pricing", href: "/pricing/" },
   { name: "Switch", href: "/switch/" },
-  { name: "Use Cases", href: "/use-cases/" },
-  { name: "Docs", href: "/resources/docs/" },
-  { name: "Blog", href: "/blog/" },
+  { name: "Resources", href: "/resources/" },
 ];
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const wasMobileMenuOpenRef = useRef(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,6 +38,52 @@ export function Header() {
     return () => {
       document.body.style.overflow = "";
     };
+  }, [mobileMenuOpen]);
+
+  useEffect(() => {
+    if (!mobileMenuOpen) {
+      if (wasMobileMenuOpenRef.current) {
+        menuButtonRef.current?.focus();
+      }
+      wasMobileMenuOpenRef.current = false;
+      return;
+    }
+
+    wasMobileMenuOpenRef.current = true;
+    const menu = mobileMenuRef.current;
+    const focusable = () =>
+      Array.from(
+        menu?.querySelectorAll<HTMLElement>("a[href], button:not([disabled])") ?? [],
+      );
+
+    focusable()[0]?.focus();
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        setMobileMenuOpen(false);
+        return;
+      }
+
+      if (event.key !== "Tab") return;
+
+      const elements = focusable();
+      if (elements.length === 0) return;
+
+      const first = elements[0];
+      const last = elements[elements.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
   }, [mobileMenuOpen]);
 
   return (
@@ -72,6 +119,7 @@ export function Header() {
           <div className="flex lg:hidden">
             <button
               type="button"
+              ref={menuButtonRef}
               className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-secondary hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2"
               onClick={() => setMobileMenuOpen(true)}
               aria-expanded={mobileMenuOpen}
@@ -82,12 +130,12 @@ export function Header() {
               <Menu className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
-          <div className="hidden lg:flex lg:gap-x-8">
+          <div className="hidden lg:flex lg:gap-x-7">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium leading-6 text-secondary hover:text-accent transition-colors relative group rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-4"
+                className="relative flex min-h-11 items-center text-sm font-medium leading-6 text-secondary transition-colors hover:text-accent group rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-4"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
@@ -97,13 +145,13 @@ export function Header() {
           <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-6 items-center">
             <Link
               href="https://app.relius.ai"
-              className="rounded-sm text-sm font-semibold leading-6 text-primary hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-4"
+              className="flex min-h-11 items-center rounded-sm text-sm font-semibold leading-6 text-primary hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-4"
             >
               Log in
             </Link>
             <Link
               href={DEFAULT_SIGNUP_URL}
-              className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-lg hover:bg-accent hover:shadow-accent/25 transition-all duration-300 flex items-center gap-2 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2"
+              className="flex min-h-11 items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-lg hover:bg-accent hover:shadow-accent/25 transition-all duration-300 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2"
             >
               Get Started Free
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -127,6 +175,7 @@ export function Header() {
         />
         <div
           id="mobile-menu"
+          ref={mobileMenuRef}
           role="dialog"
           aria-modal="true"
           aria-label="Main menu"

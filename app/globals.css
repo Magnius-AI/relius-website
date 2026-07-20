@@ -78,6 +78,33 @@ body {
   overflow-x: hidden;
 }
 
+/* The AI demos use a fixed desktop canvas. Keep the shared showcase compact on
+   small screens while preserving each demo's internal animation behavior. */
+.ai-demo-preview > div {
+  height: 360px;
+}
+
+@media (min-width: 640px) {
+  .ai-demo-preview > div {
+    height: 420px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* Typography */
 h1,
 h2,

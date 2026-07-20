@@ -1,13 +1,9 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/sections/hero";
-import { WhyRelius } from "@/components/sections/why-relius";
-import { KpiStripe } from "@/components/sections/kpi-stripe";
-import { ProductPillars } from "@/components/sections/product-pillars";
+import { AIShowcase } from "@/components/sections/ai-showcase";
+import { CoreWorkflows } from "@/components/sections/core-workflows";
 import { MigrationCallout } from "@/components/sections/migration-callout";
-import { SocialProof } from "@/components/sections/social-proof";
 import { FinalCta } from "@/components/sections/final-cta";
-import { InteractiveDemo } from "@/components/demo";
-import { LatestBlogPosts } from "@/components/sections/latest-blog-posts";
 
 export const metadata: Metadata = {
   title: "Free Church Management Software with AI | Relius",
@@ -35,7 +31,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Free Church Management Software with AI | Relius",
-    description: "100% free church management with AI-powered giving, volunteer scheduling, and pastoral care. Save 10+ hours weekly.",
+    description:
+      "100% free church management with AI-powered giving, volunteer scheduling, and pastoral care. Save 10+ hours weekly. No credit card required.",
     images: ["/og-relius-2026.png"],
   },
 };
@@ -44,13 +41,9 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <InteractiveDemo />
-      <WhyRelius />
-      <KpiStripe />
-      <ProductPillars />
+      <AIShowcase />
+      <CoreWorkflows />
       <MigrationCallout />
-      <SocialProof />
-      <LatestBlogPosts />
       <FinalCta />
     </>
   );
