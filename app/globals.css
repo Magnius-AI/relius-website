@@ -84,8 +84,16 @@ body {
   height: 360px;
 }
 
+.ai-demo-preview > .sermon-planner-demo {
+  height: 700px;
+}
+
 @media (min-width: 640px) {
   .ai-demo-preview > div {
+    height: 420px;
+  }
+
+  .ai-demo-preview > .sermon-planner-demo {
     height: 420px;
   }
 }
@@ -403,4 +411,5 @@ p {
 /* Smooth Scroll */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }

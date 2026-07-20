@@ -13,7 +13,7 @@ export function MigrationCallout() {
             <RefreshCw className="h-4 w-4" aria-hidden="true" />
             Guided migration
           </div>
-          <h2 id="migration-title" className="text-balance text-3xl font-bold tracking-tight text-white md:text-4xl">
+          <h2 id="migration-title" className="scroll-mt-24 text-balance text-3xl font-bold tracking-tight text-white md:text-4xl">
             Bring your church history with you
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-slate-300">

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 
 const CYCLE_DURATION = 9000;
 const TOPIC_TEXT = "The Power of Forgiveness";
@@ -36,6 +36,7 @@ function useTypewriter(text: string, startTime: number, phase: number, phaseStar
 export function SermonPlannerDemo() {
   const [phase, setPhase] = useState(0);
   const [cycleKey, setCycleKey] = useState(0);
+  const reduceMotion = useReducedMotion();
 
   const resetCycle = useCallback(() => {
     setPhase(0);
@@ -43,6 +44,12 @@ export function SermonPlannerDemo() {
   }, []);
 
   useEffect(() => {
+    if (reduceMotion) {
+      setPhase(5);
+      return;
+    }
+
+    setPhase(0);
     const timers = [
       setTimeout(() => setPhase(1), 100),
       setTimeout(() => setPhase(2), 700),
@@ -53,7 +60,7 @@ export function SermonPlannerDemo() {
       setTimeout(() => resetCycle(), CYCLE_DURATION),
     ];
     return () => timers.forEach(clearTimeout);
-  }, [cycleKey, resetCycle]);
+  }, [cycleKey, reduceMotion, resetCycle]);
 
   const topicText = useTypewriter(TOPIC_TEXT, cycleKey, phase, 1, 500);
   const scriptureText = useTypewriter(SCRIPTURE_TEXT, cycleKey, phase, 2, 330);
@@ -65,10 +72,10 @@ export function SermonPlannerDemo() {
   ];
 
   return (
-    <div className="rounded-xl overflow-hidden border border-slate-200 shadow-sm bg-white w-full h-[420px]">
-      <div className="flex h-full">
+    <div className="sermon-planner-demo h-[700px] w-full overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm sm:h-[420px]">
+      <div className="flex h-full flex-col sm:flex-row">
         {/* Left Panel - Form */}
-        <div className="w-[40%] p-4 border-r border-slate-100 flex flex-col gap-3">
+        <div className="flex basis-[286px] shrink-0 flex-col gap-3 border-b border-slate-100 p-3 sm:w-[40%] sm:basis-auto sm:border-r sm:border-b-0 sm:p-4">
           <div className="text-xs font-semibold text-slate-900 mb-1">Sermon Planner</div>
 
           <div>
@@ -92,8 +99,9 @@ export function SermonPlannerDemo() {
               <label className="text-[11px] text-slate-500 block mb-1">Target Audience</label>
               <motion.div
                 className="bg-slate-50 border border-slate-200 rounded-md px-2.5 py-2 text-xs text-slate-600 h-8 flex items-center"
-                initial={{ opacity: 0.3 }}
+                initial={reduceMotion ? false : { opacity: 0.3 }}
                 animate={{ opacity: phase >= 3 ? 1 : 0.3 }}
+                transition={reduceMotion ? { duration: 0 } : undefined}
               >
                 General
               </motion.div>
@@ -102,8 +110,9 @@ export function SermonPlannerDemo() {
               <label className="text-[11px] text-slate-500 block mb-1">Style</label>
               <motion.div
                 className="bg-slate-50 border border-slate-200 rounded-md px-2.5 py-2 text-xs text-slate-600 h-8 flex items-center"
-                initial={{ opacity: 0.3 }}
+                initial={reduceMotion ? false : { opacity: 0.3 }}
                 animate={{ opacity: phase >= 3 ? 1 : 0.3 }}
+                transition={reduceMotion ? { duration: 0 } : undefined}
               >
                 Expository
               </motion.div>
@@ -113,50 +122,51 @@ export function SermonPlannerDemo() {
           <motion.button
             className="mt-auto bg-accent-600 text-white text-xs font-medium rounded-md py-2 px-3"
             animate={
-              phase === 4
+              !reduceMotion && phase === 4
                 ? { scale: [1, 0.95, 1], boxShadow: ["0 0 0px rgba(37,99,235,0)", "0 0 12px rgba(37,99,235,0.5)", "0 0 0px rgba(37,99,235,0)"] }
                 : {}
             }
-            transition={{ duration: 0.4 }}
+            transition={{ duration: reduceMotion ? 0 : 0.4 }}
           >
             Generate Outline
           </motion.button>
         </div>
 
         {/* Right Panel - Generated Outline */}
-        <div className="w-[60%] p-4 overflow-hidden">
+        <div className="min-h-0 min-w-0 flex-1 overflow-hidden p-3 sm:w-[60%] sm:p-4">
           <div className="text-xs font-semibold text-slate-400 mb-3">Generated Sermon Outline</div>
 
           <AnimatePresence>
             {phase >= 5 && (
               <motion.div
-                initial={{ opacity: 0 }}
+                initial={reduceMotion ? false : { opacity: 0 }}
                 animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
+                exit={reduceMotion ? undefined : { opacity: 0 }}
+                transition={reduceMotion ? { duration: 0 } : undefined}
                 className="space-y-3"
               >
                 <motion.div
-                  initial={{ opacity: 0, y: 5 }}
+                  initial={reduceMotion ? false : { opacity: 0, y: 5 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0 }}
+                  transition={reduceMotion ? { duration: 0 } : { delay: 0 }}
                   className="text-sm font-bold text-slate-900"
                 >
                   Unburdened: The Liberating Power of Forgiveness
                 </motion.div>
 
                 <motion.div
-                  initial={{ opacity: 0, y: 5 }}
+                  initial={reduceMotion ? false : { opacity: 0, y: 5 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 }}
+                  transition={reduceMotion ? { duration: 0 } : { delay: 0.3 }}
                   className="bg-accent-50 border border-accent-200 rounded-md p-2.5 text-[11px] text-accent-800 leading-relaxed"
                 >
                   This sermon explores the transformative power of forgiveness as revealed in the Parable of the Unforgiving Servant...
                 </motion.div>
 
                 <motion.div
-                  initial={{ opacity: 0, y: 5 }}
+                  initial={reduceMotion ? false : { opacity: 0, y: 5 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.6 }}
+                  transition={reduceMotion ? { duration: 0 } : { delay: 0.6 }}
                   className="text-xs font-semibold text-slate-700"
                 >
                   Main Points
@@ -165,9 +175,9 @@ export function SermonPlannerDemo() {
                 {outlineItems.map((item, i) => (
                   <motion.div
                     key={item.title}
-                    initial={{ opacity: 0, x: -8 }}
+                    initial={reduceMotion ? false : { opacity: 0, x: -8 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.9 + i * 0.4 }}
+                    transition={reduceMotion ? { duration: 0 } : { delay: 0.9 + i * 0.4 }}
                     className="flex items-start gap-2"
                   >
                     <span className="text-xs font-bold text-accent-600 mt-0.5">{i + 1}.</span>
