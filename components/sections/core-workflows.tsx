@@ -6,19 +6,19 @@ const workflows = [
     icon: Users,
     number: "01",
     title: "Know your people",
-    description: "Keep member profiles, households, groups, care notes, and communication in one organized place.",
+    description: "Keep profiles, households, groups, care notes, and messages together.",
   },
   {
     icon: CalendarDays,
     number: "02",
     title: "Run the week",
-    description: "Coordinate events, volunteers, services, attendance, and check-ins without stitching together separate tools.",
+    description: "Plan events, schedule volunteers, take attendance, and manage check-ins.",
   },
   {
     icon: CircleDollarSign,
     number: "03",
-    title: "Make giving simpler",
-    description: "Track donation records, issue receipts, and understand generosity alongside the people you serve.",
+    title: "Track giving and receipts",
+    description: "Track donations, issue receipts, and keep giving history connected to member records.",
   },
 ];
 
@@ -28,18 +28,18 @@ export function CoreWorkflows() {
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16">
           <div className="lg:sticky lg:top-28 lg:self-start">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-blue-600">One connected workspace</p>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-blue-600">For the week ahead</p>
             <h2 id="workflows-title" className="text-balance text-3xl font-bold tracking-tight text-slate-900 md:text-5xl">
-              Church management that follows how ministry actually works
+              Keep people, planning, and giving connected
             </h2>
             <p className="mt-5 max-w-xl text-lg text-slate-600">
-              People, planning, and giving stay connected, so your team has the context it needs without duplicate entry.
+              Member records, events, services, and giving live in the same system, so staff can find the details they need.
             </p>
             <Link
               href="/features/"
               className="mt-7 inline-flex min-h-11 items-center gap-2 font-semibold text-blue-700 hover:text-blue-900 focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
             >
-              Explore all features
+              See all features
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
           </div>

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Menu, X, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { DEFAULT_SIGNUP_URL } from "@/lib/constants";
+import { analytics } from "@/lib/analytics";
 
 const navigation = [
   { name: "Features", href: "/features/" },
@@ -151,9 +152,10 @@ export function Header() {
             </Link>
             <Link
               href={DEFAULT_SIGNUP_URL}
+              onClick={() => analytics.trackCTAClick("get_started_free_header", DEFAULT_SIGNUP_URL)}
               className="flex min-h-11 items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-lg hover:bg-accent hover:shadow-accent/25 transition-all duration-300 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2"
             >
-              Get Started Free
+              Start free
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
@@ -233,9 +235,12 @@ export function Header() {
                 <Link
                   href={DEFAULT_SIGNUP_URL}
                   className="flex items-center justify-center gap-2 w-full rounded-full bg-primary px-3 py-3 text-base font-semibold text-white shadow-sm hover:bg-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-600 focus-visible:ring-offset-2"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={() => {
+                    analytics.trackCTAClick("get_started_free_header_mobile", DEFAULT_SIGNUP_URL);
+                    setMobileMenuOpen(false);
+                  }}
                 >
-                  Get Started Free
+                  Start free
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
