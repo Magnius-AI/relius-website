@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, Heart, Users } from "lucide-react";
+import { ArrowRight, CircleCheck, Heart, Users } from "lucide-react";
 import { DecorativeOrb } from "@/components/ui/decorative-orb";
 import { analytics } from "@/lib/analytics";
 import { DEFAULT_SIGNUP_URL, AUTH_URLS } from "@/lib/constants";
@@ -16,10 +16,10 @@ export function FinalCta() {
       <div className="relative z-10 mx-auto max-w-4xl">
         <div className="rounded-2xl border border-slate-200 bg-white px-8 py-12 text-center shadow-xl sm:px-16 sm:py-16">
           <h2 className="text-balance mb-4 text-slate-900 text-3xl sm:text-4xl font-bold">
-            Ready to focus more on ministry?
+            Start managing your church in Relius.
           </h2>
           <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto">
-            Join churches that are spending less time managing software and more time caring for people. Get started with Relius for free - no credit card required.
+            Start with the Free plan. Keep people, giving, events, and follow-up in one place.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button variant="accent" size="lg" asChild className="group shadow-lg">
@@ -27,7 +27,7 @@ export function FinalCta() {
                 href={DEFAULT_SIGNUP_URL}
                 onClick={() => analytics.trackCTAClick("get_started_free_final", DEFAULT_SIGNUP_URL)}
               >
-                Get Started Free
+                Start free
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
@@ -40,7 +40,7 @@ export function FinalCta() {
                 href="/contact/"
                 onClick={() => analytics.trackCTAClick("schedule_conversation_final", "/contact/")}
               >
-                Schedule a Conversation
+                Talk to us
               </Link>
             </Button>
           </div>
@@ -52,16 +52,16 @@ export function FinalCta() {
           </p>
           <div className="flex flex-wrap justify-center gap-6 mt-8 pt-6 border-t border-slate-100">
             <div className="flex items-center gap-2 text-sm text-slate-500">
-              <Shield className="w-4 h-4 text-emerald-500" />
-              <span>Secure & private</span>
+              <CircleCheck className="w-4 h-4 text-emerald-500" />
+              <span>No credit card required</span>
             </div>
             <div className="flex items-center gap-2 text-sm text-slate-500">
               <Heart className="w-4 h-4 text-emerald-500" />
-              <span>Free forever</span>
+              <span>Free plan</span>
             </div>
             <div className="flex items-center gap-2 text-sm text-slate-500">
               <Users className="w-4 h-4 text-blue-500" />
-              <span>Unlimited members</span>
+              <span>No member limit</span>
             </div>
           </div>
         </div>

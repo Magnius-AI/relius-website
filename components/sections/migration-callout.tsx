@@ -1,6 +1,6 @@
-import Link from "next/link";
-import { ArrowRight, CheckCircle2, RefreshCw } from "lucide-react";
+import { CheckCircle2, RefreshCw } from "lucide-react";
 import { MIGRATION_URLS } from "@/lib/migration-urls";
+import { MigrationCalloutCta } from "@/components/sections/migration-callout-cta";
 
 const platforms = ["Planning Center", "ChurchTrac", "Tithe.ly"];
 
@@ -14,10 +14,10 @@ export function MigrationCallout() {
             Guided migration
           </div>
           <h2 id="migration-title" className="scroll-mt-24 text-balance text-3xl font-bold tracking-tight text-white md:text-4xl">
-            Bring your church history with you
+            Keep the history your church has already built.
           </h2>
           <p className="mt-4 max-w-2xl text-lg text-slate-300">
-            Move people and donation records into Relius with migration tools and assistance for the systems churches already use.
+            Bring over people and giving records from the systems your team already uses. Start with a guide, then get help with the parts that need it.
           </p>
           <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-sm text-slate-300" aria-label="Supported migration sources">
             {platforms.map((platform) => (
@@ -28,13 +28,7 @@ export function MigrationCallout() {
             ))}
           </ul>
         </div>
-        <Link
-          href={MIGRATION_URLS.HUB}
-          className="inline-flex min-h-12 w-fit items-center justify-center gap-2 rounded-full bg-white px-6 py-3 font-semibold text-slate-950 transition-colors hover:bg-blue-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
-        >
-          Explore migration guides
-          <ArrowRight className="h-4 w-4" aria-hidden="true" />
-        </Link>
+        <MigrationCalloutCta href={MIGRATION_URLS.HUB} />
       </div>
     </section>
   );

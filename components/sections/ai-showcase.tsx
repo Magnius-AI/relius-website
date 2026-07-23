@@ -25,7 +25,7 @@ const tools = [
     id: "sermon-planner",
     label: "Sermon Planner",
     eyebrow: "Prepare",
-    description: "Turn a passage and theme into a structured sermon starting point you can review and shape.",
+    description: "Start with a passage and a theme. Relius gives you an outline you can edit.",
     icon: BookOpenText,
     demo: SermonPlannerDemo,
   },
@@ -33,7 +33,7 @@ const tools = [
     id: "content-studio",
     label: "Content Studio",
     eyebrow: "Communicate",
-    description: "Adapt one message for email, social, small groups, and the rest of your ministry channels.",
+    description: "Turn one message into an email, social post, or small-group note, then edit it in your own voice.",
     icon: MessageSquareText,
     demo: ContentStudioDemo,
   },
@@ -41,7 +41,7 @@ const tools = [
     id: "pastoral-care",
     label: "Pastoral Care",
     eyebrow: "Care",
-    description: "Surface prayer needs and follow-up priorities while keeping people at the center of every decision.",
+    description: "Keep prayer needs and follow-up work in view without losing the person behind the note.",
     icon: HandHeart,
     demo: PastoralCareDemo,
   },
@@ -49,7 +49,7 @@ const tools = [
     id: "ai-insights",
     label: "AI Insights",
     eyebrow: "Understand",
-    description: "Make attendance and engagement patterns easier to understand and act on.",
+    description: "See attendance and engagement changes without digging through spreadsheets.",
     icon: BrainCircuit,
     demo: AIInsightsDemo,
   },
@@ -57,7 +57,7 @@ const tools = [
     id: "translation",
     label: "Translation",
     eyebrow: "Include",
-    description: "Translate ministry communication so more people can participate in the life of your church.",
+    description: "Translate church messages so more people can take part.",
     icon: Languages,
     demo: TranslationDemo,
   },
@@ -65,7 +65,7 @@ const tools = [
     id: "donations-ai",
     label: "Giving Insights",
     eyebrow: "Steward",
-    description: "See giving patterns and donor follow-up opportunities without digging through spreadsheets.",
+    description: "See giving activity and follow-up needs without opening another spreadsheet.",
     icon: Sparkles,
     demo: DonationsAIDemo,
   },
@@ -98,13 +98,13 @@ export function AIShowcase() {
         <div className="mx-auto mb-10 max-w-3xl text-center">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-sm font-semibold text-blue-700">
             <Sparkles className="h-4 w-4" aria-hidden="true" />
-            AI built into the work of ministry
+            AI for the work your team already does
           </div>
           <h2 id="ai-showcase-title" className="text-balance text-3xl font-bold tracking-tight text-slate-900 md:text-5xl">
-            See what Relius AI can do
+            AI for sermon prep, communication, care, and reporting
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
-            Practical tools for preparing, communicating, caring, and understanding—not a separate chatbot your team has to learn.
+            Draft a sermon outline, adapt a church message, or review follow-up and attendance patterns. Edit each result before you use it.
           </p>
         </div>
 
@@ -155,7 +155,7 @@ export function AIShowcase() {
                 href="/ai/"
                 className="mt-6 inline-flex min-h-11 w-fit items-center gap-2 font-semibold text-blue-700 hover:text-blue-900 focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
               >
-                Explore Relius AI
+                See all AI tools
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>
             </div>

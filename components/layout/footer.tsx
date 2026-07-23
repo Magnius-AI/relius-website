@@ -59,7 +59,7 @@ export function Footer() {
               <span className="text-xl font-bold text-slate-900 tracking-tight">Relius</span>
             </Link>
             <p className="text-sm text-slate-600 leading-relaxed max-w-xs">
-              The modern Church Management System with built-in AI. Empowering churches to focus on people, not paperwork.
+              Church management software for people, giving, planning, and the details that keep a church moving.
             </p>
 
             {/* Newsletter */}

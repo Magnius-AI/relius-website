@@ -6,9 +6,9 @@ import { MigrationCallout } from "@/components/sections/migration-callout";
 import { FinalCta } from "@/components/sections/final-cta";
 
 export const metadata: Metadata = {
-  title: "Free Church Management Software with AI | Relius",
+  title: "Free church management software for people, giving, and events | Relius",
   description:
-    "100% free church management software with AI-powered giving, scheduling, and pastoral care. The modern Planning Center alternative. No credit card required.",
+    "Keep people, giving, events, and follow-up in the same place. Free plans are available, alongside AI tools for sermon prep, messages, and care.",
   alternates: {
     canonical: "https://relius.ai/",
   },
@@ -16,9 +16,9 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://relius.ai",
     siteName: "Relius",
-    title: "Free Church Management Software with AI | Relius",
+    title: "Free church management software for people, giving, and events | Relius",
     description:
-      "100% free church management with AI-powered giving, volunteer scheduling, and pastoral care. Save 10+ hours weekly. No credit card required.",
+      "Keep people, giving, events, and follow-up in the same place. Free plans are available, alongside AI tools for sermon prep, messages, and care.",
     images: [
       {
         url: "/og-relius-2026.png",
@@ -30,9 +30,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Free Church Management Software with AI | Relius",
+    title: "Free church management software for people, giving, and events | Relius",
     description:
-      "100% free church management with AI-powered giving, volunteer scheduling, and pastoral care. Save 10+ hours weekly. No credit card required.",
+      "Keep people, giving, events, and follow-up in the same place. Free plans are available, alongside AI tools for sermon prep, messages, and care.",
     images: ["/og-relius-2026.png"],
   },
 };
